@@ -1,0 +1,1159 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1b2fa46b-f209-4d28-b2e5-e817d17b48a8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DW Academico Labor</ID>
+  <Name>DW Academico Labor</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>DW Academico Labor</DataSourceID>
+  <Schema>
+    <xs:schema id="DW_x0020_Academico_x0020_Labor" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="DW_x0020_Academico_x0020_Labor" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="45723f59-5399-455e-9810-8e4620591dfa">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" msprop:design-time-name="32790a27-c859-4f39-9e77-a024ed30a849" msprop:DbTableName="HECHO_ENCUESTA_DOCENCIA" msprop:FriendlyName="HECHO_ENCUESTA_DOCENCIA" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DOCENTE_ID" msprop:design-time-name="399e08a4-5a94-4b57-be30-eb3c8b5faad5" msprop:DbColumnName="DOCENTE_ID" msprop:FriendlyName="DOCENTE_ID" type="xs:long" />
+                  <xs:element name="JEFE_DEPARTAMENTO_ID" msprop:design-time-name="f75d0eba-cf72-42c4-99a7-91be01496771" msprop:DbColumnName="JEFE_DEPARTAMENTO_ID" msprop:FriendlyName="JEFE_DEPARTAMENTO_ID" type="xs:long" />
+                  <xs:element name="DECANO_ID" msprop:design-time-name="bc97b58a-cbbc-4122-84e8-2cfd0e479e3f" msprop:DbColumnName="DECANO_ID" msprop:FriendlyName="DECANO_ID" type="xs:long" />
+                  <xs:element name="RANGO_ID" msprop:design-time-name="32a90fa1-cba3-4606-83d7-f38cfcd6a7ff" msprop:DbColumnName="RANGO_ID" msprop:FriendlyName="RANGO_ID" type="xs:long" />
+                  <xs:element name="PREGUNTA_ID" msprop:design-time-name="9ca36c84-5b04-4fb2-89b0-d2553935bbee" msprop:DbColumnName="PREGUNTA_ID" msprop:FriendlyName="PREGUNTA_ID" type="xs:long" />
+                  <xs:element name="CUESTIONARIO_ID" msprop:design-time-name="7c6f7084-98ee-4d66-b450-887c947fa9cd" msprop:DbColumnName="CUESTIONARIO_ID" msprop:FriendlyName="CUESTIONARIO_ID" type="xs:long" />
+                  <xs:element name="FUENTE_EVALUACION_ID" msprop:design-time-name="2d3578ae-e55c-4aaa-a634-27924a11e744" msprop:DbColumnName="FUENTE_EVALUACION_ID" msprop:FriendlyName="FUENTE_EVALUACION_ID" type="xs:long" />
+                  <xs:element name="PERIODO_ID" msprop:design-time-name="f7e52c03-339a-4b36-be3f-cacc05c1f2f1" msprop:DbColumnName="PERIODO_ID" msprop:FriendlyName="PERIODO_ID" type="xs:long" />
+                  <xs:element name="DEMOGRAFIA_DOCENTE_ID" msprop:design-time-name="872976a0-c9d1-4a11-8a7a-7ebeae57e0c1" msprop:DbColumnName="DEMOGRAFIA_DOCENTE_ID" msprop:FriendlyName="DEMOGRAFIA_DOCENTE_ID" type="xs:long" />
+                  <xs:element name="DEMOGRAFIA_ESTUDIANTE_ID" msprop:design-time-name="5af17bcb-380a-429e-a924-00009bcf3d2d" msprop:DbColumnName="DEMOGRAFIA_ESTUDIANTE_ID" msprop:FriendlyName="DEMOGRAFIA_ESTUDIANTE_ID" type="xs:long" />
+                  <xs:element name="DEM_ECO_DOC_ID" msprop:design-time-name="15d4dd2d-d34a-4728-ba68-31931e1c6613" msprop:DbColumnName="DEM_ECO_DOC_ID" msprop:FriendlyName="DEM_ECO_DOC_ID" type="xs:long" />
+                  <xs:element name="DEM_ECO_EST_ID" msprop:design-time-name="c98711a7-bfd8-4e64-aad2-f3b31b72b593" msprop:DbColumnName="DEM_ECO_EST_ID" msprop:FriendlyName="DEM_ECO_EST_ID" type="xs:long" />
+                  <xs:element name="PROGRAMA_ID" msprop:design-time-name="5dbaeccf-6772-4fe9-96c0-21ab51dab622" msprop:DbColumnName="PROGRAMA_ID" msprop:FriendlyName="PROGRAMA_ID" type="xs:long" />
+                  <xs:element name="PENSUM_EST_ID" msprop:design-time-name="d941c096-d40d-4ddf-ba9b-f11453872bc3" msprop:DbColumnName="PENSUM_EST_ID" msprop:FriendlyName="PENSUM_EST_ID" type="xs:long" />
+                  <xs:element name="PENSUM_MAT_ID" msprop:design-time-name="8889a3b8-5de5-4eb8-9fed-0f4cb142e2b5" msprop:DbColumnName="PENSUM_MAT_ID" msprop:FriendlyName="PENSUM_MAT_ID" type="xs:long" />
+                  <xs:element name="MATER_AD_ID" msprop:design-time-name="71dedd66-e590-4a63-8429-0378a11a0516" msprop:DbColumnName="MATER_AD_ID" msprop:FriendlyName="MATER_AD_ID" type="xs:long" />
+                  <xs:element name="MATERIA_ID" msprop:design-time-name="3ff9d84e-bd23-4e89-8844-eb68e33e3b6d" msprop:DbColumnName="MATERIA_ID" msprop:FriendlyName="MATERIA_ID" type="xs:long" />
+                  <xs:element name="CONTRATACION_ID" msprop:design-time-name="81db319f-a8b2-44dc-a072-9aad2194472e" msprop:DbColumnName="CONTRATACION_ID" msprop:FriendlyName="CONTRATACION_ID" type="xs:long" />
+                  <xs:element name="SEMESTRE_ID" msprop:design-time-name="cfc004a2-93d0-47ec-9e2a-7714e6e56011" msprop:DbColumnName="SEMESTRE_ID" msprop:FriendlyName="SEMESTRE_ID" type="xs:long" />
+                  <xs:element name="INDEST_ID" msprop:design-time-name="9f453dfb-7548-45e6-b4b4-8b4e901fcbbe" msprop:DbColumnName="INDEST_ID" msprop:FriendlyName="INDEST_ID" type="xs:long" />
+                  <xs:element name="ESTUDIANTE_ID" msprop:design-time-name="5a4c7b5b-cc3e-4c7a-b6b0-d8317ed7c9f3" msprop:DbColumnName="ESTUDIANTE_ID" msprop:FriendlyName="ESTUDIANTE_ID" type="xs:long" />
+                  <xs:element name="LUGAR_RESIDENCIA_DOC_ID" msprop:design-time-name="a9b0da8b-2e3a-4f7f-ab5d-438303a57eb3" msprop:DbColumnName="LUGAR_RESIDENCIA_DOC_ID" msprop:FriendlyName="LUGAR_RESIDENCIA_DOC_ID" type="xs:long" />
+                  <xs:element name="LUGAR_RESIDENCIA_EST_ID" msprop:design-time-name="8ef6d83d-bd01-4534-8c1f-6684ece69dea" msprop:DbColumnName="LUGAR_RESIDENCIA_EST_ID" msprop:FriendlyName="LUGAR_RESIDENCIA_EST_ID" type="xs:long" />
+                  <xs:element name="PUNTAJE" msprop:design-time-name="ba7b723f-1797-4dd3-a5cd-8858d7531119" msprop:DbColumnName="PUNTAJE" msprop:FriendlyName="PUNTAJE" type="xs:decimal" />
+                  <xs:element name="CANTIDAD_ESTUDIANTES" msprop:design-time-name="166863c8-5a23-434e-83d7-ac791042ba84" msprop:DbColumnName="CANTIDAD_ESTUDIANTES" msprop:FriendlyName="CANTIDAD_ESTUDIANTES" type="xs:double" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_PENSUM" msprop:design-time-name="6a6a0be0-29cb-4d8a-86fb-95bb70a53f6f" msprop:DbTableName="PENSUM" msprop:FriendlyName="PENSUM" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PENSUM_ID" msprop:design-time-name="bcc19ef5-a124-4ab9-811f-2a454b80f2cb" msprop:DbColumnName="PENSUM_ID" msprop:FriendlyName="PENSUM_ID" type="xs:long" />
+                  <xs:element name="DESCRIPCION" msprop:design-time-name="4230b30a-f879-4d8e-94c1-1b22295d915b" msprop:DbColumnName="DESCRIPCION" msprop:FriendlyName="DESCRIPCION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RESOLUCION" msprop:design-time-name="5ca6817f-a60b-4a33-9191-a8b39d96170c" msprop:DbColumnName="RESOLUCION" msprop:FriendlyName="RESOLUCION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RANGOS_CREDITOS" msprop:design-time-name="df5652bd-11f7-4785-9009-2dbbde76a659" msprop:DbColumnName="RANGOS_CREDITOS" msprop:FriendlyName="RANGOS_CREDITOS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS" msprop:design-time-name="d91d729e-835c-4b84-91fb-85f2edc90422" msprop:DbTableName="DEMOGRAFIA_DATOS_ECONOMICOS" msprop:FriendlyName="DEMOGRAFIA_DATOS_ECONOMICOS" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DEM_ECONOMICOS_ID" msprop:design-time-name="4e54d80f-d8ba-4b8b-92b8-3618467c0bde" msprop:DbColumnName="DEM_ECONOMICOS_ID" msprop:FriendlyName="DEM_ECONOMICOS_ID" type="xs:long" />
+                  <xs:element name="ESTRATO" msprop:design-time-name="3e34a9fb-16a8-43f5-875c-f202463fcf5b" msprop:DbColumnName="ESTRATO" msprop:FriendlyName="ESTRATO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_HERMANOS" msprop:design-time-name="d5a9884c-b9f7-4c73-ab6b-107ef573da0b" msprop:DbColumnName="NUMERO_HERMANOS" msprop:FriendlyName="NUMERO_HERMANOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="POSICION_HERMANOS" msprop:design-time-name="00f4f608-1ce8-4555-9947-06f76c1473c9" msprop:DbColumnName="POSICION_HERMANOS" msprop:FriendlyName="POSICION_HERMANOS" type="xs:unsignedByte" minOccurs="0" />
+                  <xs:element name="VIVIENDA_PROPIA" msprop:design-time-name="039174b0-7470-41c0-830c-0e8ba92ee99c" msprop:DbColumnName="VIVIENDA_PROPIA" msprop:FriendlyName="VIVIENDA_PROPIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DESPLAZADO" msprop:design-time-name="91e01180-a432-4df3-8c85-391ac83a4d95" msprop:DbColumnName="DESPLAZADO" msprop:FriendlyName="DESPLAZADO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MADRE_CABEZA" msprop:design-time-name="62055a0f-5b9c-420c-a7c2-d2d8b3b37d69" msprop:DbColumnName="MADRE_CABEZA" msprop:FriendlyName="MADRE_CABEZA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES" msprop:design-time-name="d2cd8694-268e-435a-a663-3090a2c2bf85" msprop:DbTableName="INDICADORES_ESTUDIANTES" msprop:FriendlyName="INDICADORES_ESTUDIANTES" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="INDEST_ID" msprop:design-time-name="b1b94dcd-80b4-4699-9bcf-2a9b931f0edf" msprop:DbColumnName="INDEST_ID" msprop:FriendlyName="INDEST_ID" type="xs:long" />
+                  <xs:element name="AMINISTIADO" msprop:design-time-name="fdcee09a-b835-4c1e-9cbd-ff5e101b2458" msprop:DbColumnName="AMINISTIADO" msprop:FriendlyName="AMINISTIADO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AYUDA_DEL_ESTADO" msprop:design-time-name="87f54358-9ada-4d87-96c6-929d8112fcc0" msprop:DbColumnName="AYUDA_DEL_ESTADO" msprop:FriendlyName="AYUDA_DEL_ESTADO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MONITORIA" msprop:design-time-name="ca5a40b6-53ad-4c9f-9b76-6cac93b62ac4" msprop:DbColumnName="MONITORIA" msprop:FriendlyName="MONITORIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RESIDENCIA" msprop:design-time-name="30dd3c67-6958-4333-af90-489acb130be9" msprop:DbColumnName="RESIDENCIA" msprop:FriendlyName="RESIDENCIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PILO" msprop:design-time-name="bf741d6d-7137-4a37-858e-662cc443882e" msprop:DbColumnName="PILO" msprop:FriendlyName="PILO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="35" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="JOVENES_ACCION" msprop:design-time-name="d74d28e9-a442-4be1-90f2-4bc3efb096ee" msprop:DbColumnName="JOVENES_ACCION" msprop:FriendlyName="JOVENES_ACCION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="35" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BECADO_ICETEX" msprop:design-time-name="50ed3611-c5d4-46c9-b302-467f3529e176" msprop:DbColumnName="BECADO_ICETEX" msprop:FriendlyName="BECADO_ICETEX">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_FUENTE_EVALUACION" msprop:design-time-name="3ec141c7-7710-447c-b93a-71016701be07" msprop:DbTableName="FUENTE_EVALUACION" msprop:FriendlyName="FUENTE_EVALUACION" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FUENTE_EVALUACION_ID" msprop:design-time-name="68af2937-cf57-4b4a-bd69-f17ec615a432" msprop:DbColumnName="FUENTE_EVALUACION_ID" msprop:FriendlyName="FUENTE_EVALUACION_ID" type="xs:long" />
+                  <xs:element name="NOMBRE" msprop:design-time-name="685dd05c-a58c-43d2-8ce1-3272c4b8da91" msprop:DbColumnName="NOMBRE" msprop:FriendlyName="NOMBRE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CATEGORIA" msprop:design-time-name="bacf9904-dd4e-4a80-84b6-6ef4129d73a8" msprop:DbColumnName="CATEGORIA" msprop:FriendlyName="CATEGORIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_CUESTIONARIO" msprop:design-time-name="ba7ed0d6-9c80-4b59-840c-95caccc34d9c" msprop:DbTableName="CUESTIONARIO" msprop:FriendlyName="CUESTIONARIO" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CUESTIONARIO_ID" msprop:design-time-name="ccac0eb7-0fbe-444c-aafd-ff8a8bb23211" msprop:DbColumnName="CUESTIONARIO_ID" msprop:FriendlyName="CUESTIONARIO_ID" type="xs:long" />
+                  <xs:element name="NOMBRE_CUESTIONARIO" msprop:design-time-name="f8e15532-d827-400c-8ac7-f6d5e1f87c30" msprop:DbColumnName="NOMBRE_CUESTIONARIO" msprop:FriendlyName="NOMBRE_CUESTIONARIO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PERIODO_INICIAL_VIGENCIA" msprop:design-time-name="e990e625-ced5-4e72-89d4-96d06b1ca74e" msprop:DbColumnName="PERIODO_INICIAL_VIGENCIA" msprop:FriendlyName="PERIODO_INICIAL_VIGENCIA" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_MATERIA" msprop:design-time-name="f4977fb8-876e-4b03-bd43-cd3d60770a27" msprop:DbTableName="MATERIA" msprop:FriendlyName="MATERIA" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MATERIA_ID" msprop:design-time-name="30d55312-b72c-4294-b1f9-eb26ee82c749" msprop:DbColumnName="MATERIA_ID" msprop:FriendlyName="MATERIA_ID" type="xs:long" />
+                  <xs:element name="NOMBRE_MATERIA" msprop:design-time-name="0bcc7ae4-0534-47a6-8e9e-6998d4532d24" msprop:DbColumnName="NOMBRE_MATERIA" msprop:FriendlyName="NOMBRE_MATERIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NOMBRE_CURSO" msprop:design-time-name="fb13f2cc-3c16-4798-a0f4-9fba4d136d47" msprop:DbColumnName="NOMBRE_CURSO" msprop:FriendlyName="NOMBRE_CURSO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CODIGO_MATERIA" msprop:design-time-name="a3e34c83-fab7-438a-a26f-a9148299fdca" msprop:DbColumnName="CODIGO_MATERIA" msprop:FriendlyName="CODIGO_MATERIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INDICADOR_PROMEDIO" msprop:design-time-name="5aab8a69-ef2a-44b3-ae65-dda031be3e7b" msprop:DbColumnName="INDICADOR_PROMEDIO" msprop:FriendlyName="INDICADOR_PROMEDIO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="35" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AREA_CONOCIMIENTO_ICFES" msprop:design-time-name="fe348ae4-84fe-453f-84da-1bdd5f2641ec" msprop:DbColumnName="AREA_CONOCIMIENTO_ICFES" msprop:FriendlyName="AREA_CONOCIMIENTO_ICFES">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AREA_CONOCIMIENTO" msprop:design-time-name="0c950710-b589-4eee-94e2-cc17b340d73d" msprop:DbColumnName="AREA_CONOCIMIENTO" msprop:FriendlyName="AREA_CONOCIMIENTO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INDICADOR_ELECTIVA" msprop:design-time-name="efde43e0-d0fd-47c5-973d-933987450703" msprop:DbColumnName="INDICADOR_ELECTIVA" msprop:FriendlyName="INDICADOR_ELECTIVA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INDICADOR_NOTA" msprop:design-time-name="1c552b90-3c05-452c-b1d6-c0a452a6949a" msprop:DbColumnName="INDICADOR_NOTA" msprop:FriendlyName="INDICADOR_NOTA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TIPO_MATERIA" msprop:design-time-name="a9bd5385-41a3-48ea-8239-c4731337263e" msprop:DbColumnName="TIPO_MATERIA" msprop:FriendlyName="TIPO_MATERIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PERIODICIDAD" msprop:design-time-name="788afa12-6968-4609-87b1-cb3b09ef4ae9" msprop:DbColumnName="PERIODICIDAD" msprop:FriendlyName="PERIODICIDAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_ESTUDIANTE" msprop:design-time-name="4faecd4d-ee62-436c-9607-6cf4b9cd4449" msprop:DbTableName="ESTUDIANTE" msprop:FriendlyName="ESTUDIANTE" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ESTUDIANTE_ID" msprop:design-time-name="40d6d004-012d-4fd3-9784-b1f48493b398" msprop:DbColumnName="ESTUDIANTE_ID" msprop:FriendlyName="ESTUDIANTE_ID" type="xs:long" />
+                  <xs:element name="LUGAR_NACIMIENTO_ID" msprop:design-time-name="811cf479-51dd-4269-a0e7-9564c3a54797" msprop:DbColumnName="LUGAR_NACIMIENTO_ID" msprop:FriendlyName="LUGAR_NACIMIENTO_ID" type="xs:long" minOccurs="0" />
+                  <xs:element name="LUGAR_PROCEDENCIA_ID" msprop:design-time-name="0f09cacb-8e08-408a-85f4-367d0a7eb7f7" msprop:DbColumnName="LUGAR_PROCEDENCIA_ID" msprop:FriendlyName="LUGAR_PROCEDENCIA_ID" type="xs:long" minOccurs="0" />
+                  <xs:element name="NOMBRE_COMPLETO" msprop:design-time-name="d605d6f7-5c49-4788-98ff-405f6df50f2c" msprop:DbColumnName="NOMBRE_COMPLETO" msprop:FriendlyName="NOMBRE_COMPLETO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="120" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_TELEFONO" msprop:design-time-name="06dfc589-a8bd-4e95-b388-cc868b8a4009" msprop:DbColumnName="NUMERO_TELEFONO" msprop:FriendlyName="NUMERO_TELEFONO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CODIGO" msprop:design-time-name="d0b46b43-c762-4474-83c3-c02376ffb58f" msprop:DbColumnName="CODIGO" msprop:FriendlyName="CODIGO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CORREO" msprop:design-time-name="771a6b51-8c9d-4148-a3f4-7083b2bc0c38" msprop:DbColumnName="CORREO" msprop:FriendlyName="CORREO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TIPO_IDENTIFICACION" msprop:design-time-name="69018629-6b6d-4267-912f-7a9ff72548aa" msprop:DbColumnName="TIPO_IDENTIFICACION" msprop:FriendlyName="TIPO_IDENTIFICACION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="40" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_IDENTIDAD" msprop:design-time-name="802b64bd-0ba0-4f2d-a0fc-32d2a597c0b0" msprop:DbColumnName="NUMERO_IDENTIDAD" msprop:FriendlyName="NUMERO_IDENTIDAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="EDAD_ACTUAL" msprop:design-time-name="27a6d8e6-a07e-425d-ae4f-6baa65d394bf" msprop:DbColumnName="EDAD_ACTUAL" msprop:FriendlyName="EDAD_ACTUAL" type="xs:short" />
+                  <xs:element name="DIRECCION_ACTUAL" msprop:design-time-name="bf4d9253-644c-452b-aace-ff9f11e7d01a" msprop:DbColumnName="DIRECCION_ACTUAL" msprop:FriendlyName="DIRECCION_ACTUAL" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INDICADOR_INGRESO" msprop:design-time-name="65d29e1d-e46e-4e99-ba95-63602c0ed5e7" msprop:DbColumnName="INDICADOR_INGRESO" msprop:FriendlyName="INDICADOR_INGRESO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INDICADOR_REGIONAL" msprop:design-time-name="53f269d4-6994-44df-abb3-241fb76e269b" msprop:DbColumnName="INDICADOR_REGIONAL" msprop:FriendlyName="INDICADOR_REGIONAL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PERIODO_INGRESO" msprop:design-time-name="428e611f-4b09-49e7-9f6b-9e32d81b4e34" msprop:DbColumnName="PERIODO_INGRESO" msprop:FriendlyName="PERIODO_INGRESO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LIBRETA_MILITAR" msprop:design-time-name="7bb734ee-d007-42d1-9cab-b4431a02b411" msprop:DbColumnName="LIBRETA_MILITAR" msprop:FriendlyName="LIBRETA_MILITAR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_CELULAR" msprop:design-time-name="cdafbc23-f34a-4169-bf12-02a95ecba107" msprop:DbColumnName="NUMERO_CELULAR" msprop:FriendlyName="NUMERO_CELULAR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FACTOR_RH" msprop:design-time-name="4bacb1c3-bb3e-4e14-ab11-a0cdde78feeb" msprop:DbColumnName="FACTOR_RH" msprop:FriendlyName="FACTOR_RH">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PENSUM_ACTUAL" msprop:design-time-name="20380393-9716-4f7f-86c5-b80bc4c21296" msprop:DbColumnName="PENSUM_ACTUAL" msprop:FriendlyName="PENSUM_ACTUAL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENFASIS" msprop:design-time-name="cc01fded-16f1-4fd2-8597-1ff99d782352" msprop:DbColumnName="ENFASIS" msprop:FriendlyName="ENFASIS" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GENERO" msprop:design-time-name="4fdbde17-e521-46d2-acad-c28b7c9b7652" msprop:DbColumnName="GENERO" msprop:FriendlyName="GENERO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TIPO_INSTITUCION" msprop:design-time-name="92caf6f8-4b9a-4879-9944-d2d7bc250245" msprop:DbColumnName="TIPO_INSTITUCION" msprop:FriendlyName="TIPO_INSTITUCION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INSTITUCION_PRIVADA" msprop:design-time-name="1b0f4439-8e1a-4af0-b3a8-b6697f10a430" msprop:DbColumnName="INSTITUCION_PRIVADA" msprop:FriendlyName="INSTITUCION_PRIVADA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INSTITUCION_PROCEDENCIA" msprop:design-time-name="dbaf8e62-8be9-48db-8c3f-5095d9d82338" msprop:DbColumnName="INSTITUCION_PROCEDENCIA" msprop:FriendlyName="INSTITUCION_PROCEDENCIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GRUPO_ETNICO" msprop:design-time-name="435b639d-354e-45af-9f7f-f760ae0c2af0" msprop:DbColumnName="GRUPO_ETNICO" msprop:FriendlyName="GRUPO_ETNICO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PUEBLO_COMUNIDAD" msprop:design-time-name="4d91f8ce-11f6-4796-8d6e-87f5d9635eba" msprop:DbColumnName="PUEBLO_COMUNIDAD" msprop:FriendlyName="PUEBLO_COMUNIDAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CAPACIDAD_EXCEPCIONAL" msprop:design-time-name="7a1093b3-a008-4194-bac2-f8b7803b5d7f" msprop:DbColumnName="CAPACIDAD_EXCEPCIONAL" msprop:FriendlyName="CAPACIDAD_EXCEPCIONAL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="BACHILLER_INDIGENA" msprop:design-time-name="467cf00f-5306-4ab1-8bd4-251ee6bf4d34" msprop:DbColumnName="BACHILLER_INDIGENA" msprop:FriendlyName="BACHILLER_INDIGENA" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ANDRES_BELLO" msprop:design-time-name="afe28dfe-2cc0-43c1-b235-dcd5204a230b" msprop:DbColumnName="ANDRES_BELLO" msprop:FriendlyName="ANDRES_BELLO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TIPO_ADMISION" msprop:design-time-name="d38adcb8-3149-473f-a9a7-f8f9fdf6f626" msprop:DbColumnName="TIPO_ADMISION" msprop:FriendlyName="TIPO_ADMISION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PUESTO_ADMISION" msprop:design-time-name="75e1319c-1f38-462d-818d-c3ff47d41797" msprop:DbColumnName="PUESTO_ADMISION" msprop:FriendlyName="PUESTO_ADMISION" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_LOCALIZACION" msprop:design-time-name="86d7959d-09ff-4c9b-960d-3e53eb31a328" msprop:DbTableName="LOCALIZACION" msprop:FriendlyName="LOCALIZACION" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="LOCALIZACION_ID" msprop:design-time-name="5e0cebbd-b40e-47e7-a637-f82ff34aa0b8" msprop:DbColumnName="LOCALIZACION_ID" msprop:FriendlyName="LOCALIZACION_ID" type="xs:long" />
+                  <xs:element name="PAIS" msprop:design-time-name="95418bb4-0dca-42a0-88d3-ebd7851ea497" msprop:DbColumnName="PAIS" msprop:FriendlyName="PAIS">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPARTAMENTO" msprop:design-time-name="8db5b715-91fa-4676-ba8e-8f5859dd5b9b" msprop:DbColumnName="DEPARTAMENTO" msprop:FriendlyName="DEPARTAMENTO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MUNICIPIO" msprop:design-time-name="8422fabc-91f4-43b0-899a-f10efd87cf42" msprop:DbColumnName="MUNICIPIO" msprop:FriendlyName="MUNICIPIO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CODIGO_MUNICIPIO" msprop:design-time-name="e86bc9ec-b2f9-42a9-8ba2-8be15f111dbe" msprop:DbColumnName="CODIGO_MUNICIPIO" msprop:FriendlyName="CODIGO_MUNICIPIO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS" msprop:design-time-name="c7c7df2d-7b32-4b12-ad91-3c3923b04e0a" msprop:DbTableName="DATOS_DEMOGRAFICOS" msprop:FriendlyName="DATOS_DEMOGRAFICOS" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DEMOGRAFIA_ID" msprop:design-time-name="8baf14ab-6e95-4eb9-84a4-c141887321aa" msprop:DbColumnName="DEMOGRAFIA_ID" msprop:FriendlyName="DEMOGRAFIA_ID" type="xs:long" />
+                  <xs:element name="RANGO_EDAD" msprop:design-time-name="3bb8223a-8420-4343-a508-ccda93e54cc6" msprop:DbColumnName="RANGO_EDAD" msprop:FriendlyName="RANGO_EDAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ESTADO_CIVIL" msprop:design-time-name="b90610ab-0cb4-4995-8057-00d5bbeb48e7" msprop:DbColumnName="ESTADO_CIVIL" msprop:FriendlyName="ESTADO_CIVIL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ACUDIENTE" msprop:design-time-name="e6cafd95-f61c-4164-8ea1-ba4fc7875e80" msprop:DbColumnName="ACUDIENTE" msprop:FriendlyName="ACUDIENTE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DISCAPACIDAD" msprop:design-time-name="878d9704-373f-47d5-b771-b8114d6540e0" msprop:DbColumnName="DISCAPACIDAD" msprop:FriendlyName="DISCAPACIDAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPORTISTA" msprop:design-time-name="50a8c56c-0d3a-462f-8108-03636a8212a6" msprop:DbColumnName="DEPORTISTA" msprop:FriendlyName="DEPORTISTA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_PREGUNTA" msprop:design-time-name="22e43365-cf58-4174-83bd-609cbf4cf1b3" msprop:DbTableName="PREGUNTA" msprop:FriendlyName="PREGUNTA" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PREGUNTA_ID" msprop:design-time-name="676b066a-2562-438a-9da6-5f3ba2b5a1af" msprop:DbColumnName="PREGUNTA_ID" msprop:FriendlyName="PREGUNTA_ID" type="xs:long" />
+                  <xs:element name="PREGUNTA" msprop:design-time-name="5a14aacf-4ff9-4e9b-8ba5-cc632212cf8c" msprop:DbColumnName="PREGUNTA" msprop:FriendlyName="PREGUNTA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="500" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_PREGUNTA" msprop:design-time-name="32ff342b-a388-4107-974e-b66b62a034ab" msprop:DbColumnName="NUMERO_PREGUNTA" msprop:FriendlyName="NUMERO_PREGUNTA" type="xs:unsignedByte" />
+                  <xs:element name="CATEGORIA" msprop:design-time-name="0f2482a6-7e4e-4474-986b-180c10136e80" msprop:DbColumnName="CATEGORIA" msprop:FriendlyName="CATEGORIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_DOCENTE" msprop:design-time-name="01fb63c1-5239-4a39-aa6b-44103c94a39c" msprop:DbTableName="DOCENTE" msprop:FriendlyName="DOCENTE" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DOCENTE_ID" msprop:design-time-name="10a00f6f-646b-4984-8106-8cfa95325258" msprop:DbColumnName="DOCENTE_ID" msprop:FriendlyName="DOCENTE_ID" type="xs:long" />
+                  <xs:element name="NOMBRE_COMPLETO" msprop:design-time-name="3e561e60-cc7f-46c5-a744-0c2edb32b868" msprop:DbColumnName="NOMBRE_COMPLETO" msprop:FriendlyName="NOMBRE_COMPLETO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="120" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_IDENTIDAD" msprop:design-time-name="311eca47-1844-4cb0-a39e-77c46cfa60a4" msprop:DbColumnName="NUMERO_IDENTIDAD" msprop:FriendlyName="NUMERO_IDENTIDAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPARTAMENTO" msprop:design-time-name="82c446a9-e6f3-4f1d-b578-748bd5120e34" msprop:DbColumnName="DEPARTAMENTO" msprop:FriendlyName="DEPARTAMENTO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SIGLA_FACULTAD" msprop:design-time-name="91b451d8-6a10-482c-8202-0ec718780327" msprop:DbColumnName="SIGLA_FACULTAD" msprop:FriendlyName="SIGLA_FACULTAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="GENERO" msprop:design-time-name="a8924c5f-4225-48c2-9b3c-e42fbddccac0" msprop:DbColumnName="GENERO" msprop:FriendlyName="GENERO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CORREO" msprop:design-time-name="c00ac496-abf1-455d-8154-de8b130c110c" msprop:DbColumnName="CORREO" msprop:FriendlyName="CORREO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="80" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUMERO_TELEFONO" msprop:design-time-name="1d43cd22-2ddd-45d2-a139-b99f84d0faab" msprop:DbColumnName="NUMERO_TELEFONO" msprop:FriendlyName="NUMERO_TELEFONO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CELULAR" msprop:design-time-name="a71b9c3e-3b92-41d7-aded-478127570dce" msprop:DbColumnName="CELULAR" msprop:FriendlyName="CELULAR" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LUGAR_NACIMIENTO_ID" msprop:design-time-name="c20fe75d-a5cc-4108-9a16-5c49903d0fb0" msprop:DbColumnName="LUGAR_NACIMIENTO_ID" msprop:FriendlyName="LUGAR_NACIMIENTO_ID" type="xs:long" />
+                  <xs:element name="LUGAR_PROCEDENCIA_ID" msprop:design-time-name="f1cdc691-7ca4-48b6-a3c8-530fa1cc382f" msprop:DbColumnName="LUGAR_PROCEDENCIA_ID" msprop:FriendlyName="LUGAR_PROCEDENCIA_ID" type="xs:long" />
+                  <xs:element name="ACTUAL" msprop:design-time-name="6f7d3f89-d334-4743-89f5-1110caf36afb" msprop:DbColumnName="ACTUAL" msprop:FriendlyName="ACTUAL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FECHA_EFECTIVA" msprop:design-time-name="1f92fa53-a652-410e-9a7b-e7d05e481984" msprop:DbColumnName="FECHA_EFECTIVA" msprop:FriendlyName="FECHA_EFECTIVA" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="FECHA_EXPIRACION" msprop:design-time-name="c201adf4-c5cd-4d98-84e5-b257ce5d3b68" msprop:DbColumnName="FECHA_EXPIRACION" msprop:FriendlyName="FECHA_EXPIRACION" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_PROGRAMA" msprop:design-time-name="4bc07c12-4ef7-49b9-b7ce-7d1ca8dd2005" msprop:DbTableName="PROGRAMA" msprop:FriendlyName="PROGRAMA" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PROGRAMA_ID" msprop:design-time-name="ca9e19a3-2f27-436a-b061-19c7a9cc18ce" msprop:DbColumnName="PROGRAMA_ID" msprop:FriendlyName="PROGRAMA_ID" type="xs:long" />
+                  <xs:element name="NOMBRE" msprop:design-time-name="3ef2b03d-de51-4de8-98e1-5b714caf3824" msprop:DbColumnName="NOMBRE" msprop:FriendlyName="NOMBRE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SIGLA_FACULTAD" msprop:design-time-name="2afb44c0-5387-4bcd-beef-76d9f7eea22e" msprop:DbColumnName="SIGLA_FACULTAD" msprop:FriendlyName="SIGLA_FACULTAD">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="JORNADA" msprop:design-time-name="35dc58c4-dc01-4543-8d6a-0900a4c902e0" msprop:DbColumnName="JORNADA" msprop:FriendlyName="JORNADA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DURACION" msprop:design-time-name="a0e83c88-d273-406f-b173-57f87c0d75ee" msprop:DbColumnName="DURACION" msprop:FriendlyName="DURACION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="METODOLOGIA" msprop:design-time-name="542ebcc8-d8b1-4601-abc6-484ee634da37" msprop:DbColumnName="METODOLOGIA" msprop:FriendlyName="METODOLOGIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="INDICADOR_REGIONAL" msprop:design-time-name="419117b7-1b29-4d97-a5a7-e082bde95762" msprop:DbColumnName="INDICADOR_REGIONAL" msprop:FriendlyName="INDICADOR_REGIONAL">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PREFIJO_CODIGO" msprop:design-time-name="dd2f5c7d-ca8f-4c0f-85ae-122db8eed928" msprop:DbColumnName="PREFIJO_CODIGO" msprop:FriendlyName="PREFIJO_CODIGO" type="xs:unsignedByte" />
+                  <xs:element name="ADMISION" msprop:design-time-name="aa1fdb1a-b705-4f30-a519-debcded2a431" msprop:DbColumnName="ADMISION" msprop:FriendlyName="ADMISION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FASE_ACREDITACION" msprop:design-time-name="d5fe0907-76cc-40ce-9aa0-c2021f81b00f" msprop:DbColumnName="FASE_ACREDITACION" msprop:FriendlyName="FASE_ACREDITACION" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AREA_CONOCIMIENTO" msprop:design-time-name="4d2ee428-4e2e-4630-8c7c-9e7297e995cb" msprop:DbColumnName="AREA_CONOCIMIENTO" msprop:FriendlyName="AREA_CONOCIMIENTO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SNIES_PROGRAMA" msprop:design-time-name="fe26a3fc-0587-4a1f-ade8-1ebdcae4634e" msprop:DbColumnName="SNIES_PROGRAMA" msprop:FriendlyName="SNIES_PROGRAMA" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SNIES_MUNICIPIO" msprop:design-time-name="acc8e087-90cd-49bd-80ba-b27ea19f0b06" msprop:DbColumnName="SNIES_MUNICIPIO" msprop:FriendlyName="SNIES_MUNICIPIO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="8" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="SEDE" msprop:design-time-name="48420aed-fa5f-4d25-854a-ed0b3ff18247" msprop:DbColumnName="SEDE" msprop:FriendlyName="SEDE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NUCLEO_BASICO" msprop:design-time-name="d697a1d1-7007-43cf-ad88-23501c7344a1" msprop:DbColumnName="NUCLEO_BASICO" msprop:FriendlyName="NUCLEO_BASICO" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_PERIODO" msprop:design-time-name="0992577b-0214-4007-9fec-ee04d34360ce" msprop:DbTableName="PERIODO" msprop:FriendlyName="PERIODO" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PERIODO_ID" msprop:design-time-name="ec8a067a-bbb4-44e3-929a-b06455815868" msprop:DbColumnName="PERIODO_ID" msprop:FriendlyName="PERIODO_ID" type="xs:long" />
+                  <xs:element name="PERIODO_COMPLETO" msprop:design-time-name="8a287de4-ad89-4f78-96ae-9c9c6736c483" msprop:DbColumnName="PERIODO_COMPLETO" msprop:FriendlyName="PERIODO_COMPLETO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AÑO" msprop:design-time-name="f1671692-6633-4d8e-8827-acaf370e524f" msprop:DbColumnName="AÑO" msprop:FriendlyName="AÑO" type="xs:int" />
+                  <xs:element name="PERIODO" msprop:design-time-name="b629d656-a0b7-49bb-85ba-6808f41801fa" msprop:DbColumnName="PERIODO" msprop:FriendlyName="PERIODO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FECHA_INICIO" msprop:design-time-name="6ca6c59a-1b86-44b6-8259-a307433cd55c" msprop:DbColumnName="FECHA_INICIO" msprop:FriendlyName="FECHA_INICIO" type="xs:dateTime" />
+                  <xs:element name="FECHA_FIN" msprop:design-time-name="bbf00aed-c924-4870-bb9d-76417bdd2b88" msprop:DbColumnName="FECHA_FIN" msprop:FriendlyName="FECHA_FIN" type="xs:dateTime" />
+                  <xs:element name="TIPO_PERIODO" msprop:design-time-name="c20b155e-1bb1-4de7-81ea-6207fcf4fd92" msprop:DbColumnName="TIPO_PERIODO" msprop:FriendlyName="TIPO_PERIODO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_DATOS_AD_MATERIA" msprop:design-time-name="fb17aab2-a673-46ca-8b6d-7e7a9ca2daf0" msprop:DbTableName="DATOS_AD_MATERIA" msprop:FriendlyName="DATOS_AD_MATERIA" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="MATER_AD_ID" msprop:design-time-name="c235ba9b-62b8-48f6-8a15-ef2c86c3616b" msprop:DbColumnName="MATER_AD_ID" msprop:FriendlyName="MATER_AD_ID" type="xs:long" />
+                  <xs:element name="SEMESTRE_MATERIA" msprop:design-time-name="22a7f168-965b-472e-9e29-90e3d6a0c6c3" msprop:DbColumnName="SEMESTRE_MATERIA" msprop:FriendlyName="SEMESTRE_MATERIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CREDITOS_MATERIA" msprop:design-time-name="0c114c1a-b74a-4af9-9a49-60ca7214f6ea" msprop:DbColumnName="CREDITOS_MATERIA" msprop:FriendlyName="CREDITOS_MATERIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="HORAS_SEMANA" msprop:design-time-name="4a3a92c0-e1e2-498e-9945-00d97710a0d9" msprop:DbColumnName="HORAS_SEMANA" msprop:FriendlyName="HORAS_SEMANA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="MAXIMO_FALTAS" msprop:design-time-name="2f3f9c49-e460-4936-baf7-6ad43de85acd" msprop:DbColumnName="MAXIMO_FALTAS" msprop:FriendlyName="MAXIMO_FALTAS" type="xs:unsignedByte" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_SEMESTRE" msprop:design-time-name="ec1283bc-f0d6-4255-9f77-a2a0a79560b0" msprop:DbTableName="SEMESTRE" msprop:FriendlyName="SEMESTRE" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SEMESTRE_ID" msprop:design-time-name="cd4032b2-f1e5-471f-9cbe-b7049ce99d17" msprop:DbColumnName="SEMESTRE_ID" msprop:FriendlyName="SEMESTRE_ID" type="xs:long" />
+                  <xs:element name="SEMESTRE" msprop:design-time-name="87134792-f4e9-4c5e-acf1-fbf690196377" msprop:DbColumnName="SEMESTRE" msprop:FriendlyName="SEMESTRE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PROMEDIO_SEMESTRE" msprop:design-time-name="9d3f2077-f53d-491c-95a2-3071bd29aeab" msprop:DbColumnName="PROMEDIO_SEMESTRE" msprop:FriendlyName="PROMEDIO_SEMESTRE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PROMEDIO_CARRERA" msprop:design-time-name="9802c7d2-7e19-4129-8fae-80b445eaf5f1" msprop:DbColumnName="PROMEDIO_CARRERA" msprop:FriendlyName="PROMEDIO_CARRERA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ESTADO_ESTUDIANTE" msprop:design-time-name="ccd22237-cddd-43fb-832b-db5f0876f2c7" msprop:DbColumnName="ESTADO_ESTUDIANTE" msprop:FriendlyName="ESTADO_ESTUDIANTE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CALIFICACION_SEMESTRE" msprop:design-time-name="12ba1aac-184c-4829-ac12-9a4d26ef4660" msprop:DbColumnName="CALIFICACION_SEMESTRE" msprop:FriendlyName="CALIFICACION_SEMESTRE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CALIFICACION_CARRERA" msprop:design-time-name="0382caf0-14ba-430c-9d9e-45eb41cfb456" msprop:DbColumnName="CALIFICACION_CARRERA" msprop:FriendlyName="CALIFICACION_CARRERA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="REINGRESO" msprop:design-time-name="9c533a36-b5c3-4eee-9aaa-6c867de453cd" msprop:DbColumnName="REINGRESO" msprop:FriendlyName="REINGRESO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="30" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_TIPO_CONTRATACION" msprop:design-time-name="891c8441-fcf4-4b1c-b11a-574a8f2a1e94" msprop:DbTableName="TIPO_CONTRATACION" msprop:FriendlyName="TIPO_CONTRATACION" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CONTRATACION_ID" msprop:design-time-name="93d3708e-f8ec-427c-8da7-a98978fbc6b8" msprop:DbColumnName="CONTRATACION_ID" msprop:FriendlyName="CONTRATACION_ID" type="xs:long" />
+                  <xs:element name="TIPO_CONTRATO" msprop:design-time-name="56b22383-bc95-4cf1-9d58-1cea523928b1" msprop:DbColumnName="TIPO_CONTRATO" msprop:FriendlyName="TIPO_CONTRATO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEDICACION" msprop:design-time-name="0e1afbc8-de9e-4170-8a16-4ac61fd0bf1f" msprop:DbColumnName="DEDICACION" msprop:FriendlyName="DEDICACION">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="25" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NIVELES_ESTUDIO" msprop:design-time-name="e9a29371-4899-4ade-ad19-c8197182846b" msprop:DbColumnName="NIVELES_ESTUDIO" msprop:FriendlyName="NIVELES_ESTUDIO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CATEGORIA" msprop:design-time-name="7d601549-c31e-425a-b18f-dc91a7232f46" msprop:DbColumnName="CATEGORIA" msprop:FriendlyName="CATEGORIA">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="DW_ACADEMICO_LABOR_RANGO" msprop:design-time-name="8b6074ff-2719-4f30-a81b-de41f17969ea" msprop:DbTableName="RANGO" msprop:FriendlyName="RANGO" msprop:DbSchemaName="DW_ACADEMICO_LABOR" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="RANGO_ID" msprop:design-time-name="926c7b03-84bf-41c0-abbc-3bc10ac5b1dc" msprop:DbColumnName="RANGO_ID" msprop:FriendlyName="RANGO_ID" type="xs:long" />
+                  <xs:element name="NOMBRE_RANGO" msprop:design-time-name="b0f760fd-9c04-4ead-9a5a-b7183f7bf21f" msprop:DbColumnName="NOMBRE_RANGO" msprop:FriendlyName="NOMBRE_RANGO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="15" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="RANGO" msprop:design-time-name="16c6c649-8bb5-42fd-b5bf-ba4be823d686" msprop:DbColumnName="RANGO" msprop:FriendlyName="RANGO">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="LIMITE_INFERIOR" msprop:design-time-name="0e4e61be-e073-4d03-85b1-32e3bcdcfe7d" msprop:DbColumnName="LIMITE_INFERIOR" msprop:FriendlyName="LIMITE_INFERIOR" type="xs:short" />
+                  <xs:element name="LIMITE_SUPERIOR" msprop:design-time-name="1add1211-f135-492b-83ac-ea09f535f88e" msprop:DbColumnName="LIMITE_SUPERIOR" msprop:FriendlyName="LIMITE_SUPERIOR" type="xs:short" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DOCENTE_ID" />
+          <xs:field xpath="JEFE_DEPARTAMENTO_ID" />
+          <xs:field xpath="DECANO_ID" />
+          <xs:field xpath="RANGO_ID" />
+          <xs:field xpath="PREGUNTA_ID" />
+          <xs:field xpath="CUESTIONARIO_ID" />
+          <xs:field xpath="FUENTE_EVALUACION_ID" />
+          <xs:field xpath="PERIODO_ID" />
+          <xs:field xpath="DEMOGRAFIA_DOCENTE_ID" />
+          <xs:field xpath="DEMOGRAFIA_ESTUDIANTE_ID" />
+          <xs:field xpath="DEM_ECO_DOC_ID" />
+          <xs:field xpath="DEM_ECO_EST_ID" />
+          <xs:field xpath="PROGRAMA_ID" />
+          <xs:field xpath="PENSUM_EST_ID" />
+          <xs:field xpath="PENSUM_MAT_ID" />
+          <xs:field xpath="MATER_AD_ID" />
+          <xs:field xpath="MATERIA_ID" />
+          <xs:field xpath="CONTRATACION_ID" />
+          <xs:field xpath="SEMESTRE_ID" />
+          <xs:field xpath="INDEST_ID" />
+          <xs:field xpath="ESTUDIANTE_ID" />
+          <xs:field xpath="LUGAR_RESIDENCIA_DOC_ID" />
+          <xs:field xpath="LUGAR_RESIDENCIA_EST_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_PENSUM_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_PENSUM" />
+          <xs:field xpath="PENSUM_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS" />
+          <xs:field xpath="DEM_ECONOMICOS_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES" />
+          <xs:field xpath="INDEST_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_FUENTE_EVALUACION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_FUENTE_EVALUACION" />
+          <xs:field xpath="FUENTE_EVALUACION_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_CUESTIONARIO_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_CUESTIONARIO" />
+          <xs:field xpath="CUESTIONARIO_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_MATERIA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_MATERIA" />
+          <xs:field xpath="MATERIA_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_ESTUDIANTE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_ESTUDIANTE" />
+          <xs:field xpath="ESTUDIANTE_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_LOCALIZACION" />
+          <xs:field xpath="LOCALIZACION_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS" />
+          <xs:field xpath="DEMOGRAFIA_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_PREGUNTA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_PREGUNTA" />
+          <xs:field xpath="PREGUNTA_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_DOCENTE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_DOCENTE" />
+          <xs:field xpath="DOCENTE_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_PROGRAMA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_PROGRAMA" />
+          <xs:field xpath="PROGRAMA_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_PERIODO_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_PERIODO" />
+          <xs:field xpath="PERIODO_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_DATOS_AD_MATERIA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_DATOS_AD_MATERIA" />
+          <xs:field xpath="MATER_AD_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_SEMESTRE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_SEMESTRE" />
+          <xs:field xpath="SEMESTRE_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_TIPO_CONTRATACION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_TIPO_CONTRATACION" />
+          <xs:field xpath="CONTRATACION_ID" />
+        </xs:unique>
+        <xs:unique name="DW_ACADEMICO_LABOR_RANGO_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_RANGO" />
+          <xs:field xpath="RANGO_ID" />
+        </xs:unique>
+        <xs:keyref name="DOCENTE_NACIMIENTO_FK" refer="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_DOCENTE" />
+          <xs:field xpath="LUGAR_NACIMIENTO_ID" />
+        </xs:keyref>
+        <xs:keyref name="DOCENTE_PROCEDENCIA_FK" refer="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_DOCENTE" />
+          <xs:field xpath="LUGAR_PROCEDENCIA_ID" />
+        </xs:keyref>
+        <xs:keyref name="ESTUDIANTE_PROCEDENCIA_FK" refer="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_ESTUDIANTE" />
+          <xs:field xpath="LUGAR_PROCEDENCIA_ID" />
+        </xs:keyref>
+        <xs:keyref name="ESTUDIANTE_NACIMIENTO_FK" refer="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_ESTUDIANTE" />
+          <xs:field xpath="LUGAR_NACIMIENTO_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_INDEST_FK" refer="DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="INDEST_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_LRES_DOC_FK" refer="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="LUGAR_RESIDENCIA_DOC_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_ESTUD_FK" refer="DW_ACADEMICO_LABOR_ESTUDIANTE_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="ESTUDIANTE_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_DECO_DOC_FK" refer="DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DEM_ECO_DOC_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_DEM_DOC_FK" refer="DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DEMOGRAFIA_DOCENTE_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_PEN_MAT_FK" refer="DW_ACADEMICO_LABOR_PENSUM_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="PENSUM_MAT_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_MATERIA_FK" refer="DW_ACADEMICO_LABOR_MATERIA_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="MATERIA_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_PEN_EST_FK" refer="DW_ACADEMICO_LABOR_PENSUM_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="PENSUM_EST_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_JEFE_FK" refer="DW_ACADEMICO_LABOR_DOCENTE_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="JEFE_DEPARTAMENTO_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_DEM_EST_FK" refer="DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DEMOGRAFIA_ESTUDIANTE_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_CUESTION_FK" refer="DW_ACADEMICO_LABOR_CUESTIONARIO_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="CUESTIONARIO_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_DOC_FK" refer="DW_ACADEMICO_LABOR_DOCENTE_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DOCENTE_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_PERIODO_FK" refer="DW_ACADEMICO_LABOR_PERIODO_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="PERIODO_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_DECANO_FK" refer="DW_ACADEMICO_LABOR_DOCENTE_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DECANO_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_MATER_AD_FK" refer="DW_ACADEMICO_LABOR_DATOS_AD_MATERIA_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="MATER_AD_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_LRES_EST_FK" refer="DW_ACADEMICO_LABOR_LOCALIZACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="LUGAR_RESIDENCIA_EST_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_PROGRAMA_FK" refer="DW_ACADEMICO_LABOR_PROGRAMA_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="PROGRAMA_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_SEMESTRE_FK" refer="DW_ACADEMICO_LABOR_SEMESTRE_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="SEMESTRE_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_DECO_EST_FK" refer="DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="DEM_ECO_EST_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_CONTRAT_FK" refer="DW_ACADEMICO_LABOR_TIPO_CONTRATACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="CONTRATACION_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_PREGUNTA_FK" refer="DW_ACADEMICO_LABOR_PREGUNTA_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="PREGUNTA_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_FUENTE_FK" refer="DW_ACADEMICO_LABOR_FUENTE_EVALUACION_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="FUENTE_EVALUACION_ID" />
+        </xs:keyref>
+        <xs:keyref name="HECHO_ENCUESTA_DOC_RANGO_FK" refer="DW_ACADEMICO_LABOR_RANGO_Constraint1">
+          <xs:selector xpath=".//DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" />
+          <xs:field xpath="RANGO_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <DW_x0020_Academico_x0020_Labor xmlns="" />
+  </Schema>
+</DataSourceView>

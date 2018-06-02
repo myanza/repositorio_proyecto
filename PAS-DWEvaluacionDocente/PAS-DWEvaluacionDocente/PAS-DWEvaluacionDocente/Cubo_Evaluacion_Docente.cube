@@ -1,0 +1,2075 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6018aef3-7ee2-4565-b8b9-3e91b22ad5e3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Cubo_Evaluacion_Docente</ID>
+  <Name>Cubo_Evaluacion_Docente</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="46" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="8607" scrolltop="11009" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="14314" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="HECHO_ENCUESTA_DOCENCIA" left="16723" top="15300" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5530" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00009a15000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="MATERIA" left="9031" top="21272" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="5292" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000ac14000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_MATERIA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="INDICADORES_ESTUDIANTES" left="10090" top="14453" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4233" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00008910000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PROGRAMA" left="24653" top="18498" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4419" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00004311000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_PROGRAMA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_AD_MATERIA" left="34749" top="1852" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="4207" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00006f1000004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DATOS_AD_MATERIA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="TIPO_CONTRATACION" left="28433" top="1852" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3916" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00004c0f00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_TIPO_CONTRATACION" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="CUESTIONARIO" left="24653" top="25898" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="5133" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00000d140000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_CUESTIONARIO" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_DEMOGRAFICOS" left="24653" top="7401" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3545" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000d90d0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DEMOGRAFIA_DATOS_ECONOMICOS" left="7276" top="30599" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="4366" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00000e1100009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PENSUM" left="10275" top="9328" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="4048" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000d00f0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_PENSUM" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="SEMESTRE" left="20226" top="30599" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="4842" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000ea12000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_SEMESTRE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="ESTUDIANTE" left="13631" top="1" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="5239" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00007714000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_ESTUDIANTE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="LOCALIZACION" left="7262" top="926" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="3969" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000810f00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_LOCALIZACION" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PERIODO" left="27468" top="30599" logicalid="14" controlid="14" masterid="0" hint1="0" hint2="0" width="4233" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000891000009b0f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_PERIODO" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PREGUNTA" left="24653" top="13373" logicalid="15" controlid="15" masterid="0" hint1="0" hint2="0" width="4233" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c000089100000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_PREGUNTA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FUENTE_EVALUACION" left="21270" top="2699" logicalid="16" controlid="16" masterid="0" hint1="0" hint2="0" width="4763" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00009b120000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_FUENTE_EVALUACION" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="RANGO" left="14042" top="30599" logicalid="17" controlid="17" masterid="0" hint1="0" hint2="0" width="3784" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000c80e00004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_RANGO" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE" left="20" top="1" logicalid="18" controlid="18" masterid="0" hint1="0" hint2="0" width="4842" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000ea12000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DOCENTE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15535" top="20000" logicalid="19" controlid="19" masterid="0" hint1="0" hint2="0" width="4253" height="11099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_RANGO_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="17" destid="1" sourceattachpoint="6" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="15934" y="30599" />
+              <point x="15934" y="25450" />
+              <point x="19488" y="25450" />
+              <point x="19488" y="20300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="20288" top="4502" logicalid="20" controlid="20" masterid="0" hint1="0" hint2="0" width="3763" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_FUENTE_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="16" destid="1" sourceattachpoint="9" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="23651" y="5001" />
+              <point x="23651" y="10150" />
+              <point x="20588" y="10150" />
+              <point x="20588" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21953" top="14336" logicalid="21" controlid="21" masterid="0" hint1="0" hint2="0" width="3000" height="3764" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_PREGUNTA_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="1" sourceattachpoint="18" destattachpoint="27" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24653" y="14735" />
+              <point x="23453" y="14735" />
+              <point x="23453" y="17800" />
+              <point x="22253" y="17800" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="20838" top="4502" logicalid="22" controlid="22" masterid="0" hint1="0" hint2="0" width="9953" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_CONTRAT_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="7" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="30391" y="5001" />
+              <point x="30391" y="10150" />
+              <point x="21138" y="10150" />
+              <point x="21138" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9610" top="20000" logicalid="23" controlid="23" masterid="0" hint1="0" hint2="0" width="9628" height="11099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_DECO_EST_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="1" sourceattachpoint="8" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10009" y="30599" />
+              <point x="10009" y="25450" />
+              <point x="18938" y="25450" />
+              <point x="18938" y="20300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="19738" top="20000" logicalid="24" controlid="24" masterid="0" hint1="0" hint2="0" width="3309" height="11099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_SEMESTRE_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="1" sourceattachpoint="8" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="22647" y="30599" />
+              <point x="22647" y="25450" />
+              <point x="20038" y="25450" />
+              <point x="20038" y="20300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21953" top="18050" logicalid="25" controlid="25" masterid="0" hint1="0" hint2="0" width="3000" height="3348" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_PROGRAMA_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="22" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24653" y="20998" />
+              <point x="23453" y="20998" />
+              <point x="23453" y="18350" />
+              <point x="22253" y="18350" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9397" top="3576" logicalid="26" controlid="26" masterid="0" hint1="0" hint2="0" width="10391" height="12024" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_LRES_EST_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="1" sourceattachpoint="9" destattachpoint="8" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9796" y="4075" />
+              <point x="9796" y="9687" />
+              <point x="19488" y="9687" />
+              <point x="19488" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21388" top="4502" logicalid="27" controlid="27" masterid="0" hint1="0" hint2="0" width="15864" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_MATER_AD_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="7" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="36852" y="5001" />
+              <point x="36852" y="10150" />
+              <point x="21688" y="10150" />
+              <point x="21688" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="392" top="4502" logicalid="28" controlid="28" masterid="0" hint1="0" hint2="0" width="17196" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_DECANO_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="18" destid="1" sourceattachpoint="3" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="791" y="5001" />
+              <point x="791" y="10150" />
+              <point x="17288" y="10150" />
+              <point x="17288" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="20838" top="20000" logicalid="29" controlid="29" masterid="0" hint1="0" hint2="0" width="9146" height="11099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_PERIODO_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="14" destid="1" sourceattachpoint="6" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="29584" y="30599" />
+              <point x="29584" y="25450" />
+              <point x="21138" y="25450" />
+              <point x="21138" y="20300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3692" top="4502" logicalid="30" controlid="30" masterid="0" hint1="0" hint2="0" width="15546" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_DOC_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="18" destid="1" sourceattachpoint="15" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4091" y="5001" />
+              <point x="4091" y="10150" />
+              <point x="18938" y="10150" />
+              <point x="18938" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21953" top="19150" logicalid="31" controlid="31" masterid="0" hint1="0" hint2="0" width="3000" height="8299" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_CUESTION_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="20" destattachpoint="33" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24653" y="27049" />
+              <point x="23453" y="27049" />
+              <point x="23453" y="19450" />
+              <point x="22253" y="19450" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21953" top="9338" logicalid="32" controlid="32" masterid="0" hint1="0" hint2="0" width="3000" height="8212" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_DEM_EST_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="22" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24653" y="9737" />
+              <point x="23453" y="9737" />
+              <point x="23453" y="17250" />
+              <point x="22253" y="17250" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2042" top="4502" logicalid="33" controlid="33" masterid="0" hint1="0" hint2="0" width="16646" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_JEFE_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="18" destid="1" sourceattachpoint="9" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2441" y="5001" />
+              <point x="2441" y="10150" />
+              <point x="18388" y="10150" />
+              <point x="18388" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14023" top="10841" logicalid="34" controlid="34" masterid="0" hint1="0" hint2="0" width="3000" height="6709" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_PEN_EST_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="1" sourceattachpoint="21" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14323" y="11240" />
+              <point x="15523" y="11240" />
+              <point x="15523" y="17250" />
+              <point x="16723" y="17250" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14023" top="18050" logicalid="35" controlid="35" masterid="0" hint1="0" hint2="0" width="3000" height="6122" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_MATERIA_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="27" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14323" y="23772" />
+              <point x="15523" y="23772" />
+              <point x="15523" y="18350" />
+              <point x="16723" y="18350" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14023" top="9191" logicalid="36" controlid="36" masterid="0" hint1="0" hint2="0" width="3000" height="7809" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_PEN_MAT_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="1" sourceattachpoint="15" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14323" y="9590" />
+              <point x="15523" y="9590" />
+              <point x="15523" y="16700" />
+              <point x="16723" y="16700" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="21953" top="7688" logicalid="37" controlid="37" masterid="0" hint1="0" hint2="0" width="3000" height="9312" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_DEM_DOC_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="16" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="24653" y="8087" />
+              <point x="23453" y="8087" />
+              <point x="23453" y="16700" />
+              <point x="22253" y="16700" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7960" top="20000" logicalid="38" controlid="38" masterid="0" hint1="0" hint2="0" width="10728" height="11099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_DECO_DOC_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="1" sourceattachpoint="2" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8359" y="30599" />
+              <point x="8359" y="25450" />
+              <point x="18388" y="25450" />
+              <point x="18388" y="20300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15851" top="4502" logicalid="39" controlid="39" masterid="0" hint1="0" hint2="0" width="2287" height="11098" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_ESTUD_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="1" sourceattachpoint="9" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16250" y="5001" />
+              <point x="16250" y="10150" />
+              <point x="17838" y="10150" />
+              <point x="17838" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7747" top="3576" logicalid="40" controlid="40" masterid="0" hint1="0" hint2="0" width="12591" height="12024" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_LRES_DOC_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="1" sourceattachpoint="3" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8146" y="4075" />
+              <point x="8146" y="9687" />
+              <point x="20038" y="9687" />
+              <point x="20038" y="15300" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14023" top="16263" logicalid="41" controlid="41" masterid="0" hint1="0" hint2="0" width="3000" height="1837" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[HECHO_ENCUESTA_DOC_INDEST_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="21" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14323" y="16662" />
+              <point x="15523" y="16662" />
+              <point x="15523" y="17800" />
+              <point x="16723" y="17800" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10931" top="1001" logicalid="42" controlid="42" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[ESTUDIANTE_NACIMIENTO_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="12" sourceattachpoint="15" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11231" y="1400" />
+              <point x="12431" y="1400" />
+              <point x="12431" y="1401" />
+              <point x="13631" y="1401" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10931" top="2651" logicalid="43" controlid="43" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[ESTUDIANTE_PROCEDENCIA_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="12" sourceattachpoint="21" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11231" y="3050" />
+              <point x="12431" y="3050" />
+              <point x="12431" y="3051" />
+              <point x="13631" y="3051" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4562" top="1001" logicalid="44" controlid="44" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DOCENTE_PROCEDENCIA_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="18" sourceattachpoint="14" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7262" y="1400" />
+              <point x="6062" y="1400" />
+              <point x="6062" y="1401" />
+              <point x="4862" y="1401" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4562" top="2651" logicalid="45" controlid="45" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[DOCENTE_NACIMIENTO_FK]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="18" sourceattachpoint="20" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7262" y="3050" />
+              <point x="6062" y="3050" />
+              <point x="6062" y="3051" />
+              <point x="4862" y="3051" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>8607</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>11009</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>1</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="72ef3609-d35d-46cd-91d5-c4aa260c0000">
+      <ID>RANGO</ID>
+      <Name>RANGO</Name>
+      <DimensionID>RANGO</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="64d8ffd6-cb5f-4bdf-9c07-7c805a382646">
+          <AttributeID>RANGO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b227436b-4673-49bd-a318-ffee45a056f9">
+          <AttributeID>NOMBRE RANGO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a1bf6de6-b275-491d-8aa5-c355e8fdc8bd">
+          <AttributeID>RANGO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07721eb3-bdae-41dc-b6c1-c38aef209aa1">
+          <AttributeID>LIMITE INFERIOR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97e85115-fe08-45f5-aa8c-01e6a150b8d1">
+          <AttributeID>LIMITE SUPERIOR</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a857da5e-0bd6-4f76-82f6-ea72795e54f8">
+      <ID>FUENTE EVALUACION</ID>
+      <Name>FUENTE EVALUACION</Name>
+      <DimensionID>FUENTE EVALUACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5833c92b-5d00-4ff0-8c4c-75dadabfbd28">
+          <AttributeID>FUENTE EVALUACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e1808c1-8b99-4455-aa4f-619dcfddcdbb">
+          <AttributeID>NOMBRE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e4f4972-e362-4095-9ded-ea88379798ee">
+          <AttributeID>CATEGORIA</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3180b3eb-ea4f-4757-a348-ba4276fab2d5">
+      <ID>PREGUNTA</ID>
+      <Name>PREGUNTA</Name>
+      <DimensionID>PREGUNTA</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ae39aefc-127b-48e8-9a6d-9c734fd6715d">
+          <AttributeID>PREGUNTA ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd6fe75a-2507-48c4-a395-82bce78b9977">
+          <AttributeID>PREGUNTA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="647a5753-57a5-4fa8-8048-a9f66c92789a">
+          <AttributeID>NUMERO PREGUNTA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="33cac417-9cfd-4421-894e-03f5b5b60b8d">
+          <AttributeID>CATEGORIA</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="71045d97-5d52-4ef5-a5e6-766f9523a2df">
+      <ID>TIPO CONTRATACION</ID>
+      <Name>TIPO CONTRATACION</Name>
+      <DimensionID>TIPO CONTRATACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="466cb774-5f06-47a0-b4cd-9ca2e02bfcca">
+          <AttributeID>CONTRATACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="feeac25a-a4f2-43e3-837b-649e667c1043">
+          <AttributeID>TIPO CONTRATO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d163acc-0b61-44e8-80fe-efc88bcaaaa0">
+          <AttributeID>DEDICACION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b69d0bc3-b905-4369-ab68-1bda280a7d27">
+          <AttributeID>NIVELES ESTUDIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca444eb8-76ac-4d34-a1d2-1f999e030d60">
+          <AttributeID>CATEGORIA</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="14f284e9-969f-4cdc-b116-7fbbcf8c4e1a">
+      <ID>DEM ECO EST</ID>
+      <Name>DEM ECO EST</Name>
+      <DimensionID>DEMOGRAFIA DATOS ECONOMICOS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="6f1c4c71-5c03-4901-b6dc-14ccb0bd00d3">
+          <AttributeID>DEM ECONOMICOS ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c5b1458-6c73-4c6d-834d-95e65b17bf77">
+          <AttributeID>ESTRATO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="823af44b-a9f6-42f1-9f7e-4b70f62cb49f">
+          <AttributeID>NUMERO HERMANOS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7087b887-641f-43b3-9fbf-15c229da9a1f">
+          <AttributeID>POSICION HERMANOS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6e28ce69-2bae-463c-9a33-66f36f5f95d9">
+          <AttributeID>VIVIENDA PROPIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="972f7478-bf94-4a10-a7ee-cc939961e815">
+          <AttributeID>DESPLAZADO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19e890f3-bc86-4772-aef2-4225c7fc3051">
+          <AttributeID>MADRE CABEZA</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="abad6cb6-b460-472a-be48-04e984f8e75a">
+      <ID>SEMESTRE</ID>
+      <Name>SEMESTRE</Name>
+      <DimensionID>SEMESTRE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="594eccff-e395-461f-8f3a-6ab16dca3add">
+          <AttributeID>SEMESTRE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0bb13e0-5fc9-4c21-b7b3-711052c93367">
+          <AttributeID>SEMESTRE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83d67387-c449-4260-9c97-a106e5052d9c">
+          <AttributeID>PROMEDIO SEMESTRE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a12074dc-1489-452f-8c21-be08e3fd0903">
+          <AttributeID>PROMEDIO CARRERA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a531e2b7-fa80-4292-b0b5-d83c0aebf066">
+          <AttributeID>ESTADO ESTUDIANTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0893dd54-bbcc-4287-82bc-f7541dc7ba7c">
+          <AttributeID>CALIFICACION SEMESTRE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81e432c1-c5df-47d0-836f-1110997d0374">
+          <AttributeID>CALIFICACION CARRERA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="50340c7e-2479-4854-ba71-bd3e817d689a">
+          <AttributeID>REINGRESO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="6bbe28c7-2cd3-4124-84f4-f6dab93a3fa2">
+      <ID>PROGRAMA</ID>
+      <Name>PROGRAMA</Name>
+      <DimensionID>PROGRAMA</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a082f145-306e-497d-a900-b77d7fd5a16e">
+          <AttributeID>PROGRAMA ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0bb82fc6-426c-4ada-9643-167ca4d94f27">
+          <AttributeID>NOMBRE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0b3ac9c2-a3a0-4819-9c20-b6bec715f871">
+          <AttributeID>SIGLA FACULTAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4faf1503-788a-47b4-87b1-6173acf62721">
+          <AttributeID>JORNADA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6be688b1-d427-417a-b48e-b6a7e56fb26b">
+          <AttributeID>DURACION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0888a9e7-7f12-47bb-8163-778450a05bf1">
+          <AttributeID>METODOLOGIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05489b19-edcb-45b3-99b3-caf626bcb0bf">
+          <AttributeID>INDICADOR REGIONAL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81af1220-5533-4d7d-ba64-b10ea8eca0b3">
+          <AttributeID>PREFIJO CODIGO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2ffc78d-09ef-427b-87b0-3336efd76820">
+          <AttributeID>ADMISION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ea9497b-92c5-4150-8380-c0c7e92184b1">
+          <AttributeID>FASE ACREDITACION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="62443af7-a8e0-4b6f-8a4d-79e7662fb1db">
+          <AttributeID>AREA CONOCIMIENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e7ee5672-0605-4641-93ec-00264889f587">
+          <AttributeID>SNIES PROGRAMA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d38b24ee-8242-4044-a37d-eb4f4478cb72">
+          <AttributeID>SNIES MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0c52b8a1-4b37-426f-a897-3fd7eb81dcdc">
+          <AttributeID>SEDE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3d5fad3-4d76-402e-80c8-e116ee5c614d">
+          <AttributeID>NUCLEO BASICO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="370c6a64-6717-4b06-b70b-7b5048fb6ad5">
+      <ID>LUGAR RESIDENCIA EST</ID>
+      <Name>LUGAR RESIDENCIA EST</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="901b5f42-07b8-4c9f-b9b0-ab0b38f0ee3b">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e525f1d-5d6f-4c9f-81e9-c63ce3a0c7e2">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca8f951f-a22c-48bd-9453-7dda23d7841f">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52c221fa-5a4a-4dce-935e-75067aaa9920">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a71f83c-aaf7-4b24-b7d2-aa5fb4516510">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b0795e70-2a20-4591-9ccd-e92999ec4f61">
+      <ID>DATOS AD MATERIA</ID>
+      <Name>DATOS AD MATERIA</Name>
+      <DimensionID>DATOS AD MATERIA</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5432cbf9-4c7a-4a6a-a70b-1a9f698e2ac5">
+          <AttributeID>MATER AD ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f3347039-50ae-4f1c-bef2-ec3004612f11">
+          <AttributeID>SEMESTRE MATERIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3534791d-0a4a-4573-92d1-8c132829ec02">
+          <AttributeID>CREDITOS MATERIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd458e67-20a8-4172-9de3-01b6307d6021">
+          <AttributeID>HORAS SEMANA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1ac08cf-a95e-4e55-9955-846a19b9b3a3">
+          <AttributeID>MAXIMO FALTAS</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="775eb157-ed7e-4755-a54a-f155ad1171e7">
+      <ID>DECANO</ID>
+      <Name>DECANO</Name>
+      <DimensionID>DOCENTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7317a0b2-bf57-4609-b6a8-945418f7a2b3">
+          <AttributeID>DOCENTE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a2139ed0-25dc-48c8-8014-5d2f4ee8f2f5">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="085208e5-517d-4a03-a589-0cce8680a6c0">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c6ccc87-3008-4a60-b831-dcb1855064ab">
+          <AttributeID>NOMBRE COMPLETO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4749a890-6b2b-4b0c-bb7f-8d3e9e7ae36c">
+          <AttributeID>NUMERO IDENTIDAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4f4eaa3f-2133-4555-b6aa-04658ae6f159">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58505847-b7e2-4a30-9067-ce99e7b8ba0a">
+          <AttributeID>SIGLA FACULTAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="af26e8a5-2813-4dcc-8404-b150476bc1f9">
+          <AttributeID>GENERO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ffdf804d-e725-4e29-a2c8-2e83fa665f40">
+          <AttributeID>CORREO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="083b6a2d-b6a5-4d67-a5b7-5bae3c881456">
+          <AttributeID>NUMERO TELEFONO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3135d46-cebc-466a-86fb-2eec6f51785c">
+          <AttributeID>CELULAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5b788ce-5ea6-4fae-a04e-80141ef4c6cd">
+          <AttributeID>ACTUAL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa8ee8f8-883d-4824-a83b-bfecd3bed7d9">
+          <AttributeID>FECHA EFECTIVA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7fb6d386-fbb3-48a6-a040-d1df3767c5e3">
+          <AttributeID>FECHA EXPIRACION</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7e9b3896-c6fa-43d1-b58b-573d4575cb21">
+      <ID>PERIODO</ID>
+      <Name>PERIODO</Name>
+      <DimensionID>PERIODO</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="86613a94-101c-44e9-902a-173d89ce337d">
+          <AttributeID>PERIODO ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2f3dbd13-8bc5-4159-80e6-bc24f3d4d6b9">
+      <ID>DOCENTE</ID>
+      <Name>DOCENTE</Name>
+      <DimensionID>DOCENTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f3a53ef8-1d01-4e80-951b-b6630d720520">
+          <AttributeID>DOCENTE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="88385745-73bd-427f-b616-c83ddf79e40c">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f2b7d46b-7e86-4a6e-bcb7-1689175f18d6">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5ddc7a85-ddcf-4780-a027-00479e59f215">
+          <AttributeID>NOMBRE COMPLETO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d0637c9-5383-433b-b2f9-994469961ed6">
+          <AttributeID>NUMERO IDENTIDAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9475199e-ce01-4e6f-992a-f6047d9b1c39">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="997c7386-ac19-4fc1-ade4-efdc9c363f7d">
+          <AttributeID>SIGLA FACULTAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="99a8b741-8093-4d58-9b22-dce6606f2a7b">
+          <AttributeID>GENERO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a51b17d8-1942-4a8c-bc8b-f295b4cc7a7a">
+          <AttributeID>CORREO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="72bf2786-aa1a-49fc-9862-8cf06a877fe0">
+          <AttributeID>NUMERO TELEFONO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f08a1aa4-1fa0-4ccf-a950-aa99e994ff26">
+          <AttributeID>CELULAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc5a8ba8-34e9-4d75-ace4-b1ab10ef37bd">
+          <AttributeID>ACTUAL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e8b54b1-79c6-4964-8e49-b04b5bf0d390">
+          <AttributeID>FECHA EFECTIVA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb728d1e-80a1-4ed4-b33b-10ce73528a64">
+          <AttributeID>FECHA EXPIRACION</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3a441eed-7744-4f35-9881-1a191e9f7f76">
+      <ID>CUESTIONARIO</ID>
+      <Name>CUESTIONARIO</Name>
+      <DimensionID>CUESTIONARIO</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="36e7b7c7-595d-42f9-ae32-8b1e33ad7dcb">
+          <AttributeID>CUESTIONARIO ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ec10d6f5-1d25-4a4b-88e7-643fc21bab74">
+      <ID>DEMOGRAFIA ESTUDIANTE</ID>
+      <Name>DEMOGRAFIA ESTUDIANTE</Name>
+      <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e1eaa7da-d0dd-4816-a44a-efd19ac7b79d">
+          <AttributeID>DEMOGRAFIA ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="2e09d98d-6c03-4140-b3c6-1e8dd88b0eaa">
+      <ID>JEFE DEPARTAMENTO</ID>
+      <Name>JEFE DEPARTAMENTO</Name>
+      <DimensionID>DOCENTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9eec6672-8f31-4322-acd7-74bbc6f406bd">
+          <AttributeID>DOCENTE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eafd250b-e774-4307-9613-37558115a99a">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="16501c52-5201-4895-b233-4adc6d819ac1">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b466d66-37a3-4a51-a58f-022737e39229">
+          <AttributeID>NOMBRE COMPLETO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="73b39b5a-c7d9-45fc-a6dc-f82783594672">
+          <AttributeID>NUMERO IDENTIDAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ae2cfdd-fca7-4edf-88eb-dd5f18a41cc3">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6fdeb863-c9cd-4d13-ae4d-8a2200125cff">
+          <AttributeID>SIGLA FACULTAD</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="733f8679-1296-4977-9272-0303616ea052">
+          <AttributeID>GENERO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c59685e2-1923-465c-b920-49d729f3de44">
+          <AttributeID>CORREO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c913a8e-6b15-43cb-945d-be06b86ec304">
+          <AttributeID>NUMERO TELEFONO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0bc5fc9-8553-41b2-8382-65cfcd6693b4">
+          <AttributeID>CELULAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="88033fbb-6aea-49c4-b262-701241282f99">
+          <AttributeID>ACTUAL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3032b23f-792d-412f-8bb6-3b544c934895">
+          <AttributeID>FECHA EFECTIVA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8b6e0b07-2dc8-492f-a292-d9e5daae112d">
+          <AttributeID>FECHA EXPIRACION</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a2792492-0e20-4420-b064-8789280dc842">
+      <ID>PENSUM EST</ID>
+      <Name>PENSUM EST</Name>
+      <DimensionID>PENSUM</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="567e85de-7c61-4492-a12f-b6247c1947f9">
+          <AttributeID>PENSUM ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="81750828-9e50-4313-8c5b-72670201433b">
+      <ID>MATERIA</ID>
+      <Name>MATERIA</Name>
+      <DimensionID>MATERIA</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ea697253-33ef-49fb-971f-e7c454af7222">
+          <AttributeID>MATERIA ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="780b38f5-9d86-45ef-b2e9-cbfc2c5c7157">
+      <ID>PENSUM MAT</ID>
+      <Name>PENSUM MAT</Name>
+      <DimensionID>PENSUM</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b6e8f1a8-5e2d-4710-8c5d-6cbf840bbfa1">
+          <AttributeID>PENSUM ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="63e97f0a-a009-43d9-bbd4-9f6d8bf05e8a">
+      <ID>DEMOGRAFIA DOCENTE</ID>
+      <Name>DEMOGRAFIA DOCENTE</Name>
+      <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="30c4cf68-82d0-490d-8dcd-94a7d57157c6">
+          <AttributeID>DEMOGRAFIA ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1582f9ba-cfc3-42ef-a25c-7fbff6828b00">
+      <ID>DEM ECO DOC</ID>
+      <Name>DEM ECO DOC</Name>
+      <DimensionID>DEMOGRAFIA DATOS ECONOMICOS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c7e260f1-fa98-4c9c-b475-4fbd1d2e8393">
+          <AttributeID>DEM ECONOMICOS ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="521ec64e-5c12-4fc0-b8e5-48382b8344ce">
+          <AttributeID>ESTRATO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="048a4c5c-f39b-46fc-93d1-09a96f7b4c78">
+          <AttributeID>NUMERO HERMANOS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7ed388c7-432a-4a63-bcb1-c659481a38dc">
+          <AttributeID>POSICION HERMANOS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec2a9f2b-6eb4-401a-ae55-82630b9ae8ab">
+          <AttributeID>VIVIENDA PROPIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="943fbcf6-4f11-48d2-b6e6-521915789c99">
+          <AttributeID>DESPLAZADO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3738f065-c734-487b-84e3-7a364aee7131">
+          <AttributeID>MADRE CABEZA</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d9d81e28-92a0-49f6-945c-026d2bec2c82">
+      <ID>ESTUDIANTE</ID>
+      <Name>ESTUDIANTE</Name>
+      <DimensionID>ESTUDIANTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7446b183-4950-474a-ac48-9bc7ff495b1d">
+          <AttributeID>ESTUDIANTE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58e894ec-a332-4517-a06b-fe0956400105">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74cadcc3-d1c8-423f-aeb9-065fbeaa31de">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f6d556ab-39e2-4897-8f2f-9122ea0bb9f8">
+      <ID>LUGAR RESIDENCIA DOC</ID>
+      <Name>LUGAR RESIDENCIA DOC</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1ec8a560-ad5c-4881-a554-ba32a9273c73">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e8321f06-1e43-40f2-99d9-c79338fdfa39">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4ebb86e-5604-4339-a150-a49727902a63">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e82aaa5-806f-4678-a84f-c34b1a02d129">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ae0a998-253d-4003-a0d1-5f2e0672ee00">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="43e7b0e3-2503-431a-aec3-be744ce06175">
+      <ID>INDICADORES ESTUDIANTES</ID>
+      <Name>INDICADORES ESTUDIANTES</Name>
+      <DimensionID>INDICADORES ESTUDIANTES</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e976f18a-508a-4479-8d5a-18fc32cad5c7">
+          <AttributeID>INDEST ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="085cd0b5-4bf1-48e6-9a43-fc85e4b92ef7">
+      <ID>DECANO - LUGAR PROCEDENCIA</ID>
+      <Name>DECANO - LUGAR PROCEDENCIA</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4d1c8f3c-871b-468e-a350-88af5a91fd28">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2989039b-8ede-4b87-84b7-ba49a6a332f4">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a957cc07-0ac2-448b-9d39-817e07888e35">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4858c629-7f72-4853-ae13-58a4a903bf5a">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc37053a-57b4-4bdd-9407-7d3da75cbe64">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="acf6cbbe-bdc1-4a13-afcd-6001d94ecb23">
+      <ID>DECANO - LUGAR NACIMIENTO</ID>
+      <Name>DECANO - LUGAR NACIMIENTO</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="110138e4-7a30-4bbe-82cd-371f1578f1dd">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dff38d84-5776-4c04-8246-5cb101ba27e5">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="51e0b422-cbb2-43d0-8b9a-5b9e20396ac2">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7acbf13b-da1f-4598-bd88-6bfe19b3cb92">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6839ac24-4718-40ab-8afa-1f4993d69ac3">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="35ae1094-349b-4f40-b9a4-08deea17773c">
+      <ID>DOCENTE - LUGAR PROCEDENCIA</ID>
+      <Name>DOCENTE - LUGAR PROCEDENCIA</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="daa3f4c1-07be-4fa8-9f6d-e13ea53f8cc7">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="75318807-c288-4665-aee7-775a02d50ac6">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="645fb8ad-a104-4869-aa7c-c79757326493">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a1f3e554-e479-4921-8bb4-b0a939b66e26">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c0029951-74da-4189-b8c6-95ee74b8bb0a">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5addfaba-a611-443c-b292-06af3e44efe4">
+      <ID>DOCENTE - LUGAR NACIMIENTO</ID>
+      <Name>DOCENTE - LUGAR NACIMIENTO</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="292d958f-d459-4293-93b6-68992264f6c9">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f94fc44d-8473-4a1b-9a53-4de7bef6db34">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d6fd977-2372-4dbf-bac8-6ccb846f6ed8">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e098ca47-cb41-49be-84e9-d5bffc6417a0">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c37f9e5-29bd-4488-a5aa-c2d57ee598d6">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d1c210c8-929c-4dff-91aa-631bbf2bb3da">
+      <ID>JEFE DEPARTAMENTO - LUGAR PROCEDENCIA</ID>
+      <Name>JEFE DEPARTAMENTO - LUGAR PROCEDENCIA</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a4e72bd7-4785-40dc-a9e3-15cb32531f4b">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46a26aaa-a632-406c-85a5-a64459d22072">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="697ecd6e-7b33-4f82-b298-7e34574b43dc">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="019a9006-0801-4e2c-91f1-a97f8a2c4345">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc58cc6c-e428-4eae-a2bf-5f90d82280eb">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3863dc70-a262-4807-ab46-9d61dc2862d6">
+      <ID>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</ID>
+      <Name>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e6a1b92d-9b1c-4e34-92dc-f8ae02369a5a">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1a31aa27-8868-4652-bf1f-5f884a3ad5f0">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8658caaa-695f-427b-9646-e8451246d92b">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c414cbab-9877-4970-85d0-eb26e71ab8f6">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9aa0ff81-bfa1-4e70-aae4-77ca4efad021">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="cfecc208-b54f-477f-b9f3-56506297e78b">
+      <ID>ESTUDIANTE - LUGAR NACIMIENTO</ID>
+      <Name>ESTUDIANTE - LUGAR NACIMIENTO</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="57a75a66-3d5d-4e2d-b1d8-14125c718456">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="484cd172-4a99-4e43-bf2e-86e70f4a621f">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff65cde6-8552-407a-9629-e78438c88295">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0500172-2238-405d-bf2c-8538bf37fcba">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34d196d5-0cc7-4d84-ab2d-dba3b2476399">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f44dd9bd-57ac-4f5b-a47d-c9c40a086d34">
+      <ID>ESTUDIANTE - LUGAR PROCEDENCIA</ID>
+      <Name>ESTUDIANTE - LUGAR PROCEDENCIA</Name>
+      <DimensionID>LOCALIZACION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0d0f7525-06d9-4979-812d-ee2c3e9c8404">
+          <AttributeID>LOCALIZACION ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="32f04555-6afd-4eb5-bb6e-ad4ca37fa0a8">
+          <AttributeID>PAIS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4dd0f69e-43ba-42f0-8124-ca0784bba042">
+          <AttributeID>DEPARTAMENTO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d9c377d-c4d2-41a7-8e08-82f567166bef">
+          <AttributeID>MUNICIPIO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ac6632be-2641-4060-a586-db72f24ebc3d">
+          <AttributeID>CODIGO MUNICIPIO</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="bf1369ce-06f9-40bf-99e2-e3feee22978f">
+      <ID>HECHO ENCUESTA DOCENCIA</ID>
+      <Name>HECHO ENCUESTA DOCENCIA</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="eef25745-790c-4ae2-a1b7-48a0d709503e">
+          <ID>PUNTAJE</ID>
+          <Name>PUNTAJE</Name>
+          <Source dwd:design-time-name="56191571-e6e1-4b1f-b474-772f7cb69f99">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="fafdc9b4-c083-4e32-b6bb-920361a1cef1">
+              <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+              <ColumnID>PUNTAJE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="2cb58f3d-ad54-4ea6-8185-e698bf4b032d">
+          <ID>CANTIDAD ESTUDIANTES</ID>
+          <Name>CANTIDAD ESTUDIANTES</Name>
+          <Source dwd:design-time-name="e2a69b56-d565-40cf-83e2-a932fb0434fa">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2ff82d79-8ce8-4f84-a853-3368952d1e62">
+              <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+              <ColumnID>CANTIDAD_ESTUDIANTES</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="075d2e24-e426-4b0e-8ad9-6c5c882d1f0f">
+          <ID>HECHO ENCUESTA DOCENCIA Count</ID>
+          <Name>HECHO ENCUESTA DOCENCIA Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="dc4217ba-7856-4d57-9cca-bf723d70737e">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="93700662-9486-4d75-94b4-d0a2126a7976">
+              <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c2e67a99-74ff-484d-a235-105497c0a58e">
+          <CubeDimensionID>RANGO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f539fd20-6e4e-45c4-a716-33682f42e711">
+              <AttributeID>RANGO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="21875bf5-8a27-4b9c-ba11-fdb9751e66be">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="06b981d5-e89d-4b32-97ae-b63a169a6e90">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>RANGO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ed3ce6c3-c6b8-4730-9889-d85c329999eb">
+          <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9f067121-fdbd-46a8-9d26-6bf760438861">
+              <AttributeID>FUENTE EVALUACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e2c6e529-0e9d-4269-b44d-927a96e2cead">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f64d3443-7eba-4f28-98b0-4c53e3859f2c">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>FUENTE_EVALUACION_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0496022f-d9af-4d99-9d2c-19d15d5f7d52">
+          <CubeDimensionID>PREGUNTA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f8c2744c-bbc0-4136-bd03-6b21253bf6c7">
+              <AttributeID>PREGUNTA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e80314e8-44a0-4977-ba26-7550ba58ec80">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1f5a63d8-84f5-4338-bafa-096fff03a105">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PREGUNTA_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d8c75bfa-ea97-48f6-9252-3255a6d02598">
+          <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="28485ffc-ca2b-42b4-852e-eb2dcaefe074">
+              <AttributeID>CONTRATACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6c6069eb-8cd1-48be-be2e-d6c60108b1c8">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4325c026-9c34-473b-8550-441d31db9026">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>CONTRATACION_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1f58d907-3184-474f-b0d9-b47e3104df9c">
+          <CubeDimensionID>DEM ECO EST</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ee6ebd73-2cdb-42db-b5cf-832ffe8ddb41">
+              <AttributeID>DEM ECONOMICOS ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1c8f6afe-8e6e-4cbc-b57e-e51c6e3e95c0">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f3866dc5-94d9-46f0-9092-70fc33e7d4af">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEM_ECO_EST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="79b30020-baa8-4f99-9a58-dff5438b5e22">
+          <CubeDimensionID>SEMESTRE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e18035fc-a94a-4ae2-85c7-c8f6e102c233">
+              <AttributeID>SEMESTRE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b43ba942-9394-4af3-aeb7-009f980aa62d">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a6db7fc6-dbf3-484d-9831-df8711b2bf45">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>SEMESTRE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d932a35b-7fcf-4e96-b497-3027826f6996">
+          <CubeDimensionID>PROGRAMA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4146caa0-e798-47cf-ba72-3a2ddc70f42f">
+              <AttributeID>PROGRAMA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="597e6583-2174-4b7b-ac74-23bc7efd7d67">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cb9c5b66-4031-4ef4-adea-0114a4139e70">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PROGRAMA_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="79646c1d-e50c-4391-9c61-2895a27c91b6">
+          <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f1bc5576-a622-4c2b-b00f-9c016942d202">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="972fe17a-eecb-4b0e-bbf2-64cfe856246f">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a38329f7-3f04-4027-b114-5695bd8f3df2">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>LUGAR_RESIDENCIA_EST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5f9af6a5-6c6f-4735-9b8d-3f644295ae9b">
+          <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="206e6910-a4ac-4193-b989-92cc2a1e06ae">
+              <AttributeID>MATER AD ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="847bc1b2-a1ce-4089-b53a-a2d2b52e0007">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a6523c93-166d-4668-b1b2-2d902c61ac88">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>MATER_AD_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c5fd5680-94f7-4f9b-9ea1-bfe6d7fa5a92">
+          <CubeDimensionID>DECANO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1300397c-7016-420a-bc20-48566c208d28">
+              <AttributeID>DOCENTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2e3a248d-edbe-4fbf-830d-b269c369f17d">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7151d5c8-eae4-441b-be8f-f24833011651">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DECANO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="74f6f295-82a6-4441-95f7-3305d8f91095">
+          <CubeDimensionID>PERIODO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7076a611-781e-44d3-b9b3-9bc4bded3d6d">
+              <AttributeID>PERIODO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="263744a6-6769-49cc-ba30-2fc1585fc8ba">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8d2e26eb-39c6-4642-a4fa-67baab478f17">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PERIODO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="445fa52e-3f47-43a8-a5a6-5a18d522fc80">
+          <CubeDimensionID>DOCENTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="eba42cc5-ba37-44b7-9cf1-4ebc05efe921">
+              <AttributeID>DOCENTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="343d8bde-0aa7-4a22-92b3-abe6ddee8386">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0dcb3fa1-058b-43db-b526-8a994b659ba3">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DOCENTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6fd8b7f0-6ae8-4930-8f36-ffdecc03bd0a">
+          <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4ea98d65-2ed4-4345-bf96-cd75dbdc40fc">
+              <AttributeID>CUESTIONARIO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5c46ff6a-e5d1-40f6-b52d-805a1d9440ec">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="503eb4e4-6898-4e61-b8ad-167b86ffcea5">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>CUESTIONARIO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ca54cfca-816c-418b-af96-334251e7d4f4">
+          <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="850f4b4a-bc90-4be6-8fe4-68d44588695b">
+              <AttributeID>DEMOGRAFIA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dbcc30bc-cf4f-44ee-b578-fe6adb6a6ada">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e39fc4e6-823d-4610-bbbc-6de63167ea6f">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEMOGRAFIA_ESTUDIANTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4c052618-e047-49be-8ca6-b52b05bd1a0b">
+          <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cb77303c-b481-4723-99e1-01c4eeaf21bb">
+              <AttributeID>DOCENTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="51d321c4-8db7-4f57-9351-e933954607c0">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="85bad779-acc9-493f-a072-03ae47fa26ed">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>JEFE_DEPARTAMENTO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="72090977-4606-4915-922c-d0662941a483">
+          <CubeDimensionID>PENSUM EST</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a284aec5-2c49-4392-8e3a-148977cf677f">
+              <AttributeID>PENSUM ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0db8f68b-172d-4b33-988e-717afd9012ca">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="34bf8b4d-5f50-4da6-b2b5-1efc44ea11ba">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PENSUM_EST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4d72aabe-5e88-4020-9a51-ae16c1a9222f">
+          <CubeDimensionID>MATERIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7d3c9e62-aa20-48e3-94d5-7450ded66407">
+              <AttributeID>MATERIA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e4888932-61ea-4c22-a5ff-e8e96c09c9c8">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9b0260cf-ce19-4b04-8e9f-1232f08843af">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>MATERIA_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="39380de2-dd11-4565-ade6-cae479d3ec26">
+          <CubeDimensionID>PENSUM MAT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f58ae07d-540f-4ae5-8db1-716283aad149">
+              <AttributeID>PENSUM ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e98bb742-7502-4068-ad9c-b198681b121a">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="efd8a5a4-4c05-45ec-ac4b-510e68902611">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PENSUM_MAT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2cfd35ca-dd7b-45d8-bbe1-25c5d8472bf9">
+          <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="85876fb1-6001-43a2-8e0d-254cf6ff5913">
+              <AttributeID>DEMOGRAFIA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="727c6d35-53f6-49df-8968-57cdff3e6b71">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5155eeae-e682-4c95-8c70-3d3e8e23eeef">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEMOGRAFIA_DOCENTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6a66677e-9e03-4839-9f04-2d1524ceffbd">
+          <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6865daaa-3fe7-44a0-8aab-66e49279f8d0">
+              <AttributeID>DEM ECONOMICOS ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4fcfdd9b-9892-495f-97cc-bc45552ed6c7">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="772621a1-c06a-44e8-a10f-0f2321d8a8e2">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEM_ECO_DOC_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9d235ab8-2a5b-41ab-9a65-6bc834c675e0">
+          <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3b2d39cb-3512-41f9-a916-4d0283fec918">
+              <AttributeID>ESTUDIANTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f7d731b4-5a52-411c-91ae-01533521ceef">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a4ce236c-3299-4c62-9b28-796c607359af">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>ESTUDIANTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b30366b0-866a-4fdf-8161-78207d3de94b">
+          <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b1178c09-d9f7-48c1-9bc2-d8131f5217f7">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1f6eccc0-1433-4558-b31d-8ccd466f5297">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b2a57a3c-8c18-4b83-ab74-77cc03476afc">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>LUGAR_RESIDENCIA_DOC_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="12b10d20-68df-49cd-ae32-2db6ab247b5a">
+          <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fca2439f-40cc-4e05-9203-060d379a60e7">
+              <AttributeID>INDEST ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="89a3fd9e-e25e-4bdd-83c1-f782b81a66ee">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c66ddb08-9af2-4943-a85d-efc1c1c1276c">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>INDEST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d69bb29d-72e8-4844-b3b7-66b84c6f7a40">
+          <CubeDimensionID>DECANO - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="63bf6e64-1737-48be-9a18-64b7bbcfac23">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DECANO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="582ab8dc-f29a-4c91-b4fe-96fe4030ee22">
+          <CubeDimensionID>DECANO - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="25595e55-11d8-475a-8cdf-7bc5ee6dfc78">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DECANO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="57b34f33-3592-469e-b13d-463a7ef2aa43">
+          <CubeDimensionID>DOCENTE - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="99064e6a-cc6f-41ea-b9d1-53ab679f5fa3">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DOCENTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="4807afed-272a-4895-9c34-f4b316a6efba">
+          <CubeDimensionID>DOCENTE - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1f8da1d9-b733-42d2-8f50-32c754954f27">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DOCENTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="df7a998f-5210-4e62-8ced-569796220bc3">
+          <CubeDimensionID>JEFE DEPARTAMENTO - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4b8284df-992a-4e56-8743-d16975666d0c">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>JEFE DEPARTAMENTO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="9f93df44-6ded-4161-858b-6f1618db1989">
+          <CubeDimensionID>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0e4a9227-da06-4c33-a917-723ba4bcddb9">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>JEFE DEPARTAMENTO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="e39df41b-0de0-4b6b-99ac-047223ed4fe8">
+          <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c150d42e-ba88-45fe-a216-6ac462554254">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ESTUDIANTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="90b263be-731b-4168-b5d5-96096cd8c8ed">
+          <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="56cc743b-a59a-4f1b-b7fa-2c63a1bc6d38">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ESTUDIANTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="11eeeadf-04e8-40f6-8f3f-993abb580aa2">
+    <DataSourceViewID>DW Academico Labor</DataSourceViewID>
+  </Source>
+</Cube>

@@ -1,0 +1,181 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c9e4111f-505c-4e36-9817-0d6668f00b70" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DATOS AD MATERIA</ID>
+  <Name>DATOS AD MATERIA</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1197" scrolltop="-5146" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6641" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_AD_MATERIA" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4207" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00006f1000004d0c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DATOS_AD_MATERIA" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1197</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5146</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6231123f-81fe-4d4a-a276-6594f6d7334f">
+    <DataSourceViewID>DW Academico Labor</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="ea0df157-8b56-4e0a-a547-0bc16ace5b5c">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="54f2dfb1-b455-4caf-83c4-25435990c362">
+      <ID>MATER AD ID</ID>
+      <Name>MATER AD ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d042dae-d0c2-44e7-bf07-97af941aa2fb">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75cb1d5e-ffc2-4839-960c-ba337deb5bff">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_AD_MATERIA</TableID>
+            <ColumnID>MATER_AD_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1dfd42b8-6ace-41d2-b74e-a5af3df27657">
+          <AttributeID>SEMESTRE MATERIA</AttributeID>
+          <Name>SEMESTRE MATERIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d60537f-c545-430a-a82c-590088fd8c60">
+          <AttributeID>CREDITOS MATERIA</AttributeID>
+          <Name>CREDITOS MATERIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b5b09ba0-5283-4c47-b506-5caac7dc707a">
+          <AttributeID>HORAS SEMANA</AttributeID>
+          <Name>HORAS SEMANA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="287ad37b-8627-49af-a9ae-7bbcfd33f236">
+          <AttributeID>MAXIMO FALTAS</AttributeID>
+          <Name>MAXIMO FALTAS</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="253696f8-7055-42e8-b426-e779e1525cc8">
+      <ID>SEMESTRE MATERIA</ID>
+      <Name>SEMESTRE MATERIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="130ccb71-83ee-45ca-ab28-3c91d2189b87">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49ea32bd-1cf4-4acb-9ba1-0afdce1f2230">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_AD_MATERIA</TableID>
+            <ColumnID>SEMESTRE_MATERIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f6604ea2-a2d0-4698-bbb8-101fd4ae966b">
+      <ID>CREDITOS MATERIA</ID>
+      <Name>CREDITOS MATERIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2dbcddae-76da-47aa-b254-7f78023b86e1">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="330de798-63fa-4557-a040-e066154a2160">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_AD_MATERIA</TableID>
+            <ColumnID>CREDITOS_MATERIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b8092739-6f21-491b-9e87-86a7d21a10f2">
+      <ID>HORAS SEMANA</ID>
+      <Name>HORAS SEMANA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a762af24-fc1b-43e5-8674-05ca31ca469d">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="447db5ce-b180-496d-bd36-e94226aa206a">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_AD_MATERIA</TableID>
+            <ColumnID>HORAS_SEMANA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2900417c-0a26-48a7-8a8c-747f44cbd4bb">
+      <ID>MAXIMO FALTAS</ID>
+      <Name>MAXIMO FALTAS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf9f7d75-3f42-450a-a41b-2a945fd8cc70">
+          <DataType>UnsignedTinyInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="61e4a17b-60ae-4df9-aa5e-ec7f2b2c6cb6">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_AD_MATERIA</TableID>
+            <ColumnID>MAXIMO_FALTAS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

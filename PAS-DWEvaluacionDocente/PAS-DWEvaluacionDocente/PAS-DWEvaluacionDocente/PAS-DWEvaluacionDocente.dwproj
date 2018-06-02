@@ -6,10 +6,126 @@
     <Name>PAS-DWEvaluacionDocente.database</Name>
     <FullPath>PAS-DWEvaluacionDocente.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>Cubo_Evaluacion_Docente.cube</Name>
+      <FullPath>Cubo_Evaluacion_Docente.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Cubo_Evaluacion_Docente.partitions</Name>
+          <FullPath>Cubo_Evaluacion_Docente.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>RANGO.dim</Name>
+      <FullPath>RANGO.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FUENTE EVALUACION.dim</Name>
+      <FullPath>FUENTE EVALUACION.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PREGUNTA.dim</Name>
+      <FullPath>PREGUNTA.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TIPO CONTRATACION.dim</Name>
+      <FullPath>TIPO CONTRATACION.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DEMOGRAFIA DATOS ECONOMICOS.dim</Name>
+      <FullPath>DEMOGRAFIA DATOS ECONOMICOS.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SEMESTRE.dim</Name>
+      <FullPath>SEMESTRE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PROGRAMA.dim</Name>
+      <FullPath>PROGRAMA.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>LOCALIZACION.dim</Name>
+      <FullPath>LOCALIZACION.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DATOS AD MATERIA.dim</Name>
+      <FullPath>DATOS AD MATERIA.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DOCENTE.dim</Name>
+      <FullPath>DOCENTE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PERIODO.dim</Name>
+      <FullPath>PERIODO.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CUESTIONARIO.dim</Name>
+      <FullPath>CUESTIONARIO.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DATOS DEMOGRAFICOS.dim</Name>
+      <FullPath>DATOS DEMOGRAFICOS.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>PENSUM.dim</Name>
+      <FullPath>PENSUM.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>MATERIA.dim</Name>
+      <FullPath>MATERIA.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>ESTUDIANTE.dim</Name>
+      <FullPath>ESTUDIANTE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>INDICADORES ESTUDIANTES.dim</Name>
+      <FullPath>INDICADORES ESTUDIANTES.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>DW Academico Labor.ds</Name>
+      <FullPath>DW Academico Labor.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>DW Academico Labor.dsv</Name>
+      <FullPath>DW Academico Labor.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>DW Academico Labor</Id>
+            <Name>DW Academico Labor</Name>
+            <Value xsi:type="xsd:string">Data Source=localhost;Persist Security Info=True;User ID=;Password=;Unicode=True</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionProviderMappings>
+          <ConfigurationSetting>
+            <Id>DW Academico Labor</Id>
+            <Name>DW Academico Labor</Name>
+            <Value xsi:type="xsd:string">System.Data.OracleClient</Value>
+          </ConfigurationSetting>
+        </ConnectionProviderMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>DW Academico Labor</Id>
+            <Name>DW Academico Labor</Name>
+            <Value xsi:type="xsd:int">1</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
