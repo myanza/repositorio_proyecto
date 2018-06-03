@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Inicial-Docente"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{053A6115-14EC-42C3-AD97-B4F844B04F69}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{FBAC41ED-9677-47C8-B60F-A498F1616794}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -111,8 +111,8 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -272,8 +272,8 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1030,8 +1030,8 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\DimDocente.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1310,8 +1310,8 @@ ORDER BY FACULTADES.SIGLA, FACULTADUNIDADES.DESCRIPCION</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1481,8 +1481,8 @@ ORDER BY DOCENTES.UNIDAD</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2838,12 +2838,12 @@ ORDER BY DOCENTES.UNIDAD</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2862,6 +2862,22 @@ ORDER BY DOCENTES.UNIDAD</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="179,42"
+          Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros"
+          TopLeft="38,96" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
+          TopLeft="435,185" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Tarea Flujo de Datos Docente\Fuente Facultad"
+          TopLeft="42,280" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Tarea Flujo de Datos Docente\Conversion datos"
+          TopLeft="223,373" />
+        <NodeLayout
           Size="136,42"
           Id="Package\Tarea Flujo de Datos Docente\DimDocente"
           TopLeft="458,81" />
@@ -2869,30 +2885,6 @@ ORDER BY DOCENTES.UNIDAD</property>
           Size="185,42"
           Id="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia"
           TopLeft="440,280" />
-        <NodeLayout
-          Size="160,42"
-          Id="Package\Tarea Flujo de Datos Docente\Conversion datos"
-          TopLeft="223,373" />
-        <NodeLayout
-          Size="178,42"
-          Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad"
-          TopLeft="27,209" />
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Tarea Flujo de Datos Docente\Merge Join"
-          TopLeft="227,136" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Tarea Flujo de Datos Docente\Fuente Facultad"
-          TopLeft="42,280" />
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Tarea Flujo de Datos Docente\Conversion genero"
-          TopLeft="227,219" />
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros"
-          TopLeft="38,96" />
         <NodeLayout
           Size="164,42"
           Id="Package\Tarea Flujo de Datos Docente\Columna derivada"
@@ -2902,13 +2894,21 @@ ORDER BY DOCENTES.UNIDAD</property>
           Id="Package\Tarea Flujo de Datos Docente\Fuente Terceros"
           TopLeft="44,18" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
-          TopLeft="435,185" />
+          Size="178,42"
+          Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad"
+          TopLeft="27,209" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Tarea Flujo de Datos Docente\Conversion genero"
+          TopLeft="227,219" />
         <NodeLayout
           Size="181,42"
           Id="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento"
           TopLeft="440,374" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Tarea Flujo de Datos Docente\Merge Join"
+          TopLeft="227,136" />
         <EdgeLayout
           Id="Package\Tarea Flujo de Datos Docente.Paths[Sort Output1]"
           TopLeft="217,113.5">
@@ -3177,6 +3177,27 @@ ORDER BY DOCENTES.UNIDAD</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\Fuente Terceros">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\DimDocente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia">
     <Properties>
       <Property>
@@ -3200,28 +3221,7 @@ ORDER BY DOCENTES.UNIDAD</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de Datos Docente\DimDocente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de Datos Docente\Fuente Facultad">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de Datos Docente\Fuente Terceros">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

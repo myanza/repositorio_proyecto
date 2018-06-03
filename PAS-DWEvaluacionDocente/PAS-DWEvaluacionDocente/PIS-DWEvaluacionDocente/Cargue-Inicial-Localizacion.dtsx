@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Inicial-Localizacion"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{6B65ADB9-16ED-451E-BB88-B72C7BE0C9F5}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{C03BB62A-8FB2-43E0-83FA-6B766A4B4370}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -376,8 +376,8 @@
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -543,8 +543,8 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
+                  connectionManagerRefId="{FF49194F-23AD-436B-BB5C-FE74570803FE}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -762,12 +762,12 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -776,7 +776,7 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
         <NodeLayout
           Size="235,42"
           Id="Package\Tarea Flujo de datos Localizacion"
-          TopLeft="160,80" />
+          TopLeft="161,80" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -786,94 +786,28 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
-          TopLeft="94,40" />
-        <NodeLayout
-          Size="207,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion"
-          TopLeft="82,284" />
-        <NodeLayout
           Size="190,42"
           Id="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion"
-          TopLeft="89,113" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[OLE DB Source Output]"
-          TopLeft="181.75,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="416,113" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
+          TopLeft="421,40" />
         <NodeLayout
           Size="154,42"
           Id="Package\Tarea Flujo de datos Localizacion\Derived Column"
-          TopLeft="102,200" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
-          TopLeft="181.5,155">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45"
-              Start="0,0"
-              End="0,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Derived Column Output]"
-          TopLeft="182.25,242">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="429,200" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion"
+          TopLeft="409,284" />
         <NodeLayout
           Size="154,42"
           Id="Package\Tarea Flujo de datos Localizacion\DimLocalizacion"
-          TopLeft="111,366" />
+          TopLeft="438,366" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
-          TopLeft="186.75,326">
+          TopLeft="513.75,326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -893,17 +827,75 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[OLE DB Source Output]"
+          TopLeft="508.75,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,31"
+              Start="0,0"
+              End="0,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Derived Column Output]"
+          TopLeft="509.25,242">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42"
+              Start="0,0"
+              End="0,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
+          TopLeft="508.5,155">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45"
+              Start="0,0"
+              End="0,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos Localizacion\DimLocalizacion">
     <Properties>
@@ -914,6 +906,14 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
