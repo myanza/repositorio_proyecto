@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-N341SEE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAAAXc/Qbg4KT5PUqSTU9/6Gog2nopuexzsDfcUcdv1a6mwAAAAAOgAAAAAIAACAAAACjm/OgU3MXOzvlaaLhQyxHwOFth+rs6v6so1MIZb/dN5AAAACkHqMsxR+TBaAPc+wN/4zbwt1s1gJ7HRj13CJm1hIVgx3cDd9kC4x5FO9jsB6jEGZo/xmS8KvqnRHPqYyo/Fuymi5XOMU5KQg+a0ZjGj/FYpINpn3MuP9g8xE63kLxRE5zO/sZ9gSzPJJWrpZ6XIVIHC+MtzaGePrejih5bBW05fQOs50QlrvKZ678hdWRFhNAAAAA/E76GjM677pi+7hzMre496KMXNS50H/ttfPI4xdCyYD6jiPKfP14fjHA2ZohwpXygwDzy9qVjHw44pAY8/W4zg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAABY0wdcz/nd+xETsW1PUIn6+75KdR3xjiBDwM/NlXJbMAAAAAAOgAAAAAIAACAAAABDUKOR/3M2NG+RtPGUjFaqK7G7U3YZSJB4UWfzSUBy3ZAAAABndepOabORYrHybl9VUHEZeSD5N2n88WHCGyWERvMIttRF1s+y74RRItDEsue6C1HaQUxFZSQdfXrnPKW/wk6xmuaX9aJVG2E7WIlx5lnHuGVKOLVriByOGtSVmxhHSyi+cuPfTWHdnNEWTzWDHKohMe1uWr8CqZZvT2VMRLl/ulsqyjCvlrrViF3sYUQMnJBAAAAATl7HukXqJdG0pLVfjVaq3te8qjtqIfYJapJmFq7xa7jmZ0KVcZV1KsLMDFeR3xEOb5aPBTEByUTv7ros7LKRew==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -170,7 +170,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=ACADEMICO;Unicode=True;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=ACADEMICO;Provider=OraOLEDB.Oracle.1;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -258,7 +258,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=DW_ACADEMICO_LABOR;Unicode=True;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=DW_ACADEMICO_LABOR;Provider=OraOLEDB.Oracle.1;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -335,7 +335,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.localhost.USRINSCRIPCIONES.ConnectionString">
+            <SSIS:Parameter SSIS:Name="CM.localhost USRINSCRIPCIONES.ConnectionString">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -346,11 +346,11 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=USRINSCRIPCIONES;Unicode=True;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=USRINSCRIPCIONES;Provider=OraOLEDB.Oracle.1;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.localhost.USRINSCRIPCIONES.InitialCatalog">
+            <SSIS:Parameter SSIS:Name="CM.localhost USRINSCRIPCIONES.InitialCatalog">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -364,7 +364,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.localhost.USRINSCRIPCIONES.Password">
+            <SSIS:Parameter SSIS:Name="CM.localhost USRINSCRIPCIONES.Password">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -378,7 +378,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.localhost.USRINSCRIPCIONES.RetainSameConnection">
+            <SSIS:Parameter SSIS:Name="CM.localhost USRINSCRIPCIONES.RetainSameConnection">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -393,7 +393,7 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.localhost.USRINSCRIPCIONES.ServerName">
+            <SSIS:Parameter SSIS:Name="CM.localhost USRINSCRIPCIONES.ServerName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -408,7 +408,7 @@
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
-            <SSIS:Parameter SSIS:Name="CM.localhost.USRINSCRIPCIONES.UserName">
+            <SSIS:Parameter SSIS:Name="CM.localhost USRINSCRIPCIONES.UserName">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
                 </SSIS:Property>
@@ -431,10 +431,10 @@
                 <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Localizacion</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C03BB62A-8FB2-43E0-83FA-6B766A4B4370}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{AD415170-5793-4822-B657-2ECD521083C9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

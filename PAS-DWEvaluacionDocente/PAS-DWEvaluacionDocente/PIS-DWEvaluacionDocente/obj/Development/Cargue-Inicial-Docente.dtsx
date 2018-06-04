@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Inicial-Docente"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{053A6115-14EC-42C3-AD97-B4F844B04F69}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{607CD4C6-5663-4C65-A5F2-95EA412CF777}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -93,12 +93,12 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LOCALIZACION_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PAIS" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DEPARTAMENTO" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MUNICIPIO" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CODIGO_MUNICIPIO" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LOCALIZACION_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PAIS" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTAMENTO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MUNICIPIO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CODIGO_MUNICIPIO" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_NAC]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de Datos Docente\444:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -111,8 +111,8 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -122,20 +122,19 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input].Columns[CODIGO_MUNICIPIO_NAC]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="CODIGO_MUNICIPIO_NAC"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_NAC]">
+                      cachedName="Copia de CODIGO_MUNICIPIO_NAC"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]">
                       <properties>
                         <property
                           dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
                           name="JoinToReferenceColumn">CODIGO_MUNICIPIO</property>
                         <property
                           dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
                           name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
@@ -254,12 +253,12 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LOCALIZACION_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PAIS" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DEPARTAMENTO" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="MUNICIPIO" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CODIGO_MUNICIPIO" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LOCALIZACION_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PAIS" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTAMENTO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MUNICIPIO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CODIGO_MUNICIPIO" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_PRO]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de Datos Docente\445:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -272,8 +271,8 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -283,20 +282,19 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input].Columns[CODIGO_MUNICIPIO_PRO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="CODIGO_MUNICIPIO_PRO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_PRO]">
+                      cachedName="Copia de CODIGO_MUNICIPIO_PRO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]">
                       <properties>
                         <property
                           dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
                           name="JoinToReferenceColumn">CODIGO_MUNICIPIO</property>
                         <property
                           dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
                           name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
@@ -378,36 +376,31 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[PRIMERNOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="PRIMERNOMBRE"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[PRIMERNOMBRE]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[SEGUNDONOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="SEGUNDONOMBRE"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SEGUNDONOMBRE]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[PRIMERAPELLIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="PRIMERAPELLIDO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[PRIMERAPELLIDO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[SEGUNDOAPELLIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="SEGUNDOAPELLIDO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SEGUNDOAPELLIDO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copy of GENERO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copy of GENERO"
                       errorOrTruncationOperation="Computation"
@@ -431,8 +424,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[EMAIL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="EMAIL"
                       errorOrTruncationOperation="Computation"
@@ -456,8 +448,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[CELULAR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="CELULAR"
                       errorOrTruncationOperation="Computation"
@@ -481,8 +472,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[TELEFONO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="TELEFONO"
                       errorOrTruncationOperation="Computation"
@@ -506,8 +496,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[DEPARTAMENTO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="DEPARTAMENTO"
                       errorOrTruncationOperation="Computation"
@@ -531,8 +520,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[SIGLA_FACULTAD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="SIGLA_FACULTAD"
                       errorOrTruncationOperation="Computation"
@@ -556,8 +544,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[CODIGO_MUNICIPIO_NAC]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO_MUNICIPIO_NAC"
                       errorOrTruncationOperation="Computation"
@@ -581,8 +568,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[CODIGO_MUNICIPIO_PRO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO_MUNICIPIO_PRO"
                       errorOrTruncationOperation="Computation"
@@ -783,11 +769,10 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="120"
+                      length="50"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]"
                       name="Copy of NOMBRE_COMPLETO"
                       truncationRowDisposition="FailComponent">
@@ -845,8 +830,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of ACTUAL]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="10"
@@ -906,11 +890,58 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[GENERO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="GENERO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[GENERO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[IDENTIFICACION]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="IDENTIFICACION"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[IDENTIFICACION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="EMAIL"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[CELULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="CELULAR"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CELULAR]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[TELEFONO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="TELEFONO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="DEPARTAMENTO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[SIGLA_FACULTAD]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="SIGLA_FACULTAD"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SIGLA_FACULTAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[CODIGO_MUNICIPIO_NAC]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CODIGO_MUNICIPIO_NAC"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_NAC]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Inputs[Data Conversion Input].Columns[CODIGO_MUNICIPIO_PRO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CODIGO_MUNICIPIO_PRO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_PRO]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -924,8 +955,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copy of GENERO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="20"
@@ -941,6 +971,174 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]"
+                      name="Copia de IDENTIFICACION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[IDENTIFICACION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de EMAIL]"
+                      name="Copia de EMAIL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CELULAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CELULAR]"
+                      name="Copia de CELULAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CELULAR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]"
+                      name="Copia de TELEFONO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]"
+                      name="Copia de DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[DEPARTAMENTO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]"
+                      name="Copia de SIGLA_FACULTAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SIGLA_FACULTAD]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      name="Copia de CODIGO_MUNICIPIO_NAC"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_NAC]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      name="Copia de CODIGO_MUNICIPIO_PRO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_PRO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
@@ -1030,8 +1228,8 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\DimDocente.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1051,68 +1249,60 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                       lineageId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output].Columns[DOCENTE_ID]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of NOMBRE_COMPLETO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="120"
+                      cachedDataType="wstr"
+                      cachedLength="50"
                       cachedName="Copy of NOMBRE_COMPLETO"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE_COMPLETO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[IDENTIFICACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de IDENTIFICACION]"
+                      cachedDataType="wstr"
                       cachedLength="20"
-                      cachedName="IDENTIFICACION"
+                      cachedName="Copia de IDENTIFICACION"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_IDENTIDAD]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[IDENTIFICACION]" />
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[DEPARTAMENTO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de DEPARTAMENTO]"
+                      cachedDataType="wstr"
                       cachedLength="80"
-                      cachedName="DEPARTAMENTO"
+                      cachedName="Copia de DEPARTAMENTO"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[DEPARTAMENTO]" />
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[SIGLA_FACULTAD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de SIGLA_FACULTAD]"
+                      cachedDataType="wstr"
                       cachedLength="10"
-                      cachedName="SIGLA_FACULTAD"
+                      cachedName="Copia de SIGLA_FACULTAD"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_FACULTAD]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SIGLA_FACULTAD]" />
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of GENERO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copy of GENERO"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[GENERO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copy of GENERO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[EMAIL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de EMAIL]"
+                      cachedDataType="wstr"
                       cachedLength="80"
-                      cachedName="EMAIL"
+                      cachedName="Copia de EMAIL"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CORREO]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]" />
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de EMAIL]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[TELEFONO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="TELEFONO"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de TELEFONO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de TELEFONO"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_TELEFONO]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO]" />
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[CELULAR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de CELULAR]"
+                      cachedDataType="wstr"
                       cachedLength="15"
-                      cachedName="CELULAR"
+                      cachedName="Copia de CELULAR"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CELULAR]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CELULAR]" />
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CELULAR]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[LOCALIZACION_ID_NACIMIENTO]"
                       cachedDataType="numeric"
@@ -1129,8 +1319,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                       lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_PROCEDENCIA]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of ACTUAL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Copy of ACTUAL"
                       externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[ACTUAL]"
@@ -1157,50 +1346,42 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                       precision="38" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE_COMPLETO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="120"
                       name="NOMBRE_COMPLETO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_IDENTIDAD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       name="NUMERO_IDENTIDAD" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="80"
                       name="DEPARTAMENTO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_FACULTAD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       name="SIGLA_FACULTAD" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[GENERO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       name="GENERO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CORREO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="80"
                       name="CORREO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_TELEFONO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       name="NUMERO_TELEFONO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CELULAR]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="15"
                       name="CELULAR" />
                     <externalMetadataColumn
@@ -1215,8 +1396,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                       precision="10" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[ACTUAL]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       name="ACTUAL" />
                     <externalMetadataColumn
@@ -1258,27 +1438,27 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
             <component
               refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad"
               componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
               name="Fuente Facultad"
               usesDispositions="true"
               version="7">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowset"></property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT FACULTADUNIDADES.OID "OID_DEPARTAMENTO",
         FACULTADUNIDADES.DESCRIPCION "DEPARTAMENTO",
@@ -1287,125 +1467,122 @@ FROM FACULTADES JOIN FACULTADUNIDADES ON (FACULTADES.OID = FACULTADUNIDADES.FACU
 ORDER BY FACULTADES.SIGLA, FACULTADUNIDADES.DESCRIPCION</property>
                 <property
                   dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
+                  description="Variable que contiene el comando SQL para ejecutar."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">true</property>
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
-                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].ExternalColumns[OID_DEPARTAMENTO]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].ExternalColumns[OID_DEPARTAMENTO]"
+                      length="38"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO]"
                       name="OID_DEPARTAMENTO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO]"
                       length="80"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[SIGLA_FACULTAD]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].ExternalColumns[SIGLA_FACULTAD]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
                       length="10"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[SIGLA_FACULTAD]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]"
                       name="SIGLA_FACULTAD"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].ExternalColumns[OID_DEPARTAMENTO]"
-                      dataType="r8"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].ExternalColumns[OID_DEPARTAMENTO]"
+                      dataType="wstr"
+                      length="38"
                       name="OID_DEPARTAMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      dataType="wstr"
                       length="80"
                       name="DEPARTAMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].ExternalColumns[SIGLA_FACULTAD]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
+                      dataType="wstr"
                       length="10"
                       name="SIGLA_FACULTAD" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
-                  name="OLE DB Source Error Output">
+                  name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[OID_DEPARTAMENTO]"
-                      dataType="r8"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[OID_DEPARTAMENTO]"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[OID_DEPARTAMENTO]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[OID_DEPARTAMENTO]"
                       name="OID_DEPARTAMENTO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      dataType="wstr"
                       length="80"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[SIGLA_FACULTAD]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[SIGLA_FACULTAD]"
+                      dataType="wstr"
                       length="10"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[SIGLA_FACULTAD]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[SIGLA_FACULTAD]"
                       name="SIGLA_FACULTAD" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1416,27 +1593,27 @@ ORDER BY FACULTADES.SIGLA, FACULTADUNIDADES.DESCRIPCION</property>
             <component
               refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros"
               componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
               name="Fuente Terceros"
               usesDispositions="true"
               version="7">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowset"></property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT TERCEROS.PRIMERNOMBRE,
         TERCEROS.SEGUNDONOMBRE,
@@ -1458,341 +1635,311 @@ FROM TERCEROS JOIN DOCENTES ON (TERCEROS.OID = DOCENTES.TERCERO)
 ORDER BY DOCENTES.UNIDAD</property>
                 <property
                   dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
+                  description="Variable que contiene el comando SQL para ejecutar."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">true</property>
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
-                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERNOMBRE]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[PRIMERNOMBRE]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERNOMBRE]"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERNOMBRE]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]"
                       name="PRIMERNOMBRE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDONOMBRE]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[SEGUNDONOMBRE]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDONOMBRE]"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDONOMBRE]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]"
                       name="SEGUNDONOMBRE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[PRIMERAPELLIDO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERAPELLIDO]"
                       length="20"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERAPELLIDO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]"
                       name="PRIMERAPELLIDO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDOAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[SEGUNDOAPELLIDO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDOAPELLIDO]"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDOAPELLIDO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
                       name="SEGUNDOAPELLIDO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[IDENTIFICACION]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[IDENTIFICACION]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[IDENTIFICACION]"
                       length="20"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[IDENTIFICACION]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]"
                       name="IDENTIFICACION"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[GENERO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[GENERO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[GENERO]"
                       length="1"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[GENERO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]"
                       name="GENERO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[EMAIL]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[EMAIL]"
                       length="80"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[EMAIL]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]"
                       name="EMAIL"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CELULAR]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[CELULAR]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CELULAR]"
                       length="15"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CELULAR]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]"
                       name="CELULAR"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[TELEFONO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[TELEFONO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[TELEFONO]"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[TELEFONO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]"
                       name="TELEFONO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO_DOCENTE]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[OID_DEPARTAMENTO_DOCENTE]"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO_DOCENTE]"
-                      name="OID_DEPARTAMENTO_DOCENTE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_NAC]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_MUNICIPIO_NAC]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_NAC]"
                       length="10"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_NAC]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
                       name="CODIGO_MUNICIPIO_NAC"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_PRO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_MUNICIPIO_PRO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_PRO]"
                       length="10"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_PRO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
                       name="CODIGO_MUNICIPIO_PRO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO_DOCENTE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[OID_DEPARTAMENTO_DOCENTE]"
+                      length="38"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO_DOCENTE]"
+                      name="OID_DEPARTAMENTO_DOCENTE"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[PRIMERNOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERNOMBRE]"
+                      dataType="wstr"
                       length="30"
                       name="PRIMERNOMBRE" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[SEGUNDONOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDONOMBRE]"
+                      dataType="wstr"
                       length="30"
                       name="SEGUNDONOMBRE" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[PRIMERAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERAPELLIDO]"
+                      dataType="wstr"
                       length="20"
                       name="PRIMERAPELLIDO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[SEGUNDOAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDOAPELLIDO]"
+                      dataType="wstr"
                       length="30"
                       name="SEGUNDOAPELLIDO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[IDENTIFICACION]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[IDENTIFICACION]"
+                      dataType="wstr"
                       length="20"
                       name="IDENTIFICACION" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[GENERO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[GENERO]"
+                      dataType="wstr"
                       length="1"
                       name="GENERO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[EMAIL]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[EMAIL]"
+                      dataType="wstr"
                       length="80"
                       name="EMAIL" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[CELULAR]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CELULAR]"
+                      dataType="wstr"
                       length="15"
                       name="CELULAR" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[TELEFONO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[TELEFONO]"
+                      dataType="wstr"
                       length="30"
                       name="TELEFONO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[OID_DEPARTAMENTO_DOCENTE]"
-                      dataType="r8"
-                      name="OID_DEPARTAMENTO_DOCENTE" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_MUNICIPIO_NAC]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
                       length="10"
                       name="CODIGO_MUNICIPIO_NAC" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].ExternalColumns[CODIGO_MUNICIPIO_PRO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
                       length="10"
                       name="CODIGO_MUNICIPIO_PRO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[OID_DEPARTAMENTO_DOCENTE]"
+                      dataType="wstr"
+                      length="38"
+                      name="OID_DEPARTAMENTO_DOCENTE" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
-                  name="OLE DB Source Error Output">
+                  name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[PRIMERNOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERNOMBRE]"
+                      dataType="wstr"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[PRIMERNOMBRE]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERNOMBRE]"
                       name="PRIMERNOMBRE" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[SEGUNDONOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDONOMBRE]"
+                      dataType="wstr"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[SEGUNDONOMBRE]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDONOMBRE]"
                       name="SEGUNDONOMBRE" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[PRIMERAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERAPELLIDO]"
+                      dataType="wstr"
                       length="20"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[PRIMERAPELLIDO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERAPELLIDO]"
                       name="PRIMERAPELLIDO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[SEGUNDOAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
+                      dataType="wstr"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[SEGUNDOAPELLIDO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
                       name="SEGUNDOAPELLIDO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[IDENTIFICACION]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[IDENTIFICACION]"
+                      dataType="wstr"
                       length="20"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[IDENTIFICACION]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[IDENTIFICACION]"
                       name="IDENTIFICACION" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[GENERO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[GENERO]"
+                      dataType="wstr"
                       length="1"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[GENERO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[GENERO]"
                       name="GENERO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[EMAIL]"
+                      dataType="wstr"
                       length="80"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[EMAIL]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[EMAIL]"
                       name="EMAIL" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[CELULAR]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CELULAR]"
+                      dataType="wstr"
                       length="15"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[CELULAR]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CELULAR]"
                       name="CELULAR" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[TELEFONO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[TELEFONO]"
+                      dataType="wstr"
                       length="30"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[TELEFONO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[TELEFONO]"
                       name="TELEFONO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[CODIGO_MUNICIPIO_NAC]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
                       length="10"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[CODIGO_MUNICIPIO_NAC]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
                       name="CODIGO_MUNICIPIO_NAC" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[CODIGO_MUNICIPIO_PRO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
                       length="10"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[CODIGO_MUNICIPIO_PRO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
                       name="CODIGO_MUNICIPIO_PRO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[OID_DEPARTAMENTO_DOCENTE]"
-                      dataType="r8"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[OID_DEPARTAMENTO_DOCENTE]"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[OID_DEPARTAMENTO_DOCENTE]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[OID_DEPARTAMENTO_DOCENTE]"
                       name="OID_DEPARTAMENTO_DOCENTE" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1892,84 +2039,74 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[OID_DEPARTAMENTO_DOCENTE]"
-                      cachedDataType="r8"
+                      cachedDataType="wstr"
+                      cachedLength="38"
                       cachedName="OID_DEPARTAMENTO_DOCENTE"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[OID_DEPARTAMENTO_DOCENTE]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[PRIMERNOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="PRIMERNOMBRE"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[PRIMERNOMBRE]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[SEGUNDONOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="SEGUNDONOMBRE"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[SEGUNDONOMBRE]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[PRIMERAPELLIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="PRIMERAPELLIDO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[PRIMERAPELLIDO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[SEGUNDOAPELLIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="SEGUNDOAPELLIDO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[SEGUNDOAPELLIDO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[IDENTIFICACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="IDENTIFICACION"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[IDENTIFICACION]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[GENERO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="GENERO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[GENERO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[EMAIL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="EMAIL"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[EMAIL]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[CELULAR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="CELULAR"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CELULAR]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[TELEFONO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="TELEFONO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[TELEFONO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[CODIGO_MUNICIPIO_NAC]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO_MUNICIPIO_NAC"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CODIGO_MUNICIPIO_NAC]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Left Input].Columns[CODIGO_MUNICIPIO_PRO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO_MUNICIPIO_PRO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CODIGO_MUNICIPIO_PRO]" />
@@ -1983,21 +2120,20 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Right Input].Columns[OID_DEPARTAMENTO]"
-                      cachedDataType="r8"
+                      cachedDataType="wstr"
+                      cachedLength="38"
                       cachedName="OID_DEPARTAMENTO"
                       cachedSortKeyPosition="1"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[OID_DEPARTAMENTO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Right Input].Columns[DEPARTAMENTO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="DEPARTAMENTO"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[DEPARTAMENTO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Right Input].Columns[SIGLA_FACULTAD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="SIGLA_FACULTAD"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[SIGLA_FACULTAD]" />
@@ -2012,8 +2148,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[PRIMERNOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[PRIMERNOMBRE]"
                       name="PRIMERNOMBRE">
@@ -2027,8 +2162,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SEGUNDONOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SEGUNDONOMBRE]"
                       name="SEGUNDONOMBRE">
@@ -2042,8 +2176,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[PRIMERAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[PRIMERAPELLIDO]"
                       name="PRIMERAPELLIDO">
@@ -2057,8 +2190,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SEGUNDOAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SEGUNDOAPELLIDO]"
                       name="SEGUNDOAPELLIDO">
@@ -2072,8 +2204,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[IDENTIFICACION]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[IDENTIFICACION]"
                       name="IDENTIFICACION">
@@ -2087,8 +2218,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[GENERO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="1"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[GENERO]"
                       name="GENERO">
@@ -2102,8 +2232,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="80"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[EMAIL]"
                       name="EMAIL">
@@ -2117,8 +2246,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CELULAR]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="15"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CELULAR]"
                       name="CELULAR">
@@ -2132,8 +2260,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[TELEFONO]"
                       name="TELEFONO">
@@ -2147,8 +2274,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="80"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO">
@@ -2162,8 +2288,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SIGLA_FACULTAD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[SIGLA_FACULTAD]"
                       name="SIGLA_FACULTAD">
@@ -2177,8 +2302,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_NAC]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_NAC]"
                       name="CODIGO_MUNICIPIO_NAC">
@@ -2192,8 +2316,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_PRO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       lineageId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output].Columns[CODIGO_MUNICIPIO_PRO]"
                       name="CODIGO_MUNICIPIO_PRO">
@@ -2235,9 +2358,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Inputs[Sort Input].Columns[OID_DEPARTAMENTO]"
-                      cachedDataType="r8"
+                      cachedDataType="wstr"
+                      cachedLength="38"
                       cachedName="OID_DEPARTAMENTO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2251,11 +2375,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Inputs[Sort Input].Columns[DEPARTAMENTO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="DEPARTAMENTO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2269,11 +2392,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Inputs[Sort Input].Columns[SIGLA_FACULTAD]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="SIGLA_FACULTAD"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[SIGLA_FACULTAD]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2297,7 +2419,8 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[OID_DEPARTAMENTO]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="38"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[OID_DEPARTAMENTO]"
                       name="OID_DEPARTAMENTO"
                       sortKeyPosition="1">
@@ -2306,13 +2429,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="80"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO">
@@ -2321,13 +2443,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[SIGLA_FACULTAD]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Outputs[Sort Output].Columns[SIGLA_FACULTAD]"
                       name="SIGLA_FACULTAD">
@@ -2336,7 +2457,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output].Columns[SIGLA_FACULTAD]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2369,11 +2490,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[PRIMERNOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="PRIMERNOMBRE"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERNOMBRE]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2387,11 +2507,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[SEGUNDONOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="SEGUNDONOMBRE"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDONOMBRE]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2405,11 +2524,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[PRIMERAPELLIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="PRIMERAPELLIDO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERAPELLIDO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2423,11 +2541,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[SEGUNDOAPELLIDO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="SEGUNDOAPELLIDO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDOAPELLIDO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2441,11 +2558,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[IDENTIFICACION]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="IDENTIFICACION"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[IDENTIFICACION]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2459,11 +2575,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[GENERO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="1"
                       cachedName="GENERO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[GENERO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2477,11 +2592,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[EMAIL]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="EMAIL"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[EMAIL]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2495,11 +2609,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[CELULAR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="CELULAR"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CELULAR]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2513,11 +2626,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[TELEFONO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="30"
                       cachedName="TELEFONO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[TELEFONO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2531,9 +2643,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[OID_DEPARTAMENTO_DOCENTE]"
-                      cachedDataType="r8"
+                      cachedDataType="wstr"
+                      cachedLength="38"
                       cachedName="OID_DEPARTAMENTO_DOCENTE"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO_DOCENTE]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO_DOCENTE]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2547,11 +2660,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[CODIGO_MUNICIPIO_NAC]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO_MUNICIPIO_NAC"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_NAC]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2565,11 +2677,10 @@ ORDER BY DOCENTES.UNIDAD</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input].Columns[CODIGO_MUNICIPIO_PRO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO_MUNICIPIO_PRO"
-                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_PRO]">
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2593,8 +2704,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[PRIMERNOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[PRIMERNOMBRE]"
                       name="PRIMERNOMBRE">
@@ -2603,13 +2713,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERNOMBRE]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[SEGUNDONOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[SEGUNDONOMBRE]"
                       name="SEGUNDONOMBRE">
@@ -2618,13 +2727,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDONOMBRE]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[PRIMERAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[PRIMERAPELLIDO]"
                       name="PRIMERAPELLIDO">
@@ -2633,13 +2741,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[PRIMERAPELLIDO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[SEGUNDOAPELLIDO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[SEGUNDOAPELLIDO]"
                       name="SEGUNDOAPELLIDO">
@@ -2648,13 +2755,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[SEGUNDOAPELLIDO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[IDENTIFICACION]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="20"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[IDENTIFICACION]"
                       name="IDENTIFICACION">
@@ -2663,13 +2769,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[IDENTIFICACION]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[GENERO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="1"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[GENERO]"
                       name="GENERO">
@@ -2678,13 +2783,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[GENERO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[EMAIL]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="80"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[EMAIL]"
                       name="EMAIL">
@@ -2693,13 +2797,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[EMAIL]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CELULAR]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="15"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CELULAR]"
                       name="CELULAR">
@@ -2708,13 +2811,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CELULAR]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[TELEFONO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="30"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[TELEFONO]"
                       name="TELEFONO">
@@ -2723,12 +2825,13 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[TELEFONO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[OID_DEPARTAMENTO_DOCENTE]"
-                      dataType="r8"
+                      dataType="wstr"
+                      length="38"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[OID_DEPARTAMENTO_DOCENTE]"
                       name="OID_DEPARTAMENTO_DOCENTE"
                       sortKeyPosition="1">
@@ -2737,13 +2840,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[OID_DEPARTAMENTO_DOCENTE]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[OID_DEPARTAMENTO_DOCENTE]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CODIGO_MUNICIPIO_NAC]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CODIGO_MUNICIPIO_NAC]"
                       name="CODIGO_MUNICIPIO_NAC">
@@ -2752,13 +2854,12 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_NAC]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CODIGO_MUNICIPIO_PRO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="10"
                       lineageId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Outputs[Sort Output].Columns[CODIGO_MUNICIPIO_PRO]"
                       name="CODIGO_MUNICIPIO_PRO">
@@ -2767,7 +2868,7 @@ ORDER BY DOCENTES.UNIDAD</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output].Columns[CODIGO_MUNICIPIO_PRO]}</property>
+                          name="SortColumnId">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -2808,20 +2909,20 @@ ORDER BY DOCENTES.UNIDAD</property>
               name="Merge Join Output"
               startId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output]" />
             <path
-              refId="Package\Tarea Flujo de Datos Docente.Paths[OLE DB Source Output]"
-              endId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[OLE DB Source Output]" />
-            <path
-              refId="Package\Tarea Flujo de Datos Docente.Paths[OLE DB Source Output1]"
-              endId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Inputs[Sort Input]"
-              name="OLE DB Source Output"
-              startId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[OLE DB Source Output]" />
-            <path
               refId="Package\Tarea Flujo de Datos Docente.Paths[Row Number Output]"
               endId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input]"
               name="Row Number Output"
               startId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros.Inputs[Sort Input]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Salida de origen de OLE DB1]"
+              endId="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad.Inputs[Sort Input]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de Datos Docente\Fuente Facultad.Outputs[Salida de origen de OLE DB]" />
             <path
               refId="Package\Tarea Flujo de Datos Docente.Paths[Sort Output]"
               endId="Package\Tarea Flujo de Datos Docente\Merge Join.Inputs[Merge Join Right Input]"
@@ -2838,12 +2939,12 @@ ORDER BY DOCENTES.UNIDAD</property>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -2862,6 +2963,18 @@ ORDER BY DOCENTES.UNIDAD</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="179,42"
+          Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros"
+          TopLeft="38,96" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
+          TopLeft="435,185" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Tarea Flujo de Datos Docente\Conversion datos"
+          TopLeft="223,373" />
+        <NodeLayout
           Size="136,42"
           Id="Package\Tarea Flujo de Datos Docente\DimDocente"
           TopLeft="458,81" />
@@ -2870,45 +2983,25 @@ ORDER BY DOCENTES.UNIDAD</property>
           Id="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia"
           TopLeft="440,280" />
         <NodeLayout
-          Size="160,42"
-          Id="Package\Tarea Flujo de Datos Docente\Conversion datos"
-          TopLeft="223,373" />
+          Size="164,42"
+          Id="Package\Tarea Flujo de Datos Docente\Columna derivada"
+          TopLeft="228,294" />
         <NodeLayout
           Size="178,42"
           Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Facultad"
           TopLeft="27,209" />
         <NodeLayout
-          Size="130,42"
-          Id="Package\Tarea Flujo de Datos Docente\Merge Join"
-          TopLeft="227,136" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Tarea Flujo de Datos Docente\Fuente Facultad"
-          TopLeft="42,280" />
-        <NodeLayout
           Size="167,42"
           Id="Package\Tarea Flujo de Datos Docente\Conversion genero"
           TopLeft="227,219" />
         <NodeLayout
-          Size="179,42"
-          Id="Package\Tarea Flujo de Datos Docente\Ordenacion_Terceros"
-          TopLeft="38,96" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Tarea Flujo de Datos Docente\Columna derivada"
-          TopLeft="228,294" />
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Tarea Flujo de Datos Docente\Fuente Terceros"
-          TopLeft="44,18" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
-          TopLeft="435,185" />
-        <NodeLayout
           Size="181,42"
           Id="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento"
           TopLeft="440,374" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Tarea Flujo de Datos Docente\Merge Join"
+          TopLeft="227,136" />
         <EdgeLayout
           Id="Package\Tarea Flujo de Datos Docente.Paths[Sort Output1]"
           TopLeft="217,113.5">
@@ -2985,50 +3078,6 @@ ORDER BY DOCENTES.UNIDAD</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,-54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de Datos Docente.Paths[OLE DB Source Output1]"
-          TopLeft="117.5,280">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-29"
-              Start="0,0"
-              End="0,-21.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-21.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de Datos Docente.Paths[OLE DB Source Output]"
-          TopLeft="124.5,60">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3173,32 +3222,73 @@ ORDER BY DOCENTES.UNIDAD</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Tarea Flujo de Datos Docente\Fuente Terceros"
+          TopLeft="58,16" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Salida de origen de OLE DB]"
+          TopLeft="135.5,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8,38"
+              Start="0,0"
+              End="-8,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15"
+                    Point2="0,19"
+                    Point3="-4,19" />
+                  <mssgle:LineSegment
+                    End="-4,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4,19"
+                    Point2="-8,19"
+                    Point3="-8,23" />
+                  <mssgle:LineSegment
+                    End="-8,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Tarea Flujo de Datos Docente\Fuente Facultad"
+          TopLeft="42,316" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Salida de origen de OLE DB1]"
+          TopLeft="117.5,316">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-65"
+              Start="0,0"
+              End="0,-57.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-57.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">"DW_ACADEMICO_LABOR"."LOCALIZACION"</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de Datos Docente\DimDocente">
     <Properties>
@@ -3213,8 +3303,46 @@ ORDER BY DOCENTES.UNIDAD</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de Datos Docente\Fuente Facultad">
+    design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"DW_ACADEMICO_LABOR"."LOCALIZACION"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"DW_ACADEMICO_LABOR"."LOCALIZACION"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -3229,23 +3357,8 @@ ORDER BY DOCENTES.UNIDAD</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento">
+    design-time-name="Package\Tarea Flujo de Datos Docente\Fuente Facultad">
     <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">"DW_ACADEMICO_LABOR"."LOCALIZACION"</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

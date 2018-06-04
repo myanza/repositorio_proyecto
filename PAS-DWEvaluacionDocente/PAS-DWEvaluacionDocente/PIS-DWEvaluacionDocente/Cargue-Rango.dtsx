@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Rango"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{C669F8E3-7CD4-4C96-ABE8-F82544664207}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{4B185BB2-084F-495E-94D0-61786BF7C8E3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -102,7 +102,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="RANGO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NOMBRE_RANGO" dataType="DT_STR" length="15" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="RANGO" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="LIMITE_INFERIOR" dataType="DT_NUMERIC" length="0" precision="3" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LIMITE_SUPERIOR" dataType="DT_NUMERIC" length="0" precision="3" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="RANGO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NOMBRE_RANGO" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RANGO" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LIMITE_INFERIOR" dataType="DT_NUMERIC" length="0" precision="3" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LIMITE_SUPERIOR" dataType="DT_NUMERIC" length="0" precision="3" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -120,8 +120,8 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Busqueda Rango.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -130,42 +130,6 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                   refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of NOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Copy of NOMBRE"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">NOMBRE_RANGO</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of RANGO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Copy of RANGO"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">RANGO</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
                     <inputColumn
                       refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of LIMITE_INFERIOR]"
                       cachedDataType="numeric"
@@ -197,6 +161,40 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of RANGO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of RANGO"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">RANGO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copy of NOMBRE"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">NOMBRE_RANGO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
                           name="CopyFromReferenceColumn" />
                       </properties>
                     </inputColumn>
@@ -292,8 +290,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="15"
@@ -314,8 +311,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="10"
@@ -562,140 +558,136 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Data Flow Task\Fuente Rango"
               componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE DB Destination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Fuente Rango"
               usesDispositions="true"
               version="4">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowset">"DW_ACADEMICO_LABOR"."RANGO"</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">true</property>
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadMaxInsertCommitSize">2147483647</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
-                  description="The OLE DB runtime connection used to access the database."
+                  refId="Package\Data Flow Task\Fuente Rango.Connections[OleDbConnection]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
+                  refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="OLE DB Destination Input">
+                  name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rango_iD]"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Rango_iD]"
                       cachedDataType="i4"
                       cachedName="Rango_iD"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RANGO_ID]"
+                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
                       lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of NOMBRE]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="Copy of NOMBRE"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE_RANGO]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of RANGO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Copy of RANGO"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RANGO]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of LIMITE_INFERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_INFERIOR"
-                      cachedPrecision="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIMITE_INFERIOR]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of LIMITE_SUPERIOR]"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_SUPERIOR]"
                       cachedDataType="numeric"
                       cachedName="Copy of LIMITE_SUPERIOR"
                       cachedPrecision="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIMITE_SUPERIOR]"
+                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
                       lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_INFERIOR]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of LIMITE_INFERIOR"
+                      cachedPrecision="3"
+                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of RANGO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of RANGO"
+                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copy of NOMBRE"
+                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RANGO_ID]"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
                       dataType="numeric"
                       name="RANGO_ID"
                       precision="10" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE_RANGO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
+                      dataType="wstr"
                       length="15"
                       name="NOMBRE_RANGO" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RANGO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
+                      dataType="wstr"
                       length="10"
                       name="RANGO" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIMITE_INFERIOR]"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
                       dataType="numeric"
                       name="LIMITE_INFERIOR"
                       precision="3" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LIMITE_SUPERIOR]"
+                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
                       dataType="numeric"
                       name="LIMITE_SUPERIOR"
                       precision="3" />
@@ -704,22 +696,22 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1540,7 +1532,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Output 0]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB]"
               name="Output 0"
               startId="Package\Data Flow Task\Script Component.Outputs[Output 0]" />
           </paths>
@@ -1560,7 +1552,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{63686CBC-8381-45DA-90F6-7DFF1314D5BA}"
+          SQLTask:Connection="{5797239F-B739-4D39-8315-28285D9C507A}"
           SQLTask:SqlStatementSource="select &#xA;  case&#xA;    when max(rango_id) is null then 0 &#xA;    else max(rango_id)  &#xA;  end as maxkey&#xA;from rango"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -1581,12 +1573,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -1631,74 +1623,48 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="83,354" />
-        <NodeLayout
           Size="163,42"
           Id="Package\Data Flow Task\Script Component"
-          TopLeft="80,281" />
+          TopLeft="266,279" />
         <NodeLayout
           Size="141,42"
           Id="Package\Data Flow Task\Excel Rangos"
-          TopLeft="94,36" />
+          TopLeft="280,34" />
         <NodeLayout
-          Size="158,44"
+          Size="158,42"
           Id="Package\Data Flow Task\Busqueda Rango"
-          TopLeft="82,199" />
+          TopLeft="268,197" />
         <NodeLayout
           Size="164,42"
           Id="Package\Data Flow Task\Conversion Rango"
-          TopLeft="82,121" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="165,323">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="268,119" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="161.25,243">
+          TopLeft="347.25,239">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38"
+              EndConnector="0,40"
               Start="0,0"
-              End="0,30.5">
+              End="0,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,9.4453125,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,10.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="164.25,78">
+          TopLeft="350.25,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1720,7 +1686,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="162.5,163">
+          TopLeft="348.5,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1740,11 +1706,60 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Data Flow Task\Fuente Rango"
+          TopLeft="278,367" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="348.75,321">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Data Flow Task\Busqueda Rango">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"DW_ACADEMICO_LABOR"."RANGO"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Rangos">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1757,30 +1772,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Busqueda Rango">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">"DW_ACADEMICO_LABOR"."RANGO"</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Rangos">
+    design-time-name="Package\Data Flow Task\Fuente Rango">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Inicial-Localizacion"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{6B65ADB9-16ED-451E-BB88-B72C7BE0C9F5}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{890B943F-06FB-41B4-B9B1-A91803B6380D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -64,32 +64,28 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Inputs[Data Conversion Input].Columns[CODIGO MUNICIPIO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="CODIGO MUNICIPIO"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[CODIGO MUNICIPIO]" />
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[CODIGO MUNICIPIO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Inputs[Data Conversion Input].Columns[PAIS]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="200"
                       cachedName="PAIS"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[PAIS]" />
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[PAIS]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Inputs[Data Conversion Input].Columns[DEPARTAMENTO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="100"
                       cachedName="DEPARTAMENTO"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]" />
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]" />
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Inputs[Data Conversion Input].Columns[MUNICIPIO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="MUNICIPIO"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[MUNICIPIO]" />
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[MUNICIPIO]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -103,8 +99,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="10"
@@ -116,7 +111,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[CODIGO MUNICIPIO]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[CODIGO MUNICIPIO]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -125,8 +120,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of PAIS]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
@@ -138,7 +132,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[PAIS]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[PAIS]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -147,8 +141,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
@@ -160,7 +153,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -169,8 +162,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       length="50"
@@ -182,7 +174,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[MUNICIPIO]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[MUNICIPIO]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -231,8 +223,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input].Columns[Copy of CODIGO MUNICIPIO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Copy of CODIGO MUNICIPIO"
                       errorOrTruncationOperation="Computation"
@@ -256,8 +247,7 @@
                     </inputColumn>
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input].Columns[Copy of MUNICIPIO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of MUNICIPIO"
                       errorOrTruncationOperation="Computation"
@@ -320,143 +310,135 @@
             <component
               refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion"
               componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
               name="DimLocalizacion"
               usesDispositions="true"
               version="4">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowset">"DW_ACADEMICO_LABOR"."LOCALIZACION"</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">true</property>
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadMaxInsertCommitSize">2147483647</property>
               </properties>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
-                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
+                  refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="OLE DB Destination Input">
+                  name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].Columns[Copy of CODIGO MUNICIPIO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Copy of CODIGO MUNICIPIO"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_MUNICIPIO]"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].Columns[Copy of PAIS]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of PAIS"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[PAIS]"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of PAIS]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].Columns[Copy of DEPARTAMENTO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of DEPARTAMENTO"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of DEPARTAMENTO]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].Columns[Copy of MUNICIPIO]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of MUNICIPIO"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[MUNICIPIO]"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].Columns[LOCALIZACION_ID]"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[LOCALIZACION_ID]"
                       cachedDataType="i4"
                       cachedName="LOCALIZACION_ID"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[LOCALIZACION_ID]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[LOCALIZACION_ID]"
                       lineageId="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion.Outputs[Row Number Output].Columns[LOCALIZACION_ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[Copy of MUNICIPIO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of MUNICIPIO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[MUNICIPIO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[Copy of DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of DEPARTAMENTO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[Copy of PAIS]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of PAIS"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[PAIS]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of PAIS]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[Copy of CODIGO MUNICIPIO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of CODIGO MUNICIPIO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CODIGO_MUNICIPIO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[LOCALIZACION_ID]"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[LOCALIZACION_ID]"
                       dataType="numeric"
                       name="LOCALIZACION_ID"
                       precision="38" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[PAIS]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[PAIS]"
+                      dataType="wstr"
                       length="50"
                       name="PAIS" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      dataType="wstr"
                       length="50"
                       name="DEPARTAMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[MUNICIPIO]"
+                      dataType="wstr"
                       length="50"
                       name="MUNICIPIO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input].ExternalColumns[CODIGO_MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CODIGO_MUNICIPIO]"
+                      dataType="wstr"
                       length="10"
                       name="CODIGO_MUNICIPIO" />
                   </externalMetadataColumns>
@@ -464,22 +446,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input]">
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -490,27 +472,27 @@
             <component
               refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
               componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
               name="Fuente Localizacion"
               usesDispositions="true"
               version="7">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowset"></property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  PAISES.DESCRIPCION "PAIS",
         DEPARTAMENTOS.DESCRIPCION "DEPARTAMENTO", 
@@ -520,155 +502,143 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
       ON (MUNICIPIOS.DEPARTAMENTO = DEPARTAMENTOS.OID)</property>
                 <property
                   dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
+                  description="Variable que contiene el comando SQL para ejecutar."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">true</property>
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
                   refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Connections[OleDbConnection]"
-                  connectionManagerID="{FF49194F-23AD-436B-BB5C-FE74570803FE}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost.academico]"
-                  description="The OLE DB runtime connection used to access the database."
+                  connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
+                  refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[CODIGO MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[PAIS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[CODIGO MUNICIPIO]"
-                      length="10"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[CODIGO MUNICIPIO]"
-                      name="CODIGO MUNICIPIO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[PAIS]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[PAIS]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[PAIS]"
                       length="200"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[PAIS]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[PAIS]"
                       name="PAIS"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO]"
                       length="100"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[CODIGO MUNICIPIO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[MUNICIPIO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO MUNICIPIO]"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[CODIGO MUNICIPIO]"
+                      name="CODIGO MUNICIPIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[MUNICIPIO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[MUNICIPIO]"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].Columns[MUNICIPIO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].Columns[MUNICIPIO]"
                       name="MUNICIPIO"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[CODIGO MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="CODIGO MUNICIPIO" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[PAIS]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[PAIS]"
+                      dataType="wstr"
                       length="200"
                       name="PAIS" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      dataType="wstr"
                       length="100"
                       name="DEPARTAMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output].ExternalColumns[MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO MUNICIPIO]"
+                      dataType="wstr"
+                      length="10"
+                      name="CODIGO MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB].ExternalColumns[MUNICIPIO]"
+                      dataType="wstr"
                       length="50"
                       name="MUNICIPIO" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output]"
+                  refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
-                  name="OLE DB Source Error Output">
+                  name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[PAIS]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[PAIS]"
+                      dataType="wstr"
                       length="200"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[PAIS]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[PAIS]"
                       name="PAIS" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      dataType="wstr"
                       length="100"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO]"
                       name="DEPARTAMENTO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[CODIGO MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO MUNICIPIO]"
+                      dataType="wstr"
                       length="10"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[CODIGO MUNICIPIO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO MUNICIPIO]"
                       name="CODIGO MUNICIPIO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[MUNICIPIO]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[MUNICIPIO]"
+                      dataType="wstr"
                       length="50"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[MUNICIPIO]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[MUNICIPIO]"
                       name="MUNICIPIO" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -747,27 +717,27 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
               name="Derived Column Output"
               startId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Tarea Flujo de datos Localizacion.Paths[OLE DB Source Output]"
-              endId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Inputs[Data Conversion Input]"
-              name="OLE DB Source Output"
-              startId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[OLE DB Source Output]" />
-            <path
               refId="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
-              endId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[OLE DB Destination Input]"
+              endId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB]"
               name="Row Number Output"
               startId="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion.Outputs[Row Number Output]" />
+            <path
+              refId="Package\Tarea Flujo de datos Localizacion.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Inputs[Data Conversion Input]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
@@ -776,7 +746,7 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
         <NodeLayout
           Size="235,42"
           Id="Package\Tarea Flujo de datos Localizacion"
-          TopLeft="160,80" />
+          TopLeft="161,80" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -786,68 +756,20 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
-          TopLeft="94,40" />
-        <NodeLayout
-          Size="207,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion"
-          TopLeft="82,284" />
-        <NodeLayout
           Size="190,42"
           Id="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion"
-          TopLeft="89,113" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[OLE DB Source Output]"
-          TopLeft="181.75,82">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,31"
-              Start="0,0"
-              End="0,23.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="415,119" />
         <NodeLayout
           Size="154,42"
           Id="Package\Tarea Flujo de datos Localizacion\Derived Column"
-          TopLeft="102,200" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
-          TopLeft="181.5,155">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45"
-              Start="0,0"
-              End="0,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="429,200" />
+        <NodeLayout
+          Size="207,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion"
+          TopLeft="409,284" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos Localizacion.Paths[Derived Column Output]"
-          TopLeft="182.25,242">
+          TopLeft="509.25,242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -867,24 +789,84 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Tarea Flujo de datos Localizacion\DimLocalizacion"
-          TopLeft="111,366" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
-          TopLeft="186.75,326">
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
+          TopLeft="508,161">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,32.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
+          TopLeft="433,32" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Salida de origen de OLE DB]"
+          TopLeft="518.5,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.5,45"
+              Start="0,0"
+              End="-8.5,37.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.5"
+                    Point2="0,22.5"
+                    Point3="-4,22.5" />
+                  <mssgle:LineSegment
+                    End="-4.5,22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.5,22.5"
+                    Point2="-8.5,22.5"
+                    Point3="-8.5,26.5" />
+                  <mssgle:LineSegment
+                    End="-8.5,37.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Tarea Flujo de datos Localizacion\DimLocalizacion"
+          TopLeft="440,379" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
+          TopLeft="514.75,326">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53"
+              Start="0,0"
+              End="0,45.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
