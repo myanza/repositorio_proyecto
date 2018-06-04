@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Inicial-Docente"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{607CD4C6-5663-4C65-A5F2-95EA412CF777}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{24A4F6C1-F6ED-4C17-B8FA-2DF83ABD249B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1172,57 +1172,57 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
             <component
               refId="Package\Tarea Flujo de Datos Docente\DimDocente"
               componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
               name="DimDocente"
               usesDispositions="true"
               version="4">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowset">"DW_ACADEMICO_LABOR"."DOCENTE"</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">true</property>
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadKeepIdentity">false</property>
                 <property
                   dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadKeepNulls">false</property>
                 <property
                   dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
                   name="FastLoadMaxInsertCommitSize">2147483647</property>
               </properties>
               <connections>
@@ -1230,181 +1230,181 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   refId="Package\Tarea Flujo de Datos Docente\DimDocente.Connections[OleDbConnection]"
                   connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
-                  description="The OLE DB runtime connection used to access the database."
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
+                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
-                  name="OLE DB Destination Input">
+                  name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[DOCENTE_ID]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[DOCENTE_ID]"
                       cachedDataType="i4"
                       cachedName="DOCENTE_ID"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[DOCENTE_ID]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DOCENTE_ID]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output].Columns[DOCENTE_ID]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of NOMBRE_COMPLETO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of NOMBRE_COMPLETO]"
                       cachedDataType="wstr"
                       cachedLength="50"
                       cachedName="Copy of NOMBRE_COMPLETO"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE_COMPLETO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_COMPLETO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de IDENTIFICACION]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de IDENTIFICACION]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copia de IDENTIFICACION"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_IDENTIDAD]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_IDENTIDAD]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de DEPARTAMENTO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de DEPARTAMENTO]"
                       cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="Copia de DEPARTAMENTO"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPARTAMENTO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de SIGLA_FACULTAD]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de SIGLA_FACULTAD]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Copia de SIGLA_FACULTAD"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_FACULTAD]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of GENERO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of GENERO]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copy of GENERO"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[GENERO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[GENERO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copy of GENERO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de EMAIL]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de EMAIL]"
                       cachedDataType="wstr"
                       cachedLength="80"
                       cachedName="Copia de EMAIL"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CORREO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CORREO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de EMAIL]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de TELEFONO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de TELEFONO]"
                       cachedDataType="wstr"
                       cachedLength="20"
                       cachedName="Copia de TELEFONO"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_TELEFONO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_TELEFONO]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copia de CELULAR]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de CELULAR]"
                       cachedDataType="wstr"
                       cachedLength="15"
                       cachedName="Copia de CELULAR"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CELULAR]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CELULAR]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion genero.Outputs[Data Conversion Output].Columns[Copia de CELULAR]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[LOCALIZACION_ID_NACIMIENTO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[LOCALIZACION_ID_NACIMIENTO]"
                       cachedDataType="numeric"
                       cachedName="LOCALIZACION_ID_NACIMIENTO"
                       cachedPrecision="38"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[LUGAR_NACIMIENTO_ID]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_NACIMIENTO_ID]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_NACIMIENTO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[LOCALIZACION_ID_PROCEDENCIA]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[LOCALIZACION_ID_PROCEDENCIA]"
                       cachedDataType="numeric"
                       cachedName="LOCALIZACION_ID_PROCEDENCIA"
                       cachedPrecision="38"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[LUGAR_PROCEDENCIA_ID]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_PROCEDENCIA_ID]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_PROCEDENCIA]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of ACTUAL]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of ACTUAL]"
                       cachedDataType="wstr"
                       cachedLength="10"
                       cachedName="Copy of ACTUAL"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[ACTUAL]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACTUAL]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of ACTUAL]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of FECHA_EFECTIVA]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of FECHA_EFECTIVA]"
                       cachedDataType="dbDate"
                       cachedName="Copy of FECHA_EFECTIVA"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_EFECTIVA]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EFECTIVA]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of FECHA_EFECTIVA]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].Columns[Copy of FECHA_EXPIRACION]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of FECHA_EXPIRACION]"
                       cachedDataType="dbDate"
                       cachedName="Copy of FECHA_EXPIRACION"
-                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_EXPIRACION]"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EXPIRACION]"
                       lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos.Outputs[Data Conversion Output].Columns[Copy of FECHA_EXPIRACION]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[DOCENTE_ID]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DOCENTE_ID]"
                       dataType="numeric"
                       name="DOCENTE_ID"
                       precision="38" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NOMBRE_COMPLETO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_COMPLETO]"
                       dataType="wstr"
                       length="120"
                       name="NOMBRE_COMPLETO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_IDENTIDAD]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_IDENTIDAD]"
                       dataType="wstr"
                       length="30"
                       name="NUMERO_IDENTIDAD" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPARTAMENTO]"
                       dataType="wstr"
                       length="80"
                       name="DEPARTAMENTO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[SIGLA_FACULTAD]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
                       dataType="wstr"
                       length="10"
                       name="SIGLA_FACULTAD" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[GENERO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[GENERO]"
                       dataType="wstr"
                       length="20"
                       name="GENERO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CORREO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CORREO]"
                       dataType="wstr"
                       length="80"
                       name="CORREO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[NUMERO_TELEFONO]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_TELEFONO]"
                       dataType="wstr"
                       length="20"
                       name="NUMERO_TELEFONO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[CELULAR]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CELULAR]"
                       dataType="wstr"
                       length="15"
                       name="CELULAR" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[LUGAR_NACIMIENTO_ID]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_NACIMIENTO_ID]"
                       dataType="numeric"
                       name="LUGAR_NACIMIENTO_ID"
                       precision="10" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[LUGAR_PROCEDENCIA_ID]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_PROCEDENCIA_ID]"
                       dataType="numeric"
                       name="LUGAR_PROCEDENCIA_ID"
                       precision="10" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[ACTUAL]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACTUAL]"
                       dataType="wstr"
                       length="10"
                       name="ACTUAL" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_EFECTIVA]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EFECTIVA]"
                       dataType="dbTimeStamp"
                       name="FECHA_EFECTIVA" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_EXPIRACION]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EXPIRACION]"
                       dataType="dbTimeStamp"
                       name="FECHA_EXPIRACION" />
                   </externalMetadataColumns>
@@ -1412,22 +1412,22 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input]">
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2910,7 +2910,7 @@ ORDER BY DOCENTES.UNIDAD</property>
               startId="Package\Tarea Flujo de Datos Docente\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Tarea Flujo de Datos Docente.Paths[Row Number Output]"
-              endId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[OLE DB Destination Input]"
+              endId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB]"
               name="Row Number Output"
               startId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output]" />
             <path
@@ -2969,15 +2969,11 @@ ORDER BY DOCENTES.UNIDAD</property>
         <NodeLayout
           Size="189,42"
           Id="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
-          TopLeft="435,185" />
+          TopLeft="438,172" />
         <NodeLayout
           Size="160,42"
           Id="Package\Tarea Flujo de Datos Docente\Conversion datos"
           TopLeft="223,373" />
-        <NodeLayout
-          Size="136,42"
-          Id="Package\Tarea Flujo de Datos Docente\DimDocente"
-          TopLeft="458,81" />
         <NodeLayout
           Size="185,42"
           Id="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia"
@@ -3065,28 +3061,6 @@ ORDER BY DOCENTES.UNIDAD</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de Datos Docente.Paths[Row Number Output]"
-          TopLeft="527.75,185">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-62"
-              Start="0,0"
-              End="0,-54.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-54.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Tarea Flujo de Datos Docente.Paths[Merge Join Output]"
           TopLeft="311.416666666667,178">
           <EdgeLayout.Curve>
@@ -3110,25 +3084,25 @@ ORDER BY DOCENTES.UNIDAD</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de Datos Docente.Paths[Lookup Match Output1]"
-          TopLeft="531,280">
+          TopLeft="532.5,280">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-53"
+              EndConnector="0,-66"
               Start="0,0"
-              End="0,-45.5">
+              End="0,-58.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-45.5" />
+                    End="0,-58.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,-28.5546875,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,-35.0546875,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3286,22 +3260,35 @@ ORDER BY DOCENTES.UNIDAD</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Tarea Flujo de Datos Docente\DimDocente"
+          TopLeft="470,82" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Row Number Output]"
+          TopLeft="535.25,172">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-48"
+              Start="0,0"
+              End="0,-40.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-40.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de Datos Docente\DimDocente">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia">
     <Properties>
@@ -3361,6 +3348,19 @@ ORDER BY DOCENTES.UNIDAD</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\DimDocente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

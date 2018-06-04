@@ -26,13 +26,15 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-N341SEE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAAAHdkbDlsmKZ7Fa1EvObxJSj1QSvnABvubW88u2DZvTwAAAAAAOgAAAAAIAACAAAAB+OfjFICWkrixhcrwA1n5gs7XOWi35mEacjWFgLzINZ5AAAABtSUqAQv6nMIuqWJ7x9HIe8nA5not4GTZ+zMdVz40aSWOQsgVgyrsXw3hwAPc8kcREGtlnt3kEmd87+FwLca8ePQ6BJwS5l2BeMzYfWjSKRnb5xbNvfQTwr5RsJ9FkPI16rYNCIx7dcIoqPfDa5kKrYJXYL3j1RiyigyciSvabjKLZgfrPzJt2LR8gKT4A0IJAAAAAbtRuZmaDlbE2Fo3VWaDcb5Yb0/pKHafpVls43THGMihOi1sbbVJGpfwNIk5BD6MjWnXNRMOHKRElOSuNmsLEmQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAACI+VLBXlZpsY4ITaqU0SB15NPSEqXQfQ4wVuOjiqMOngAAAAAOgAAAAAIAACAAAAA59NIMZA6cRx59+dNGejqEkavlHblEF8OnuLLYiIrnTZAAAABkLgNMtNGhL3m0vAZ98fpQlW1Hk5wlRtNWCA606odhg2wnxtO5U0mfCCaUDrR2BfXHhsN3hzHZPpsFNzl1vAo21s9uJysl48uPJSgcdRIS8H1PHJmClEZOwT/XQKpjwDfWsoQrs0MbX0YNOH01vNBG15c3jKDDa4AB/Km0QCFSUYGycIOTzrwcsrfO4S4TXHJAAAAA3bijXhmLGJSDPmkmIUbtQi6a8Ut52pSQQQEANZrTbtmOnDeIykJLZGNABgHtHXkvuGlvsDcRLk+/Uu+VnaAvMg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Cargue-Inicial-Localizacion.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue-Inicial-Docente.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue-Rango.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Pregunta.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Cuestionario.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Origen_Excel_Evaluacion.conmgr" />
@@ -448,10 +450,10 @@
                 <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Docente</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">23</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">31</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{607CD4C6-5663-4C65-A5F2-95EA412CF777}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{24A4F6C1-F6ED-4C17-B8FA-2DF83ABD249B}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -469,6 +471,40 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{4B185BB2-084F-495E-94D0-61786BF7C8E3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Pregunta.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{B6C947F8-C7E9-4DCA-81F4-3BCEDEA6F5D3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Pregunta</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A8E895D3-A286-48CF-BB87-F47088034F68}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Cuestionario.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{FF32C394-5C88-4F42-AABC-329993D62A0C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Cuestionario</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9AC2414D-5B25-4388-97D2-5E890FA7EA02}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
