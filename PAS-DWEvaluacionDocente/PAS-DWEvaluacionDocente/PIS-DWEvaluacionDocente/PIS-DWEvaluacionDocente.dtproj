@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-N341SEE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAAAfUkuYaQ8INxOfGejwGsogsZR31DrGcTmRfSDvXn572AAAAAAOgAAAAAIAACAAAAAZWZEi+ElKZELfZmRFPewrSsaPK5d2WvtJRk7XvOyjRpAAAACZbXcorOmMF9mHcxWttUxH/NKIn6xxlfalimO6+hMXJP7LAAXUdBJhpvlnOcoHZStkfrLdy4oyFAhVZDHpH2rNAZOmpduAsdJ7e1PbbnNLf8sYMkXpLdAeUkr+HBZduS3GP+hPkaQRGGPjuvoAzPqtJR8ZrqZT8O99/AXk5I3i3AYI1/mO/l7zbQSHgjTsZRRAAAAA7Rzpax0NNuVcXinEk0MWtltbFbxam8z2BJKi4/1kg/+CQwklhE6w1WD8vA0Y57RubmOX2iQ+Jk3p0iqPrxr1Sw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAAA8WNUWdyblT0sHUYo04HsgbfHbSRewLySf3sUF1fggHQAAAAAOgAAAAAIAACAAAABo7FDN4jz8cbQ9xGeuKM8Y58MjjV6MbzkNUywcYbMKppAAAAAyDheQDzxZH40Q5Ud4bqBZqPCwZrkjCSQZDuS1tJQY6dnJZsLY29ceSdENxzG7C6CS344WBoJfh8jzUDnDyu4xv5FPOoe4KdOVpnlzJvp7J8pCdGgCK6oqUFefjWbXk5NVSkS7A71hJsdAtY2nYOVD6Ndmhxi00ttFh62K/UIEp0iUuVWXxsT8PA3PSbv1BrtAAAAAJ+gaSb8Aq+zOKS4SiF1zpkYHNk9PROLXtUq/kIv/5jd9q6LsgX6rxlQCbPtiu3IxL7KPFVsO7wMHqVvauuOIPg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -36,6 +36,8 @@
           <SSIS:Package SSIS:Name="Cargue-Inicial-Pregunta.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue-Inicial-Cuestionario.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue_Fuente_Evaluacion.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue_Periodo.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue_Datos_Demograficos.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Origen_Excel_Evaluacion.conmgr" />
@@ -468,10 +470,10 @@
                 <SSIS:Property SSIS:Name="Name">Cargue-Rango</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">28</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{4B185BB2-084F-495E-94D0-61786BF7C8E3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A42094FB-1A93-4D72-907F-E8AE0F3305B1}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -519,10 +521,44 @@
                 <SSIS:Property SSIS:Name="Name">Cargue_Fuente_Evaluacion</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">19</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{C2BE3FC1-D76E-4A88-9E56-10E67F74CA12}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{096BB22A-0C3D-45ED-815C-387565416187}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue_Periodo.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{48329AD8-07D7-4E36-A870-2B3B592AEC52}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue_Periodo</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{331B16C3-0684-4916-8B0F-F8EFF1BB4B97}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue_Datos_Demograficos.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F3198473-F155-46D0-9A37-294B3C9E15B5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue_Datos_Demograficos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{36E1F884-CCA9-4C21-A34D-DBB2A9C59DCF}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

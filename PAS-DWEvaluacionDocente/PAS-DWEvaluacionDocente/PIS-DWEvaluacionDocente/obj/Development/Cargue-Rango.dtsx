@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Rango"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{44CBDA33-DE06-476E-939C-8D39F85861DD}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{9CAA5A16-DCA9-44FB-A30A-C9DB255C27CB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -476,7 +476,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                       cachedDataType="i4"
                       cachedName="Rango_iD"
                       externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
-                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]" />
+                      lineageId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]" />
                     <inputColumn
                       refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_SUPERIOR]"
                       cachedDataType="numeric"
@@ -720,11 +720,11 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Script Component"
+              refId="Package\Data Flow Task\Llave primaria Rango"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Script Component"
+              name="Llave primaria Rango"
               version="10">
               <properties>
                 <property
@@ -1491,7 +1491,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+                  refId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <externalMetadataColumns />
@@ -1499,14 +1499,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Script Component.Outputs[Output 0]"
+                  refId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Data Flow Task\Script Component.Inputs[Input 0]">
+                  synchronousInputId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]"
+                      refId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]"
+                      lineageId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]"
                       name="Rango_iD" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1527,14 +1527,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+              endId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Output 0]"
               endId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]"
               name="Output 0"
-              startId="Package\Data Flow Task\Script Component.Outputs[Output 0]" />
+              startId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1623,17 +1623,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="127,42"
-          Id="Package\Data Flow Task\DimRango"
-          TopLeft="278,367" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Script Component"
-          TopLeft="266,279" />
-        <NodeLayout
           Size="141,42"
           Id="Package\Data Flow Task\Excel Rangos"
           TopLeft="280,34" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Data Flow Task\Llave primaria Rango"
+          TopLeft="266,285" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\DimRango"
+          TopLeft="278,367" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Busqueda Rango"
@@ -1644,18 +1644,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           TopLeft="268,119" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="344.5,321">
+          TopLeft="355,327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="-13.5,40"
               Start="0,0"
-              End="0,38.5">
+              End="-13.5,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-9.5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,20"
+                    Point2="-13.5,20"
+                    Point3="-13.5,24" />
+                  <mssgle:LineSegment
+                    End="-13.5,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1666,25 +1678,37 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="347.25,239">
+          TopLeft="347,239">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="8,46"
               Start="0,0"
-              End="0,32.5">
+              End="8,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="4,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4,23"
+                    Point2="8,23"
+                    Point3="8,27" />
+                  <mssgle:LineSegment
+                    End="8,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,10.4453125,111.6127734375,11.609375"
+              BoundingBox="-51.80638671875,28,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1736,19 +1760,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DimRango">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Busqueda Rango">
     <Properties>
       <Property>
@@ -1773,6 +1784,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Excel Rangos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\DimRango">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
