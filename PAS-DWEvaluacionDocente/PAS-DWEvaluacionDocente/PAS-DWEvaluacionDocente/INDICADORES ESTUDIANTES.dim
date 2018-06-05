@@ -1,11 +1,37 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c67852ec-259e-40d1-9b2e-e38a099f22a4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>INDICADORES ESTUDIANTES</ID>
   <Name>INDICADORES ESTUDIANTES</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1078" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="INDICADORES_ESTUDIANTES" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4233" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00008910000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-1078</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-4511</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -40,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="cc3255eb-13dc-4df8-82a4-d267de863267">
     <DataSourceViewID>DW Academico Labor</DataSourceViewID>
@@ -65,7 +91,149 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="45e99538-9841-493a-b7bb-e9009fe967df">
+          <AttributeID>AMINISTIADO</AttributeID>
+          <Name>AMINISTIADO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="017ec73d-e85a-4919-b74c-dcc699376be5">
+          <AttributeID>AYUDA DEL ESTADO</AttributeID>
+          <Name>AYUDA DEL ESTADO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="56fc85fd-f3e6-4b32-9524-9139b18fe356">
+          <AttributeID>MONITORIA</AttributeID>
+          <Name>MONITORIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="aa8396b5-80ca-4a8f-91a1-0ee4d4564095">
+          <AttributeID>RESIDENCIA</AttributeID>
+          <Name>RESIDENCIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="820ef2d8-48f2-4bfe-b448-c1655e010290">
+          <AttributeID>PILO</AttributeID>
+          <Name>PILO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e5407c19-430f-4d0e-965b-e5b39226f067">
+          <AttributeID>JOVENES ACCION</AttributeID>
+          <Name>JOVENES ACCION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fb99802a-c4a5-4d3d-ac40-883d7ce9c921">
+          <AttributeID>BECADO ICETEX</AttributeID>
+          <Name>BECADO ICETEX</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5e263ec7-2c4f-4c70-918c-a09d6613b890">
+      <ID>AMINISTIADO</ID>
+      <Name>AMINISTIADO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="084e4327-44dd-4aea-a893-b0d814d5be83">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9ec4a604-0ec7-4d2d-a04b-13386ec6e924">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>AMINISTIADO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9be8af02-cf31-429a-b72a-bbee647ae43e">
+      <ID>AYUDA DEL ESTADO</ID>
+      <Name>AYUDA DEL ESTADO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="867a5399-f4cb-498e-893f-ac06f03153c3">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f1a766ff-5337-4a29-b5a3-45c8ab1b4784">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>AYUDA_DEL_ESTADO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8a0f9ab7-4801-4ac7-8046-8d3786a84d09">
+      <ID>MONITORIA</ID>
+      <Name>MONITORIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d8a35e1c-ade8-4f77-b2b0-15c06d86a63f">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="449f8a06-af49-4805-947d-b87c0c4cc232">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>MONITORIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="51788d2a-1dff-4c84-b8e5-132ff855e2c8">
+      <ID>RESIDENCIA</ID>
+      <Name>RESIDENCIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1dc13d2a-8c79-456c-b526-e7ec6a1c606a">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7bc05b42-8c67-4847-a305-e919061574e4">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>RESIDENCIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4a827adb-2306-4dd8-ac88-bc34925231cd">
+      <ID>PILO</ID>
+      <Name>PILO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="13ed06ac-1573-408e-b92f-c224d13e2ab8">
+          <DataType>WChar</DataType>
+          <DataSize>35</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="771ec9cc-6453-4102-a21a-30679471ff34">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>PILO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eeba2993-ed10-4179-b4b2-9f278e05b6f5">
+      <ID>JOVENES ACCION</ID>
+      <Name>JOVENES ACCION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d9be453-b4b0-474c-9eb8-989d19a3e716">
+          <DataType>WChar</DataType>
+          <DataSize>35</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="21326fc6-221c-43a7-b776-d1a724a061c0">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>JOVENES_ACCION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9805c94e-511f-4c4d-a59b-80b324aee5d6">
+      <ID>BECADO ICETEX</ID>
+      <Name>BECADO ICETEX</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a5445850-f762-489b-a36a-2e76df419c0b">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96d89bf9-46fc-488a-baa9-fbf781b43098">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>BECADO_ICETEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>

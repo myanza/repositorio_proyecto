@@ -1,11 +1,37 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6469ba11-75d8-4366-963a-ce3703cdf9d4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DATOS DEMOGRAFICOS</ID>
   <Name>DATOS DEMOGRAFICOS</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1422" scrolltop="-4934" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_DEMOGRAFICOS" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3545" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c0000d90d0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-1422</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-4934</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -40,7 +66,7 @@
       <Value>100</Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c03f3dbe-2686-478b-8056-74b1ca0713c9">
     <DataSourceViewID>DW Academico Labor</DataSourceViewID>
@@ -65,7 +91,109 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9d31f7e2-89e9-4c82-aa2d-78d57da06eab">
+          <AttributeID>RANGO EDAD</AttributeID>
+          <Name>RANGO EDAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6cb54fa6-c591-44c1-9fbc-414017b925e0">
+          <AttributeID>ESTADO CIVIL</AttributeID>
+          <Name>ESTADO CIVIL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d6c563c5-638e-4500-a8c6-4c415cf0cd72">
+          <AttributeID>ACUDIENTE</AttributeID>
+          <Name>ACUDIENTE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="248d466a-cf59-41e2-8294-fac289335494">
+          <AttributeID>DISCAPACIDAD</AttributeID>
+          <Name>DISCAPACIDAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2faa547c-3c12-4fc3-af13-2fdb36f5a4e2">
+          <AttributeID>DEPORTISTA</AttributeID>
+          <Name>DEPORTISTA</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e21c2b7b-73f0-4247-8c53-c3fb3a5c0b48">
+      <ID>RANGO EDAD</ID>
+      <Name>RANGO EDAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0599bb2c-8f5c-40a5-b9ef-448c19f1fa0d">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c2b07c0f-af05-4bd8-be0b-fb188e9aa5a0">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS</TableID>
+            <ColumnID>RANGO_EDAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d569c359-ea36-4150-a574-351d374321ba">
+      <ID>ESTADO CIVIL</ID>
+      <Name>ESTADO CIVIL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dd43c124-929d-420f-9777-2872bc1b713a">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="083c541a-f4ac-44de-a0c9-5264e94a16c9">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS</TableID>
+            <ColumnID>ESTADO_CIVIL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4cfa8eb3-3999-45c7-b43a-3f206cf1f100">
+      <ID>ACUDIENTE</ID>
+      <Name>ACUDIENTE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15612b1c-c384-484f-b816-0bd2ce193af4">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3308b8b8-1766-43fb-b20c-69667174dc45">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS</TableID>
+            <ColumnID>ACUDIENTE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a4a902f4-ecfb-4cda-b0ad-138d5c09162a">
+      <ID>DISCAPACIDAD</ID>
+      <Name>DISCAPACIDAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="99c26127-6a33-44d0-b172-9cc973961d0e">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9f9c23c9-23ac-4559-906e-309962f544ac">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS</TableID>
+            <ColumnID>DISCAPACIDAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fb35f5fe-8f4f-48d7-acc8-c38a219ab4a7">
+      <ID>DEPORTISTA</ID>
+      <Name>DEPORTISTA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5ab26f06-fc4c-4c89-90c6-be26422eb998">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd8e0710-1b0d-4f5e-924b-5dd79adaac75">
+            <TableID>DW_ACADEMICO_LABOR_DATOS_DEMOGRAFICOS</TableID>
+            <ColumnID>DEPORTISTA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
