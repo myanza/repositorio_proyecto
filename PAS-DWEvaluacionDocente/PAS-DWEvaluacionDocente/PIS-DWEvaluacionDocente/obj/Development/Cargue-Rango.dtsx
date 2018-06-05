@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Rango"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{4B185BB2-084F-495E-94D0-61786BF7C8E3}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{D309DE9E-C791-403C-BC94-20675E84CD58}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -400,6 +400,168 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
+              refId="Package\Data Flow Task\DimRango"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="DimRango"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">"DW_ACADEMICO_LABOR"."RANGO"</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\DimRango.Connections[OleDbConnection]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Rango_iD]"
+                      cachedDataType="i4"
+                      cachedName="Rango_iD"
+                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
+                      lineageId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_SUPERIOR]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of LIMITE_SUPERIOR"
+                      cachedPrecision="3"
+                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_INFERIOR]"
+                      cachedDataType="numeric"
+                      cachedName="Copy of LIMITE_INFERIOR"
+                      cachedPrecision="3"
+                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of RANGO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of RANGO"
+                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of NOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copy of NOMBRE"
+                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
+                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
+                      dataType="numeric"
+                      name="RANGO_ID"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
+                      dataType="wstr"
+                      length="15"
+                      name="NOMBRE_RANGO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
+                      dataType="wstr"
+                      length="10"
+                      name="RANGO" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
+                      dataType="numeric"
+                      name="LIMITE_INFERIOR"
+                      precision="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
+                      dataType="numeric"
+                      name="LIMITE_SUPERIOR"
+                      precision="3" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Data Flow Task\Excel Rangos"
               componentClassID="Microsoft.ExcelSource"
               contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
@@ -558,173 +720,11 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Fuente Rango"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
-              description="Destino de OLE DB"
-              name="Fuente Rango"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">"DW_ACADEMICO_LABOR"."RANGO"</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL para ejecutar."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Fuente Rango.Connections[OleDbConnection]"
-                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
-                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB]"
-                  errorOrTruncationOperation="Insertar"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="Entrada de destino de OLE DB">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Rango_iD]"
-                      cachedDataType="i4"
-                      cachedName="Rango_iD"
-                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
-                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_SUPERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_SUPERIOR"
-                      cachedPrecision="3"
-                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_INFERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_INFERIOR"
-                      cachedPrecision="3"
-                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of RANGO]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Copy of RANGO"
-                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].Columns[Copy of NOMBRE]"
-                      cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Copy of NOMBRE"
-                      externalMetadataColumnId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
-                      dataType="numeric"
-                      name="RANGO_ID"
-                      precision="10" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
-                      dataType="wstr"
-                      length="15"
-                      name="NOMBRE_RANGO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
-                      dataType="wstr"
-                      length="10"
-                      name="RANGO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
-                      dataType="numeric"
-                      name="LIMITE_INFERIOR"
-                      precision="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
-                      dataType="numeric"
-                      name="LIMITE_SUPERIOR"
-                      precision="3" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Fuente Rango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Script Component"
+              refId="Package\Data Flow Task\Llave primaria Rango"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Script Component"
+              name="Llave primaria Rango"
               version="10">
               <properties>
                 <property
@@ -1012,7 +1012,7 @@ public class Input0Buffer: ScriptBuffer
             }
             else
             {
-                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+                throw new InvalidOperationException("La propiedad IsNull no puede establecerse en False. En su lugar, asigne un valor a la columna.");
             }
         }
     }
@@ -1070,20 +1070,20 @@ namespace SC_786c85a23de84a608b13a87c2dbd8104.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
 		<msb:CodeName>SC_786c85a23de84a608b13a87c2dbd8104</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
 		<msb:DisplayName>SC_786c85a23de84a608b13a87c2dbd8104</msb:DisplayName>
 		<msb:ProjectId>{D9219031-79B1-4ED6-A1F1-69445C4A417D}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_786c85a23de84a608b13a87c2dbd8104.csproj"/>
-		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
@@ -1311,23 +1311,23 @@ namespace SC_786c85a23de84a608b13a87c2dbd8104.Properties {
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-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
+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
-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
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHwyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-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
+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
-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
+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
-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
+AAoCAnMMAAAGfQIAAAQCAnMNAAAGfQMAAAQqkgRywAAAcBpvFwAACiwVAgUCAygYAAAKDgRzAwAA
 Bm8KAAAGKkorBwIDbwsAAAYDbwYAAAYt8SoGKjoCKBkAAAoCA30EAAAEKjoCKBkAAAoCA30FAAAE
-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
+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
-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
+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
@@ -1383,26 +1383,26 @@ c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBv
 bmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlw
 ZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQAR2V0VmFsdWVXaXRoQ29udGV4dABTY3JpcHRD
 b21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29udGV4dABJbnB1dDBfUHJvY2Vzc0lu
-cHV0Um93AE5leHRSb3cATmV4dEtleQBnZXRfTWF4S2V5AGdldF9Bc3NlbWJseQAAAAAAgJtJAHMA
-TgB1AGwAbAAgAHAAcgBvAHAAZQByAHQAeQAgAGMAYQBuAG4AbwB0ACAAYgBlACAAcwBlAHQAIAB0
-AG8AIABGAGEAbABzAGUALgAgAEEAcwBzAGkAZwBuACAAYQAgAHYAYQBsAHUAZQAgAHQAbwAgAHQA
-aABlACAAYwBvAGwAdQBtAG4AIABpAG4AcwB0AGUAYQBkAC4AAA9JAG4AcAB1AHQAIAAwAAANTQBh
-AHgASwBlAHkAAHFTAEMAXwA3ADgANgBjADgANQBhADIAMwBkAGUAOAA0AGEANgAwADgAYgAxADMA
-YQA4ADcAYwAyAGQAYgBkADgAMQAwADQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1
-AHIAYwBlAHMAAAAAqVCGCZiFe0G2MAq3XmvwbgAEIAEBCAMgAAEFIAEBEREEIAEBDgUgAQERWQMH
-AQgJIAMBEj0dCBJBBSACAQgcAyAAAgYgAgIOEXUFIAEdCAgEIAASeQUgARJ9HAUAABKAgQYgARwS
-gIUIAAESgI0RgJEFIAASgJUHIAIBDhKAlQi3elxWGTTgiQiJhF3NgIDMkQIGCAMGEhQDBhIYAwYS
-RQMGElEDBhJVAwYSIAUgAQESDAQgAQECCSAEAQgOEj0SQQUgAQESRQMgAAoEAAASUQQAABJVBQAB
-ARJVBAAAEiADAAABAygACAMoAAIDKAAKBAgAElEECAASVQQIABIgCAEACAAAAAAAHgEAAQBUAhZX
-cmFwTm9uRXhjZXB0aW9uVGhyb3dzAQgBAAIAAAAAACgBACNTQ183ODZjODVhMjNkZTg0YTYwOGIx
-M2E4N2MyZGJkODEwNAAABQEAAAAAFgEAEUNvcHlyaWdodCBAICAyMDE4AABJAQAaLk5FVEZyYW1l
-d29yayxWZXJzaW9uPXY0LjUBAFQOFEZyYW1ld29ya0Rpc3BsYXlOYW1lEi5ORVQgRnJhbWV3b3Jr
-IDQuNQQBAAAAAAAAtAAAAM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVh
-ZGVyLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tl
-eVRva2VuPWI3N2E1YzU2MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VT
-ZXQCAAAAAAAAAAAAAABQQURQQURQtAAAAIQyAAAAAAAAAAAAAJ4yAAAAIAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACQMgAAAAAAAAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+cHV0Um93AE5leHRSb3cATmV4dEtleQBnZXRfTWF4S2V5AGdldF9Bc3NlbWJseQAAAAAAgL1MAGEA
+IABwAHIAbwBwAGkAZQBkAGEAZAAgAEkAcwBOAHUAbABsACAAbgBvACAAcAB1AGUAZABlACAAZQBz
+AHQAYQBiAGwAZQBjAGUAcgBzAGUAIABlAG4AIABGAGEAbABzAGUALgAgAEUAbgAgAHMAdQAgAGwA
+dQBnAGEAcgAsACAAYQBzAGkAZwBuAGUAIAB1AG4AIAB2AGEAbABvAHIAIABhACAAbABhACAAYwBv
+AGwAdQBtAG4AYQAuAAAPSQBuAHAAdQB0ACAAMAAADU0AYQB4AEsAZQB5AABxUwBDAF8ANwA4ADYA
+YwA4ADUAYQAyADMAZABlADgANABhADYAMAA4AGIAMQAzAGEAOAA3AGMAMgBkAGIAZAA4ADEAMAA0
+AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAADRKcdCOvqcSLx/ap9/
+oIkfAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFZAwcBCAkgAwESPR0IEkEFIAIBCBwDIAACBiAC
+Ag4RdQUgAR0ICAQgABJ5BSABEn0cBQAAEoCBBiABHBKAhQgAARKAjRGAkQUgABKAlQcgAgEOEoCV
+CLd6XFYZNOCJCImEXc2AgMyRAgYIAwYSFAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIMBCABAQIJ
+IAQBCA4SPRJBBSABARJFAyAACgQAABJRBAAAElUFAAEBElUEAAASIAMAAAEDKAAIAygAAgMoAAoE
+CAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEA
+AgAAAAAAKAEAI1NDXzc4NmM4NWEyM2RlODRhNjA4YjEzYTg3YzJkYmQ4MTA0AAAFAQAAAAAWAQAR
+Q29weXJpZ2h0IEAgIDIwMTgAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNQEAVA4URnJh
+bWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41BAEAAAAAAAC0AAAAzsrvvgEAAACR
+AAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQu
+MC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNT
+eXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA
+pDIAAAAAAAAAAAAAvjIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAyAAAAAAAAAAAAAAAAX0Nv
+ckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1434,7 +1434,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAsDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA0DIAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1491,7 +1491,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+                  refId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <externalMetadataColumns />
@@ -1499,14 +1499,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Script Component.Outputs[Output 0]"
+                  refId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Data Flow Task\Script Component.Inputs[Input 0]">
+                  synchronousInputId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]"
+                      refId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Script Component.Outputs[Output 0].Columns[Rango_iD]"
+                      lineageId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]"
                       name="Rango_iD" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1527,14 +1527,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Script Component.Inputs[Input 0]"
+              endId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Output 0]"
-              endId="Package\Data Flow Task\Fuente Rango.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]"
               name="Output 0"
-              startId="Package\Data Flow Task\Script Component.Outputs[Output 0]" />
+              startId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1553,7 +1553,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{5797239F-B739-4D39-8315-28285D9C507A}"
-          SQLTask:SqlStatementSource="select &#xA;  case&#xA;    when max(rango_id) is null then 0 &#xA;    else max(rango_id)  &#xA;  end as maxkey&#xA;from rango"
+          SQLTask:SqlStatementSource="select &#xA;  case&#xA;    when max(rango_id) is null then 0 &#xA;    else max(rango_id)  &#xA;  end as maxkey&#xA; from rango"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -1623,13 +1623,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Script Component"
-          TopLeft="266,279" />
-        <NodeLayout
           Size="141,42"
           Id="Package\Data Flow Task\Excel Rangos"
           TopLeft="280,34" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Data Flow Task\Llave primaria Rango"
+          TopLeft="266,285" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\Data Flow Task\DimRango"
+          TopLeft="278,367" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Busqueda Rango"
@@ -1639,26 +1643,72 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           Id="Package\Data Flow Task\Conversion Rango"
           TopLeft="268,119" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="347.25,239">
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="355,327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="-13.5,40"
               Start="0,0"
-              End="0,32.5">
+              End="-13.5,32.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="-4,20" />
+                  <mssgle:LineSegment
+                    End="-9.5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,20"
+                    Point2="-13.5,20"
+                    Point3="-13.5,24" />
+                  <mssgle:LineSegment
+                    End="-13.5,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
+          TopLeft="347,239">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8,46"
+              Start="0,0"
+              End="8,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19"
+                    Point2="0,23"
+                    Point3="4,23" />
+                  <mssgle:LineSegment
+                    End="4,23" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4,23"
+                    Point2="8,23"
+                    Point3="8,27" />
+                  <mssgle:LineSegment
+                    End="8,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,10.4453125,111.6127734375,11.609375"
+              BoundingBox="-51.80638671875,28,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1706,32 +1756,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="144,42"
-          Id="Package\Data Flow Task\Fuente Rango"
-          TopLeft="278,367" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="348.75,321">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46"
-              Start="0,0"
-              End="0,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -1741,7 +1765,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1751,7 +1775,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1772,7 +1796,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Fuente Rango">
+    design-time-name="Package\Data Flow Task\DimRango">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

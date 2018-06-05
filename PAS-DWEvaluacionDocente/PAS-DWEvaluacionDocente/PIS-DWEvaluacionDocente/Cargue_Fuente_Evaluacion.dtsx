@@ -1,49 +1,62 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="6/1/2018 2:54:45 PM"
+  DTS:CreationDate="6/4/2018 11:22:30 AM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="DESKTOP-N341SEE"
-  DTS:CreatorName="DESKTOP-N341SEE\Win10Pro"
-  DTS:DTSID="{65776178-4BB4-4E62-96D4-A1623A343241}"
+  DTS:CreatorComputerName="SEBASTIAN"
+  DTS:CreatorName="SEBASTIAN\Sebastian Jimenez"
+  DTS:DTSID="{087906AA-8F09-4935-BF91-5A3E1A762A50}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2165.0"
-  DTS:LocaleID="9226"
-  DTS:ObjectName="Cargue-Rango"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Cargue_Fuente_Evaluacion"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{D309DE9E-C791-403C-BC94-20675E84CD58}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{096BB22A-0C3D-45ED-815C-387565416187}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C9F73406-CBFF-4D44-B816-B9E5444705FC}"
+      DTS:DTSID="{21DB37E9-0EFE-43DC-BAFF-32E44AD78F14}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="MaxKey">
       <DTS:VariableValue
         DTS:DataType="20">0</DTS:VariableValue>
     </DTS:Variable>
-    <DTS:Variable
-      DTS:CreationName=""
-      DTS:DTSID="{E00804D5-2A7B-4BB0-93B1-D17B48546AFE}"
-      DTS:IncludeInDebugDump="6789"
-      DTS:Namespace="User"
-      DTS:ObjectName="MaxKeyy">
-      <DTS:VariableValue
-        DTS:DataType="20">0</DTS:VariableValue>
-    </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9d5304ae-ca86-4a67-a061-e8b92dda6367}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{5797239F-B739-4D39-8315-28285D9C507A}"
+          SQLTask:SqlStatementSource="select &#xA;  case&#xA;    when max(fuente_evaluacion_id) is null then 0 &#xA;    else max(fuente_evaluacion_id)  &#xA;  end as maxkey&#xA; from fuente_evaluacion"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::MaxKey" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
       DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{7D9D84CE-0A75-4F6C-9617-D999489A355F}"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{D873941A-23C6-4B2F-BFB6-D7185DEFD6A7}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Tarea Flujo de datos"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -51,130 +64,96 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Busqueda Rango"
+              refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion"
               componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Busqueda Rango"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda Fuente Evaluacion"
               usesDispositions="true"
               version="6">
               <properties>
                 <property
                   dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."RANGO"</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."FUENTE_EVALUACION"</property>
                 <property
                   dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."RANGO") "refTable"
-where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."LIMITE_INFERIOR" = ? and "refTable"."LIMITE_SUPERIOR" = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."FUENTE_EVALUACION") "refTable"
+where "refTable"."NOMBRE" = ? and "refTable"."CATEGORIA" = ?</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
                   name="ConnectionType"
                   typeConverter="LookupConnectionType">0</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
                   name="CacheType"
                   typeConverter="CacheType">0</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
                   name="NoMatchBehavior"
                   typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
                   name="NoMatchCachePercentage">0</property>
                 <property
                   dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
                   name="MaxMemoryUsage">25</property>
                 <property
                   dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
                   name="MaxMemoryUsage64">25</property>
                 <property
                   dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="RANGO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NOMBRE_RANGO" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RANGO" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LIMITE_INFERIOR" dataType="DT_NUMERIC" length="0" precision="3" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LIMITE_SUPERIOR" dataType="DT_NUMERIC" length="0" precision="3" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="FUENTE_EVALUACION_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NOMBRE" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CATEGORIA" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]};#{Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]};#{Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]};#{Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]};</property>
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NOMBRE]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]};</property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
                   name="DefaultCodePage">1252</property>
                 <property
                   dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
                   name="TreatDuplicateKeysAsError">false</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Busqueda Rango.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Connections[OleDbConnection]"
                   connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
-                  description="Connection manager used to access lookup data."
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input]"
-                  name="Lookup Input">
+                  refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of LIMITE_INFERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_INFERIOR"
-                      cachedPrecision="3"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">LIMITE_INFERIOR</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of LIMITE_SUPERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_SUPERIOR"
-                      cachedPrecision="3"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">LIMITE_SUPERIOR</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of RANGO]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda].Columns[Copia de NOMBRE]"
                       cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Copy of RANGO"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]">
+                      cachedLength="30"
+                      cachedName="Copia de NOMBRE"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NOMBRE]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">RANGO</property>
+                          name="JoinToReferenceColumn">NOMBRE</property>
                         <property
                           dataType="System.Null"
                           description="Especifica la columna de la tabla de referencia de la que se copia una columna."
@@ -182,16 +161,16 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input].Columns[Copy of NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda].Columns[Copia de CATEGORIA]"
                       cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Copy of NOMBRE"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]">
+                      cachedLength="30"
+                      cachedName="Copia de CATEGORIA"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">NOMBRE_RANGO</property>
+                          name="JoinToReferenceColumn">CATEGORIA</property>
                         <property
                           dataType="System.Null"
                           description="Especifica la columna de la tabla de referencia de la que se copia una columna."
@@ -204,38 +183,38 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
                   exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input]">
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en &quot;Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes&quot;."
                   exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input]">
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup Error Output]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de error de búsqueda]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input]">
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -244,131 +223,79 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Conversion Rango"
+              refId="Package\Tarea Flujo de datos\Conversión de datos"
               componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Conversion Rango"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
+                  refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input].Columns[NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[NOMBRE]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="NOMBRE"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[NOMBRE]" />
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[NOMBRE]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input].Columns[RANGO]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[CATEGORIA]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="RANGO"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[RANGO]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input].Columns[LIMITE_INFERIOR]"
-                      cachedDataType="r8"
-                      cachedName="LIMITE_INFERIOR"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_INFERIOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input].Columns[LIMITE_SUPERIOR]"
-                      cachedDataType="r8"
-                      cachedName="LIMITE_SUPERIOR"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_SUPERIOR]" />
+                      cachedName="CATEGORIA"
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[CATEGORIA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output]"
+                  refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]"
                   exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input]">
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NOMBRE]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      length="15"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]"
-                      name="Copy of NOMBRE"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NOMBRE]"
+                      name="Copia de NOMBRE"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[NOMBRE]}</property>
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[NOMBRE]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      length="10"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]"
-                      name="Copy of RANGO"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]"
+                      name="Copia de CATEGORIA"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[RANGO]}</property>
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[CATEGORIA]}</property>
                         <property
                           dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]"
-                      name="Copy of LIMITE_INFERIOR"
-                      precision="3"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_INFERIOR]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]"
-                      name="Copy of LIMITE_SUPERIOR"
-                      precision="3"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_SUPERIOR]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
                           name="FastParse">false</property>
                       </properties>
                     </outputColumn>
@@ -376,22 +303,22 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Error Output]"
+                  refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos]"
                   exclusionGroup="1"
                   isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input]">
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -400,11 +327,11 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\DimRango"
+              refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="DimRango"
+              name="DimFuenteEvaluacion"
               usesDispositions="true"
               version="4">
               <properties>
@@ -415,7 +342,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">"DW_ACADEMICO_LABOR"."RANGO"</property>
+                  name="OpenRowset">"DW_ACADEMICO_LABOR"."FUENTE_EVALUACION"</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -457,7 +384,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\DimRango.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Connections[OleDbConnection]"
                   connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -465,95 +392,71 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Rango_iD]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].Columns[FUENTE_EVALUACION_ID]"
                       cachedDataType="i4"
-                      cachedName="Rango_iD"
-                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
-                      lineageId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]" />
+                      cachedName="FUENTE_EVALUACION_ID"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[FUENTE_EVALUACION_ID]"
+                      lineageId="Package\Tarea Flujo de datos\Script Component.Outputs[Output 0].Columns[FUENTE_EVALUACION_ID]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_SUPERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_SUPERIOR"
-                      cachedPrecision="3"
-                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_SUPERIOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of LIMITE_INFERIOR]"
-                      cachedDataType="numeric"
-                      cachedName="Copy of LIMITE_INFERIOR"
-                      cachedPrecision="3"
-                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of LIMITE_INFERIOR]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of RANGO]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].Columns[Copia de NOMBRE]"
                       cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Copy of RANGO"
-                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of RANGO]" />
+                      cachedLength="30"
+                      cachedName="Copia de NOMBRE"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NOMBRE]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].Columns[Copy of NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].Columns[Copia de CATEGORIA]"
                       cachedDataType="wstr"
-                      cachedLength="15"
-                      cachedName="Copy of NOMBRE"
-                      externalMetadataColumnId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
-                      lineageId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output].Columns[Copy of NOMBRE]" />
+                      cachedLength="30"
+                      cachedName="Copia de CATEGORIA"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CATEGORIA]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_ID]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[FUENTE_EVALUACION_ID]"
                       dataType="numeric"
-                      name="RANGO_ID"
+                      name="FUENTE_EVALUACION_ID"
                       precision="10" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_RANGO]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE]"
                       dataType="wstr"
-                      length="15"
-                      name="NOMBRE_RANGO" />
+                      length="30"
+                      name="NOMBRE" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CATEGORIA]"
                       dataType="wstr"
-                      length="10"
-                      name="RANGO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_INFERIOR]"
-                      dataType="numeric"
-                      name="LIMITE_INFERIOR"
-                      precision="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB].ExternalColumns[LIMITE_SUPERIOR]"
-                      dataType="numeric"
-                      name="LIMITE_SUPERIOR"
-                      precision="3" />
+                      length="30"
+                      name="CATEGORIA" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\DimRango.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -562,156 +465,120 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Excel Rangos"
+              refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion"
               componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Excel Rangos"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Excel Fuente Evaluacion"
               usesDispositions="true"
               version="1">
               <properties>
                 <property
                   dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
                   name="CommandTimeout">0</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">RANGO$</property>
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">FUENTEEVALUACION$</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
                   name="OpenRowsetVariable"></property>
                 <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
+                  description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
                 <property
                   dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
+                  description="Variable que contiene el comando SQL para ejecutar."
                   name="SqlCommandVariable"></property>
                 <property
                   dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
                   name="AccessMode"
                   typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
+                  description="La asignación de parámetros del comando SQL a variables."
                   name="ParameterMapping"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Excel Rangos.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Connections[OleDbConnection]"
                   connectionManagerID="{F323AAFC-5EF5-4E2A-AED2-B1EA7D92CC85}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Origen_Excel_Evaluacion]"
-                  description="The OLE DB runtime connection used to access the database."
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
                   name="OleDbConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
+                  refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel]"
+                  name="Salida de origen de Excel">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[NOMBRE]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[NOMBRE]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].ExternalColumns[NOMBRE]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[NOMBRE]"
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[NOMBRE]"
                       name="NOMBRE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[RANGO]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[CATEGORIA]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
+                      errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[RANGO]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].ExternalColumns[CATEGORIA]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[RANGO]"
-                      name="RANGO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_INFERIOR]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[LIMITE_INFERIOR]"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_INFERIOR]"
-                      name="LIMITE_INFERIOR"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_SUPERIOR]"
-                      dataType="r8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[LIMITE_SUPERIOR]"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].Columns[LIMITE_SUPERIOR]"
-                      name="LIMITE_SUPERIOR"
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].Columns[CATEGORIA]"
+                      name="CATEGORIA"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].ExternalColumns[NOMBRE]"
                       dataType="wstr"
                       length="255"
                       name="NOMBRE" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[RANGO]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel].ExternalColumns[CATEGORIA]"
                       dataType="wstr"
                       length="255"
-                      name="RANGO" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[LIMITE_INFERIOR]"
-                      dataType="r8"
-                      name="LIMITE_INFERIOR" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output].ExternalColumns[LIMITE_SUPERIOR]"
-                      dataType="r8"
-                      name="LIMITE_SUPERIOR" />
+                      name="CATEGORIA" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output]"
+                  refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel]"
                   isErrorOut="true"
-                  name="Excel Source Error Output">
+                  name="Salida de error de origen de Excel">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[NOMBRE]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[NOMBRE]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[NOMBRE]"
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[NOMBRE]"
                       name="NOMBRE" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[RANGO]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[CATEGORIA]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[RANGO]"
-                      name="RANGO" />
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[CATEGORIA]"
+                      name="CATEGORIA" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[LIMITE_INFERIOR]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[LIMITE_INFERIOR]"
-                      name="LIMITE_INFERIOR" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[LIMITE_SUPERIOR]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[LIMITE_SUPERIOR]"
-                      name="LIMITE_SUPERIOR" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -720,11 +587,11 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Llave primaria Rango"
+              refId="Package\Tarea Flujo de datos\Script Component"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;10"
               description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
-              name="Llave primaria Rango"
+              name="Script Component"
               version="10">
               <properties>
                 <property
@@ -965,7 +832,7 @@ public class ScriptMain : UserComponent
             NextKey = NextKey + 1;
         }
 
-        Row.RangoiD = NextKey;
+        Row.FUENTEEVALUACIONID = NextKey;
 
     }
 
@@ -995,14 +862,14 @@ public class Input0Buffer: ScriptBuffer
     {
     }
 
-    public Int32 RangoiD
+    public Int32 FUENTEEVALUACIONID
     {
         set
         {
             this[0] = value;
         }
     }
-    public bool RangoiD_IsNull
+    public bool FUENTEEVALUACIONID_IsNull
     {
         set
         {
@@ -1134,11 +1001,11 @@ using System.Runtime.CompilerServices;
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{f6886cef-afc1-4329-a948-262c7a85131b}</ProjectGuid>
+    <ProjectGuid>{F6886CEF-AFC1-4329-A948-262C7A85131B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SC_786c85a23de84a608b13a87c2dbd8104</RootNamespace>
-    <AssemblyName>SC_786c85a23de84a608b13a87c2dbd8104</AssemblyName>
+    <AssemblyName>SC_85B2502A6AF24C74990ECA7539EBB76C</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
@@ -1203,8 +1070,8 @@ using System.Runtime.CompilerServices;
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
-        <Host Name="ScriptComponent" GeneratedNamespace="SC_786c85a23de84a608b13a87c2dbd8104" IconIndex="0"></Host>
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptComponent" IconIndex="0" />
         <ProjectClient>
           <HostIdentifier>SSIS_SC130</HostIdentifier>
         </ProjectClient>
@@ -1307,18 +1174,18 @@ namespace SC_786c85a23de84a608b13a87c2dbd8104.Properties {
                   <arrayElements
                     arrayElementCount="2">
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_786c85a23de84a608b13a87c2dbd8104.dll]]></arrayElement>
+                      dataType="System.String"><![CDATA[SC_85B2502A6AF24C74990ECA7539EBB76C.dll]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDADBtFVsAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAzjIA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAKltFVsAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA4jIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
-ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHwyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAJAyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA1BIAAAAgAAAAFAAAAAIA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAA6BIAAAAgAAAAFAAAAAIA
 AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
-LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAACw
-MgAAAAAAAEgAAAACAAUA3CEAAOgPAAABAAAAAAAAAMQxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAADE
+MgAAAAAAAEgAAAACAAUA3CEAAPwPAAABAAAAAAAAANgxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAABMwAwA7AAAAAQAAEQJ7AwAABG8OAAAGaQoCewEAAAQtCwIG
 F1h9AQAABCsOAgJ7AQAABBdYfQEAAAQDAnsBAAAEbwQAAAYqHgIoCAAABioqAgMEBSgQAAAKKjoC
 FgOMGgAAASgRAAAKKloDLAgCFigSAAAKKnIBAABwcxMAAAp6HgIoFAAACioeAigVAAAKKn4CKBYA
@@ -1327,82 +1194,82 @@ Bm8KAAAGKkorBwIDbwsAAAYDbwYAAAYt8SoGKjoCKBkAAAoCA30EAAAEKjoCKBkAAAoCA30FAAAE
 KpYCewUAAARvGgAACnLQAABwbxsAAAooHAAACm8dAAAKpSIAAAEqHgIoGQAACiqufgYAAAQtHnLe
 AABw0AcAAAIoHgAACm8fAAAKcyAAAAqABgAABH4GAAAEKhp+BwAABCoeAoAHAAAEKhp+CAAABCoe
 AighAAAKKi5zFAAABoAIAAAEKkJTSkIBAAEAAAAAAAwAAAB2NC4wLjMwMzE5AAAAAAUAbAAAAGwF
-AAAjfgAA2AUAAPgGAAAjU3RyaW5ncwAAAADQDAAAUAEAACNVUwAgDgAAEAAAACNHVUlEAAAAMA4A
+AAAjfgAA2AUAAAwHAAAjU3RyaW5ncwAAAADkDAAAUAEAACNVUwA0DgAAEAAAACNHVUlEAAAARA4A
 ALgBAAAjQmxvYgAAAAAAAAACAAABVxWiAQkBAAAA+gEzABYAAAEAAAAlAAAACAAAAAgAAAAVAAAA
-DwAAACEAAAAQAAAAAQAAAAQAAAAGAAAABwAAAAEAAAAFAAAAAQAAAAAAJAMBAAAAAAAGADUCygQG
-AMkCygQGAIEBtwQPAD4FAAAGAK4BwQMGABgCwQMGAPkBwQMGALACwQMGAFUCwQMGAG4CwQMGAMUB
-wQMGAOAB7QIKAIkCzgAKAGEEzgAOAFIEzgAKAAoEzgAKABAGzgAGANMFeQMGAGQBtwQGAHIE6gQG
-AP4DrAMSADQBDgMSAJUBDgMSABwBlwMGAEkBygQGADoAeQMGANMDeQMGAAcDeQMGAO0DeQMWABEA
-ggQWAAEAggRHAIYGAAAWACIAggQGAGQAeQMGAO8AeQMGAKAAeQMGAOwGwQMAAAAAagAAAAAAAQAB
-AAEAEACMAwAAEAABAAEAAQAQAEUEAAA5AAIAAwABABAA8gUAAEUAAgAIAAEAEADHBQAASQAEAAwA
-AQAQAIgFAABJAAUADQAAABAA8QRNBUkABgAPAAABEAC3BU0FYQAIABMAAQDVBoEABgDHBYQABgCI
-BYgAAQAABowAAQAABowAEQCAA5AAEQAMAZQAEQCQAJgAUCAAAAAAxgC2BpwAAQCXIAAAAACGGKoE
-BgACAJ8gAAAAAIYYqgQfAAIAqiAAAAAAhgh7AAEABQC5IAAAAACGCEwDogAGANAgAAAAAIYAzQYv
-AAcA2CAAAAAAhgDaBS8ABwDgIAAAAACGGKoEBgAHAAAhAAAAAMYAZQanAAcAJSEAAAAAxgFeBpwA
-CwA4IQAAAADGAbYGnAAMADohAAAAAIYYqgSxAA0ASSEAAAAAhhiqBLEADgBYIQAAAACGCN0GtwAP
-AH4hAAAAAIMYqgQGAA8AhiEAAAAAkwhuBLsADwCyIQAAAACTCPQAwAAPALkhAAAAAJMIAAHFAA8A
-wSEAAAAAlgjmBcsAEADIIQAAAACGGKoEBgAQANAhAAAAAJEYsATQABAAAAABANEGAAABAGcEAAAC
-AJIFAAADABgEAAABAOcCAAABAOcCAAABAHMAAAACAMQAAAADAGcEAAAEABgEAAABAGcEAAABANEG
-AAABABYGAAABABYGAAABAOcCCQCqBAEAEQCqBAYAGQCqBAoAKQCqBBAAMQCqBBAAOQCqBBAAQQCq
-BBAASQCqBBAAUQCqBBAAWQCqBBAAYQCqBBAAaQCqBAYAmQCqBAYAuQCqBBUAyQCqBAYAcQCqBB8A
-cQBwAykAcQBfAwEA2QCqBBAAcQDNBi8AcQDaBS8AiQCqBAYA4QDABTMAiQCmBToAkQCqBAYAiQB8
-BUAA8QBnA0UAiQChBksA+QByBlEAGQGyAFgAGQHoBmEAoQCqBGcAwQCqBAYALgALAO8ALgATAPgA
+DwAAACEAAAAQAAAAAQAAAAQAAAAGAAAABwAAAAEAAAAFAAAAAQAAAAAALwMBAAAAAAAGAEAC4AQG
+ANQC4AQGAIwBzQQPAFQFAAAGALkB1wMGACMC1wMGAAQC1wMGALsC1wMGAGAC1wMGAHkC1wMGANAB
+1wMGAOsB+AIKAJQC2QAKAHcE2QAOAGgE2QAKACAE2QAKACYG2QAGAOkFjwMGAG8BzQQGAIgEAAUG
+ABQEwgMSAD8BGQMSAKABGQMSACcBrQMGAFQB4AQGADoAjwMGAOkDjwMGABIDjwMGAAMEjwMWABEA
+mAQWAAEAmARHAJwGAAAWACIAmAQGAEAAjwMGAPoAjwMGAKsAjwMGAAIH1wMAAAAARgAAAAAAAQAB
+AAEAEACiAwAAEAABAAEAAQAQAFsEAAA5AAIAAwABABAACAYAAEUAAgAIAAEAEADdBQAASQAEAAwA
+AQAQAJ4FAABJAAUADQAAABAABwVjBUkABgAPAAABEADNBWMFYQAIABMAAQDrBoEABgDdBYQABgCe
+BYgAAQAWBowAAQAWBowAEQCWA5AAEQAXAZQAEQCbAJgAUCAAAAAAxgDMBpwAAQCXIAAAAACGGMAE
+BgACAJ8gAAAAAIYYwAQfAAIAqiAAAAAAhghzAAEABQC5IAAAAACGCFcDogAGANAgAAAAAIYA4wYv
+AAcA2CAAAAAAhgDwBS8ABwDgIAAAAACGGMAEBgAHAAAhAAAAAMYAewanAAcAJSEAAAAAxgF0BpwA
+CwA4IQAAAADGAcwGnAAMADohAAAAAIYYwASxAA0ASSEAAAAAhhjABLEADgBYIQAAAACGCPMGtwAP
+AH4hAAAAAIMYwAQGAA8AhiEAAAAAkwiEBLsADwCyIQAAAACTCP8AwAAPALkhAAAAAJMICwHFAA8A
+wSEAAAAAlgj8BcsAEADIIQAAAACGGMAEBgAQANAhAAAAAJEYxgTQABAAAAABAOcGAAABAH0EAAAC
+AKgFAAADAC4EAAABAPICAAABAPICAAABAIoAAAACAM8AAAADAH0EAAAEAC4EAAABAH0EAAABAOcG
+AAABACwGAAABACwGAAABAPICCQDABAEAEQDABAYAGQDABAoAKQDABBAAMQDABBAAOQDABBAAQQDA
+BBAASQDABBAAUQDABBAAWQDABBAAYQDABBAAaQDABAYAmQDABAYAuQDABBUAyQDABAYAcQDABB8A
+cQCGAykAcQB1AwEA2QDABBAAcQDjBi8AcQDwBS8AiQDABAYA4QDWBTMAiQC8BToAkQDABAYAiQCS
+BUAA8QB9A0UAiQC3BksA+QCIBlEAGQG9AFgAGQH+BmEAoQDABGcAwQDABAYALgALAO8ALgATAPgA
 LgAbABcBLgAjACABLgArAEkBLgAzAEkBLgA7AEkBLgBDACABLgBLAE8BLgBTAEkBLgBbAGYBQwBj
-ALABiQBzABcBqQBzABcB4wBrALABAQF7ALABGwADAAEABgADAAcABAAIAAYAAAB/ANQAAABQA9gA
-AADhBtwAAAByBOAAAAAUAeUAAADqBeoAAQAEAAMAAQAFAAUAAgAOAAcAAgAQAAkAAgARAAsAAQAS
-AAsAAgATAA0ABIAAAAEAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAAAAAAG8AhwAAAAAADQAAAAAA
-AAAAAAAAeAAgBgAAAAANAAAAAAAAAAAAAAB4AD0GAAAAAAQAAAAAAAAAAAAAAG8AeQMAAAAADQAA
-AAAAAAAAAAAAeAAiBAAAAAAAAAAAAQAAAPsEAAAAAAAAAElEVFNWYXJpYWJsZTEwMABJRFRTVmFy
-aWFibGVzMTAwAElEVFNFdmFsdWF0b3JDb250ZXh0MTAwAEludDMyAFNDXzc4NmM4NWEyM2RlODRh
-NjA4YjEzYTg3YzJkYmQ4MTA0AEludDY0ADxNb2R1bGU+AElucHV0SUQAc2V0X1JhbmdvaUQAbXNj
-b3JsaWIAZGVmYXVsdEluc3RhbmNlAFJ1bnRpbWVUeXBlSGFuZGxlAEdldFR5cGVGcm9tSGFuZGxl
-AElucHV0TmFtZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5QaXBlbGluZQBUeXBlAGdldF9DdWx0
-dXJlAHNldF9DdWx0dXJlAHJlc291cmNlQ3VsdHVyZQBBcHBsaWNhdGlvblNldHRpbmdzQmFzZQBF
-ZGl0b3JCcm93c2FibGVTdGF0ZQBDb21waWxlckdlbmVyYXRlZEF0dHJpYnV0ZQBEZWJ1Z2dlck5v
-blVzZXJDb2RlQXR0cmlidXRlAERlYnVnZ2FibGVBdHRyaWJ1dGUARWRpdG9yQnJvd3NhYmxlQXR0
-cmlidXRlAEFzc2VtYmx5VGl0bGVBdHRyaWJ1dGUAQXNzZW1ibHlUcmFkZW1hcmtBdHRyaWJ1dGUA
-VGFyZ2V0RnJhbWV3b3JrQXR0cmlidXRlAEFzc2VtYmx5Q29uZmlndXJhdGlvbkF0dHJpYnV0ZQBB
-c3NlbWJseURlc2NyaXB0aW9uQXR0cmlidXRlAENvbXBpbGF0aW9uUmVsYXhhdGlvbnNBdHRyaWJ1
-dGUAQXNzZW1ibHlQcm9kdWN0QXR0cmlidXRlAEFzc2VtYmx5Q29weXJpZ2h0QXR0cmlidXRlAFNT
-SVNTY3JpcHRDb21wb25lbnRFbnRyeVBvaW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJp
-YnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0eUF0dHJpYnV0ZQB2YWx1ZQBTeXN0ZW0uUnVudGltZS5W
-ZXJzaW9uaW5nAFN0cmluZwBTeXN0ZW0uQ29tcG9uZW50TW9kZWwAU0NfNzg2Yzg1YTIzZGU4NGE2
-MDhiMTNhODdjMmRiZDgxMDQuZGxsAHNldF9SYW5nb2lEX0lzTnVsbABTZXROdWxsAGdldF9JdGVt
-AHNldF9JdGVtAFN5c3RlbQByZXNvdXJjZU1hbgBTY3JpcHRNYWluAFN5c3RlbS5Db25maWd1cmF0
-aW9uAFN5c3RlbS5HbG9iYWxpemF0aW9uAFN5c3RlbS5SZWZsZWN0aW9uAEludmFsaWRPcGVyYXRp
-b25FeGNlcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXROYW1lTWFwAE91
-dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1J1bnRpbWVXcmFwAElucHV0MEJ1ZmZlcgBQ
-aXBlbGluZUJ1ZmZlcgBTY3JpcHRCdWZmZXIAZ2V0X1Jlc291cmNlTWFuYWdlcgBNaWNyb3NvZnQu
-U3FsU2VydmVyLkR0cy5SdW50aW1lLldyYXBwZXIALmN0b3IALmNjdG9yAFN5c3RlbS5EaWFnbm9z
-dGljcwBTeXN0ZW0uUnVudGltZS5Db21waWxlclNlcnZpY2VzAFN5c3RlbS5SZXNvdXJjZXMAU0Nf
-Nzg2Yzg1YTIzZGU4NGE2MDhiMTNhODdjMmRiZDgxMDQuUHJvcGVydGllcy5SZXNvdXJjZXMucmVz
-b3VyY2VzAERlYnVnZ2luZ01vZGVzAFNDXzc4NmM4NWEyM2RlODRhNjA4YjEzYTg3YzJkYmQ4MTA0
-LlByb3BlcnRpZXMAZ2V0X1JlYWRPbmx5VmFyaWFibGVzAEJ1ZmZlckNvbHVtbkluZGV4ZXMAR2V0
-Q29sdW1uSW5kZXhlcwBTZXR0aW5ncwBFcXVhbHMAQ29ubmVjdGlvbnMAT2JqZWN0AEVuZE9mUm93
-c2V0AGdldF9EZWZhdWx0AFVzZXJDb21wb25lbnQAUGFyZW50Q29tcG9uZW50AFNjcmlwdENvbXBv
-bmVudABNaWNyb3NvZnQuU3FsU2VydmVyLlR4U2NyaXB0AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuUGlw
-ZWxpbmVIb3N0AElucHV0MF9Qcm9jZXNzSW5wdXQAR2V0VmFsdWVXaXRoQ29udGV4dABTY3JpcHRD
-b21wb25lbnRFdmFsQ29udGV4dABnZXRfRXZhbHVhdG9yQ29udGV4dABJbnB1dDBfUHJvY2Vzc0lu
-cHV0Um93AE5leHRSb3cATmV4dEtleQBnZXRfTWF4S2V5AGdldF9Bc3NlbWJseQAAAAAAgL1MAGEA
-IABwAHIAbwBwAGkAZQBkAGEAZAAgAEkAcwBOAHUAbABsACAAbgBvACAAcAB1AGUAZABlACAAZQBz
-AHQAYQBiAGwAZQBjAGUAcgBzAGUAIABlAG4AIABGAGEAbABzAGUALgAgAEUAbgAgAHMAdQAgAGwA
-dQBnAGEAcgAsACAAYQBzAGkAZwBuAGUAIAB1AG4AIAB2AGEAbABvAHIAIABhACAAbABhACAAYwBv
-AGwAdQBtAG4AYQAuAAAPSQBuAHAAdQB0ACAAMAAADU0AYQB4AEsAZQB5AABxUwBDAF8ANwA4ADYA
-YwA4ADUAYQAyADMAZABlADgANABhADYAMAA4AGIAMQAzAGEAOAA3AGMAMgBkAGIAZAA4ADEAMAA0
-AC4AUAByAG8AcABlAHIAdABpAGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAADRKcdCOvqcSLx/ap9/
-oIkfAAQgAQEIAyAAAQUgAQEREQQgAQEOBSABARFZAwcBCAkgAwESPR0IEkEFIAIBCBwDIAACBiAC
-Ag4RdQUgAR0ICAQgABJ5BSABEn0cBQAAEoCBBiABHBKAhQgAARKAjRGAkQUgABKAlQcgAgEOEoCV
-CLd6XFYZNOCJCImEXc2AgMyRAgYIAwYSFAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIMBCABAQIJ
-IAQBCA4SPRJBBSABARJFAyAACgQAABJRBAAAElUFAAEBElUEAAASIAMAAAEDKAAIAygAAgMoAAoE
-CAASUQQIABJVBAgAEiAIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRpb25UaHJvd3MBCAEA
-AgAAAAAAKAEAI1NDXzc4NmM4NWEyM2RlODRhNjA4YjEzYTg3YzJkYmQ4MTA0AAAFAQAAAAAWAQAR
-Q29weXJpZ2h0IEAgIDIwMTgAAEkBABouTkVURnJhbWV3b3JrLFZlcnNpb249djQuNQEAVA4URnJh
-bWV3b3JrRGlzcGxheU5hbWUSLk5FVCBGcmFtZXdvcmsgNC41BAEAAAAAAAC0AAAAzsrvvgEAAACR
-AAAAbFN5c3RlbS5SZXNvdXJjZXMuUmVzb3VyY2VSZWFkZXIsIG1zY29ybGliLCBWZXJzaW9uPTQu
-MC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OSNT
-eXN0ZW0uUmVzb3VyY2VzLlJ1bnRpbWVSZXNvdXJjZVNldAIAAAAAAAAAAAAAAFBBRFBBRFC0AAAA
-pDIAAAAAAAAAAAAAvjIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAyAAAAAAAAAAAAAAAAX0Nv
-ckRsbE1haW4AbXNjb3JlZS5kbGwAAAAAAP8lACAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ALABiQBzABcBqQBzABcB4wBrALABAQF7ALABGwADAAEABgADAAcABAAIAAYAAAB3ANQAAABbA9gA
+AAD3BtwAAACIBOAAAAAfAeUAAAAABuoAAQAEAAMAAQAFAAUAAgAOAAcAAgAQAAkAAgARAAsAAQAS
+AAsAAgATAA0ABIAAAAEAAAAAAAAAAAAAAAAATwAAAAQAAAAAAAAAAAAAAG8AkgAAAAAADQAAAAAA
+AAAAAAAAeAA2BgAAAAANAAAAAAAAAAAAAAB4AFMGAAAAAAQAAAAAAAAAAAAAAG8AjwMAAAAADQAA
+AAAAAAAAAAAAeAA4BAAAAAAAAAAAAQAAABEFAAAAAAAAAElEVFNWYXJpYWJsZTEwMABJRFRTVmFy
+aWFibGVzMTAwAElEVFNFdmFsdWF0b3JDb250ZXh0MTAwAEludDMyAEludDY0ADxNb2R1bGU+AFND
+Xzg1QjI1MDJBNkFGMjRDNzQ5OTBFQ0E3NTM5RUJCNzZDAHNldF9GVUVOVEVFVkFMVUFDSU9OSUQA
+SW5wdXRJRABtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlw
+ZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5
+cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0
+dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRlAENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRl
+AERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUARGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JC
+cm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRsZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFy
+a0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRyaWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9u
+QXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0
+aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRB
+dHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlD
+b21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAHZhbHVlAFN5c3Rl
+bS5SdW50aW1lLlZlcnNpb25pbmcAU3RyaW5nAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ184NUIy
+NTAyQTZBRjI0Qzc0OTkwRUNBNzUzOUVCQjc2Qy5kbGwAc2V0X0ZVRU5URUVWQUxVQUNJT05JRF9J
+c051bGwAU2V0TnVsbABnZXRfSXRlbQBzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0
+TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVm
+bGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVy
+ZUluZm8AT3V0cHV0TmFtZU1hcABPdXRwdXRNYXAATWljcm9zb2Z0LlNxbFNlcnZlci5EVFNSdW50
+aW1lV3JhcABJbnB1dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNv
+dXJjZU1hbmFnZXIATWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUnVudGltZS5XcmFwcGVyAC5jdG9y
+AC5jY3RvcgBTeXN0ZW0uRGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNl
+cwBTeXN0ZW0uUmVzb3VyY2VzAFNDXzc4NmM4NWEyM2RlODRhNjA4YjEzYTg3YzJkYmQ4MTA0LlBy
+b3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTQ183ODZjODVhMjNk
+ZTg0YTYwOGIxM2E4N2MyZGJkODEwNC5Qcm9wZXJ0aWVzAGdldF9SZWFkT25seVZhcmlhYmxlcwBC
+dWZmZXJDb2x1bW5JbmRleGVzAEdldENvbHVtbkluZGV4ZXMAU2V0dGluZ3MARXF1YWxzAENvbm5l
+Y3Rpb25zAE9iamVjdABFbmRPZlJvd3NldABnZXRfRGVmYXVsdABVc2VyQ29tcG9uZW50AFBhcmVu
+dENvbXBvbmVudABTY3JpcHRDb21wb25lbnQATWljcm9zb2Z0LlNxbFNlcnZlci5UeFNjcmlwdABN
+aWNyb3NvZnQuU3FsU2VydmVyLlBpcGVsaW5lSG9zdABJbnB1dDBfUHJvY2Vzc0lucHV0AEdldFZh
+bHVlV2l0aENvbnRleHQAU2NyaXB0Q29tcG9uZW50RXZhbENvbnRleHQAZ2V0X0V2YWx1YXRvckNv
+bnRleHQASW5wdXQwX1Byb2Nlc3NJbnB1dFJvdwBOZXh0Um93AE5leHRLZXkAZ2V0X01heEtleQBn
+ZXRfQXNzZW1ibHkAAACAvUwAYQAgAHAAcgBvAHAAaQBlAGQAYQBkACAASQBzAE4AdQBsAGwAIABu
+AG8AIABwAHUAZQBkAGUAIABlAHMAdABhAGIAbABlAGMAZQByAHMAZQAgAGUAbgAgAEYAYQBsAHMA
+ZQAuACAARQBuACAAcwB1ACAAbAB1AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBs
+AG8AcgAgAGEAIABsAGEAIABjAG8AbAB1AG0AbgBhAC4AAA9JAG4AcAB1AHQAIAAwAAANTQBhAHgA
+SwBlAHkAAHFTAEMAXwA3ADgANgBjADgANQBhADIAMwBkAGUAOAA0AGEANgAwADgAYgAxADMAYQA4
+ADcAYwAyAGQAYgBkADgAMQAwADQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIA
+YwBlAHMAAICc1kgOrVBClXYsSsXNdSQABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkDBwEICSAD
+ARI9HQgSQQUgAgEIHAMgAAIGIAICDhF1BSABHQgIBCAAEnkFIAESfRwFAAASgIEGIAEcEoCFCAAB
+EoCNEYCRBSAAEoCVByACAQ4SgJUIt3pcVhk04IkIiYRdzYCAzJECBggDBhIUAwYSGAMGEkUDBhJR
+AwYSVQMGEiAFIAEBEgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUDIAAKBAAAElEEAAASVQUAAQESVQQA
+ABIgAwAAAQMoAAgDKAACAygACgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEAVAIWV3JhcE5v
+bkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNzg2Yzg1YTIzZGU4NGE2MDhiMTNhODdj
+MmRiZDgxMDQAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxOAAASQEAGi5ORVRGcmFtZXdvcmss
+VmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1ld29yayA0LjUE
+AQAAAAAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJlYWRlciwg
+bXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tl
+bj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNlU2V0AgAA
+AAAAAAAAAAAAUEFEUEFEULQAAAC4MgAAAAAAAAAAAADSMgAAACAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAxDIAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1417,13 +1284,13 @@ MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
 AABTAEMAXwA3ADgANgBjADgANQBhADIAMwBkAGUAOAA0AGEANgAwADgAYgAxADMAYQA4ADcAYwAy
 AGQAYgBkADgAMQAwADQAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADcAOAA2AGMAOAA1
-AGEAMgAzAGQAZQA4ADQAYQA2ADAAOABiADEAMwBhADgANwBjADIAZABiAGQAOAAxADAANAAuAGQA
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADgANQBCADIANQAw
+ADIAQQA2AEEARgAyADQAQwA3ADQAOQA5ADAARQBDAEEANwA1ADMAOQBFAEIAQgA3ADYAQwAuAGQA
 bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
 AHQAIABAACAAIAAyADAAMQA4AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANwA4
-ADYAYwA4ADUAYQAyADMAZABlADgANABhADYAMAA4AGIAMQAzAGEAOAA3AGMAMgBkAGIAZAA4ADEA
-MAA0AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADcAOAA2
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AOAA1
+AEIAMgA1ADAAMgBBADYAQQBGADIANABDADcANAA5ADkAMABFAEMAQQA3ADUAMwA5AEUAQgBCADcA
+NgBDAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADcAOAA2
 AGMAOAA1AGEAMgAzAGQAZQA4ADQAYQA2ADAAOABiADEAMwBhADgANwBjADIAZABiAGQAOAAxADAA
 NAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
 AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
@@ -1434,7 +1301,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA0DIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAA5DIAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1450,7 +1317,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
                   name="VSTAProjectName"
-                  typeConverter="NOTBROWSABLE">SC_786c85a23de84a608b13a87c2dbd8104</property>
+                  typeConverter="NOTBROWSABLE">SC_85b2502a6af24c74990eca7539ebb76c</property>
                 <property
                   dataType="System.String"
                   description="Specifies the programming language used by the script."
@@ -1479,19 +1346,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataChecksum"
-                  typeConverter="NOTBROWSABLE">812cac9fb036e66fbc69582ee6d23d4a</property>
+                  typeConverter="NOTBROWSABLE">0d526e1adaa1def0df726d73fa008d49</property>
                 <property
                   dataType="System.String"
                   description="Checksum to match component metedata against compiled codes."
                   name="MetadataShaChecksum"
-                  typeConverter="NOTBROWSABLE">48f1623ac635391e8ce6237773c59b5f1819e935</property>
+                  typeConverter="NOTBROWSABLE">541e712cc7cbf20def8584de98ab66e664fbb9e6</property>
                 <property
                   dataType="System.String"
                   name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
               </properties>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]"
+                  refId="Package\Tarea Flujo de datos\Script Component.Inputs[Input 0]"
                   hasSideEffects="true"
                   name="Input 0">
                   <externalMetadataColumns />
@@ -1499,15 +1366,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0]"
+                  refId="Package\Tarea Flujo de datos\Script Component.Outputs[Output 0]"
                   name="Output 0"
-                  synchronousInputId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Script Component.Inputs[Input 0]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]"
+                      refId="Package\Tarea Flujo de datos\Script Component.Outputs[Output 0].Columns[FUENTE_EVALUACION_ID]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0].Columns[Rango_iD]"
-                      name="Rango_iD" />
+                      lineageId="Package\Tarea Flujo de datos\Script Component.Outputs[Output 0].Columns[FUENTE_EVALUACION_ID]"
+                      name="FUENTE_EVALUACION_ID" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1516,61 +1383,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Data Conversion Output]"
-              endId="Package\Data Flow Task\Busqueda Rango.Inputs[Lookup Input]"
-              name="Data Conversion Output"
-              startId="Package\Data Flow Task\Conversion Rango.Outputs[Data Conversion Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Excel Source Output]"
-              endId="Package\Data Flow Task\Conversion Rango.Inputs[Data Conversion Input]"
-              name="Excel Source Output"
-              startId="Package\Data Flow Task\Excel Rangos.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
-              endId="Package\Data Flow Task\Llave primaria Rango.Inputs[Input 0]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Task\Busqueda Rango.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Output 0]"
-              endId="Package\Data Flow Task\DimRango.Inputs[Entrada de destino de OLE DB]"
+              refId="Package\Tarea Flujo de datos.Paths[Output 0]"
+              endId="Package\Tarea Flujo de datos\DimFuenteEvaluacion.Inputs[Entrada de destino de OLE DB]"
               name="Output 0"
-              startId="Package\Data Flow Task\Llave primaria Rango.Outputs[Output 0]" />
+              startId="Package\Tarea Flujo de datos\Script Component.Outputs[Output 0]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]"
+              name="Salida de conversión de datos"
+              startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Script Component.Inputs[Input 0]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+              endId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de Excel"
+              startId="Package\Tarea Flujo de datos\Excel Fuente Evaluacion.Outputs[Salida de origen de Excel]" />
           </paths>
         </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{9F50CBE7-C30E-4B3C-8892-F9F07EA36DF9}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{5797239F-B739-4D39-8315-28285D9C507A}"
-          SQLTask:SqlStatementSource="select &#xA;  case&#xA;    when max(rango_id) is null then 0 &#xA;    else max(rango_id)  &#xA;  end as maxkey&#xA; from rango"
-          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-          <SQLTask:ResultBinding
-            SQLTask:ResultName="0"
-            SQLTask:DtsVariableName="User::MaxKey" />
-        </SQLTask:SqlTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{9CCCC88B-5111-49C1-A438-A785FB459698}"
+      DTS:DTSID="{E8C13505-1983-4726-9ED3-54ACCEFEA39B}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
-      DTS:To="Package\Data Flow Task" />
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Tarea Flujo de datos" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -1585,27 +1430,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task"
-          TopLeft="122,159" />
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="295,170" />
         <NodeLayout
           Size="163,42"
           Id="Package\Execute SQL Task"
-          TopLeft="117,58" />
+          TopLeft="296,80" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="198,100">
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="380.25,122">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59"
+              EndConnector="0,48"
               Start="0,0"
-              End="0,51.5">
+              End="0,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,51.5" />
+                    End="0,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1618,56 +1463,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Tarea Flujo de datos">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="141,42"
-          Id="Package\Data Flow Task\Excel Rangos"
-          TopLeft="280,34" />
+          Size="192,42"
+          Id="Package\Tarea Flujo de datos\Excel Fuente Evaluacion"
+          TopLeft="275,34" />
         <NodeLayout
-          Size="178,42"
-          Id="Package\Data Flow Task\Llave primaria Rango"
-          TopLeft="266,285" />
-        <NodeLayout
-          Size="127,42"
-          Id="Package\Data Flow Task\DimRango"
-          TopLeft="278,367" />
-        <NodeLayout
-          Size="158,42"
-          Id="Package\Data Flow Task\Busqueda Rango"
-          TopLeft="268,197" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Data Flow Task\Conversion Rango"
-          TopLeft="268,119" />
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Conversión de datos"
+          TopLeft="282,120" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="355,327">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+          TopLeft="370.25,76">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-13.5,40"
+              EndConnector="0,44"
               Start="0,0"
-              End="-13.5,32.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="-4,20" />
-                  <mssgle:LineSegment
-                    End="-9.5,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.5,20"
-                    Point2="-13.5,20"
-                    Point3="-13.5,24" />
-                  <mssgle:LineSegment
-                    End="-13.5,32.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1676,45 +1497,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion"
+          TopLeft="267,205" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="347,239">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8,46"
-              Start="0,0"
-              End="8,38.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="4,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4,23"
-                    Point2="8,23"
-                    Point3="8,27" />
-                  <mssgle:LineSegment
-                    End="8,38.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-51.80638671875,28,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="350.25,76">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="371.75,162">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1734,20 +1523,52 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Tarea Flujo de datos\Script Component"
+          TopLeft="293,289" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="348.5,161">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="374.25,247">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,36"
+              EndConnector="0,42"
               Start="0,0"
-              End="0,28.5">
+              End="0,34.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.5" />
+                    End="0,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-106.8890234375,11.15234375,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Tarea Flujo de datos\DimFuenteEvaluacion"
+          TopLeft="284,370" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Output 0]"
+          TopLeft="374.25,331">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1760,30 +1581,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Busqueda Rango">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">"DW_ACADEMICO_LABOR"."RANGO"</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Rangos">
+    design-time-name="Package\Tarea Flujo de datos\Excel Fuente Evaluacion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1796,7 +1594,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\DimRango">
+    design-time-name="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"DW_ACADEMICO_LABOR"."FUENTE_EVALUACION"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\DimFuenteEvaluacion">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
