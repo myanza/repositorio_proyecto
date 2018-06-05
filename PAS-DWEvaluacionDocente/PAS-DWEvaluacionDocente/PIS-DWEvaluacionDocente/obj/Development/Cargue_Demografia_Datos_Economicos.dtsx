@@ -1,47 +1,65 @@
 <?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="6/4/2018 2:45:48 PM"
+  DTS:CreationDate="6/4/2018 4:56:57 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SEBASTIAN"
   DTS:CreatorName="SEBASTIAN\Sebastian Jimenez"
-  DTS:DTSID="{F3198473-F155-46D0-9A37-294B3C9E15B5}"
+  DTS:DTSID="{E3FCA4FB-0846-4306-AF18-F9F3755DF668}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2165.0"
   DTS:LocaleID="3082"
-  DTS:ObjectName="Cargue_Datos_Demograficos"
+  DTS:ObjectName="Cargue_Demografia_Datos_Economicos"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{4A531F98-3FD3-4FDB-A23B-5B63D2288BAE}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{17C59F46-967C-4A7F-82C7-8EB6C0B6F65F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F5BBE070-0BCA-456C-ADF7-36E49F0FA9C7}"
+      DTS:DTSID="{4881096D-6E80-4354-8846-9E5C77FE51BD}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="MaxKey">
       <DTS:VariableValue
         DTS:DataType="20">1</DTS:VariableValue>
     </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{23DDFFFF-2937-421F-8435-48CD1BBC6E2B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxKey1">
+      <DTS:VariableValue
+        DTS:DataType="20">1</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{067952C4-DE7C-4EE4-9BAC-9B469B589614}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="MaxKey2">
+      <DTS:VariableValue
+        DTS:DataType="20">1</DTS:VariableValue>
+    </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Execute SQL Task"
+      DTS:refId="Package\Tarea Ejecutar SQL"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{b6a21bf1-0bfa-4f0d-95f0-0b69906bd282}"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{BB572E6A-6E45-426F-8EB8-579F266B4768}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task"
+      DTS:ObjectName="Tarea Ejecutar SQL"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2016; © 2015 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{5797239F-B739-4D39-8315-28285D9C507A}"
-          SQLTask:SqlStatementSource="select &#xA;  case&#xA;    when max(demografia_id) is null then 0 &#xA;    else max(demografia_id)  &#xA;  end as maxkey&#xA; from datos_demograficos"
+          SQLTask:SqlStatementSource="select case&#xA; when max(DEM_ECONOMICOS_ID) is null then 0 &#xA;else max(DEM_ECONOMICOS_ID) end as maxkey&#xA; from demografia_datos_economicos"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
             SQLTask:ResultName="0"
@@ -53,7 +71,7 @@
       DTS:refId="Package\Tarea Flujo de datos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{84783E58-4CAC-4252-A780-B3FC21F629C1}"
+      DTS:DTSID="{8F1F7642-A207-4BCE-87E4-1DAC251A487B}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Tarea Flujo de datos"
@@ -64,11 +82,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos"
+              refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica"
               componentClassID="Microsoft.Lookup"
               contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
               description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
-              name="Búsqueda Datos demograficos"
+              name="Búsqueda Demografia Economica"
               usesDispositions="true"
               version="6">
               <properties>
@@ -77,14 +95,14 @@
                   description="Especifica la instrucción SQL que genera la tabla de búsqueda."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS"</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."DEMOGRAFIA_DATOS_ECONOMICOS"</property>
                 <property
                   dataType="System.String"
                   description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS") "refTable"
-where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable"."DEPORTISTA" = ? and "refTable"."ESTADO_CIVIL" = ? and "refTable"."DISCAPACIDAD" = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."DEMOGRAFIA_DATOS_ECONOMICOS") "refTable"
+where "refTable"."POSICION_HERMANOS" = ? and "refTable"."VIVIENDA_PROPIA" = ? and "refTable"."DESPLAZADO" = ? and "refTable"."MADRE_CABEZA" = ? and "refTable"."ESTRATO" = ? and "refTable"."NUMERO_HERMANOS" = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
@@ -115,12 +133,12 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                 <property
                   dataType="System.String"
                   description="Indica si se debe hacer referencia a metadatos en formato XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DEMOGRAFIA_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RANGO_EDAD" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ESTADO_CIVIL" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACUDIENTE" dataType="DT_WSTR" length="25" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DISCAPACIDAD" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPORTISTA" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DEM_ECONOMICOS_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ESTRATO" dataType="DT_WSTR" length="15" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NUMERO_HERMANOS" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="POSICION_HERMANOS" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VIVIENDA_PROPIA" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DESPLAZADO" dataType="DT_WSTR" length="25" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MADRE_CABEZA" dataType="DT_WSTR" length="25" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de POSICIONHERMANOS]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de VIVIENDAPROPIA]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESPLAZADO]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de MADRECABEZA]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTRATO]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NUMEROHERMANOS]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -132,7 +150,7 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Connections[OleDbConnection]"
                   connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
@@ -140,20 +158,20 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda]"
                   name="Entrada de búsqueda">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda].Columns[Copia de POSICIONHERMANOS]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de RANGO_EDAD"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]">
+                      cachedLength="10"
+                      cachedName="Copia de POSICIONHERMANOS"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de POSICIONHERMANOS]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">RANGO_EDAD</property>
+                          name="JoinToReferenceColumn">POSICION_HERMANOS</property>
                         <property
                           dataType="System.Null"
                           description="Especifica la columna de la tabla de referencia de la que se copia una columna."
@@ -161,16 +179,16 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de ESTADO_CIVIL]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda].Columns[Copia de VIVIENDAPROPIA]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de ESTADO_CIVIL"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]">
+                      cachedLength="30"
+                      cachedName="Copia de VIVIENDAPROPIA"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de VIVIENDAPROPIA]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">ESTADO_CIVIL</property>
+                          name="JoinToReferenceColumn">VIVIENDA_PROPIA</property>
                         <property
                           dataType="System.Null"
                           description="Especifica la columna de la tabla de referencia de la que se copia una columna."
@@ -178,50 +196,67 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de DISCAPACIDAD]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copia de DISCAPACIDAD"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">DISCAPACIDAD</property>
-                        <property
-                          dataType="System.Null"
-                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de DEPORTISTA]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de DEPORTISTA"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">DEPORTISTA</property>
-                        <property
-                          dataType="System.Null"
-                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda].Columns[Copia de DESPLAZADO]"
                       cachedDataType="wstr"
                       cachedLength="25"
-                      cachedName="Copia de ACUDIENTE"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]">
+                      cachedName="Copia de DESPLAZADO"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESPLAZADO]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">ACUDIENTE</property>
+                          name="JoinToReferenceColumn">DESPLAZADO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda].Columns[Copia de MADRECABEZA]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="Copia de MADRECABEZA"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de MADRECABEZA]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">MADRE_CABEZA</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda].Columns[Copia de ESTRATO]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copia de ESTRATO"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTRATO]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ESTRATO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda].Columns[Copia de NUMEROHERMANOS]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de NUMEROHERMANOS"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NUMEROHERMANOS]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">NUMERO_HERMANOS</property>
                         <property
                           dataType="System.Null"
                           description="Especifica la columna de la tabla de referencia de la que se copia una columna."
@@ -234,38 +269,38 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de entradas coincidentes de búsqueda]"
                   errorOrTruncationOperation="Búsqueda"
                   exclusionGroup="1"
                   name="Salida de entradas coincidentes de búsqueda"
-                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de entradas no coincidentes de búsqueda]"
                   description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en &quot;Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes&quot;."
                   exclusionGroup="1"
                   name="Salida de entradas no coincidentes de búsqueda"
-                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de error de búsqueda]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de búsqueda"
-                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -311,25 +346,37 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       cachedName="CLAVE"
                       cachedPrecision="18"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CLAVE]" />
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[CLAVE]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[POSICIONHERMANOS]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="ACUDIENTE"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ACUDIENTE]" />
+                      cachedName="POSICIONHERMANOS"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[POSICIONHERMANOS]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[VIVIENDAPROPIA]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="RANGO_EDAD"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[RANGO_EDAD]" />
+                      cachedName="VIVIENDAPROPIA"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[VIVIENDAPROPIA]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[DEPORTISTA]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[DESPLAZADO]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="DEPORTISTA"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DEPORTISTA]" />
+                      cachedName="DESPLAZADO"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[DESPLAZADO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[MADRECABEZA]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="MADRECABEZA"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[MADRECABEZA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[NUMEROHERMANOS]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="NUMEROHERMANOS"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[NUMEROHERMANOS]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -344,19 +391,13 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       cachedName="CLAVE"
                       cachedPrecision="18"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[CLAVE]" />
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].Columns[CLAVE]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[ESTADO_CIVIL]"
-                      cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="ESTADO_CIVIL"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[ESTADO_CIVIL]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[DISCAPACIDAD]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DISCAPACIDAD"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[DISCAPACIDAD]" />
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[ESTRATO]"
+                      cachedDataType="numeric"
+                      cachedName="ESTRATO"
+                      cachedPrecision="1"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].Columns[ESTRATO]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -367,73 +408,87 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                   name="Salida de combinación de mezcla">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[POSICIONHERMANOS]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ACUDIENTE]"
-                      name="ACUDIENTE">
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[POSICIONHERMANOS]"
+                      name="POSICIONHERMANOS">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[ACUDIENTE]}</property>
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[POSICIONHERMANOS]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[VIVIENDAPROPIA]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[RANGO_EDAD]"
-                      name="RANGO_EDAD">
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[VIVIENDAPROPIA]"
+                      name="VIVIENDAPROPIA">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[RANGO_EDAD]}</property>
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[VIVIENDAPROPIA]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DEPORTISTA]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DESPLAZADO]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DEPORTISTA]"
-                      name="DEPORTISTA">
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DESPLAZADO]"
+                      name="DESPLAZADO">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[DEPORTISTA]}</property>
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[DESPLAZADO]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTADO_CIVIL]"
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[MADRECABEZA]"
                       dataType="wstr"
-                      length="30"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTADO_CIVIL]"
-                      name="ESTADO_CIVIL">
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[MADRECABEZA]"
+                      name="MADRECABEZA">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[ESTADO_CIVIL]}</property>
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[MADRECABEZA]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DISCAPACIDAD]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DISCAPACIDAD]"
-                      name="DISCAPACIDAD">
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTRATO]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTRATO]"
+                      name="ESTRATO"
+                      precision="1">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[DISCAPACIDAD]}</property>
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla].Columns[ESTRATO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[NUMEROHERMANOS]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[NUMEROHERMANOS]"
+                      name="NUMEROHERMANOS">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla].Columns[NUMEROHERMANOS]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -454,35 +509,41 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                   name="Entrada de conversión de datos">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[POSICIONHERMANOS]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="ACUDIENTE"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ACUDIENTE]" />
+                      cachedName="POSICIONHERMANOS"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[POSICIONHERMANOS]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[VIVIENDAPROPIA]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="RANGO_EDAD"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[RANGO_EDAD]" />
+                      cachedName="VIVIENDAPROPIA"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[VIVIENDAPROPIA]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DEPORTISTA]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DESPLAZADO]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="DEPORTISTA"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DEPORTISTA]" />
+                      cachedName="DESPLAZADO"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DESPLAZADO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ESTADO_CIVIL]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[MADRECABEZA]"
                       cachedDataType="wstr"
-                      cachedLength="30"
-                      cachedName="ESTADO_CIVIL"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTADO_CIVIL]" />
+                      cachedLength="255"
+                      cachedName="MADRECABEZA"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[MADRECABEZA]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DISCAPACIDAD]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[ESTRATO]"
+                      cachedDataType="numeric"
+                      cachedName="ESTRATO"
+                      cachedPrecision="1"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTRATO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[NUMEROHERMANOS]"
                       cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="DISCAPACIDAD"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DISCAPACIDAD]" />
+                      cachedLength="255"
+                      cachedName="NUMEROHERMANOS"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[NUMEROHERMANOS]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -495,20 +556,62 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                   synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de POSICIONHERMANOS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de POSICIONHERMANOS]"
+                      name="Copia de POSICIONHERMANOS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[POSICIONHERMANOS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de VIVIENDAPROPIA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de VIVIENDAPROPIA]"
+                      name="Copia de VIVIENDAPROPIA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[VIVIENDAPROPIA]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESPLAZADO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
                       length="25"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]"
-                      name="Copia de ACUDIENTE"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESPLAZADO]"
+                      name="Copia de DESPLAZADO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ACUDIENTE]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DESPLAZADO]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -516,20 +619,20 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de MADRECABEZA]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]"
-                      name="Copia de RANGO_EDAD"
+                      length="25"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de MADRECABEZA]"
+                      name="Copia de MADRECABEZA"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[RANGO_EDAD]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[MADRECABEZA]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -537,20 +640,20 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTRATO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]"
-                      name="Copia de DEPORTISTA"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTRATO]"
+                      name="Copia de ESTRATO"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DEPORTISTA]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTRATO]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -558,41 +661,20 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]"
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NUMEROHERMANOS]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]"
-                      name="Copia de ESTADO_CIVIL"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NUMEROHERMANOS]"
+                      name="Copia de NUMEROHERMANOS"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[ESTADO_CIVIL]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]"
-                      name="Copia de DISCAPACIDAD"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[DISCAPACIDAD]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla].Columns[NUMEROHERMANOS]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -627,11 +709,11 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\DimDatosDemograficos"
+              refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
               description="Destino de OLE DB"
-              name="DimDatosDemograficos"
+              name="DimDemografiaDatosEconomicos"
               usesDispositions="true"
               version="4">
               <properties>
@@ -642,7 +724,7 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                 <property
                   dataType="System.String"
                   description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">"DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS"</property>
+                  name="OpenRowset">"DW_ACADEMICO_LABOR"."DEMOGRAFIA_DATOS_ECONOMICOS"</property>
                 <property
                   dataType="System.String"
                   description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
@@ -684,7 +766,7 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Connections[OleDbConnection]"
                   connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -692,107 +774,119 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB]"
                   errorOrTruncationOperation="Insertar"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="Entrada de destino de OLE DB">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[DEMOGRAFIA_ID]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[DEMOGRAFIA_ID]"
                       cachedDataType="i4"
                       cachedName="DEMOGRAFIA_ID"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEMOGRAFIA_ID]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEM_ECONOMICOS_ID]"
                       lineageId="Package\Tarea Flujo de datos\Llave primaria Demografia.Outputs[Output 0].Columns[DEMOGRAFIA_ID]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[Copia de RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[Copia de ESTRATO]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de RANGO_EDAD"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_EDAD]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]" />
+                      cachedLength="15"
+                      cachedName="Copia de ESTRATO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ESTRATO]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTRATO]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[Copia de DEPORTISTA]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[Copia de NUMEROHERMANOS]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de DEPORTISTA"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPORTISTA]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]" />
+                      cachedLength="10"
+                      cachedName="Copia de NUMEROHERMANOS"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_HERMANOS]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de NUMEROHERMANOS]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[Copia de ESTADO_CIVIL]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[Copia de POSICIONHERMANOS]"
                       cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de ESTADO_CIVIL"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ESTADO_CIVIL]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]" />
+                      cachedLength="10"
+                      cachedName="Copia de POSICIONHERMANOS"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[POSICION_HERMANOS]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de POSICIONHERMANOS]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[Copia de DISCAPACIDAD]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[Copia de VIVIENDAPROPIA]"
                       cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copia de DISCAPACIDAD"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DISCAPACIDAD]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]" />
+                      cachedLength="30"
+                      cachedName="Copia de VIVIENDAPROPIA"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[VIVIENDA_PROPIA]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de VIVIENDAPROPIA]" />
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[Copia de ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[Copia de DESPLAZADO]"
                       cachedDataType="wstr"
                       cachedLength="25"
-                      cachedName="Copia de ACUDIENTE"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACUDIENTE]"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]" />
+                      cachedName="Copia de DESPLAZADO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DESPLAZADO]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DESPLAZADO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].Columns[Copia de MADRECABEZA]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="Copia de MADRECABEZA"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[MADRE_CABEZA]"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de MADRECABEZA]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEMOGRAFIA_ID]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEM_ECONOMICOS_ID]"
                       dataType="numeric"
-                      name="DEMOGRAFIA_ID"
+                      name="DEM_ECONOMICOS_ID"
                       precision="38" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGO_EDAD]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ESTRATO]"
                       dataType="wstr"
-                      length="20"
-                      name="RANGO_EDAD" />
+                      length="15"
+                      name="ESTRATO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ESTADO_CIVIL]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_HERMANOS]"
                       dataType="wstr"
-                      length="20"
-                      name="ESTADO_CIVIL" />
+                      length="10"
+                      name="NUMERO_HERMANOS" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACUDIENTE]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[POSICION_HERMANOS]"
+                      dataType="wstr"
+                      length="10"
+                      name="POSICION_HERMANOS" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[VIVIENDA_PROPIA]"
+                      dataType="wstr"
+                      length="30"
+                      name="VIVIENDA_PROPIA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DESPLAZADO]"
                       dataType="wstr"
                       length="25"
-                      name="ACUDIENTE" />
+                      name="DESPLAZADO" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DISCAPACIDAD]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB].ExternalColumns[MADRE_CABEZA]"
                       dataType="wstr"
-                      length="50"
-                      name="DISCAPACIDAD" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPORTISTA]"
-                      dataType="wstr"
-                      length="20"
-                      name="DEPORTISTA" />
+                      length="25"
+                      name="MADRE_CABEZA" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Outputs[Salida de error de destino de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Outputs[Salida de error de destino de OLE DB]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de destino de OLE DB"
-                  synchronousInputId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB]">
+                  synchronousInputId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\DimDatosDemograficos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\DimDatosDemograficos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -801,11 +895,222 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </outputs>
             </component>
             <component
-              refId="Package\Tarea Flujo de datos\Fuente Academico"
+              refId="Package\Tarea Flujo de datos\Excel demografia"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Origen de Excel"
+              name="Excel demografia"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        1 AS CLAVE, [NUMEROHERMANOS$].NUMEROHERMANOS, [POSICIONHERMANOS$].POSICIONHERMANOS, [VIVIENDAPROPIA$].VIVIENDAPROPIA, [DESPLAZADO$].DESPLAZADO, 
+                         [MADRECABEZA$].MADRECABEZA
+FROM            [NUMEROHERMANOS$], [POSICIONHERMANOS$], [VIVIENDAPROPIA$], [DESPLAZADO$], [MADRECABEZA$]
+ORDER BY 1</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="La asignación de parámetros del comando SQL a variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Excel demografia.Connections[OleDbConnection]"
+                  connectionManagerID="{F323AAFC-5EF5-4E2A-AED2-B1EA7D92CC85}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Origen_Excel_Evaluacion]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel]"
+                  isSorted="true"
+                  name="Salida de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[CLAVE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[CLAVE]"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[CLAVE]"
+                      name="CLAVE"
+                      precision="18"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[NUMEROHERMANOS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[NUMEROHERMANOS]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[NUMEROHERMANOS]"
+                      name="NUMEROHERMANOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[POSICIONHERMANOS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[POSICIONHERMANOS]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[POSICIONHERMANOS]"
+                      name="POSICIONHERMANOS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[VIVIENDAPROPIA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[VIVIENDAPROPIA]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[VIVIENDAPROPIA]"
+                      name="VIVIENDAPROPIA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[DESPLAZADO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[DESPLAZADO]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[DESPLAZADO]"
+                      name="DESPLAZADO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[MADRECABEZA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[MADRECABEZA]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].Columns[MADRECABEZA]"
+                      name="MADRECABEZA"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[CLAVE]"
+                      dataType="i4"
+                      name="CLAVE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[NUMEROHERMANOS]"
+                      dataType="wstr"
+                      length="255"
+                      name="NUMEROHERMANOS" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[POSICIONHERMANOS]"
+                      dataType="wstr"
+                      length="255"
+                      name="POSICIONHERMANOS" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[VIVIENDAPROPIA]"
+                      dataType="wstr"
+                      length="255"
+                      name="VIVIENDAPROPIA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[DESPLAZADO]"
+                      dataType="wstr"
+                      length="255"
+                      name="DESPLAZADO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel].ExternalColumns[MADRECABEZA]"
+                      dataType="wstr"
+                      length="255"
+                      name="MADRECABEZA" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel]"
+                  isErrorOut="true"
+                  isSorted="true"
+                  name="Salida de error de origen de Excel">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[CLAVE]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[CLAVE]"
+                      name="CLAVE"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[NUMEROHERMANOS]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[NUMEROHERMANOS]"
+                      name="NUMEROHERMANOS" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[POSICIONHERMANOS]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[POSICIONHERMANOS]"
+                      name="POSICIONHERMANOS" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[VIVIENDAPROPIA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[VIVIENDAPROPIA]"
+                      name="VIVIENDAPROPIA" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[DESPLAZADO]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[DESPLAZADO]"
+                      name="DESPLAZADO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[MADRECABEZA]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[MADRECABEZA]"
+                      name="MADRECABEZA" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Fuente academico"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
               description="Origen de OLE DB"
-              name="Fuente Academico"
+              name="Fuente academico"
               usesDispositions="true"
               version="7">
               <properties>
@@ -825,8 +1130,7 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 1 AS CLAVE, ESTADOSCIVILES.DESCRIPCION AS ESTADO_CIVIL,DISCAPACIDADES.DESCRIPCION AS DISCAPACIDAD
-FROM ESTADOSCIVILES CROSS JOIN DISCAPACIDADES
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT 1 AS CLAVE,  ESTRATO FROM ESTUDIANTES
 ORDER BY 1</property>
                 <property
                   dataType="System.String"
@@ -852,7 +1156,7 @@ ORDER BY 1</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Fuente Academico.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\Fuente academico.Connections[OleDbConnection]"
                   connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
                   description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
@@ -860,37 +1164,27 @@ ORDER BY 1</property>
               </connections>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB]"
                   isSorted="true"
                   name="Salida de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[ESTADO_CIVIL]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[ESTADO_CIVIL]"
-                      length="30"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[ESTADO_CIVIL]"
-                      name="ESTADO_CIVIL"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[DISCAPACIDAD]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[DISCAPACIDAD]"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[DISCAPACIDAD]"
-                      name="DISCAPACIDAD"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[CLAVE]"
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].Columns[ESTRATO]"
                       dataType="numeric"
                       errorOrTruncationOperation="Conversión"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[CLAVE]"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[CLAVE]"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].ExternalColumns[ESTRATO]"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].Columns[ESTRATO]"
+                      name="ESTRATO"
+                      precision="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].Columns[CLAVE]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].ExternalColumns[CLAVE]"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].Columns[CLAVE]"
                       name="CLAVE"
                       precision="18"
                       sortKeyPosition="1"
@@ -899,57 +1193,46 @@ ORDER BY 1</property>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[ESTADO_CIVIL]"
-                      dataType="wstr"
-                      length="30"
-                      name="ESTADO_CIVIL" />
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].ExternalColumns[ESTRATO]"
+                      dataType="numeric"
+                      name="ESTRATO"
+                      precision="1" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[DISCAPACIDAD]"
-                      dataType="wstr"
-                      length="50"
-                      name="DISCAPACIDAD" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[CLAVE]"
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB].ExternalColumns[CLAVE]"
                       dataType="wstr"
                       length="38"
                       name="CLAVE" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB]"
+                  refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB]"
                   isErrorOut="true"
                   isSorted="true"
                   name="Salida de error de origen de OLE DB">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[CLAVE]"
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[CLAVE]"
                       dataType="wstr"
                       length="38"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[CLAVE]"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[CLAVE]"
                       name="CLAVE"
                       sortKeyPosition="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[ESTADO_CIVIL]"
-                      dataType="wstr"
-                      length="30"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[ESTADO_CIVIL]"
-                      name="ESTADO_CIVIL" />
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[ESTRATO]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[ESTRATO]"
+                      name="ESTRATO"
+                      precision="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DISCAPACIDAD]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DISCAPACIDAD]"
-                      name="DISCAPACIDAD" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1308,20 +1591,20 @@ namespace SC_786c85a23de84a608b13a87c2dbd8104.Properties {
                       dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="3.0" schemaVersion="1.0">
 	<msb:PropertyGroup>
-		<msb:Language>msBuild</msb:Language>
 		<msb:CodeName>SC_786c85a23de84a608b13a87c2dbd8104</msb:CodeName>
+		<msb:Language>msBuild</msb:Language>
 		<msb:DisplayName>SC_786c85a23de84a608b13a87c2dbd8104</msb:DisplayName>
 		<msb:ProjectId>{D9219031-79B1-4ED6-A1F1-69445C4A417D}</msb:ProjectId>
 	</msb:PropertyGroup>
 	<msb:ItemGroup>
 		<msb:Project Include="SC_786c85a23de84a608b13a87c2dbd8104.csproj"/>
-		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\AssemblyInfo.cs"/>
+		<msb:File Include="Properties\Settings.settings"/>
 		<msb:File Include="Properties\Resources.resx"/>
 		<msb:File Include="Properties\Resources.Designer.cs"/>
-		<msb:File Include="BufferWrapper.cs"/>
-		<msb:File Include="main.cs"/>
 		<msb:File Include="Properties\Settings.Designer.cs"/>
+		<msb:File Include="main.cs"/>
+		<msb:File Include="BufferWrapper.cs"/>
 		<msb:File Include="ComponentWrapper.cs"/>
 	</msb:ItemGroup>
 </c:Project>]]></arrayElement>
@@ -1364,7 +1647,7 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[UTF8]]></arrayElement>
                     <arrayElement
-                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f6886cef-afc1-4329-a948-262c7a85131b}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_786c85a23de84a608b13a87c2dbd8104</RootNamespace><AssemblyName>SC_3EA7231D84B54DE7BFDF63FF0F60CDE7</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_786c85a23de84a608b13a87c2dbd8104" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{f6886cef-afc1-4329-a948-262c7a85131b}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>SC_786c85a23de84a608b13a87c2dbd8104</RootNamespace><AssemblyName>SC_FA69AD6DEE9347F79BF0D447CB2FDB65</AssemblyName><TargetFrameworkVersion>v4.5</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.TxScript, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.PipelineHost, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Compile Include="main.cs" /><Compile Include="BufferWrapper.cs" /><Compile Include="ComponentWrapper.cs" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><!-- This section defines VSTA properties that describe the host-changable project properties. --><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptComponent" GeneratedNamespace="SC_786c85a23de84a608b13a87c2dbd8104" IconIndex="0"></Host><ProjectClient><HostIdentifier>SSIS_SC130</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
                     <arrayElement
@@ -1460,11 +1743,11 @@ namespace SC_786c85a23de84a608b13a87c2dbd8104.Properties {
                   <arrayElements
                     arrayElementCount="2">
                     <arrayElement
-                      dataType="System.String"><![CDATA[SC_3EA7231D84B54DE7BFDF63FF0F60CDE7.dll]]></arrayElement>
+                      dataType="System.String"><![CDATA[SC_FA69AD6DEE9347F79BF0D447CB2FDB65.dll]]></arrayElement>
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAEOxFVsAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA1jIA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAOnGFVsAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAA1jIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAIQyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1506,8 +1789,8 @@ AADrBtwAAAB8BOAAAAAZAeUAAAD0BeoAAQAEAAMAAQAFAAUAAgAOAAcAAgAQAAkAAgARAAsAAQAS
 AAsAAgATAA0ABIAAAAEAAAAAAAAAAAAAAAAARgAAAAQAAAAAAAAAAAAAAG8AjAAAAAAADQAAAAAA
 AAAAAAAAeAAqBgAAAAANAAAAAAAAAAAAAAB4AEcGAAAAAAQAAAAAAAAAAAAAAG8AgwMAAAAADQAA
 AAAAAAAAAAAAeAAsBAAAAAAAAAAAAQAAAAUFAAAAAAAAAElEVFNWYXJpYWJsZTEwMABJRFRTVmFy
-aWFibGVzMTAwAElEVFNFdmFsdWF0b3JDb250ZXh0MTAwAEludDMyAEludDY0AFNDXzNFQTcyMzFE
-ODRCNTRERTdCRkRGNjNGRjBGNjBDREU3ADxNb2R1bGU+AHNldF9ERU1PR1JBRklBSUQASW5wdXRJ
+aWFibGVzMTAwAElEVFNFdmFsdWF0b3JDb250ZXh0MTAwAEludDMyAEludDY0AFNDX0ZBNjlBRDZE
+RUU5MzQ3Rjc5QkYwRDQ0N0NCMkZEQjY1ADxNb2R1bGU+AHNldF9ERU1PR1JBRklBSUQASW5wdXRJ
 RABtc2NvcmxpYgBkZWZhdWx0SW5zdGFuY2UAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21I
 YW5kbGUASW5wdXROYW1lAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0
 X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVzb3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NC
@@ -1519,8 +1802,8 @@ dXRlAEFzc2VtYmx5RGVzY3JpcHRpb25BdHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0
 dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RBdHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1
 dGUAU1NJU1NjcmlwdENvbXBvbmVudEVudHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55
 QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRpYmlsaXR5QXR0cmlidXRlAHZhbHVlAFN5c3RlbS5SdW50
-aW1lLlZlcnNpb25pbmcAU3RyaW5nAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ18zRUE3MjMxRDg0
-QjU0REU3QkZERjYzRkYwRjYwQ0RFNy5kbGwAc2V0X0RFTU9HUkFGSUFJRF9Jc051bGwAU2V0TnVs
+aW1lLlZlcnNpb25pbmcAU3RyaW5nAFN5c3RlbS5Db21wb25lbnRNb2RlbABTQ19GQTY5QUQ2REVF
+OTM0N0Y3OUJGMEQ0NDdDQjJGREI2NS5kbGwAc2V0X0RFTU9HUkFGSUFJRF9Jc051bGwAU2V0TnVs
 bABnZXRfSXRlbQBzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2NyaXB0TWFpbgBTeXN0ZW0u
 Q29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0uUmVmbGVjdGlvbgBJbnZh
 bGlkT3BlcmF0aW9uRXhjZXB0aW9uAFN0cmluZ0NvbXBhcmlzb24AQ3VsdHVyZUluZm8AT3V0cHV0
@@ -1542,8 +1825,8 @@ AGUAIABlAHMAdABhAGIAbABlAGMAZQByAHMAZQAgAGUAbgAgAEYAYQBsAHMAZQAuACAARQBuACAA
 cwB1ACAAbAB1AGcAYQByACwAIABhAHMAaQBnAG4AZQAgAHUAbgAgAHYAYQBsAG8AcgAgAGEAIABs
 AGEAIABjAG8AbAB1AG0AbgBhAC4AAA9JAG4AcAB1AHQAIAAwAAANTQBhAHgASwBlAHkAAHFTAEMA
 XwA3ADgANgBjADgANQBhADIAMwBkAGUAOAA0AGEANgAwADgAYgAxADMAYQA4ADcAYwAyAGQAYgBk
-ADgAMQAwADQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAPt66MtO
-kzBIscmrwGkR/M8ABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkDBwEICSADARI9HQgSQQUgAgEI
+ADgAMQAwADQALgBQAHIAbwBwAGUAcgB0AGkAZQBzAC4AUgBlAHMAbwB1AHIAYwBlAHMAAKesDs2A
+K4tIpObHMdma5awABCABAQgDIAABBSABARERBCABAQ4FIAEBEVkDBwEICSADARI9HQgSQQUgAgEI
 HAMgAAIGIAICDhF1BSABHQgIBCAAEnkFIAESfRwFAAASgIEGIAEcEoCFCAABEoCNEYCRBSAAEoCV
 ByACAQ4SgJUIt3pcVhk04IkIiYRdzYCAzJECBggDBhIUAwYSGAMGEkUDBhJRAwYSVQMGEiAFIAEB
 EgwEIAEBAgkgBAEIDhI9EkEFIAEBEkUDIAAKBAAAElEEAAASVQUAAQESVQQAABIgAwAAAQMoAAgD
@@ -1570,13 +1853,13 @@ MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
 AABTAEMAXwA3ADgANgBjADgANQBhADIAMwBkAGUAOAA0AGEANgAwADgAYgAxADMAYQA4ADcAYwAy
 AGQAYgBkADgAMQAwADQAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADMARQBBADcAMgAz
-ADEARAA4ADQAQgA1ADQARABFADcAQgBGAEQARgA2ADMARgBGADAARgA2ADAAQwBEAEUANwAuAGQA
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfAEYAQQA2ADkAQQBE
+ADYARABFAEUAOQAzADQANwBGADcAOQBCAEYAMABEADQANAA3AEMAQgAyAEYARABCADYANQAuAGQA
 bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
 AHQAIABAACAAIAAyADAAMQA4AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AMwBF
-AEEANwAyADMAMQBEADgANABCADUANABEAEUANwBCAEYARABGADYAMwBGAEYAMABGADYAMABDAEQA
-RQA3AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADcAOAA2
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ARgBB
+ADYAOQBBAEQANgBEAEUARQA5ADMANAA3AEYANwA5AEIARgAwAEQANAA0ADcAQwBCADIARgBEAEIA
+NgA1AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADcAOAA2
 AGMAOAA1AGEAMgAzAGQAZQA4ADQAYQA2ADAAOABiADEAMwBhADgANwBjADIAZABiAGQAOAAxADAA
 NAAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
 AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
@@ -1603,7 +1886,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.String"
                   description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
                   name="VSTAProjectName"
-                  typeConverter="NOTBROWSABLE">SC_3ea7231d84b54de7bfdf63ff0f60cde7</property>
+                  typeConverter="NOTBROWSABLE">SC_fa69ad6dee9347f79bf0d447cb2fdb65</property>
                 <property
                   dataType="System.String"
                   description="Specifies the programming language used by the script."
@@ -1666,179 +1949,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Tarea Flujo de datos\Origen de Excel"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Origen de Excel;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
-              description="Origen de Excel"
-              name="Origen de Excel"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowset">ACUDIENTE</property>
-                <property
-                  dataType="System.String"
-                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL para ejecutar."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  1 AS CLAVE,   [RANGOEDAD$].RANGO_EDAD, [ACUDIENTE$].ACUDIENTE, [DEPORTISTA$].DEPORTISTA
-FROM            [ACUDIENTE$], [DEPORTISTA$], [RANGOEDAD$]
-ORDER BY 1</property>
-                <property
-                  dataType="System.String"
-                  description="Variable que contiene el comando SQL para ejecutar."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
-                  name="AccessMode"
-                  typeConverter="AccessMode">2</property>
-                <property
-                  dataType="System.String"
-                  description="La asignación de parámetros del comando SQL a variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Tarea Flujo de datos\Origen de Excel.Connections[OleDbConnection]"
-                  connectionManagerID="{F323AAFC-5EF5-4E2A-AED2-B1EA7D92CC85}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Origen_Excel_Evaluacion]"
-                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]"
-                  isSorted="true"
-                  name="Salida de origen de Excel">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ACUDIENTE]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ACUDIENTE]"
-                      length="255"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[ACUDIENTE]"
-                      name="ACUDIENTE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[RANGO_EDAD]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[RANGO_EDAD]"
-                      length="255"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[RANGO_EDAD]"
-                      name="RANGO_EDAD"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DEPORTISTA]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[DEPORTISTA]"
-                      length="255"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[DEPORTISTA]"
-                      name="DEPORTISTA"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CLAVE]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[CLAVE]"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].Columns[CLAVE]"
-                      name="CLAVE"
-                      precision="18"
-                      sortKeyPosition="1"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[ACUDIENTE]"
-                      dataType="wstr"
-                      length="255"
-                      name="ACUDIENTE" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[RANGO_EDAD]"
-                      dataType="wstr"
-                      length="255"
-                      name="RANGO_EDAD" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[DEPORTISTA]"
-                      dataType="wstr"
-                      length="255"
-                      name="DEPORTISTA" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel].ExternalColumns[CLAVE]"
-                      dataType="i4"
-                      name="CLAVE" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel]"
-                  isErrorOut="true"
-                  isSorted="true"
-                  name="Salida de error de origen de Excel">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[CLAVE]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[CLAVE]"
-                      name="CLAVE"
-                      sortKeyPosition="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[RANGO_EDAD]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[RANGO_EDAD]"
-                      name="RANGO_EDAD" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ACUDIENTE]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ACUDIENTE]"
-                      name="ACUDIENTE" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[DEPORTISTA]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[DEPORTISTA]"
-                      name="DEPORTISTA" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de error de origen de Excel].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\Tarea Flujo de datos.Paths[Output 0]"
-              endId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos.Inputs[Entrada de destino de OLE DB]"
               name="Output 0"
               startId="Package\Tarea Flujo de datos\Llave primaria Demografia.Outputs[Output 0]" />
             <path
@@ -1848,24 +1963,24 @@ ORDER BY 1</property>
               startId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Inputs[Entrada de búsqueda]"
               name="Salida de conversión de datos"
               startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
               endId="Package\Tarea Flujo de datos\Llave primaria Demografia.Inputs[Input 0]"
               name="Salida de entradas no coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Demografia Economica.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
               name="Salida de origen de Excel"
-              startId="Package\Tarea Flujo de datos\Origen de Excel.Outputs[Salida de origen de Excel]" />
+              startId="Package\Tarea Flujo de datos\Excel demografia.Outputs[Salida de origen de Excel]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de origen de OLE DB"
-              startId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB]" />
+              startId="Package\Tarea Flujo de datos\Fuente academico.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1875,8 +1990,8 @@ ORDER BY 1</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{ADA66549-4428-499A-A98B-2CB0BB0AC3E0}"
-      DTS:From="Package\Execute SQL Task"
+      DTS:DTSID="{AF973463-F4FE-45DF-87C5-1FC498A8F7B5}"
+      DTS:From="Package\Tarea Ejecutar SQL"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
       DTS:To="Package\Tarea Flujo de datos" />
@@ -1894,27 +2009,27 @@ ORDER BY 1</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="163,42"
-          Id="Package\Execute SQL Task"
-          TopLeft="308,35" />
-        <NodeLayout
           Size="176,42"
           Id="Package\Tarea Flujo de datos"
-          TopLeft="298,128" />
+          TopLeft="277,144" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="277,54" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="387.75,77">
+          TopLeft="363.5,96">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51"
+              EndConnector="0,48"
               Start="0,0"
-              End="0,43.5">
+              End="0,40.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.5" />
+                    End="0,40.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1932,59 +2047,59 @@ ORDER BY 1</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="165,42"
-          Id="Package\Tarea Flujo de datos\Fuente Academico"
-          TopLeft="360,45" />
+          Size="234,42"
+          Id="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos"
+          TopLeft="233,509" />
         <NodeLayout
-          Size="189,42"
-          Id="Package\Tarea Flujo de datos\DimDatosDemograficos"
-          TopLeft="223,476" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Tarea Flujo de datos\Conversión de datos"
-          TopLeft="231,222" />
-        <NodeLayout
-          Size="153,42"
-          Id="Package\Tarea Flujo de datos\Origen de Excel"
-          TopLeft="119,47" />
+          Size="160,42"
+          Id="Package\Tarea Flujo de datos\Excel demografia"
+          TopLeft="125,62" />
         <NodeLayout
           Size="203,42"
           Id="Package\Tarea Flujo de datos\Llave primaria Demografia"
-          TopLeft="221,391" />
+          TopLeft="243,429" />
         <NodeLayout
           Size="190,42"
           Id="Package\Tarea Flujo de datos\Combinación de mezcla"
-          TopLeft="216,156" />
+          TopLeft="242,178" />
         <NodeLayout
-          Size="221,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Datos demograficos"
-          TopLeft="205,297" />
+          Size="164,42"
+          Id="Package\Tarea Flujo de datos\Fuente academico"
+          TopLeft="397,57" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Demografia Economica"
+          TopLeft="215,332" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Conversión de datos"
+          TopLeft="246,251" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="442.5,87">
+          TopLeft="479,99">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-101.166666666667,69"
+              EndConnector="-111.666666666667,79"
               Start="0,0"
-              End="-101.166666666667,61.5">
+              End="-111.666666666667,71.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.0542797494781" />
+                    End="0,43.0041753653445" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.0542797494781"
-                    Point2="0,41.0542797494781"
-                    Point3="-4,41.0542797494781" />
+                    Point1="0,43.0041753653445"
+                    Point2="0,47.0041753653445"
+                    Point3="-4,47.0041753653445" />
                   <mssgle:LineSegment
-                    End="-97.1666666666667,41.0542797494781" />
+                    End="-107.666666666667,47.0041753653445" />
                   <mssgle:CubicBezierSegment
-                    Point1="-97.1666666666667,41.0542797494781"
-                    Point2="-101.166666666667,41.0542797494781"
-                    Point3="-101.166666666667,45.0542797494781" />
+                    Point1="-107.666666666667,47.0041753653445"
+                    Point2="-111.666666666667,47.0041753653445"
+                    Point3="-111.666666666667,51.0041753653445" />
                   <mssgle:LineSegment
-                    End="-101.166666666667,61.5" />
+                    End="-111.666666666667,71.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1995,30 +2110,30 @@ ORDER BY 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
-          TopLeft="195.5,89">
+          TopLeft="205,104">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85.1666666666667,67"
+              EndConnector="101.666666666667,74"
               Start="0,0"
-              End="85.1666666666667,59.5">
+              End="101.666666666667,66.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.8643006263048" />
+                    End="0,40.0292275574113" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35.8643006263048"
-                    Point2="0,39.8643006263048"
-                    Point3="4,39.8643006263048" />
+                    Point1="0,40.0292275574113"
+                    Point2="0,44.0292275574113"
+                    Point3="4,44.0292275574113" />
                   <mssgle:LineSegment
-                    End="81.1666666666667,39.8643006263048" />
+                    End="97.6666666666667,44.0292275574113" />
                   <mssgle:CubicBezierSegment
-                    Point1="81.1666666666667,39.8643006263048"
-                    Point2="85.1666666666667,39.8643006263048"
-                    Point3="85.1666666666667,43.8643006263048" />
+                    Point1="97.6666666666667,44.0292275574113"
+                    Point2="101.666666666667,44.0292275574113"
+                    Point3="101.666666666667,48.0292275574113" />
                   <mssgle:LineSegment
-                    End="85.1666666666667,59.5" />
+                    End="101.666666666667,66.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2029,42 +2144,54 @@ ORDER BY 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="319,339">
+          TopLeft="333,374">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52"
+              EndConnector="11.5,55"
               Start="0,0"
-              End="0,44.5">
+              End="11.5,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.5" />
+                    End="0,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.5"
+                    Point2="0,27.5"
+                    Point3="4,27.5" />
+                  <mssgle:LineSegment
+                    End="7.5,27.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.5,27.5"
+                    Point2="11.5,27.5"
+                    Point3="11.5,31.5" />
+                  <mssgle:LineSegment
+                    End="11.5,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-106.8890234375,16.15234375,213.778046875,12.1953125"
+              BoundingBox="-101.1390234375,32.5,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="317,264">
+          TopLeft="333.25,293">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,33"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,25.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2075,18 +2202,18 @@ ORDER BY 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
-          TopLeft="314.75,198">
+          TopLeft="335.25,220">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24"
+              EndConnector="0,31"
               Start="0,0"
-              End="0,16.5">
+              End="0,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5" />
+                    End="0,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2097,18 +2224,18 @@ ORDER BY 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Output 0]"
-          TopLeft="320,433">
+          TopLeft="347.25,471">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,35.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2121,7 +2248,7 @@ ORDER BY 1</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Fuente Academico">
+    design-time-name="Package\Tarea Flujo de datos\DimDemografiaDatosEconomicos">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2134,33 +2261,23 @@ ORDER BY 1</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\DimDatosDemograficos">
+    design-time-name="Package\Tarea Flujo de datos\Excel demografia">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Origen de Excel">
+    design-time-name="Package\Tarea Flujo de datos\Fuente academico">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Búsqueda Datos demograficos">
+    design-time-name="Package\Tarea Flujo de datos\Búsqueda Demografia Economica">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2170,7 +2287,7 @@ ORDER BY 1</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">"DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS"</Value>
+          type="q3:string">"DW_ACADEMICO_LABOR"."DEMOGRAFIA_DATOS_ECONOMICOS"</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>

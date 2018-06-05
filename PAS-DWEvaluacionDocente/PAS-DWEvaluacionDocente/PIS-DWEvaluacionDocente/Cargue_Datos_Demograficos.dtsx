@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue_Datos_Demograficos"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{12FCEC35-15F8-49CA-B6BF-AE29866BE447}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{4A531F98-3FD3-4FDB-A23B-5B63D2288BAE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1894,13 +1894,13 @@ ORDER BY 1</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="176,42"
-          Id="Package\Tarea Flujo de datos"
-          TopLeft="298,128" />
-        <NodeLayout
           Size="163,42"
           Id="Package\Execute SQL Task"
           TopLeft="308,35" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="298,128" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
           TopLeft="387.75,77">
@@ -1947,6 +1947,10 @@ ORDER BY 1</property>
           Size="153,42"
           Id="Package\Tarea Flujo de datos\Origen de Excel"
           TopLeft="119,47" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Tarea Flujo de datos\Llave primaria Demografia"
+          TopLeft="221,391" />
         <NodeLayout
           Size="190,42"
           Id="Package\Tarea Flujo de datos\Combinación de mezcla"
@@ -2024,6 +2028,30 @@ ORDER BY 1</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="319,339">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-106.8890234375,16.15234375,213.778046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
           TopLeft="317,264">
           <EdgeLayout.Curve>
@@ -2065,34 +2093,6 @@ ORDER BY 1</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="203,42"
-          Id="Package\Tarea Flujo de datos\Llave primaria Demografia"
-          TopLeft="221,391" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="319,339">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-106.8890234375,16.15234375,213.778046875,12.1953125"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2165,7 +2165,7 @@ ORDER BY 1</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2175,7 +2175,7 @@ ORDER BY 1</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
