@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-628" scrolltop="-5569" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-628" scrolltop="-5569" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6376" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="CUESTIONARIO" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5133" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="CUESTIONARIO" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5133" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c00000d140000fe080000" />
             </control>
@@ -65,6 +65,33 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
     </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="183">
+            <Shape Id="CUESTIONARIO ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="CUESTIONARIO ID" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="NOMBRE CUESTIONARIO" Expanded="false">
+              <Attributes>
+                <Attribute Id="NOMBRE CUESTIONARIO" />
+              </Attributes>
+              <Position x="253" y="20" />
+            </Shape>
+            <Shape Id="PERIODO INICIAL VIGENCIA" Expanded="false">
+              <Attributes>
+                <Attribute Id="PERIODO INICIAL VIGENCIA" />
+              </Attributes>
+              <Position x="487" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
   <State>Unprocessed</State>
@@ -96,10 +123,6 @@
           <AttributeID>NOMBRE CUESTIONARIO</AttributeID>
           <Name>NOMBRE CUESTIONARIO</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="aeaceb6e-0ea2-4232-95a2-7a84241f1e91">
-          <AttributeID>PERIODO INICIAL VIGENCIA</AttributeID>
-          <Name>PERIODO INICIAL VIGENCIA</Name>
-        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
@@ -109,15 +132,29 @@
       <ID>NOMBRE CUESTIONARIO</ID>
       <Name>NOMBRE CUESTIONARIO</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="47d569c0-0e9d-44df-b560-49497497e25c">
+        <KeyColumn dwd:design-time-name="d330d8d6-e48c-4564-9811-f42d4b3b819b">
           <DataType>WChar</DataType>
           <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="026fb1c1-79c1-440c-a1c1-e52aa1ce415c">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8e322498-7dd0-4803-ab9e-b8c5575fbaca">
             <TableID>DW_ACADEMICO_LABOR_CUESTIONARIO</TableID>
             <ColumnID>NOMBRE_CUESTIONARIO</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="766b992f-d665-42fb-9281-dcb155236f62">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ae5cc3ad-b9a9-4568-9ca9-9e5ebf1241bf">
+          <TableID>DW_ACADEMICO_LABOR_CUESTIONARIO</TableID>
+          <ColumnID>NOMBRE_CUESTIONARIO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2b282ebe-86b2-4bc4-a2d6-21d54cbeb782">
+          <AttributeID>PERIODO INICIAL VIGENCIA</AttributeID>
+          <Name>PERIODO INICIAL VIGENCIA</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -134,9 +171,35 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="a72bc1ed-bc6e-46de-9b76-3a6b3e169b32">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="91b99849-edab-4074-98cd-fbf9fa93e728">
+          <TableID>DW_ACADEMICO_LABOR_CUESTIONARIO</TableID>
+          <ColumnID>PERIODO_INICIAL_VIGENCIA</ColumnID>
+        </Source>
+      </NameColumn>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="6741beb8-6293-46d3-8522-881daed8c97e">
+      <ID>Hierarchy</ID>
+      <Name>Jerarquia_Cuestionario</Name>
+      <Levels>
+        <Level dwd:design-time-name="117dbca0-4330-45b7-a183-33444b37c8c5">
+          <ID>PERIODO INICIAL VIGENCIA</ID>
+          <Name>PERIODO INICIAL VIGENCIA</Name>
+          <SourceAttributeID>PERIODO INICIAL VIGENCIA</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="fd04afc9-35a9-49f0-8ba2-3a3a8f154084">
+          <ID>NOMBRE CUESTIONARIO</ID>
+          <Name>NOMBRE CUESTIONARIO</Name>
+          <SourceAttributeID>NOMBRE CUESTIONARIO</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>
