@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6138" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -68,12 +68,18 @@
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
       <Value>
-        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="17" xmlns="">
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
           <Shapes NodeWidth="234">
             <Shape Id="SEMESTRE ID" Expanded="false">
               <Attributes>
                 <Attribute Id="SEMESTRE ID" />
+                <Attribute Id="CALIFICACION CARRERA 2" />
+                <Attribute Id="CALIFICACION SEMESTRE 2" />
+                <Attribute Id="ESTADO ESTUDIANTE 4" />
+                <Attribute Id="PROMEDIO CARRERA 2" />
+                <Attribute Id="PROMEDIO SEMESTRE 2" />
                 <Attribute Id="REINGRESO" />
+                <Attribute Id="SEMESTRE 3" />
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
@@ -240,8 +246,33 @@
           <AttributeID>PROMEDIO SEMESTRE</AttributeID>
           <Name>PROMEDIO SEMESTRE_SEMESTRE</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="74ad8a60-98c6-4704-aecc-ce5cc9fdb93e">
+          <AttributeID>CALIFICACION SEMESTRE 2</AttributeID>
+          <Name>CALIFICACION SEMESTRE_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="947137a7-a0d2-4ec0-a06e-ad7153997ebd">
+          <AttributeID>CALIFICACION CARRERA 2</AttributeID>
+          <Name>CALIFICACION CARRERA_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9fac7119-9020-43f9-a5d2-83258e0b5819">
+          <AttributeID>ESTADO ESTUDIANTE 4</AttributeID>
+          <Name>ESTADO ESTUDIANTE_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d8853d1-10ed-4651-9dfb-19a4167ab0f6">
+          <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+          <Name>PROMEDIO SEMESTRE_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6aefc4d-f66b-44d3-a77b-a2abc2078658">
+          <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+          <Name>PROMEDIO CARRERA_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9edf2183-cf66-4653-857a-651c221b0ba3">
+          <AttributeID>SEMESTRE 3</AttributeID>
+          <Name>SEMESTRE_SINJERARQUIA</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -266,6 +297,7 @@
           <ColumnID>SEMESTRE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -304,6 +336,7 @@
           <Name>SEMESTRE_PROM_SEMESTRE</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -342,6 +375,7 @@
           <Name>SEMESTRE_PROM_CARRERA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -366,6 +400,7 @@
           <ColumnID>ESTADO_ESTUDIANTE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -404,6 +439,7 @@
           <Name>SEMESTRE_CAL_SEMESTRE</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -442,6 +478,7 @@
           <Name>SEMESTRE_CAL_CARRERA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -458,6 +495,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="617fdaf9-86a7-463a-b439-68fae6b0c5c0">
+          <Language>9226</Language>
+          <Caption>Reingreso</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -482,6 +525,7 @@
           <ColumnID>SEMESTRE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -506,6 +550,7 @@
           <ColumnID>SEMESTRE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -530,6 +575,7 @@
           <ColumnID>SEMESTRE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -554,6 +600,7 @@
           <ColumnID>ESTADO_ESTUDIANTE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -578,6 +625,7 @@
           <ColumnID>ESTADO_ESTUDIANTE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -602,6 +650,7 @@
           <ColumnID>ESTADO_ESTUDIANTE</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -640,6 +689,7 @@
           <Name>ESTADO_PROM_SEMESTRE</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -678,6 +728,7 @@
           <Name>ESTADO_PROM_CARRERA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -716,6 +767,7 @@
           <Name>ESTADO_CAL_SEMESTRE</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -754,6 +806,187 @@
           <Name>ESTADO_CAL_CARERRA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="344d22ea-1636-47d2-934b-f861a85aa168">
+      <ID>CALIFICACION SEMESTRE 2</ID>
+      <Name>CALIFICACION SEMESTRE_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86d32477-7b03-4fb1-95b1-3378d7c0b247">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26da170b-9afe-4306-b5a9-6acd909ba928">
+            <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+            <ColumnID>CALIFICACION_SEMESTRE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6cb36a5b-79c4-4e62-89b6-c34736307323">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cc576729-8c66-416e-8be5-5f2e33dd5a02">
+          <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+          <ColumnID>CALIFICACION_SEMESTRE</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="3b256219-bf85-4564-b559-8894d7893a4c">
+          <Language>9226</Language>
+          <Caption>Calificación Semestre</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="07871bb6-7361-4ec2-a72c-e157e833d214">
+      <ID>CALIFICACION CARRERA 2</ID>
+      <Name>CALIFICACION CARRERA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ea299d64-f954-4531-826c-161582aa167b">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="11193ab7-7a01-447d-9a10-9a9f747f5388">
+            <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+            <ColumnID>CALIFICACION_CARRERA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="cf0924aa-b48b-4686-ae33-2ddd99942b8e">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="39f1326a-92be-4f68-bbba-0dfea725d27d">
+          <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+          <ColumnID>CALIFICACION_CARRERA</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="2baf444c-8b3f-46ee-aff2-eb59705eda90">
+          <Language>9226</Language>
+          <Caption>Calificación Carrera</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="286f44a9-85cc-4947-910a-47dd3b17ba96">
+      <ID>ESTADO ESTUDIANTE 4</ID>
+      <Name>ESTADO ESTUDIANTE_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3958ce39-97b4-4454-b2b7-5be656f45a65">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20bc3570-7b0e-4af5-9396-848f80a8a569">
+            <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+            <ColumnID>ESTADO_ESTUDIANTE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="312cdf2c-ee88-4173-ba98-eea04bead515">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="568cb61e-3d83-41c1-8399-ec63e4c4ea6b">
+          <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+          <ColumnID>ESTADO_ESTUDIANTE</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="ae54bd91-3280-40ee-9af2-fcf7b71f333c">
+          <Language>9226</Language>
+          <Caption>Estado Estudiante</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d48c8d7d-8034-450f-a189-93f3dd959b4d">
+      <ID>PROMEDIO SEMESTRE 2</ID>
+      <Name>PROMEDIO SEMESTRE_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fe22e3cd-eb17-4f6b-b8f4-143c0f3eb419">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="05154f9a-bbfa-41c0-bcef-e745369026b1">
+            <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+            <ColumnID>PROMEDIO_SEMESTRE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e8c3c6a2-7729-4cf7-8b09-7ddfe3d87760">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b61a86d0-2103-45bd-8a37-e56497bf2b9f">
+          <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+          <ColumnID>PROMEDIO_SEMESTRE</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="225d4cca-0610-4101-a674-0ad6ab735399">
+          <Language>9226</Language>
+          <Caption>Promedio Semestre</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d300a59e-c4eb-423c-89f0-713e17cfb69f">
+      <ID>PROMEDIO CARRERA 2</ID>
+      <Name>PROMEDIO CARRERA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3cb54e3d-1713-4165-bc6a-5e6b3cbec2e9">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="01954a0f-0c98-4a23-b291-a4b3abba79c6">
+            <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+            <ColumnID>PROMEDIO_CARRERA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ddf1ec0c-aaaa-4fa6-b452-5124f816ad51">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="78665f12-7a49-4fe8-99bf-c050b18bea56">
+          <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+          <ColumnID>PROMEDIO_CARRERA</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="a4e9ec0a-4053-4340-aa1c-96b781e8acd0">
+          <Language>9226</Language>
+          <Caption>Promedio Carrera</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11361ec9-a250-47e2-99fb-626eb74189d2">
+      <ID>SEMESTRE 3</ID>
+      <Name>SEMESTRE_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="194d3ad4-b295-40ca-9860-518b112e3550">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5644aa4e-ddf9-4ffb-a32a-dc533338cf20">
+            <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+            <ColumnID>SEMESTRE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="38a7879c-3407-4b46-b5c9-1e5ffdaff437">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c08b456b-56ab-4901-aaeb-8d17a894248a">
+          <TableID>DW_ACADEMICO_LABOR_SEMESTRE</TableID>
+          <ColumnID>SEMESTRE</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="7d113d6c-1787-4c57-b5f0-57882a92ff0a">
+          <Language>9226</Language>
+          <Caption>Semestre Estudiante</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -767,11 +1000,23 @@
           <ID>SEMESTRE_PROM_SEMESTRE</ID>
           <Name>SEMESTRE_PROM_SEMESTRE</Name>
           <SourceAttributeID>SEMESTRE</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="2dd7e0f8-0ed8-466b-b1e2-71ddbc0b7b0d">
+              <Language>9226</Language>
+              <Caption>Semestre Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="e46dadfa-d0f5-4a43-9cbe-6fe73d0c0899">
           <ID>PROMEDIO SEMESTRE_SEMESTRE</ID>
           <Name>PROMEDIO SEMESTRE_SEMESTRE</Name>
           <SourceAttributeID>PROMEDIO SEMESTRE</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5f345ee0-261e-4194-9c28-9528ba0b7368">
+              <Language>9226</Language>
+              <Caption>Promedio Semestre</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -783,11 +1028,23 @@
           <ID>SEMESTRE_PROM_CARRERA</ID>
           <Name>SEMESTRE_PROM_CARRERA</Name>
           <SourceAttributeID>SEMESTRE 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="92f5ddcb-ec5a-424d-b26a-4c89850f2228">
+              <Language>9226</Language>
+              <Caption>Semestre Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="ca63d69b-fd40-4bb5-a047-db7bfd422f20">
           <ID>PROMEDIO CARRERA_SEMESTRE</ID>
           <Name>PROMEDIO CARRERA_SEMESTRE</Name>
           <SourceAttributeID>PROMEDIO CARRERA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="ed67555d-039d-42fd-a392-9df6d56bc593">
+              <Language>9226</Language>
+              <Caption>Promedio Carrera</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -799,11 +1056,23 @@
           <ID>SEMESTRE_CAL_SEMESTRE</ID>
           <Name>SEMESTRE_CAL_SEMESTRE</Name>
           <SourceAttributeID>SEMESTRE 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="f80315a1-bf34-4781-9124-3ec44eac93ff">
+              <Language>9226</Language>
+              <Caption>Semestre Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="33fb6be1-d807-4b33-b792-17bd7baa6cf2">
           <ID>CALIFICACION SEMESTRE_SEMESTRE</ID>
           <Name>CALIFICACION SEMESTRE_SEMESTRE</Name>
           <SourceAttributeID>CALIFICACION SEMESTRE</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="e239c369-5a7e-42ce-89d0-bc480bdf1a65">
+              <Language>9226</Language>
+              <Caption>Calificación Semestre</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -815,11 +1084,23 @@
           <ID>SEMESTRE_CAL_CARRERA</ID>
           <Name>SEMESTRE_CAL_CARRERA</Name>
           <SourceAttributeID>SEMESTRE 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="423f9571-671c-404c-baea-8d7a3f3e2ee5">
+              <Language>9226</Language>
+              <Caption>Semestre Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="1e38905a-52fe-405d-9f5d-7122c23baad4">
           <ID>CALIFICACION CARRERA_SEMESTRE</ID>
           <Name>CALIFICACION CARRERA_SEMESTRE</Name>
           <SourceAttributeID>CALIFICACION CARRERA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="3828c91c-b038-4d09-9304-d0adf631e1c7">
+              <Language>9226</Language>
+              <Caption>Calificación Carrera</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -831,11 +1112,23 @@
           <ID>ESTADO_CAL_CARERRA</ID>
           <Name>ESTADO_CAL_CARERRA</Name>
           <SourceAttributeID>ESTADO ESTUDIANTE 3</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="a4b57d07-9fb9-41b0-838b-446f3f10ea0c">
+              <Language>9226</Language>
+              <Caption>Estado Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="42681933-dc2f-4def-97e4-e996ed7ffee0">
           <ID>CALIFICACION CARRERA_ESTADO</ID>
           <Name>CALIFICACION CARRERA_ESTADO</Name>
           <SourceAttributeID>CALIFICACION CARRERA 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="dbf4fc4b-9f40-4cd3-8de3-5b6e6e768e93">
+              <Language>9226</Language>
+              <Caption>Calificación Carrera</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -847,11 +1140,23 @@
           <ID>ESTADO_CAL_SEMESTRE</ID>
           <Name>ESTADO_CAL_SEMESTRE</Name>
           <SourceAttributeID>ESTADO ESTUDIANTE 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="543b8b88-bfd7-401e-9b12-af61dd0fa622">
+              <Language>9226</Language>
+              <Caption>Estado Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="540197ed-221a-4fab-96fa-11e57a57f7b4">
           <ID>CALIFICACION SEMESTRE_ESTADO</ID>
           <Name>CALIFICACION SEMESTRE_ESTADO</Name>
           <SourceAttributeID>CALIFICACION SEMESTRE 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="fe2d79bd-61c6-47e2-90ca-a796d0cb3896">
+              <Language>9226</Language>
+              <Caption>Calificación Semestre</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -863,11 +1168,23 @@
           <ID>ESTADO_PROM_CARRERA</ID>
           <Name>ESTADO_PROM_CARRERA</Name>
           <SourceAttributeID>ESTADO ESTUDIANTE 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="0a551c95-dba6-414b-96b5-686ab41bc125">
+              <Language>9226</Language>
+              <Caption>Estado Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="339bdd00-3752-46c4-973f-31a374aab2f6">
           <ID>PROMEDIO CARRERA_ESTADO</ID>
           <Name>PROMEDIO CARRERA_ESTADO</Name>
           <SourceAttributeID>PROMEDIO CARRERA 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="e57c36ec-4a19-4eb9-8ea7-6a6fcb6c5f60">
+              <Language>9226</Language>
+              <Caption>Promedio Carrera</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -879,11 +1196,23 @@
           <ID>ESTADO_PROM_SEMESTRE</ID>
           <Name>ESTADO_PROM_SEMESTRE</Name>
           <SourceAttributeID>ESTADO ESTUDIANTE</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5014db3c-e535-4199-bb6e-027627f59d1a">
+              <Language>9226</Language>
+              <Caption>Estado Estudiante</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="d35a6fa0-bc8e-4216-b051-27e0878153d6">
           <ID>PROMEDIO SEMESTRE_ESTADO</ID>
           <Name>PROMEDIO SEMESTRE_ESTADO</Name>
           <SourceAttributeID>PROMEDIO SEMESTRE 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="b0350fc1-d7a8-4d2a-a20e-5651971de527">
+              <Language>9226</Language>
+              <Caption>Promedio Semestre</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>

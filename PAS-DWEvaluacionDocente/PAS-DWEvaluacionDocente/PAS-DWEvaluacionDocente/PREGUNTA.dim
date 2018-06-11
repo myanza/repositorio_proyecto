@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1184" scrolltop="-5358" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6376" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1184" scrolltop="-5358" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -73,6 +73,7 @@
             <Shape Id="PREGUNTA ID" Expanded="false">
               <Attributes>
                 <Attribute Id="PREGUNTA ID" />
+                <Attribute Id="CATEGORIA 2" />
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
@@ -130,6 +131,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="233c2047-790d-4764-9d85-389a97db8d1d">
+          <Language>9226</Language>
+          <Caption>PK Pregunta</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="3219d7aa-c0fd-49dd-b9bd-d8ae8da05fed">
           <AttributeID>PREGUNTA</AttributeID>
@@ -139,8 +146,13 @@
           <AttributeID>NUMERO PREGUNTA</AttributeID>
           <Name>NUMERO PREGUNTA</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d5873dea-9493-4ef3-b9e7-bfdfece97773">
+          <AttributeID>CATEGORIA 2</AttributeID>
+          <Name>CATEGORIA_SINJERARQUIA</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -165,6 +177,12 @@
           <ColumnID>PREGUNTA</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="ee627261-187c-4386-859c-0757332942d3">
+          <Language>9226</Language>
+          <Caption>Pregunta</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="49d23912-9b12-4ce7-8850-209171147ac0">
           <AttributeID>CATEGORIA</AttributeID>
@@ -193,6 +211,12 @@
           <ColumnID>NUMERO_PREGUNTA</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="097268a3-74e9-4668-bc3c-d99d4b5568af">
+          <Language>9226</Language>
+          <Caption>Numero Pregunta</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="d397422c-0f7d-476d-bc3b-2a4ea2d76d14">
           <AttributeID>CATEGORIA 1</AttributeID>
@@ -223,6 +247,7 @@
           <ColumnID>CATEGORIA</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -247,6 +272,37 @@
           <ColumnID>CATEGORIA</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ca2c6a91-c039-472f-9679-2ebf5a78c932">
+      <ID>CATEGORIA 2</ID>
+      <Name>CATEGORIA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cf85ea22-1749-47d9-9d71-b06b4e447d8d">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e08d75a6-ae69-4cb0-b430-588edf46401f">
+            <TableID>DW_ACADEMICO_LABOR_PREGUNTA</TableID>
+            <ColumnID>CATEGORIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="332ace3b-4ad8-446a-b5c2-968e53da80c0">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="72bc31fd-f1c8-4897-a263-3de3616797fd">
+          <TableID>DW_ACADEMICO_LABOR_PREGUNTA</TableID>
+          <ColumnID>CATEGORIA</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="2cf25871-c4ff-4292-93c6-361c1ca66c55">
+          <Language>9226</Language>
+          <Caption>Categoría</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -260,11 +316,23 @@
           <ID>CATEGORIA_TEXTO</ID>
           <Name>CATEGORIA_TEXTO</Name>
           <SourceAttributeID>CATEGORIA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1e218c62-9f8a-4f85-ac54-c018998792bb">
+              <Language>9226</Language>
+              <Caption>Categoría</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="ff5ecb80-f6a1-416b-91c8-78d674a0af22">
           <ID>PREGUNTA</ID>
           <Name>PREGUNTA</Name>
           <SourceAttributeID>PREGUNTA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="e9e361a2-7a3a-4cd1-8603-1091e9beb547">
+              <Language>9226</Language>
+              <Caption>Pregunta</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -276,11 +344,23 @@
           <ID>CATEGORIA_NUMERO</ID>
           <Name>CATEGORIA_NUMERO</Name>
           <SourceAttributeID>CATEGORIA 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="c06f9418-2417-4ca6-b9e0-a330307c0340">
+              <Language>9226</Language>
+              <Caption>Categoría</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="da15af76-2592-4000-934c-ad8486b21c0c">
           <ID>NUMERO PREGUNTA</ID>
           <Name>NUMERO PREGUNTA</Name>
           <SourceAttributeID>NUMERO PREGUNTA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d3b4387c-195e-46d9-9db1-8d9f6658a0dd">
+              <Language>9226</Language>
+              <Caption>Numero Pregunta</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>

@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1117" scrolltop="-4723" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6138" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1117" scrolltop="-4723" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -73,7 +73,9 @@
             <Shape Id="DEM ECONOMICOS ID" Expanded="false">
               <Attributes>
                 <Attribute Id="DEM ECONOMICOS ID" />
+                <Attribute Id="ESTRATO 1 3" />
                 <Attribute Id="POSICION HERMANOS" />
+                <Attribute Id="VIVIENDA PROPIA 1 1" />
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
@@ -192,8 +194,17 @@
           <AttributeID>ESTRATO 1 2</AttributeID>
           <Name>ESTRATO_MADRE_CABEZA</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="23158d7e-3542-4495-9ee3-503dbc223668">
+          <AttributeID>ESTRATO 1 3</AttributeID>
+          <Name>ESTRATO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9195062c-baa8-4aea-9a08-935a4ffbeee6">
+          <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
+          <Name>VIVIENDA PROPIA_SINJERARQUIA</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -218,6 +229,7 @@
           <ColumnID>ESTRATO</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -250,6 +262,12 @@
           <ColumnID>NUMERO_HERMANOS</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="90b0be0a-7981-4eb8-821c-0301cddc9902">
+          <Language>9226</Language>
+          <Caption>Numero Hermanos</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="c0b43644-97c6-462d-9ae2-9ed35ad30ef8">
           <AttributeID>ESTRATO</AttributeID>
@@ -272,6 +290,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="e01628a5-b0ab-4c33-8e9c-8db05dd8b563">
+          <Language>9226</Language>
+          <Caption>Posición Hermanos</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -296,6 +320,7 @@
           <ColumnID>VIVIENDA_PROPIA</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -320,6 +345,12 @@
           <ColumnID>DESPLAZADO</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="7bdcb509-b1d0-4727-865b-257617ea85ad">
+          <Language>9226</Language>
+          <Caption>Desplazado</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -344,6 +375,12 @@
           <ColumnID>MADRE_CABEZA</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="e1b35a23-31d9-47ce-a668-a80549e9ea61">
+          <Language>9226</Language>
+          <Caption>Madre Cabeza</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -376,12 +413,20 @@
           <ColumnID>ESTRATO</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="4a6dd917-ee44-41ee-b956-4523caa0768a">
+          <Language>9226</Language>
+          <Caption>Estrato Vivienda</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="7e130956-e8db-4233-b6ed-83d702b56636">
           <AttributeID>VIVIENDA PROPIA</AttributeID>
           <Name>VIVIENDA PROPIA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyOrdered>false</AttributeHierarchyOrdered>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -406,6 +451,7 @@
           <ColumnID>ESTRATO</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -444,6 +490,7 @@
           <Name>ESTRATO</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -482,6 +529,7 @@
           <Name>DESPLAZADO</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -520,6 +568,67 @@
           <Name>MADRE CABEZA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3381c2df-b161-4a52-a753-ab7aab10b100">
+      <ID>ESTRATO 1 3</ID>
+      <Name>ESTRATO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1b3d8240-625f-4f40-9158-97b0010f47b8">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d6df63b1-02c9-4bf2-a098-b6b290442040">
+            <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
+            <ColumnID>ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="391e200a-9f4e-4549-b521-298b420b38e4">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f5cb1492-a18b-4c67-8d3d-fb4bd4a479c7">
+          <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
+          <ColumnID>ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="c07b8448-a495-4488-87d1-16475c888c5e">
+          <Language>9226</Language>
+          <Caption>Estrato</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11dac8d6-1d0a-48dc-b3f1-049d3fa8821d">
+      <ID>VIVIENDA PROPIA 1 1</ID>
+      <Name>VIVIENDA PROPIA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="493e324c-894d-4467-b113-39b35d29fc48">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a8299f45-b84c-4036-b23a-24a6298443ef">
+            <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
+            <ColumnID>VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="083a13f9-0ebd-45db-bd9a-428c1a059c9a">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3dd7198b-3e31-4a4a-b01c-b1f86ce9de38">
+          <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
+          <ColumnID>VIVIENDA_PROPIA</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="fe23ebdd-ef2f-483f-b196-065aa8aae705">
+          <Language>9226</Language>
+          <Caption>Vivienda Propia</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -533,11 +642,23 @@
           <ID>ESTRATO_NUMEROH</ID>
           <Name>ESTRATO_NUMEROH</Name>
           <SourceAttributeID>ESTRATO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="092c601b-749e-4da7-b8bf-faefb44fd48e">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="a24869d7-568a-4203-b0b5-69c9408b86fd">
           <ID>NUMERO HERMANOS</ID>
           <Name>NUMERO HERMANOS</Name>
           <SourceAttributeID>NUMERO HERMANOS</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="172936c0-8617-4055-8d5b-c28b8d255eda">
+              <Language>9226</Language>
+              <Caption>Numero Hermanos</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -549,11 +670,23 @@
           <ID>VIVIENDA PROPIA</ID>
           <Name>VIVIENDA PROPIA</Name>
           <SourceAttributeID>VIVIENDA PROPIA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d6ef5ee4-30c0-4635-a7ee-fa27c3badfea">
+              <Language>9226</Language>
+              <Caption>Vivienda Propia</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="f90e5291-8840-48a7-8318-4294b8512b86">
           <ID>ESTRATO_VIVIENDA</ID>
           <Name>ESTRATO_VIVIENDA</Name>
           <SourceAttributeID>ESTRATO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="6c4f11c2-e754-4cfa-930d-f73ec11b1633">
+              <Language>9226</Language>
+              <Caption>Estrato Vivienda</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -565,11 +698,23 @@
           <ID>ESTRATO</ID>
           <Name>ESTRATO</Name>
           <SourceAttributeID>ESTRATO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="6f08cd2b-ad9c-4bf5-bd98-d8e0c3819e16">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="a3dbc09e-17f3-44ab-9bf2-c5d5bf4befa4">
           <ID>VIVIENDA PROPIA_ESTRATO</ID>
           <Name>VIVIENDA PROPIA_ESTRATO</Name>
           <SourceAttributeID>VIVIENDA PROPIA 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="7f6f5fec-9dfc-4772-9a1d-a86148ee2fb7">
+              <Language>9226</Language>
+              <Caption>Vivienda Propia</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -581,11 +726,23 @@
           <ID>MADRE CABEZA</ID>
           <Name>MADRE CABEZA</Name>
           <SourceAttributeID>MADRE CABEZA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="6811ec1b-dabf-49ba-b69e-0039d03a3dff">
+              <Language>9226</Language>
+              <Caption>Madre Cabeza</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="e544f6c4-9f8b-4c23-91df-098e4270fc6f">
           <ID>ESTRATO_MADRE_CABEZA</ID>
           <Name>ESTRATO_MADRE_CABEZA</Name>
           <SourceAttributeID>ESTRATO 1 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d6de2c3d-39ad-4d97-a7bd-07e208968718">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -597,11 +754,23 @@
           <ID>DESPLAZADO</ID>
           <Name>DESPLAZADO</Name>
           <SourceAttributeID>DESPLAZADO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="c18b766e-e7c3-4f35-ab35-d42cbb08c380">
+              <Language>9226</Language>
+              <Caption>Desplazado</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="2f99b0da-15e2-4b6b-a08f-1d1c77373653">
           <ID>ESTRATO_DESPLAZADO</ID>
           <Name>ESTRATO_DESPLAZADO</Name>
           <SourceAttributeID>ESTRATO 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1edcd46e-ad9e-4bd6-a32b-c9b9fcded9ff">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>

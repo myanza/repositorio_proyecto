@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-548" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6588" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-548" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -198,8 +198,25 @@
           <AttributeID>NOMBRE CURSO 2</AttributeID>
           <Name>NOMBRE CURSO_TIPOMAT</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="812403b2-464e-4978-a210-28178b2090ad">
+          <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+          <Name>AREA CONOCIMIENTO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dedf529e-9628-4634-bb89-cad9b7af97c4">
+          <AttributeID>INDICADOR PROMEDIO 1</AttributeID>
+          <Name>INDICADOR PROMEDIO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f75797a-82f7-4e92-a16f-ffd12d445a83">
+          <AttributeID>NOMBRE CURSO 3</AttributeID>
+          <Name>NOMBRE CURSO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f584f53c-7e74-4558-bf02-08787b592945">
+          <AttributeID>NOMBRE MATERIA 3</AttributeID>
+          <Name>NOMBRE MATERIA_SINJERARQUIA</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -230,6 +247,7 @@
           <Name>AREA CONOCIMIENTO_AREAMAT</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -268,6 +286,7 @@
           <Name>NOMBRE MATERIA_AREAMAT</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -284,6 +303,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="156f4ad9-bc6a-4704-b8e0-900329ab94f1">
+          <Language>9226</Language>
+          <Caption>Código Materia</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -308,6 +333,7 @@
           <ColumnID>INDICADOR_PROMEDIO</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -324,6 +350,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="bdbf227d-5f98-4ca4-a688-74e71b4bfb71">
+          <Language>9226</Language>
+          <Caption>Área Conocimiento Icfes</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -348,6 +380,7 @@
           <ColumnID>AREA_CONOCIMIENTO</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -364,6 +397,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="3d13cefe-b5a2-4bcc-9077-b130de0d5b01">
+          <Language>9226</Language>
+          <Caption>Indicador Electiva</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -380,6 +419,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="513c1893-bbdd-4c98-bb21-ef3317d986be">
+          <Language>9226</Language>
+          <Caption>Indicador Nota</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -404,6 +449,12 @@
           <ColumnID>TIPO_MATERIA</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="e9578729-9256-42d2-9d32-0d127f05f33c">
+          <Language>9226</Language>
+          <Caption>Tipo Materia</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -420,6 +471,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="acd41003-9845-4033-ae89-647f36eecd92">
+          <Language>9226</Language>
+          <Caption>Periocidad</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -458,6 +515,7 @@
           <Name>INDICADOR PROMEDIO_PROMMAT</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -496,6 +554,7 @@
           <Name>NOMBRE MATERIA_PROMMAT</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -534,6 +593,7 @@
           <Name>TIPO MATERIA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -572,6 +632,127 @@
           <Name>NOMBRE MATERIA_TIPOMAT</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="83322bae-9349-422d-85ff-ca5ce95b1fd7">
+      <ID>AREA CONOCIMIENTO 1</ID>
+      <Name>AREA CONOCIMIENTO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="510603dc-e476-4511-9d01-f0b15f08e961">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="43d8e1bf-8ee8-4eb4-9664-8250729331cc">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>AREA_CONOCIMIENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c52321d4-2429-41d5-97b3-c3dabb06c77f">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1cdfeada-fa34-4d94-8094-d5ee265de1be">
+          <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+          <ColumnID>AREA_CONOCIMIENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="e8e3e171-abfc-4355-bcfd-6b0661e2552c">
+          <Language>9226</Language>
+          <Caption>Área Conocimiento</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8573f96a-def1-4afb-90fc-f551c67288d4">
+      <ID>INDICADOR PROMEDIO 1</ID>
+      <Name>INDICADOR PROMEDIO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5fe0eea5-aba7-4a24-8b58-397fad7708f3">
+          <DataType>WChar</DataType>
+          <DataSize>35</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f08a991-43e5-4e9b-b29e-3083980fa701">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>INDICADOR_PROMEDIO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f77193ee-e72a-43cd-8556-81b500e3fd8b">
+        <DataType>WChar</DataType>
+        <DataSize>35</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="cc5dddca-66b5-4975-8d2b-3fd1282e58b2">
+          <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+          <ColumnID>INDICADOR_PROMEDIO</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="164889f2-9a2a-4b2a-ada8-21864a243b90">
+          <Language>9226</Language>
+          <Caption>Indicador Promedio</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a106dcbc-55a6-4ee3-8c4a-5b8808735a47">
+      <ID>NOMBRE CURSO 3</ID>
+      <Name>NOMBRE CURSO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="41182a2b-240f-4eba-9dce-d496d601b6af">
+          <DataType>WChar</DataType>
+          <DataSize>5</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cafe9b51-6788-4b98-b0ec-177556c1a291">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>NOMBRE_CURSO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c86a18fe-b503-42c4-8720-958ac2a6a09b">
+        <DataType>WChar</DataType>
+        <DataSize>5</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="95321f8b-6f3b-46da-9ea1-d4c6d7db8289">
+          <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+          <ColumnID>NOMBRE_CURSO</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="933967ff-4f43-4069-97d6-e063420e7f1c">
+          <Language>9226</Language>
+          <Caption>Nombre Curso</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a9c55655-74ef-4786-9c5f-9f26a1d3d3dc">
+      <ID>NOMBRE MATERIA 3</ID>
+      <Name>NOMBRE MATERIA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dc8721d2-f31f-48bb-ac02-7c1858ce25b3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a3c22c01-d7cd-4403-87b4-00fdd230f892">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>NOMBRE_MATERIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="e165d714-65d7-402e-a2cf-34ac84821a04">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="285829c4-bb96-4fb4-8734-53d56d816c66">
+          <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+          <ColumnID>NOMBRE_MATERIA</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="6d91ac33-62c4-4b50-9dbe-3bc66fbb2f3e">
+          <Language>9226</Language>
+          <Caption>Nombre Materia</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -585,16 +766,34 @@
           <ID>AREA CONOCIMIENTO_AREAMAT</ID>
           <Name>AREA CONOCIMIENTO_AREAMAT</Name>
           <SourceAttributeID>AREA CONOCIMIENTO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="df7fac03-7887-406e-b523-055980807957">
+              <Language>9226</Language>
+              <Caption>Área Conocimiento</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="adfda223-f075-4fc0-a293-459b6a4d788e">
           <ID>NOMBRE MATERIA_AREAMAT</ID>
           <Name>NOMBRE MATERIA_AREAMAT</Name>
           <SourceAttributeID>NOMBRE MATERIA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="48e0be3c-5570-4c74-aee3-15bf2bbeee32">
+              <Language>9226</Language>
+              <Caption>Nombre Materia</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="bd80e3b0-3e63-4538-b7c6-6aeffc9e6a9c">
           <ID>NOMBRE CURSO_AREAMAT</ID>
           <Name>NOMBRE CURSO_AREAMAT</Name>
           <SourceAttributeID>NOMBRE CURSO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="3c064c4a-c4e1-4d77-ac3d-cf49abe52108">
+              <Language>9226</Language>
+              <Caption>Nombre Curso</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -606,16 +805,34 @@
           <ID>INDICADOR PROMEDIO_PROMMAT</ID>
           <Name>INDICADOR PROMEDIO_PROMMAT</Name>
           <SourceAttributeID>INDICADOR PROMEDIO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="85371956-4323-4a0a-b3bb-ab7f02e32f3a">
+              <Language>9226</Language>
+              <Caption>Indicador Promedio</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="4dca12df-e6c7-43dc-9ade-84ac68af59cd">
           <ID>NOMBRE MATERIA_PROMMAT</ID>
           <Name>NOMBRE MATERIA_PROMMAT</Name>
           <SourceAttributeID>NOMBRE MATERIA 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="e1b4c312-ac27-4634-8e27-3897f2b57697">
+              <Language>9226</Language>
+              <Caption>Nombre Materia</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="cece5acd-260f-4859-909a-df802eee4283">
           <ID>NOMBRE CURSO_PROMMAT</ID>
           <Name>NOMBRE CURSO_PROMMAT</Name>
           <SourceAttributeID>NOMBRE CURSO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="daae18eb-9e84-4a8c-ba24-d3c0dfb563f7">
+              <Language>9226</Language>
+              <Caption>Nombre Curso</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -627,16 +844,34 @@
           <ID>TIPO MATERIA</ID>
           <Name>TIPO MATERIA</Name>
           <SourceAttributeID>TIPO MATERIA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="801b04ba-e184-4c4c-990f-43442844ce83">
+              <Language>9226</Language>
+              <Caption>Tipo Materia</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="efb5db7c-1f86-45e8-b084-74c7df5229a3">
           <ID>NOMBRE MATERIA_TIPOMAT</ID>
           <Name>NOMBRE MATERIA_TIPOMAT</Name>
           <SourceAttributeID>NOMBRE MATERIA 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="c140db15-78d2-4306-bc55-5580799d2d8e">
+              <Language>9226</Language>
+              <Caption>Nombre Materia</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="ce783227-0304-409e-ab5f-01228daf5ef7">
           <ID>NOMBRE CURSO_TIPOMAT</ID>
           <Name>NOMBRE CURSO_TIPOMAT</Name>
           <SourceAttributeID>NOMBRE CURSO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="525ea122-e760-4c70-ad21-b8f16eecb7cc">
+              <Language>9226</Language>
+              <Caption>Nombre Curso</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>

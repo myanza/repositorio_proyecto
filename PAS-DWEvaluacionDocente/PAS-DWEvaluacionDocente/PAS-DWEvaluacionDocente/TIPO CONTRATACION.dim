@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1342" scrolltop="-2922" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6138" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1342" scrolltop="-2922" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6350" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -146,6 +146,12 @@
           <ColumnID>DEDICACION</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="f079baf4-7971-496a-be2a-305be0159931">
+          <Language>9226</Language>
+          <Caption>Dedicación</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="c97edbac-c39c-46ef-8ac3-da01ba8566ff">
           <AttributeID>CATEGORIA</AttributeID>
@@ -184,6 +190,12 @@
           <ColumnID>NIVELES_ESTUDIO</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="01d10b42-52e7-45a8-8ce1-ad90cf321791">
+          <Language>9226</Language>
+          <Caption>Nivel Estudio</Caption>
+        </Translation>
+      </Translations>
       <AttributeRelationships>
         <AttributeRelationship dwd:design-time-name="eb605c3b-f4fc-49a7-ba19-55035b791205">
           <AttributeID>TIPO CONTRATO</AttributeID>
@@ -214,6 +226,12 @@
           <ColumnID>CATEGORIA</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="50caa93c-e040-4250-8f7e-f8c18a057529">
+          <Language>9226</Language>
+          <Caption>Categoría</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -241,6 +259,7 @@
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -265,6 +284,12 @@
           <ColumnID>TIPO_CONTRATO</ColumnID>
         </Source>
       </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="2abde7a0-c55b-4f22-a924-96b0c069972f">
+          <Language>9226</Language>
+          <Caption>Tipo Contrato</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -272,33 +297,57 @@
   <Hierarchies>
     <Hierarchy dwd:design-time-name="e32d192f-aabd-4c94-9a2b-0452ddedd33f">
       <ID>Hierarchy</ID>
-      <Name>Jerarquia_Contratacion</Name>
+      <Name>Jerarquia_Contrato_Niveles</Name>
       <Levels>
         <Level dwd:design-time-name="81bbb432-4bc6-4bc5-8b95-f9109a3b0157">
           <ID>TIPO CONTRATO</ID>
           <Name>TIPO CONTRATO</Name>
           <SourceAttributeID>TIPO CONTRATO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="e12b6721-201e-4655-a1c4-8ec83bd425ca">
+              <Language>9226</Language>
+              <Caption>Tipo Contrato</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="470b7280-7f6d-4724-a59b-f819d43abd57">
           <ID>NIVELES ESTUDIO</ID>
           <Name>NIVELES ESTUDIO</Name>
           <SourceAttributeID>NIVELES ESTUDIO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="643192ee-6227-4e39-a84d-d85c89242449">
+              <Language>9226</Language>
+              <Caption>Nivel Estudio</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
     <Hierarchy dwd:design-time-name="6a175bd4-f098-46ce-945d-838ee7bde8ae">
       <ID>Hierarchy 1</ID>
-      <Name>Jerarquia_Categoria</Name>
+      <Name>Jerarquia_Categoria_Dedicacion</Name>
       <Levels>
         <Level dwd:design-time-name="6e12f7d1-4558-44e1-ad11-8237580798ef">
           <ID>CATEGORIA</ID>
           <Name>CATEGORIA</Name>
           <SourceAttributeID>CATEGORIA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="bd7f7947-6a94-42da-87be-9f7933bdbea7">
+              <Language>9226</Language>
+              <Caption>Categoría</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="830f49fc-fa78-40c6-b7e9-698bfd288da7">
           <ID>DEDICACION</ID>
           <Name>DEDICACION</Name>
           <SourceAttributeID>DEDICACION</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="166824e3-b2f7-4c78-8eca-fdc591572eaf">
+              <Language>9226</Language>
+              <Caption>Dedicación</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>

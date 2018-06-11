@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="10" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6138" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="10" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -127,12 +127,16 @@
                 <Attribute Id="ACTUAL" />
                 <Attribute Id="CELULAR" />
                 <Attribute Id="CORREO" />
+                <Attribute Id="DEPARTAMENTO 3" />
                 <Attribute Id="FECHA EFECTIVA" />
                 <Attribute Id="FECHA EXPIRACION" />
+                <Attribute Id="GENERO 3" />
                 <Attribute Id="LUGAR NACIMIENTO ID" />
                 <Attribute Id="LUGAR PROCEDENCIA ID" />
+                <Attribute Id="NOMBRE COMPLETO 4" />
                 <Attribute Id="NUMERO IDENTIDAD" />
                 <Attribute Id="NUMERO TELEFONO" />
+                <Attribute Id="SIGLA FACULTAD 2" />
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
@@ -276,6 +280,7 @@
           <ColumnID>PAIS</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -314,6 +319,7 @@
           <Name>PAIS_NACIMIENTO</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -360,6 +366,7 @@
           <Name>DEPARTAMENTO_NACIMIENTO</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -376,6 +383,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="34f4644e-33a1-42d8-a01c-d419400f1853">
+          <Language>9226</Language>
+          <Caption>Número Identidad</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -406,6 +419,7 @@
           <Name>SIGLA FACULTAD_FACULTAD</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -430,6 +444,7 @@
           <ColumnID>SIGLA_FACULTAD</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -459,6 +474,7 @@
           <Name>MUNICIPIO_NACIMIENTO</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -475,6 +491,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="bb2cb20d-7c87-463a-b073-d51a1e869475">
+          <Language>9226</Language>
+          <Caption>Correo</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -491,6 +513,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="b103bba8-f89d-4653-9f41-aa6b5cf2cd16">
+          <Language>9226</Language>
+          <Caption>Número Teléfono</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -507,6 +535,12 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="6bce329d-a1b2-4d4e-8525-3a029fae27d0">
+          <Language>9226</Language>
+          <Caption>Celular</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -522,6 +556,7 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -537,6 +572,7 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -553,6 +589,15 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="f7b9b6b7-d824-4ffc-a1ac-48709acce0ff">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="87552ffd-ee84-4229-8320-d5da19f96efe">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+          <ColumnID>ACTUAL</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -568,6 +613,7 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -583,6 +629,7 @@
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -652,7 +699,24 @@
           <AttributeID>NOMBRE COMPLETO 3</AttributeID>
           <Name>NOMBRE COMPLETO_DOCENTE</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8dbcf111-e28a-4e68-9ef1-56fa8592a427">
+          <AttributeID>DEPARTAMENTO 3</AttributeID>
+          <Name>DEPARTAMENTO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f00df6db-1a62-44c2-82c5-621e274630a2">
+          <AttributeID>GENERO 3</AttributeID>
+          <Name>GENERO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0d193aee-4568-4a28-8a24-dfb25646af33">
+          <AttributeID>NOMBRE COMPLETO 4</AttributeID>
+          <Name>NOMBRE COMPLETO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="87397e48-27d8-4e5a-8772-d64050352801">
+          <AttributeID>SIGLA FACULTAD 2</AttributeID>
+          <Name>SIGLA FACULTAD_SINJERARQUIA</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -677,6 +741,7 @@
           <ColumnID>PAIS</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -715,6 +780,7 @@
           <Name>PAIS_PROCEDENCIA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -761,6 +827,7 @@
           <Name>DEPARTAMENTO_PROCEDENCIA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -799,6 +866,7 @@
           <Name>GENERO_PROCEDENCIA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -828,6 +896,7 @@
           <Name>MUNICIPIO_PROCEDENCIA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -866,6 +935,7 @@
           <Name>GENERO_NACIMIENTO</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -912,6 +982,7 @@
           <Name>DEPARTAMENTO_FACULTAD</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -966,6 +1037,7 @@
           <Name>GENERO_FACULTAD</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -990,6 +1062,7 @@
           <ColumnID>SIGLA_FACULTAD</ColumnID>
         </Source>
       </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -1020,6 +1093,7 @@
           <Name>SIGLA FACULTAD_DOCENTE</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -1066,6 +1140,122 @@
           <Name>DEPARTAMENTO_DOCENTE</Name>
         </AttributeRelationship>
       </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11dd774e-d180-45f7-8b08-388e2701ede1">
+      <ID>DEPARTAMENTO 3</ID>
+      <Name>DEPARTAMENTO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a478d59d-e978-4398-97c5-49e26fac0304">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64003bd7-fa3b-41ef-9be9-3dd16f82be4e">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+            <ColumnID>DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="8d58e8b5-7d9b-4c75-b9fd-b28a75685164">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4958763c-f538-4e6c-b36e-a0cb74c79550">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+          <ColumnID>DEPARTAMENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a22b28cb-2d64-45a5-83aa-b5d90259e416">
+      <ID>GENERO 3</ID>
+      <Name>GENERO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8b7503f7-5811-488b-89de-81d122a500eb">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c5181bd9-fc7c-4308-915a-592a0d331d65">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+            <ColumnID>GENERO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="03dd0216-c832-481b-8c2d-5c8ff0c2c05c">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="125ea689-820b-4016-b535-13e4119e85f8">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+          <ColumnID>GENERO</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="67e35e56-ec3d-464d-8315-fcf418afaea2">
+          <Language>9226</Language>
+          <Caption>Género</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cd56abe6-24e0-46ed-83ca-216814276b41">
+      <ID>NOMBRE COMPLETO 4</ID>
+      <Name>NOMBRE COMPLETO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f85406d2-bebd-4a11-84a2-8239dffbba1f">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96e26d62-db28-4617-8219-7edf137ed2c4">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+            <ColumnID>NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="cc2e2c47-d73d-4c11-9f92-c3ed502baac2">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="8577278d-cbac-4b85-9c73-42a664d8db72">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+          <ColumnID>NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="150b6ecc-9187-47f6-8584-1cd24698f369">
+          <Language>9226</Language>
+          <Caption>Nombre Completo</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="84af7a5f-3a69-4480-9bbc-01dfb735ea2a">
+      <ID>SIGLA FACULTAD 2</ID>
+      <Name>SIGLA FACULTAD_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0cebaa6b-150c-4dcd-91eb-c602efbfbd67">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fe1597c6-2dae-4770-a451-6f6da6c774d9">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+            <ColumnID>SIGLA_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="831e5381-1fce-40aa-b7f1-c601a6119891">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c6284a0e-332e-425b-89fb-f6d75acb05fd">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE</TableID>
+          <ColumnID>SIGLA_FACULTAD</ColumnID>
+        </Source>
+      </NameColumn>
+      <Translations>
+        <Translation dwd:design-time-name="830156b1-2941-425a-89ec-21096c6ec0c7">
+          <Language>9226</Language>
+          <Caption>Sigla Facultad</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -1079,26 +1269,56 @@
           <ID>PAIS_NACIMIENTO</ID>
           <Name>PAIS_NACIMIENTO</Name>
           <SourceAttributeID>PAIS</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="58364f3a-5d76-4110-8ac1-810736ff0c5a">
+              <Language>9226</Language>
+              <Caption>País</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="1d3cc69e-5e08-432b-ac57-ed1f08356a11">
           <ID>DEPARTAMENTO_NACIMIENTO</ID>
           <Name>DEPARTAMENTO_NACIMIENTO</Name>
           <SourceAttributeID>DEPARTAMENTO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="17408c0e-d34b-46b0-8bf3-9cf26e013b3e">
+              <Language>9226</Language>
+              <Caption>Departamento</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="fa1bf448-65e8-4c1b-87b4-dee0c1eb2964">
           <ID>MUNICIPIO_NACIMIENTO</ID>
           <Name>MUNICIPIO_NACIMIENTO</Name>
           <SourceAttributeID>MUNICIPIO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="be0b035c-0abb-4f9b-8722-9a6132d04367">
+              <Language>9226</Language>
+              <Caption>Municipio</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="ec6acd50-2e45-42fa-9926-d8c571982adf">
           <ID>GENERO_NACIMIENTO</ID>
           <Name>GENERO_NACIMIENTO</Name>
           <SourceAttributeID>GENERO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="7e22dbc9-f169-43e0-9866-567ec63c4995">
+              <Language>9226</Language>
+              <Caption>Género</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="a3ab1dc0-7ce0-4e2e-9540-c7befb2f540c">
           <ID>NOMBRE COMPLETO_NACIMIENTO</ID>
           <Name>NOMBRE COMPLETO_NACIMIENTO</Name>
           <SourceAttributeID>NOMBRE COMPLETO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="fab56643-a996-49c5-bbbc-0e2f2a994a8c">
+              <Language>9226</Language>
+              <Caption>Nombre Completo</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -1110,26 +1330,56 @@
           <ID>PAIS_PROCEDENCIA</ID>
           <Name>PAIS_PROCEDENCIA</Name>
           <SourceAttributeID>PAIS 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5a00e6fd-2053-43d3-bc51-8686581b6075">
+              <Language>9226</Language>
+              <Caption>País</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="bfd50f53-1d17-494d-b8cc-baa2fff58ee8">
           <ID>DEPARTAMENTO_PROCEDENCIA</ID>
           <Name>DEPARTAMENTO_PROCEDENCIA</Name>
           <SourceAttributeID>DEPARTAMENTO 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d6870e89-25e9-4dfd-8b8a-d3232bed5f8a">
+              <Language>9226</Language>
+              <Caption>Departamento</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="c3f7ede2-09ba-48a1-8643-10852b7bc454">
           <ID>MUNICIPIO_PROCEDENCIA</ID>
           <Name>MUNICIPIO_PROCEDENCIA</Name>
           <SourceAttributeID>MUNICIPIO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="051328ea-0a71-4cf2-a63d-cbf6f73bbb03">
+              <Language>9226</Language>
+              <Caption>Municipio</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="0b1cb09a-8df9-46c5-a1b4-0214d4dd6a79">
           <ID>GENERO_PROCEDENCIA</ID>
           <Name>GENERO_PROCEDENCIA</Name>
           <SourceAttributeID>GENERO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="f92ea11a-f54a-49ee-a074-38ec80161357">
+              <Language>9226</Language>
+              <Caption>Género</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="acffef25-a23b-42b7-8ec5-007d23bfae13">
           <ID>NOMBRE COMPLETO_PROCEDENCIA</ID>
           <Name>NOMBRE COMPLETO_PROCEDENCIA</Name>
           <SourceAttributeID>NOMBRE COMPLETO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="0da48b78-0bc1-43a2-be98-c5a6c6218f69">
+              <Language>9226</Language>
+              <Caption>Nombre Completo</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -1141,21 +1391,45 @@
           <ID>SIGLA FACULTAD_FACULTAD</ID>
           <Name>SIGLA FACULTAD_FACULTAD</Name>
           <SourceAttributeID>SIGLA FACULTAD</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="a85b6425-58fd-4a0e-84b3-418371d54563">
+              <Language>9226</Language>
+              <Caption>Sigla Facultad</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="da35c013-22bf-48da-8a13-8c9dda919cb5">
           <ID>DEPARTAMENTO_FACULTAD</ID>
           <Name>DEPARTAMENTO_FACULTAD</Name>
           <SourceAttributeID>DEPARTAMENTO</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="b5bd6d1f-74b0-4522-adbc-efa5a90a5ece">
+              <Language>9226</Language>
+              <Caption>Departamento Facultad</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="0a883acd-8890-4857-9a03-0687071985ce">
           <ID>GENERO_FACULTAD</ID>
           <Name>GENERO_FACULTAD</Name>
           <SourceAttributeID>GENERO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="4d5b5818-7241-4246-84d5-91d3c2dad1a1">
+              <Language>9226</Language>
+              <Caption>Género</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="eb7c2046-bc6c-4fe5-b8b9-99b7f67f848b">
           <ID>NOMBRE COMPLETO_FACULTAD</ID>
           <Name>NOMBRE COMPLETO_FACULTAD</Name>
           <SourceAttributeID>NOMBRE COMPLETO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="98b4a673-ea82-41bd-afc9-6bd595553121">
+              <Language>9226</Language>
+              <Caption>Nombre Completo</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
@@ -1167,16 +1441,34 @@
           <ID>SIGLA FACULTAD_DOCENTE</ID>
           <Name>SIGLA FACULTAD_DOCENTE</Name>
           <SourceAttributeID>SIGLA FACULTAD 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="8cc0a5d1-fd60-4e65-9822-e7f49c816ef2">
+              <Language>9226</Language>
+              <Caption>Sigla Facultad</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="2ef56db3-0ef7-4ebd-a67b-8171b9bd12d4">
           <ID>DEPARTAMENTO_DOCENTE</ID>
           <Name>DEPARTAMENTO_DOCENTE</Name>
           <SourceAttributeID>DEPARTAMENTO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5dcd5340-9ed3-4190-8d4e-1018bc6b25ba">
+              <Language>9226</Language>
+              <Caption>Departamento Facultad</Caption>
+            </Translation>
+          </Translations>
         </Level>
         <Level dwd:design-time-name="2548579f-e1e7-4e2b-9fb1-e7322c349ffa">
           <ID>NOMBRE COMPLETO_DOCENTE</ID>
           <Name>NOMBRE COMPLETO_DOCENTE</Name>
           <SourceAttributeID>NOMBRE COMPLETO 3</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="88ceb744-8cee-404d-bb1c-fbc7201a43e7">
+              <Language>9226</Language>
+              <Caption>Nombre Completo</Caption>
+            </Translation>
+          </Translations>
         </Level>
       </Levels>
     </Hierarchy>
