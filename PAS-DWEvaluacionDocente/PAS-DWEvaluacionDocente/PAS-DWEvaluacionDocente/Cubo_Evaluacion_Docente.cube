@@ -1321,6 +1321,12 @@
         <Attribute dwd:design-time-name="10db5519-efc4-4598-b24e-f5b54075b69c">
           <AttributeID>SIGLA FACULTAD 2</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="e38be555-3a51-4f01-8865-fa8780c4b598">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ee41958-24ee-4a15-909d-0a6c6620eae0">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="8c04ee1b-b8d4-4589-a0fc-1a066325b7f6">
@@ -1464,6 +1470,12 @@
         </Attribute>
         <Attribute dwd:design-time-name="8de21b6d-fa55-4b39-83a0-1849475d9580">
           <AttributeID>SIGLA FACULTAD 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf99f7de-56f4-42da-bcef-94bc4b122ba1">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="912c1bd7-460f-4212-91bb-16bf304918d9">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1638,6 +1650,12 @@
         </Attribute>
         <Attribute dwd:design-time-name="52861212-239f-46c2-9dea-c13b3e22e41f">
           <AttributeID>SIGLA FACULTAD 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="316f64a0-c443-4e10-85ff-859c71ba2b1c">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb5fde28-1fcc-4ea6-a7ff-3ccc6aa5671d">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -2061,6 +2079,12 @@
         </Attribute>
         <Attribute dwd:design-time-name="bea3889e-65b8-4316-b258-5061b4be7d55">
           <AttributeID>TIPO ADMISION 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6b63997b-9ae6-41e0-bbbf-000d8f0acab5">
+          <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2deb3851-660e-481c-ae0b-8302c883afff">
+          <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -2858,6 +2882,110 @@
               <Type>Granularity</Type>
             </Attribute>
           </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="efdd7b13-f6e3-43ea-9908-987b27925dd7">
+          <CubeDimensionID>DECANO - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="47d220b4-0ce6-4ac1-b1b6-7a3ea2e1dfcc">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DECANO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="a2f60164-67ee-4248-80cd-c1ec5e1789f7">
+          <CubeDimensionID>DECANO - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c2bb5edf-8291-44e0-840f-6c7a5a776f3e">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DECANO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="dcdb2696-d320-407d-9d1b-0e8b390f5ff4">
+          <CubeDimensionID>DOCENTE - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e436e927-0c04-4cf8-9ab0-53d29b70ecc5">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DOCENTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="e9cd4e2f-3cca-4f7d-9058-308d65256a6b">
+          <CubeDimensionID>DOCENTE - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="62d00ddb-d843-42a6-99f9-28527e84bf90">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DOCENTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="029ff3bd-dfac-4076-a859-8764ab602d8f">
+          <CubeDimensionID>JEFE DEPARTAMENTO - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="645dddfb-0a6b-4b06-a251-b474c272bf2a">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>JEFE DEPARTAMENTO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="475ce752-a326-4b05-a592-36d603f04d49">
+          <CubeDimensionID>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d26ea064-63e6-4118-bddd-9623d54763cb">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>JEFE DEPARTAMENTO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="a180edd5-f00a-41a5-a6e2-1ef8734bc739">
+          <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3960e970-69ad-4f3b-9ecb-a7ff0d325b9c">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ESTUDIANTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="50225031-b34b-4027-a8b2-5e6312efeab8">
+          <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1f414a39-9b0a-450f-8faa-f4a28597376a">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ESTUDIANTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
       </Dimensions>
       <Partitions />
