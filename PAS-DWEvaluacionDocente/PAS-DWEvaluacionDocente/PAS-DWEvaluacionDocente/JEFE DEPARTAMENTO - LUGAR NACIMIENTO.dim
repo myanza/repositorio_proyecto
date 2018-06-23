@@ -1,0 +1,327 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4abd8e84-a121-42ae-8792-8e46dd8943c7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>JEFE - LUGAR NACIMIENTO</ID>
+  <Name>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="70fa037f-758e-43d1-a45b-6c41724a82fb">
+    <DataSourceViewID>DW Academico Labor</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="2b9d4f3b-c8ee-44ce-998c-fbc6f05470cc">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="db6818a2-74ae-4a45-a7c3-0d41dbf2916d">
+      <ID>DOC DOCENTE ID</ID>
+      <Name>DOC DOCENTE ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b78e0087-6e1f-497d-9d97-f5bb0274c47c">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="439e8131-f192-433d-809d-f41eb68d8530">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bd977f17-f158-4188-bcab-60f8696f6002">
+          <AttributeID>LOC LOCALIZACION ID</AttributeID>
+          <Name>LOC LOCALIZACION ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9efd36ff-89f3-4346-9d78-968e1e17500f">
+          <AttributeID>LOC PAIS</AttributeID>
+          <Name>LOC PAIS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d4ebf6c-b5af-4ebd-a840-249f5e58114c">
+          <AttributeID>LOC DEPARTAMENTO</AttributeID>
+          <Name>LOC DEPARTAMENTO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4dc40781-55a1-4959-b9e6-49ecbfbeedba">
+          <AttributeID>LOC MUNICIPIO</AttributeID>
+          <Name>LOC MUNICIPIO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5f3460b1-e1cb-4646-83e9-695f8617d36d">
+          <AttributeID>DOC CELULAR</AttributeID>
+          <Name>DOC CELULAR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="63d8e71a-d1e3-4702-804b-8c7d2afe0b74">
+          <AttributeID>DOC CORREO</AttributeID>
+          <Name>DOC CORREO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4f300f5f-090c-4a1e-94d2-692b568f3791">
+          <AttributeID>DOC DEPARTAMENTO</AttributeID>
+          <Name>DOC DEPARTAMENTO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7c3b1f37-daaa-475c-be7a-e902da413521">
+          <AttributeID>DOC GENERO</AttributeID>
+          <Name>DOC GENERO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="26b380e5-8cf1-47f1-8f50-8f250cadcb3e">
+          <AttributeID>DOC NOMBRE COMPLETO</AttributeID>
+          <Name>DOC NOMBRE COMPLETO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="18d1d85f-8b84-4aae-a48c-7d99a3345cab">
+          <AttributeID>DOC NUMERO IDENTIDAD</AttributeID>
+          <Name>DOC NUMERO IDENTIDAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d3594a48-6e6a-4f64-a7e5-c545f9e46174">
+          <AttributeID>DOC NUMERO TELEFONO</AttributeID>
+          <Name>DOC NUMERO TELEFONO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a9b4497e-359b-43a1-bfaa-b2791d6172d9">
+          <AttributeID>DOC FACULTAD</AttributeID>
+          <Name>DOC FACULTAD</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d8136d78-19ab-437a-a086-9c15e0011ab6">
+      <ID>LOC LOCALIZACION ID</ID>
+      <Name>LOC LOCALIZACION ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9dd7739c-c8e3-4dbd-8dd9-478c81ae6a6a">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9b914e85-bd47-4de3-bac4-fc5d3c847c5d">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_LOCALIZACION_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bf15cf2e-c51a-464f-b86b-b5ae393a6a6a">
+      <ID>LOC PAIS</ID>
+      <Name>LOC PAIS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0c322b5d-e44a-4571-ab0e-e66e75902e18">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dffefefc-05d1-4763-ae2a-f8949c8ae526">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="15e0b5b0-860c-4442-8a47-3e7fcfef8ffb">
+      <ID>LOC DEPARTAMENTO</ID>
+      <Name>LOC DEPARTAMENTO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="efb862f0-d621-4472-b52d-7c08c19243db">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c9e72006-92cf-4b8f-9690-a89cba2aa55f">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="346ea29f-cae5-46a7-a57a-3880a7503e4e">
+      <ID>LOC MUNICIPIO</ID>
+      <Name>LOC MUNICIPIO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2d15fafb-fd60-4048-872a-b859368159fd">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1fe068cd-6374-4482-b9d7-945d4ce50329">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ad102af-97f7-4a48-803a-35dada9a97b7">
+      <ID>DOC CELULAR</ID>
+      <Name>DOC CELULAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="110b1e3d-e01f-4b8d-86d4-6fc34b78b2ee">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a14cad7-243b-4018-9555-d8b361c9bd2d">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_CELULAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c34e8334-18a9-4eb6-ac9c-6c0f52889cce">
+      <ID>DOC CORREO</ID>
+      <Name>DOC CORREO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a5ead5e-9c55-431a-bfac-d3b81429c91c">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="af6a9089-4c52-4f5e-848a-c11353407d53">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_CORREO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11b51cf3-35f5-4d21-8a5a-018024251473">
+      <ID>DOC DEPARTAMENTO</ID>
+      <Name>DOC DEPARTAMENTO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bd795ef5-d44f-4719-b6a2-bdb82d290fdb">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="353fc75b-6bbf-4cb6-a9c8-ca4f5fa0a79b">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7de303ef-02f0-4080-841c-3551344677f4">
+      <ID>DOC GENERO</ID>
+      <Name>DOC GENERO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6e975fc5-0f68-4994-a3da-e92ae1eba3b2">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6a9b2ae9-1358-424d-a79f-1731127320b3">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_GENERO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d2c9db57-af8d-4175-b8bf-29d761ecb3f7">
+      <ID>DOC NOMBRE COMPLETO</ID>
+      <Name>DOC NOMBRE COMPLETO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c6369b7b-7d1b-4a46-9378-5dad04b7e185">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="38570121-9fda-4cc5-8306-e82f55a5807b">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="17cc21cd-4445-49a7-9654-cef0c2d6a6b3">
+      <ID>DOC NUMERO IDENTIDAD</ID>
+      <Name>DOC NUMERO IDENTIDAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="89037cdd-1b07-4c6d-a625-1c8ba6ab18e2">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9b4542e5-2bcd-4fe7-8a8d-78b7f3059beb">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NUMERO_IDENTIDAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="03ca7d0b-07a1-431e-9fc4-b0cbe8e0d7f2">
+      <ID>DOC NUMERO TELEFONO</ID>
+      <Name>DOC NUMERO TELEFONO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6bc70a4f-a25a-42c6-abe2-b09554b524b2">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="092e201c-6824-4533-97de-7f66c15141cf">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NUMERO_TELEFONO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b6f240cf-92e4-4e2c-8bac-bae94331ab7e">
+      <ID>DOC FACULTAD</ID>
+      <Name>DOC FACULTAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="212dbce3-247e-4d7f-a477-af13a6fa89f0">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="23e00c6f-edaf-4463-b172-61e8a063f63d">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
