@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1223" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6879" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1223" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6747" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -268,6 +268,10 @@
         <AttributeRelationship dwd:design-time-name="109f4283-239a-47c8-a23b-dea366711e6f">
           <AttributeID>DOC NOMBRE COMPLETO 2</AttributeID>
           <Name>DOC NOMBRE COMPLETO_PDMFDN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="79d6b8c6-a5ee-40cf-8332-c11a113cc896">
+          <AttributeID>DOC FACULTAD COMPLETA</AttributeID>
+          <Name>DOC FACULTAD COMPLETA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -1224,6 +1228,28 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="9945cdba-09fd-48ec-a060-ff747512c2ed">
+      <ID>DOC FACULTAD COMPLETA</ID>
+      <Name>DOC FACULTAD COMPLETA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b203a12-e7bf-470a-ba87-5ea8887d573a">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb7d92d9-d69c-4d69-bc8a-e260305790d5">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD_COMPLETA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="06b2b0d4-1b21-4525-b0e0-d738fac838d7">
+          <Language>9226</Language>
+          <Caption>Facultad Docente</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
     <Hierarchy dwd:design-time-name="3fc3c7b9-cde2-4330-ac7a-6778f8af6616">
@@ -1381,7 +1407,7 @@
           <Translations>
             <Translation dwd:design-time-name="57fac949-12e5-4b25-a09e-888882c1790d">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>

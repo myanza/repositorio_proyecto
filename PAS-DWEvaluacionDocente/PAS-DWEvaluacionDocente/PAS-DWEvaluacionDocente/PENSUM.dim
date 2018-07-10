@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1170" scrolltop="-5358" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6429" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1170" scrolltop="-5358" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6932" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -121,54 +121,21 @@
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="0621bf91-155d-44d3-8226-f91bbea67be7">
-          <AttributeID>DESCRIPCION</AttributeID>
-          <Name>DESCRIPCION</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="b1cecdb7-b628-49a3-ac15-d78c81f2605b">
           <AttributeID>RESOLUCION</AttributeID>
           <Name>RESOLUCION</Name>
         </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f408d2d7-4f29-44c2-8706-b5f4c015603e">
+          <AttributeID>DESCRIPCION</AttributeID>
+          <Name>DESCRIPCION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="439a257c-a492-47ea-b6ba-2ba74ad40335">
+          <AttributeID>CODIGO PENSUM</AttributeID>
+          <Name>CODIGO PENSUM</Name>
+        </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="bf22eda9-9fe5-414a-8fe5-75591f15507e">
-      <ID>DESCRIPCION</ID>
-      <Name>DESCRIPCION</Name>
-      <EstimatedCount>1</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="7774da91-0d40-444b-9ef8-6234d465a356">
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="426c5aeb-2ae3-44ab-9c68-a571f4ec2041">
-            <TableID>DW_ACADEMICO_LABOR_PENSUM</TableID>
-            <ColumnID>DESCRIPCION</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="f867f69c-cfb8-4943-b7f9-0b20d5693098">
-        <DataType>WChar</DataType>
-        <DataSize>50</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="347db18c-da45-40bb-ac39-0ae1a789f923">
-          <TableID>DW_ACADEMICO_LABOR_PENSUM</TableID>
-          <ColumnID>DESCRIPCION</ColumnID>
-        </Source>
-      </NameColumn>
-      <Translations>
-        <Translation dwd:design-time-name="cfdbd115-da0c-4abc-95aa-a628b2b4caa4">
-          <Language>9226</Language>
-          <Caption>Pensum</Caption>
-        </Translation>
-      </Translations>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="024e316e-aeda-47ba-8f2f-db64d2c99d6a">
-          <AttributeID>RANGOS CREDITOS</AttributeID>
-          <Name>RANGOS CREDITOS</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -225,6 +192,55 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="d2d02e79-0f8b-42f9-9535-249bfec6afba">
+      <ID>DESCRIPCION</ID>
+      <Name>DESCRIPCION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dd6a74ba-b4b7-4e45-b670-8f133bb38ad3">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a0956075-03a6-4828-bebd-b10d880f6579">
+            <TableID>DW_ACADEMICO_LABOR_PENSUM</TableID>
+            <ColumnID>DESCRIPCION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="b2589bdc-446d-4e01-b131-b7387cd0fc01">
+          <Language>9226</Language>
+          <Caption>Descripción</Caption>
+        </Translation>
+      </Translations>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bcb60295-a14b-40fa-bc43-18bd8f70b5ef">
+          <AttributeID>RANGOS CREDITOS</AttributeID>
+          <Name>RANGOS CREDITOS</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e4690326-49a6-4734-a604-6e16cc7fb9ba">
+      <ID>CODIGO PENSUM</ID>
+      <Name>CODIGO PENSUM</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3c7c3220-f0c6-422a-a4e8-0e4e5a03c2c3">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64f6696a-eef4-4df3-902c-b2fe3abf3b8b">
+            <TableID>DW_ACADEMICO_LABOR_PENSUM</TableID>
+            <ColumnID>CODIGO_PENSUM</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="04b3df57-da26-4960-9790-bb092ebb9d11">
+          <Language>9226</Language>
+          <Caption>Código Pensum</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
     <Hierarchy dwd:design-time-name="4bf8f7d1-85df-4c3a-a6f5-006ad919fc7e">
@@ -242,14 +258,14 @@
             </Translation>
           </Translations>
         </Level>
-        <Level dwd:design-time-name="8233df29-fc11-4ca2-9aeb-bb23dfb85e29">
+        <Level dwd:design-time-name="e3d59729-42f2-40c4-806f-6da3e77267bf">
           <ID>DESCRIPCION</ID>
           <Name>DESCRIPCION</Name>
           <SourceAttributeID>DESCRIPCION</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="a456e51f-c0ee-4f8f-a9aa-0bd3b1de7906">
+            <Translation dwd:design-time-name="d420c197-a64a-48f7-8eae-e8280b8394e8">
               <Language>9226</Language>
-              <Caption>Pensum</Caption>
+              <Caption>Descripción</Caption>
             </Translation>
           </Translations>
         </Level>

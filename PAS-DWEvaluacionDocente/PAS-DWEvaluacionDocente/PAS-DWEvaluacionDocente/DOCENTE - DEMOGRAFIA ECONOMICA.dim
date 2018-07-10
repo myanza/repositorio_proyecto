@@ -1,14 +1,14 @@
 ﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c1d27b87-2533-4740-89a8-ca3c00164c82" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>DOCENTE - DEMOGRAFIA ECONOMICA</ID>
   <Name>DOCENTE - DEMOGRAFIA ECONOMICA</Name>
-  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-166" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7223" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-166" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6747" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE_DEM_ECONOMICA_VIEW" left="46" top="-2858" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5159" height="8493" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE_DEM_ECONOMICA_VIEW" left="46" top="-2858" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5159" height="8493" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c0000271400002d210000" />
             </control>
@@ -82,6 +82,7 @@
                 <Attribute Id="DOC CELULAR" />
                 <Attribute Id="DOC CORREO" />
                 <Attribute Id="DOC DEPARTAMENTO" />
+                <Attribute Id="DOC FACULTAD COMPLETA" />
                 <Attribute Id="DOC FACULTAD" />
                 <Attribute Id="DOC GENERO" />
                 <Attribute Id="DOC NOMBRE COMPLETO" />
@@ -90,63 +91,63 @@
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
-            <Shape Id="DOC NOMBRE COMPLETO 5" Expanded="false">
-              <Attributes>
-                <Attribute Id="DOC NOMBRE COMPLETO 5" />
-              </Attributes>
-              <Position x="352" y="20" />
-            </Shape>
-            <Shape Id="DOC DEPARTAMENTO 5" Expanded="false">
-              <Attributes>
-                <Attribute Id="DOC DEPARTAMENTO 5" />
-              </Attributes>
-              <Position x="685" y="20" />
-            </Shape>
-            <Shape Id="DOC FACULTAD 5" Expanded="false">
-              <Attributes>
-                <Attribute Id="DOC FACULTAD 5" />
-              </Attributes>
-              <Position x="1017" y="20" />
-            </Shape>
-            <Shape Id="DEM ESTRATO 5" Expanded="false">
-              <Attributes>
-                <Attribute Id="DEM ESTRATO 5" />
-              </Attributes>
-              <Position x="1350" y="20" />
-            </Shape>
-            <Shape Id="DEM VIVIENDA PROPIA 1" Expanded="false">
-              <Attributes>
-                <Attribute Id="DEM VIVIENDA PROPIA 1" />
-              </Attributes>
-              <Position x="1682" y="20" />
-            </Shape>
             <Shape Id="DOC NOMBRE COMPLETO 4" Expanded="false">
               <Attributes>
                 <Attribute Id="DOC NOMBRE COMPLETO 4" />
               </Attributes>
-              <Position x="352" y="68" />
+              <Position x="352" y="20" />
             </Shape>
             <Shape Id="DOC DEPARTAMENTO 4" Expanded="false">
               <Attributes>
                 <Attribute Id="DOC DEPARTAMENTO 4" />
               </Attributes>
-              <Position x="685" y="68" />
+              <Position x="685" y="20" />
             </Shape>
             <Shape Id="DOC FACULTAD 4" Expanded="false">
               <Attributes>
                 <Attribute Id="DOC FACULTAD 4" />
               </Attributes>
-              <Position x="1017" y="68" />
+              <Position x="1017" y="20" />
             </Shape>
             <Shape Id="DEM ESTRATO 3" Expanded="false">
               <Attributes>
                 <Attribute Id="DEM ESTRATO 3" />
               </Attributes>
-              <Position x="1350" y="68" />
+              <Position x="1350" y="20" />
             </Shape>
             <Shape Id="DEM MADRE CABEZA 1" Expanded="false">
               <Attributes>
                 <Attribute Id="DEM MADRE CABEZA 1" />
+              </Attributes>
+              <Position x="1682" y="20" />
+            </Shape>
+            <Shape Id="DOC NOMBRE COMPLETO 5" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC NOMBRE COMPLETO 5" />
+              </Attributes>
+              <Position x="352" y="68" />
+            </Shape>
+            <Shape Id="DOC DEPARTAMENTO 5" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC DEPARTAMENTO 5" />
+              </Attributes>
+              <Position x="685" y="68" />
+            </Shape>
+            <Shape Id="DOC FACULTAD 5" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC FACULTAD 5" />
+              </Attributes>
+              <Position x="1017" y="68" />
+            </Shape>
+            <Shape Id="DEM ESTRATO 5" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM ESTRATO 5" />
+              </Attributes>
+              <Position x="1350" y="68" />
+            </Shape>
+            <Shape Id="DEM VIVIENDA PROPIA 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM VIVIENDA PROPIA 1" />
               </Attributes>
               <Position x="1682" y="68" />
             </Shape>
@@ -245,7 +246,7 @@
       </Value>
     </Annotation>
   </Annotations>
-  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ead2aca5-d598-4672-8b03-0603beeffa28">
     <DataSourceViewID>DW Academico Labor</DataSourceViewID>
@@ -292,10 +293,6 @@
         <AttributeRelationship dwd:design-time-name="96bfe87b-aa00-4d57-a70f-393552ea6c49">
           <AttributeID>DEM ESTRATO</AttributeID>
           <Name>DEM ESTRATO_SINJERARQUIA</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="32f6c60c-63e6-46fd-8efb-1e8b997ad365">
-          <AttributeID>DEM MADRE CABEZA</AttributeID>
-          <Name>DEM MADRE CABEZA_SINJERARQUIA</Name>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="99976ab5-ffba-466b-a0a6-8fee2d434f71">
           <AttributeID>DEM NUMERO HERMANOS</AttributeID>
@@ -353,13 +350,21 @@
           <AttributeID>DOC NOMBRE COMPLETO 3</AttributeID>
           <Name>DOC NOMBRE COMPLETO_EVFDN</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7068e9d1-ca9f-4742-8c17-c7e22dc788f1">
-          <AttributeID>DOC NOMBRE COMPLETO 4</AttributeID>
-          <Name>DOC NOMBRE COMPLETO_MEFDN</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="368003f8-8a73-4f41-bf72-ea3b37328f5b">
           <AttributeID>DOC NOMBRE COMPLETO 5</AttributeID>
           <Name>DOC NOMBRE COMPLETO_VEFDN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c7d3f754-28cb-4958-92d5-f3f12822b164">
+          <AttributeID>DOC FACULTAD COMPLETA</AttributeID>
+          <Name>DOC FACULTAD COMPLETA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9c3709f6-9c9e-4839-b21d-f18e42adeef7">
+          <AttributeID>DEM MADRE CABEZA</AttributeID>
+          <Name>DEM MADRE CABEZA_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0833f3b1-08c6-4045-bdb3-ecc628b889a9">
+          <AttributeID>DOC NOMBRE COMPLETO 4</AttributeID>
+          <Name>DOC NOMBRE COMPLETO_MEFDN</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -406,29 +411,6 @@
         <Translation dwd:design-time-name="f868693e-0a48-4249-b623-9eb8fb099e27">
           <Language>9226</Language>
           <Caption>Estrato</Caption>
-        </Translation>
-      </Translations>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="f5bdd1b0-3fa9-47f5-b1ba-39e63ab94790">
-      <ID>DEM MADRE CABEZA</ID>
-      <Name>DEM MADRE CABEZA_SINJERARQUIA</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="08350acc-aa1d-47d6-97d9-70aedaad02b9">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b688235a-0281-4075-9e87-5c423d2081ad">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <Translations>
-        <Translation dwd:design-time-name="47d7b500-a3f1-4303-9b7c-9962b7d55afa">
-          <Language>9226</Language>
-          <Caption>Madre Cabeza</Caption>
         </Translation>
       </Translations>
       <OrderBy>Key</OrderBy>
@@ -681,7 +663,7 @@
       <Translations>
         <Translation dwd:design-time-name="dba65103-5e79-414d-b381-92e401aa9fb8">
           <Language>9226</Language>
-          <Caption>Facultad</Caption>
+          <Caption>Sigla Facultad</Caption>
         </Translation>
       </Translations>
       <OrderBy>Key</OrderBy>
@@ -835,70 +817,6 @@
         <AttributeRelationship dwd:design-time-name="d894ee91-d714-4c09-80eb-904981cc8ed6">
           <AttributeID>DEM ESTRATO 2</AttributeID>
           <Name>DEM ESTRATO_EVFDN</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="57880cb7-6f91-446d-8b3c-a3f5acaf8fd4">
-      <ID>DEM MADRE CABEZA 1</ID>
-      <Name>DEM MADRE CABEZA_MEFDN</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="7554ebab-82d8-40d7-b9d1-ed6287dd662e">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="05d0b8d9-9d2a-4010-9363-1993999e233e">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="922ac53c-0b38-4ab2-9952-06ea4af94a2f">
-        <DataType>WChar</DataType>
-        <DataSize>25</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="563696e7-a508-457f-9c61-9419b57b366f">
-          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-          <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="5b053f4b-8112-4c79-89dc-8bf10c7067b8">
-      <ID>DEM ESTRATO 3</ID>
-      <Name>DEM ESTRATO_MEFDN</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="6da274c5-7d21-4a09-8b3c-56092ba3b1d8">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="70eafe26-0bb1-4a52-96e2-328bb6f84160">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="51510350-c11d-4d88-8f0b-65347dfaa62a">
-          <DataType>WChar</DataType>
-          <DataSize>15</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="af021974-3c5b-4ac3-8b0a-9b960b7f855b">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_ESTRATO</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="3101d185-6428-4d5d-909a-1d08326ca729">
-        <DataType>WChar</DataType>
-        <DataSize>15</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="02988850-be1c-41cc-b34e-0ec57bf360be">
-          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-          <ColumnID>DEM_ESTRATO</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="e6d8f6f2-b566-48cf-92b4-fda85b5a08af">
-          <AttributeID>DEM MADRE CABEZA 1</AttributeID>
-          <Name>DEM MADRE CABEZA_MEFDN</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -1104,53 +1022,6 @@
         <AttributeRelationship dwd:design-time-name="68801f2e-5415-4397-9b07-7ad1fd23ad97">
           <AttributeID>DEM VIVIENDA PROPIA 2</AttributeID>
           <Name>DEM VIVIENDA PROPIA_EVFDN</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="39b717c5-9a2b-4910-ac8e-9db5f44d1fcf">
-      <ID>DOC FACULTAD 4</ID>
-      <Name>DOC FACULTAD_MEFDN</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="b4088972-28b0-4665-8830-be4ace06a0bd">
-          <DataType>WChar</DataType>
-          <DataSize>15</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d03ad0b7-54d4-4701-a3a6-e09bf4d1d08a">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_ESTRATO</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="54af4e2b-1f85-4d48-b01e-7c6df1de6cdb">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="815cf52b-edb5-4f11-8c9c-246f051f7974">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="c73a6f7f-57f4-4071-b6a9-15f0cd04a517">
-          <DataType>WChar</DataType>
-          <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8516e3ea-daff-4d71-88fb-455ec147c4ef">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DOC_FACULTAD</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="a1491d60-a771-4249-a553-0882d1194d24">
-        <DataType>WChar</DataType>
-        <DataSize>10</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="4c8251e2-17de-48fd-b09c-d93a1b99f531">
-          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-          <ColumnID>DOC_FACULTAD</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="5856ed58-ec37-4a49-9202-d6cafec9458b">
-          <AttributeID>DEM ESTRATO 3</AttributeID>
-          <Name>DEM ESTRATO_MEFDN</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -1363,61 +1234,6 @@
         <AttributeRelationship dwd:design-time-name="c89bfabc-7fbd-411b-af10-9e6ee14ebd8c">
           <AttributeID>DOC FACULTAD 3</AttributeID>
           <Name>DOC FACULTAD_EVFDN</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="8badc976-aa5b-41a6-94d5-68a4f9c77316">
-      <ID>DOC DEPARTAMENTO 4</ID>
-      <Name>DOC DEPARTAMENTO_MEFDN</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="e4102eb3-df54-4411-91be-abf2e52d1fb2">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e164fc39-2294-44ec-932d-1a882e8fea77">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="0c186b40-eb1e-4d6d-84bc-3df93cb5e382">
-          <DataType>WChar</DataType>
-          <DataSize>15</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2442a83c-1c60-4d9d-b558-beebe8457de1">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_ESTRATO</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="8844bd8e-7550-48ba-a4db-f97694109f46">
-          <DataType>WChar</DataType>
-          <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="fef3b479-6a72-4988-b1c7-2c449df6baca">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DOC_FACULTAD</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="a9ca331f-4c0f-42d9-bff5-97cb579752c8">
-          <DataType>WChar</DataType>
-          <DataSize>80</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a96e2762-45a3-4936-b640-539405999119">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="336b48ba-02dc-433a-9dfb-542933ebc04d">
-        <DataType>WChar</DataType>
-        <DataSize>80</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="bcc094e7-78ed-473a-a8b5-e1ad0a35e0fc">
-          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-          <ColumnID>DOC_DEPARTAMENTO</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="a0d41d88-b04f-4a55-985f-f4f0de3f287b">
-          <AttributeID>DOC FACULTAD 4</AttributeID>
-          <Name>DOC FACULTAD_MEFDN</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -1668,69 +1484,6 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="bec8c985-9cd0-41da-b2d3-226b1c544a11">
-      <ID>DOC NOMBRE COMPLETO 4</ID>
-      <Name>DOC NOMBRE COMPLETO_MEFDN</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="ae933720-328f-4dea-96cd-38567aea9754">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="dcf695d4-2f92-493a-bb21-391c4a4aa853">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="31ce3e43-f585-402d-8964-b4e3ee8384d8">
-          <DataType>WChar</DataType>
-          <DataSize>15</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="5fe826cf-1d99-4584-a0c3-ace3c5dbdc91">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DEM_ESTRATO</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="91f9e2d9-1eea-4df0-a107-547c6a9bf666">
-          <DataType>WChar</DataType>
-          <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b91e7ff-fd1a-4074-8a47-a41078e2042a">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DOC_FACULTAD</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="5c0576a5-c6e8-4fa6-bd2b-0002279e8473">
-          <DataType>WChar</DataType>
-          <DataSize>80</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c82f6da8-2adc-44a4-8e4f-df0022efa2e3">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="09a4fdbf-259b-4f9d-a8f7-c83d46c62eda">
-          <DataType>WChar</DataType>
-          <DataSize>120</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6aaa847-337d-47ae-beef-27a291472941">
-            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="feaf3c25-a48c-4b91-8d14-2af91cef136b">
-        <DataType>WChar</DataType>
-        <DataSize>120</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="8131e74b-004f-4de8-9b3c-6a58124c5840">
-          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
-          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="d8c3811b-1085-4472-b971-466533e0692d">
-          <AttributeID>DOC DEPARTAMENTO 4</AttributeID>
-          <Name>DOC DEPARTAMENTO_MEFDN</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
     <Attribute dwd:design-time-name="3d677ce8-7e3b-476c-be6e-7e339616feb0">
       <ID>DOC NOMBRE COMPLETO 5</ID>
       <Name>DOC NOMBRE COMPLETO_VEFDN</Name>
@@ -1833,6 +1586,299 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="577bdead-38dc-4001-a2d6-d7f6e630578d">
+      <ID>DOC FACULTAD COMPLETA</ID>
+      <Name>DOC FACULTAD COMPLETA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7573a476-6ee4-47a9-8ae5-3cd3bba3ab7f">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c2b57d3-32ee-4020-a9c7-1bfcf33c45aa">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD_COMPLETA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="2a49caad-21d5-4bb5-9c7b-8ce9a3a2a262">
+          <Language>9226</Language>
+          <Caption>Facultad Docente</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c875d4ea-f834-4a30-a572-29ea831359cd">
+      <ID>DEM MADRE CABEZA</ID>
+      <Name>DEM MADRE CABEZA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="66f504d5-7964-4053-8bd5-e79c43a1f104">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08f66b34-8a01-40d2-ad12-705095822bb4">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="90f4464f-0d0c-4217-a6aa-e21c0917a0ad">
+          <Language>9226</Language>
+          <Caption>Madre Cabeza</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e52ebb41-1039-4aa6-8b95-74d8c98f2599">
+      <ID>DEM MADRE CABEZA 1</ID>
+      <Name>DEM MADRE CABEZA_MEFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e560533a-0506-421a-9a35-9281e196cedb">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f453c91-3962-4d9b-a7e0-b304eda498dd">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="97d9e14f-039f-4e02-b0d0-19b93f74f1c6">
+      <ID>DEM ESTRATO 3</ID>
+      <Name>DEM ESTRATO_MEFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="23c883e1-04d2-4c8f-9322-c96c3d963a1e">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f58ac0f0-463f-4b8e-a40e-535821e979a6">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="403ebb30-322c-44ef-989c-8c9023a287f8">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e9d1dba8-83be-440c-a98a-ad551c8304b7">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="41292bd2-c6a7-4a70-95f8-0a7d0980e5b7">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8c9f8698-76c8-4f7e-9a9c-adb75e0b895b">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="56eb7ff4-2da2-4eb8-beab-9612ad1dfd64">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e7c18709-a74f-40a1-8b9f-724dd1cae012">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d2db78fe-2848-4a41-a624-d730bf83812a">
+          <AttributeID>DEM MADRE CABEZA 1</AttributeID>
+          <Name>DEM MADRE CABEZA_MEFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7e11cd79-5a26-4bfb-8f95-aa15f1f65521">
+      <ID>DOC FACULTAD 4</ID>
+      <Name>DOC FACULTAD_MEFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="aeb0b4a1-19b1-4721-9393-9f38d2d9e920">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="438d9660-a532-4556-8a1d-914f99f4b711">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="2784daa1-6a8f-4623-8eb5-6707f5de9c21">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53895f31-b42a-40a0-96e9-e718318cd9f1">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="173c31f1-7651-4308-b704-115da22d306f">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="14a3a67f-d6c4-4ee7-8276-6d03324d9fa2">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="14439510-4ab3-4986-a840-7ae7bd1b42e8">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9faf72e6-d45b-4de7-a9b4-b8cef72c41b4">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="cf4f757e-5437-413e-ae61-52427324704d">
+        <DataType>WChar</DataType>
+        <DataSize>11</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="4e4d3d97-afea-427c-ad7b-007fbe7c09b5">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DOC_FACULTAD</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="fba05848-8e65-4fda-84c8-8d149ea9dc7a">
+          <AttributeID>DEM ESTRATO 3</AttributeID>
+          <Name>DEM ESTRATO_MEFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="06a672ed-e7b3-4924-ac07-a54fc974973a">
+      <ID>DOC DEPARTAMENTO 4</ID>
+      <Name>DOC DEPARTAMENTO_MEFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="68e512f9-2095-4e94-b11d-61f3ba0ab111">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6e6091e0-0612-4076-ac75-f78d8606733c">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="3df5df6a-a34a-41b1-b16b-b7065b27ac2c">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c16e229c-23e4-4021-b160-856d804d85ad">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a5893d40-41ef-405e-8640-26f5336a6398">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a38a6de4-f514-42bb-9149-d7a9efeb3c89">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="7b2dd2aa-280b-48f9-ae62-260ff9b834de">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f1eebe18-c07a-46d5-b36e-66bcfa198243">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="0cadb871-99f6-4411-8b5e-e9d81a69c2fd">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1e22e862-31e2-40f0-9563-f38e3e263248">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="de7648a6-ed12-4277-9e54-4117e8987b5c">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="bfd59a7c-8fdb-469f-8d01-a2dbbabff5cf">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4eda4d13-0a69-4751-a105-9e24f0eb1345">
+          <AttributeID>DOC FACULTAD 4</AttributeID>
+          <Name>DOC FACULTAD_MEFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5aa6ed48-3e18-4723-9cce-f99ae7ce6ed7">
+      <ID>DOC NOMBRE COMPLETO 4</ID>
+      <Name>DOC NOMBRE COMPLETO_MEFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fd5ff945-780a-4009-8c24-8a2bfee00abb">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e8eaa450-e4ba-4c0a-bf14-160c84ffa443">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="634ff37a-b43c-4a4f-af55-6b7a3ba631fb">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="846b6e29-c5d7-4224-bc0a-f6aa4a1a24be">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="99b00e41-f30a-4525-882b-48c9a16acfd4">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="861b7d5a-03c8-4edd-98e3-f8280a4e189f">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="685c990f-8578-4908-8245-d78506e68288">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bc8a5a87-3a29-4dad-ba81-1fd035329eff">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="11eb6726-61b0-42e5-ab01-2b5985222722">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="422a988b-f897-4817-a23d-835cec556977">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="605087c8-9b07-4e29-8c3e-8866c5918b7d">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5c9c4cd4-f131-41f3-b3d2-a4176b486314">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="f7693dd1-124e-46d4-ae8f-c9e46bd39c0f">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="3036565e-f005-4633-8083-3ddced117e03">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3e9dca6a-f1cc-4901-b6a8-cfdf0d7c802e">
+          <AttributeID>DOC DEPARTAMENTO 4</AttributeID>
+          <Name>DOC DEPARTAMENTO_MEFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
     <Hierarchy dwd:design-time-name="e416ddd6-39cb-4c0a-8d56-c1152b13503a">
@@ -1868,7 +1914,7 @@
           <Translations>
             <Translation dwd:design-time-name="1d6435f2-5648-4d73-bb82-6e82ccb9f891">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>
@@ -1929,7 +1975,7 @@
           <Translations>
             <Translation dwd:design-time-name="a9cf5206-0adc-44f1-a289-6d59088e6a86">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>
@@ -1990,7 +2036,7 @@
           <Translations>
             <Translation dwd:design-time-name="7169b4cf-3657-49a6-861d-2731d555c05e">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>
@@ -2022,56 +2068,56 @@
       <ID>Hierarchy 1 1</ID>
       <Name>Jerarquia_MEFDN</Name>
       <Levels>
-        <Level dwd:design-time-name="8baa8f39-fdd6-4ee7-9f65-c5fa69e4cf10">
+        <Level dwd:design-time-name="d1c33465-5885-4b56-bb4b-f9696431b6c5">
           <ID>DEM MADRE CABEZA_MEFDN</ID>
           <Name>DEM MADRE CABEZA_MEFDN</Name>
           <SourceAttributeID>DEM MADRE CABEZA 1</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="fb7cde64-2656-4ca5-80a9-9e2a53922d87">
+            <Translation dwd:design-time-name="57e00814-72c8-45f9-99ef-441f4605d350">
               <Language>9226</Language>
               <Caption>Madre Cabeza</Caption>
             </Translation>
           </Translations>
         </Level>
-        <Level dwd:design-time-name="b398eb0f-e425-4376-8d3a-6cd91566b25e">
+        <Level dwd:design-time-name="9c669167-dacc-4b76-9827-96a9ed51fc31">
           <ID>DEM ESTRATO_MEFDN</ID>
           <Name>DEM ESTRATO_MEFDN</Name>
           <SourceAttributeID>DEM ESTRATO 3</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="24790933-c29b-4edb-83b2-52ebdb1f87bd">
+            <Translation dwd:design-time-name="224d4541-47a6-4d58-acf0-ac581ae1a9b2">
               <Language>9226</Language>
               <Caption>Estrato</Caption>
             </Translation>
           </Translations>
         </Level>
-        <Level dwd:design-time-name="f510c01a-3b8b-412f-bb06-d65f619269d3">
+        <Level dwd:design-time-name="3134255c-dad2-434b-a90d-1ffc9bfc93da">
           <ID>DOC FACULTAD_MEFDN</ID>
           <Name>DOC FACULTAD_MEFDN</Name>
           <SourceAttributeID>DOC FACULTAD 4</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="836dacf0-de0f-49f0-9d75-df33fd3bd260">
+            <Translation dwd:design-time-name="4d2ea88f-5225-43a2-bb37-50b9f4af5acc">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>
-        <Level dwd:design-time-name="e3885ecd-48be-4554-99ca-97456242e709">
+        <Level dwd:design-time-name="fa9e1497-52b1-4303-866c-4639f6c82abb">
           <ID>DOC DEPARTAMENTO_MEFDN</ID>
           <Name>DOC DEPARTAMENTO_MEFDN</Name>
           <SourceAttributeID>DOC DEPARTAMENTO 4</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="b518e108-daa5-4234-b2e0-cfe8869648e5">
+            <Translation dwd:design-time-name="ca835536-8e1c-430d-bdae-2c401a1db18b">
               <Language>9226</Language>
               <Caption>Departamento</Caption>
             </Translation>
           </Translations>
         </Level>
-        <Level dwd:design-time-name="31ee751b-79e2-49e3-9dfb-c51ada090def">
+        <Level dwd:design-time-name="6310e221-5f14-4831-a70a-640be708aaa8">
           <ID>DOC NOMBRE COMPLETO_MEFDN</ID>
           <Name>DOC NOMBRE COMPLETO_MEFDN</Name>
           <SourceAttributeID>DOC NOMBRE COMPLETO 4</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="25d2dec5-4c81-46e0-ac1f-9acb4e14db93">
+            <Translation dwd:design-time-name="e587841f-e0bf-4205-9a43-43726be2efbb">
               <Language>9226</Language>
               <Caption>Nombre Docente</Caption>
             </Translation>
@@ -2112,7 +2158,7 @@
           <Translations>
             <Translation dwd:design-time-name="6ef14f9c-a155-407e-ae31-a509b5041760">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>

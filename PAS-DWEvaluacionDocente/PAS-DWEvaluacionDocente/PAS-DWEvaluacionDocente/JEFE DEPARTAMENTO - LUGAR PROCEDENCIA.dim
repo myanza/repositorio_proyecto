@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-932" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6879" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-932" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6747" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="JEFE_LUGAR_PROCEDENCIA_VIEW" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4974" height="7038" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="JEFE_LUGAR_PROCEDENCIA_VIEW" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4974" height="7038" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c00006e1300007e1b0000" />
             </control>
@@ -268,6 +268,10 @@
         <AttributeRelationship dwd:design-time-name="1e0f4772-054f-4cdd-aaa6-d385e6e76488">
           <AttributeID>DOC NOMBRE COMPLETO 1 1</AttributeID>
           <Name>DOC NOMBRE COMPLETO_PDMGN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="feeba6bd-0434-4820-b1bf-82bfe84e4e7e">
+          <AttributeID>DOC FACULTAD COMPLETA</AttributeID>
+          <Name>DOC FACULTAD COMPLETA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -538,7 +542,7 @@
       <Translations>
         <Translation dwd:design-time-name="4b37f3bd-6779-499f-8d62-301f3882741e">
           <Language>9226</Language>
-          <Caption>Facultad Jefe</Caption>
+          <Caption>Sigla Facultad Jefe</Caption>
         </Translation>
       </Translations>
       <OrderBy>Key</OrderBy>
@@ -1240,6 +1244,28 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="2b631b11-9f8a-4983-89fa-7052c8595c30">
+      <ID>DOC FACULTAD COMPLETA</ID>
+      <Name>DOC FACULTAD COMPLETA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d29c9407-b0e3-4e83-a1e8-de9662feb73d">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b935166b-1eba-48f3-aa32-fed92974fb02">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD_COMPLETA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="eba058a1-8c35-4220-a8a7-55aa2e35eea7">
+          <Language>9226</Language>
+          <Caption>Facultad Jefe</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
     <Hierarchy dwd:design-time-name="4c5fd431-f0d9-49d1-a531-e850943b22eb">
@@ -1286,7 +1312,7 @@
           <Translations>
             <Translation dwd:design-time-name="f89f8543-2447-41e1-a5fa-9359dfbfeec1">
               <Language>9226</Language>
-              <Caption>Facultad</Caption>
+              <Caption>Sigla Facultad</Caption>
             </Translation>
           </Translations>
         </Level>
