@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-932" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6747" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-932" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7144" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -671,34 +671,41 @@
       <ID>DOC GENERO 1</ID>
       <Name>DOC GENERO_PDMGN</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="57318c7c-d7ac-472c-8215-725dac8d63ee">
+        <KeyColumn dwd:design-time-name="621e52c3-d09d-490f-92a7-9c8434e6818e">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bd667633-288c-4a4e-884b-e31fc3630fa1">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a2ae3224-df9c-4cab-b05f-5ab00710d149">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7d90f829-85d3-428e-819a-b4d563ef709f">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ed939a80-172c-4150-8c4a-8eb6ab3f4045">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_PAIS</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="8837de8f-42f7-42dc-92b0-225625130b98">
+        <KeyColumn dwd:design-time-name="6b785349-af42-487f-9637-0f4f829e694a">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f18bc3d5-adc1-4def-996a-a9c1526b1e6c">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4eceb5eb-f6de-4fc2-8fc8-13de4176c454">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_DEPARTAMENTO</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="84544d1d-cec0-4d69-b4bc-5d531d4d21bf">
+        <KeyColumn dwd:design-time-name="70f561ee-7161-476a-a279-fd9baffd9f33">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="97c09e39-6f0a-48bc-8dae-e986a0a2358e">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7623dc5b-fb63-4a29-9c5c-165e6969419a">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_MUNICIPIO</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="3fc03c08-66a3-442f-be08-447363d5a7fa">
+        <KeyColumn dwd:design-time-name="89ce53d8-6cfd-4daf-8944-301fccb1b78e">
           <DataType>WChar</DataType>
           <DataSize>20</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="491485bc-41ec-4de8-a514-a0a1febfe4da">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1ba2bf30-d451-4ee1-9d3c-878542489e83">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>DOC_GENERO</ColumnID>
           </Source>
@@ -954,18 +961,25 @@
       <ID>LOC DEPARTAMENTO 1 1</ID>
       <Name>LOC DEPARTAMENTO_PDMGN</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="50c52eda-8aef-4de2-addc-be18300b175a">
+        <KeyColumn dwd:design-time-name="20545225-0e20-4a92-b60c-bea2ef2b16f7">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8252d433-4be0-4fc8-be1e-a08e1b952ada">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="0c69820d-f491-4a53-b29d-4721da726c77">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="40acfa44-0202-4dfc-aef1-c3ae34864f18">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a4f32d4c-4c36-4d3c-a640-25b8e9a88fab">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_PAIS</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="e3444b12-f595-4794-a1d3-c27068c2dbe2">
+        <KeyColumn dwd:design-time-name="00617e39-4dfb-4c85-9297-dedc9794fa87">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="611c6cda-3163-4525-b357-7d7c50891418">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e2b321c4-55d9-4ed1-9b4c-0ae33d43aa81">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_DEPARTAMENTO</ColumnID>
           </Source>
@@ -1079,26 +1093,33 @@
       <ID>LOC MUNICIPIO 1 1</ID>
       <Name>LOC MUNICIPIO_PDMGN</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="4bbc1726-9fcc-4126-b60d-0f5bf0da6c5e">
+        <KeyColumn dwd:design-time-name="6c0481c9-06e9-4210-bca8-c8a550a06e6c">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5bdba89-9ee4-482e-8f5e-efe97faccfde">
+            <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="99fb1f4f-ebde-41f9-af3d-2ca57b59e6ba">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="65c96f3f-5228-4dcc-8695-5a70f96f7c02">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f20bfcae-8dc3-4f41-a8cd-95bacf848947">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_PAIS</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="0750ba32-8de3-4185-873c-f82157853fd9">
+        <KeyColumn dwd:design-time-name="ff59fcae-7958-496a-aca5-cdbff85becba">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0e3496d-0dc9-4f13-9ecd-92f19e153555">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="961ea952-f964-4bb8-b74a-0e52724f79f4">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_DEPARTAMENTO</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="b7894d65-257e-4560-bc08-f53ff4d5e854">
+        <KeyColumn dwd:design-time-name="a2e63524-28e3-434e-9479-208263597de8">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0fed86d-7df2-486d-a6b8-6b9faef57009">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="139c3361-537b-4797-b957-f262a0ca2d17">
             <TableID>DW_ACADEMICO_LABOR_JEFE_LUGAR_PROCEDENCIA_VIEW</TableID>
             <ColumnID>LOC_MUNICIPIO</ColumnID>
           </Source>
