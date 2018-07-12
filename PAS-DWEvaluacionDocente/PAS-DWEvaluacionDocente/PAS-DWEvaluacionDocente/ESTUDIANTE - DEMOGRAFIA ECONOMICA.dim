@@ -1,0 +1,1911 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4adde680-687a-4204-84ff-69b304c026b8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>ESTUDIANTE - DEMOGRAFIA ECONOMICA</ID>
+  <Name>ESTUDIANTE - DEMOGRAFIA ECONOMICA</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="317" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7038" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="EST_DEM_ECONOMICA_VIEW" left="126" top="-3624" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5953" height="11747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c000041170000e32d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>317</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4220</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>126</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-3624</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="8" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="262">
+            <Shape Id="EST ESTUDIANTE ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="EST ESTUDIANTE ID" />
+                <Attribute Id="DEM DESPLAZADO" />
+                <Attribute Id="DEM ESTRATO" />
+                <Attribute Id="DEM MADRE CABEZA 1" />
+                <Attribute Id="DEM NUMERO HERMANOS 1" />
+                <Attribute Id="DEM POSICION HERMANOS" />
+                <Attribute Id="DEM VIVIENDA PROPIA" />
+                <Attribute Id="EST ANDRES BELLO" />
+                <Attribute Id="EST BACHILLER INDIGENA" />
+                <Attribute Id="EST CAPACIDAD EXCEPCIONAL" />
+                <Attribute Id="EST CODIGO" />
+                <Attribute Id="EST CORREO" />
+                <Attribute Id="EST DIRECCION ACTUAL" />
+                <Attribute Id="EST EDAD ACTUAL" />
+                <Attribute Id="EST ENFASIS" />
+                <Attribute Id="EST FACTOR RH" />
+                <Attribute Id="EST GENERO" />
+                <Attribute Id="EST GRUPO ETNICO" />
+                <Attribute Id="EST INDICADOR INGRESO" />
+                <Attribute Id="EST INDICADOR REGIONAL" />
+                <Attribute Id="EST INSTITUCION PRIVADA" />
+                <Attribute Id="EST INSTITUCION PROCEDENCIA" />
+                <Attribute Id="EST LIBRETA MILITAR" />
+                <Attribute Id="EST NOMBRE COMPLETO" />
+                <Attribute Id="EST NUMERO CELULAR" />
+                <Attribute Id="EST NUMERO IDENTIDAD" />
+                <Attribute Id="EST NUMERO TELEFONO" />
+                <Attribute Id="EST PENSUM ACTUAL" />
+                <Attribute Id="EST PERIODO INGRESO" />
+                <Attribute Id="EST PUEBLO COMUNIDAD" />
+                <Attribute Id="EST PUESTO ADMISION" />
+                <Attribute Id="EST TIPO ADMISION" />
+                <Attribute Id="EST TIPO IDENTIFICACION" />
+                <Attribute Id="EST TIPO INSTITUCION" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="EST NOMBRE COMPLETO 4" Expanded="false">
+              <Attributes>
+                <Attribute Id="EST NOMBRE COMPLETO 4" />
+              </Attributes>
+              <Position x="352" y="20" />
+            </Shape>
+            <Shape Id="DEM ESTRATO 4" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM ESTRATO 4" />
+              </Attributes>
+              <Position x="685" y="20" />
+            </Shape>
+            <Shape Id="DEM MADRE CABEZA" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM MADRE CABEZA" />
+              </Attributes>
+              <Position x="1017" y="20" />
+            </Shape>
+            <Shape Id="EST NOMBRE COMPLETO 5" Expanded="false">
+              <Attributes>
+                <Attribute Id="EST NOMBRE COMPLETO 5" />
+              </Attributes>
+              <Position x="352" y="68" />
+            </Shape>
+            <Shape Id="DEM ESTRATO 5" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM ESTRATO 5" />
+              </Attributes>
+              <Position x="685" y="68" />
+            </Shape>
+            <Shape Id="DEM VIVIENDA PROPIA 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM VIVIENDA PROPIA 2" />
+              </Attributes>
+              <Position x="1017" y="68" />
+            </Shape>
+            <Shape Id="EST NOMBRE COMPLETO 3" Expanded="false">
+              <Attributes>
+                <Attribute Id="EST NOMBRE COMPLETO 3" />
+              </Attributes>
+              <Position x="352" y="116" />
+            </Shape>
+            <Shape Id="DEM VIVIENDA PROPIA 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM VIVIENDA PROPIA 1" />
+              </Attributes>
+              <Position x="685" y="116" />
+            </Shape>
+            <Shape Id="DEM ESTRATO 3" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM ESTRATO 3" />
+              </Attributes>
+              <Position x="1017" y="116" />
+            </Shape>
+            <Shape Id="EST NOMBRE COMPLETO 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="EST NOMBRE COMPLETO 2" />
+              </Attributes>
+              <Position x="352" y="164" />
+            </Shape>
+            <Shape Id="DEM NUMERO HERMANOS" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM NUMERO HERMANOS" />
+              </Attributes>
+              <Position x="685" y="164" />
+            </Shape>
+            <Shape Id="DEM ESTRATO 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM ESTRATO 2" />
+              </Attributes>
+              <Position x="1017" y="164" />
+            </Shape>
+            <Shape Id="EST NOMBRE COMPLETO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="EST NOMBRE COMPLETO 1" />
+              </Attributes>
+              <Position x="352" y="212" />
+            </Shape>
+            <Shape Id="DEM ESTRATO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM ESTRATO 1" />
+              </Attributes>
+              <Position x="685" y="212" />
+            </Shape>
+            <Shape Id="DEM DESPLAZADO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DEM DESPLAZADO 1" />
+              </Attributes>
+              <Position x="1017" y="212" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="66bbbe3a-ce5b-497c-8709-0e64e36de79c">
+    <DataSourceViewID>DW Academico Labor</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="c2d77d06-4663-426b-8351-40c6210c4393">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="351c5542-490e-488f-ab7b-9d563fe2be6e">
+      <ID>EST ESTUDIANTE ID</ID>
+      <Name>EST ESTUDIANTE ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d060bfef-45bc-44ce-949b-a1ef341e4bc0">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="786ec18b-572e-4717-830e-8a87f1afecf4">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_ESTUDIANTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="81584e44-7051-4636-824f-6d864c854046">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f56a965e-156c-498d-811a-892bd62faf85">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ECONOMICOS_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="bd564fc4-ecf2-4686-884c-3982b4964239">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="eb6c4bdc-66d7-4943-9bd4-7f683d6f29f1">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>EST_ESTUDIANTE_ID</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="823dde67-6720-4bf2-b1f5-504b6040aa61">
+          <AttributeID>DEM DESPLAZADO</AttributeID>
+          <Name>DEM DESPLAZADO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="085a52c5-4c2a-4155-a814-d2da73314afb">
+          <AttributeID>DEM ESTRATO</AttributeID>
+          <Name>DEM ESTRATO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="58a33dc9-5783-49d7-9d5e-80b62a657cc2">
+          <AttributeID>DEM POSICION HERMANOS</AttributeID>
+          <Name>DEM POSICION HERMANOS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ca870c3-bc66-4b3d-813a-4eee304f05bc">
+          <AttributeID>DEM VIVIENDA PROPIA</AttributeID>
+          <Name>DEM VIVIENDA PROPIA_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="bd4a1040-82e9-4a06-b6f1-dba6ee9438ea">
+          <AttributeID>EST BACHILLER INDIGENA</AttributeID>
+          <Name>EST BACHILLER INDIGENA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4fbc578d-2381-4692-8abc-d89a1af8af27">
+          <AttributeID>EST CAPACIDAD EXCEPCIONAL</AttributeID>
+          <Name>EST CAPACIDAD EXCEPCIONAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e003d014-1808-4426-af45-a7c537d6076b">
+          <AttributeID>EST CODIGO</AttributeID>
+          <Name>EST CODIGO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="77157e0d-bddf-46cf-9f71-f80743979696">
+          <AttributeID>EST CORREO</AttributeID>
+          <Name>EST CORREO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d03be2dc-0377-4304-9d26-afa37678b847">
+          <AttributeID>EST DIRECCION ACTUAL</AttributeID>
+          <Name>EST DIRECCION ACTUAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="df89283a-bb68-4396-a0e4-e949caa1f41e">
+          <AttributeID>EST ENFASIS</AttributeID>
+          <Name>EST ENFASIS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b1ac9faa-e01f-4832-bd34-8073c39e7e07">
+          <AttributeID>EST FACTOR RH</AttributeID>
+          <Name>EST FACTOR RH</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a1af27eb-0ed1-4f4a-958a-978d998773ad">
+          <AttributeID>EST GENERO</AttributeID>
+          <Name>EST GENERO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2ba95461-d2a0-4f34-b3b3-29cb9ced0701">
+          <AttributeID>EST GRUPO ETNICO</AttributeID>
+          <Name>EST GRUPO ETNICO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a3462837-b431-41b3-be7d-223823037ab0">
+          <AttributeID>EST INDICADOR INGRESO</AttributeID>
+          <Name>EST INDICADOR INGRESO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f4c13824-3ff2-4565-9668-d0302e13455d">
+          <AttributeID>EST INDICADOR REGIONAL</AttributeID>
+          <Name>EST INDICADOR REGIONAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="27699ebc-80b4-40c2-be5f-2d58f09a572d">
+          <AttributeID>EST INSTITUCION PRIVADA</AttributeID>
+          <Name>EST INSTITUCION PRIVADA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8e2f011b-a186-433d-8b49-3cebf9f22828">
+          <AttributeID>EST INSTITUCION PROCEDENCIA</AttributeID>
+          <Name>EST INSTITUCION PROCEDENCIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="afa03763-0b46-4a16-816b-b375176fa392">
+          <AttributeID>EST LIBRETA MILITAR</AttributeID>
+          <Name>EST LIBRETA MILITAR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8f03aff7-3a15-4247-912e-f100d5f6a055">
+          <AttributeID>EST NOMBRE COMPLETO</AttributeID>
+          <Name>EST NOMBRE COMPLETO_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fd2be886-e530-463f-bb04-c42ea6f2d657">
+          <AttributeID>EST NUMERO CELULAR</AttributeID>
+          <Name>EST NUMERO CELULAR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="86e0b9e0-b59f-4763-9aab-f126ba6d2874">
+          <AttributeID>EST NUMERO IDENTIDAD</AttributeID>
+          <Name>EST NUMERO IDENTIDAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2f40516d-a83a-4630-bfef-2e4b85baa58c">
+          <AttributeID>EST NUMERO TELEFONO</AttributeID>
+          <Name>EST NUMERO TELEFONO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="37244f89-f742-48b5-bba1-2f1af44fae34">
+          <AttributeID>EST PERIODO INGRESO</AttributeID>
+          <Name>EST PERIODO INGRESO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="28c33e8f-07e3-44f9-8e5a-4063dd73552c">
+          <AttributeID>EST PUEBLO COMUNIDAD</AttributeID>
+          <Name>EST PUEBLO COMUNIDAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1be8a822-edbb-4738-b13d-8bce9cb17454">
+          <AttributeID>EST PUESTO ADMISION</AttributeID>
+          <Name>EST PUESTO ADMISION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6aa9ce80-f8b8-49ea-828a-02ebf48629b8">
+          <AttributeID>EST TIPO ADMISION</AttributeID>
+          <Name>EST TIPO ADMISION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e2398155-a9e8-4525-a3b7-8fc37e753bfc">
+          <AttributeID>EST TIPO IDENTIFICACION</AttributeID>
+          <Name>EST TIPO IDENTIFICACION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7584b433-3f32-4f7b-bad1-f9e4c6627283">
+          <AttributeID>EST TIPO INSTITUCION</AttributeID>
+          <Name>EST TIPO INSTITUCION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c3b5332e-9d1e-40bf-969c-7d8d64ebf672">
+          <AttributeID>DEM NUMERO HERMANOS 1</AttributeID>
+          <Name>DEM NUMERO HERMANOS_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2245c82f-14e9-4dcf-a9fe-91274c80f1ad">
+          <AttributeID>EST NOMBRE COMPLETO 1</AttributeID>
+          <Name>EST NOMBRE COMPLETO_DEN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d7522c0c-5180-4d17-81bd-d3179020d4d5">
+          <AttributeID>EST NOMBRE COMPLETO 2</AttributeID>
+          <Name>EST NOMBRE COMPLETO_ENN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0cdfb04a-ab25-434a-a76f-7a021c52bee4">
+          <AttributeID>EST NOMBRE COMPLETO 3</AttributeID>
+          <Name>EST NOMBRE COMPLETO_EVN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6d0c319c-4b02-4561-a8db-1effd70f35f6">
+          <AttributeID>EST NOMBRE COMPLETO 5</AttributeID>
+          <Name>EST NOMBRE COMPLETO_VEN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a8671f61-bee4-46ca-8768-f3fadcdf42bb">
+          <AttributeID>EST ANDRES BELLO</AttributeID>
+          <Name>EST ANDRES BELLO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1fd5ec7e-ddee-4d30-bd1c-bb78cb7484ee">
+          <AttributeID>EST EDAD ACTUAL</AttributeID>
+          <Name>EST EDAD ACTUAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="39a0572f-1b25-4fa1-a631-92df5e5e6bf2">
+          <AttributeID>EST PENSUM ACTUAL</AttributeID>
+          <Name>EST PENSUM ACTUAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6b12b201-2a82-4b27-850f-713753ae93f1">
+          <AttributeID>DEM MADRE CABEZA 1</AttributeID>
+          <Name>DEM MADRE CABEZA_SINJERARQUIA</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fd4c6669-6025-42e6-a758-6fe98f82fa46">
+          <AttributeID>EST NOMBRE COMPLETO 4</AttributeID>
+          <Name>EST NOMBRE COMPLETO_MEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="256dfeeb-ac69-4131-b5e4-9b25ddcef5a4">
+      <ID>DEM DESPLAZADO</ID>
+      <Name>DEM DESPLAZADO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b565d914-d125-452e-9da3-86ab975b564b">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="babfe8b5-b34b-4bde-ab98-09d03a91ff12">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_DESPLAZADO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="270f3f4c-e453-4467-b347-c8c3c49c4f0c">
+          <Language>9226</Language>
+          <Caption>Desplazado</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2b8787fb-8988-4d0e-9361-ec0beffd0dcc">
+      <ID>DEM ESTRATO</ID>
+      <Name>DEM ESTRATO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fafbed24-9f92-4e34-9fd2-455e5fbc888d">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="26424447-417a-4655-af13-49172c6c2dc8">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="de788612-df6b-427f-9f31-84d17a8de288">
+          <Language>9226</Language>
+          <Caption>Estrato</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e333aa14-51e2-486a-9cec-c90accfe9649">
+      <ID>DEM NUMERO HERMANOS</ID>
+      <Name>DEM NUMERO HERMANOS_ENN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="db6526fe-8028-48dc-a58d-a3adda4b0050">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c07f744-4598-49bb-9c95-f993ce7e3b06">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="500f0eaf-df43-4f68-a7fa-be107806d599">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="77f04cdd-3b06-4fa9-9435-79fad87b56d4">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_NUMERO_HERMANOS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="a475d11d-c89a-4a33-8e6f-f2df0c87bb3f">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="bb5d98ec-1835-4c45-b447-3f1bcbe6daf0">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_NUMERO_HERMANOS</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="beea6148-9d56-4344-890b-26cad30f9e10">
+          <AttributeID>DEM ESTRATO 2</AttributeID>
+          <Name>DEM ESTRATO_ENN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7c328934-eb52-4c31-b10d-5c036e7c17fc">
+      <ID>DEM POSICION HERMANOS</ID>
+      <Name>DEM POSICION HERMANOS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="58dead42-86b4-4b91-94e6-319438459815">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="408c8993-4171-4317-83b2-5bac70a01973">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_POSICION_HERMANOS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="3fbbe113-1800-48d8-973f-fcdc30427953">
+          <Language>9226</Language>
+          <Caption>Posición Hermanps</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c64fdafd-efdc-44b3-9ddc-132a1c362e2a">
+      <ID>DEM VIVIENDA PROPIA</ID>
+      <Name>DEM VIVIENDA PROPIA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0aa95313-2322-4d98-8f84-41a874e42ba6">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9f01cea3-65dc-47d4-a04c-ac0eba044c90">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="a334bdfb-40e2-49d0-870c-390056a97e6e">
+          <Language>9226</Language>
+          <Caption>Vivienda Propia</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3fb4d9d8-04aa-4a04-831d-c997ad354be3">
+      <ID>EST BACHILLER INDIGENA</ID>
+      <Name>EST BACHILLER INDIGENA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4133f1bb-e2ac-4752-b64f-509237867f55">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="83984d20-f6aa-4a83-9a7a-aa04f5032827">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_BACHILLER_INDIGENA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="0fcb2eae-5a9b-4b46-8ab9-0a419a5c92e3">
+          <Language>9226</Language>
+          <Caption>Bachiller Indígena</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="635e58b1-0601-4439-8a41-47182a83b9b0">
+      <ID>EST CAPACIDAD EXCEPCIONAL</ID>
+      <Name>EST CAPACIDAD EXCEPCIONAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3fcf3690-bcc5-4acb-9f86-6a713ec73d98">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="95084896-9777-46a5-b151-839b4867c9fc">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_CAPACIDAD_EXCEPCIONAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="5e4742a0-a1f2-41c9-91e1-ae45c912b522">
+          <Language>9226</Language>
+          <Caption>Capacidad Excepcional</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="47d3dd3e-17b6-4f7a-8f25-8302a7f4de7c">
+      <ID>EST CODIGO</ID>
+      <Name>EST CODIGO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bbe5142f-3156-4df2-923a-a199799249ba">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96666d98-ac20-473b-bbb2-4a8ff45bb4ef">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_CODIGO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="521131f8-584f-4a51-9213-d48f4bcb7241">
+          <Language>9226</Language>
+          <Caption>Código</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b22cda1e-e497-449a-9a54-c889d4e3a9a4">
+      <ID>EST CORREO</ID>
+      <Name>EST CORREO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4251f959-4890-4d1e-a333-8ec78436c4e3">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf070edc-81d4-4d03-8030-c17005f6ab55">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_CORREO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="0fb25a24-45b2-4071-bfea-8c6eb4f49093">
+          <Language>9226</Language>
+          <Caption>Correo</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="69b21297-dc84-42cd-b12a-12208dcc6d01">
+      <ID>EST DIRECCION ACTUAL</ID>
+      <Name>EST DIRECCION ACTUAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1cc035ac-8c04-4f02-a6c7-68ae537158de">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0fa70c1e-7ad5-4449-8314-b29bb59b3f7d">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_DIRECCION_ACTUAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="73c69fd2-ecf2-486d-b29a-eb5ac3a04296">
+          <Language>9226</Language>
+          <Caption>Dirección Actual</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3753a64e-c1f7-4158-9a89-bd47c1750ac7">
+      <ID>EST ENFASIS</ID>
+      <Name>EST ENFASIS</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1bd94977-1e8c-455a-9292-d6b01544c599">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3840705f-9eb4-47c5-a145-dab9b0f05017">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_ENFASIS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="531dbf26-08bd-48e2-adac-6ccada06aa15">
+          <Language>9226</Language>
+          <Caption>Énfasis</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7f58ca9a-aa6f-4d42-99c4-7b4f119f1edf">
+      <ID>EST FACTOR RH</ID>
+      <Name>EST FACTOR RH</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f9b1571e-46e5-4b4a-a311-e041dae1b76b">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00542948-486f-49c0-86cb-c473bee28237">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_FACTOR_RH</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="d5bfdd54-63ae-48fa-8daa-89457d6905c9">
+          <Language>9226</Language>
+          <Caption>Factor RH</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="70f36fc3-f13a-4ebf-a2f8-50d4b2de7950">
+      <ID>EST GENERO</ID>
+      <Name>EST GENERO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5de071ae-cb8d-47e2-9ceb-3a28b800cdc9">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a5977e02-94bc-402c-bf74-71b236afe3df">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_GENERO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="7184fbdd-44d7-473e-940f-b540f3e61bdb">
+          <Language>9226</Language>
+          <Caption>Género</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e0f56a23-5736-4945-aa89-f9deb7f1f562">
+      <ID>EST GRUPO ETNICO</ID>
+      <Name>EST GRUPO ETNICO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e9b8fbe5-aaa7-4c99-beaa-4873346836f5">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c06eb70-5d60-4072-a70a-058a3b8b823c">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_GRUPO_ETNICO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="06dd6cf8-7030-429a-92a6-7ffc76ec728c">
+          <Language>9226</Language>
+          <Caption>Grupo Étnico</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="752193ee-675b-40cc-b005-8d0f153a0d2e">
+      <ID>EST INDICADOR INGRESO</ID>
+      <Name>EST INDICADOR INGRESO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7a263bde-a130-4fcb-8b6a-e7cf8271d9ce">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6fb97e2d-74d3-4578-869d-99881053c915">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_INDICADOR_INGRESO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="07a28262-d885-4556-93ec-d443f7215ed5">
+          <Language>9226</Language>
+          <Caption>Indicador Ingreso</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="449f8ec2-61d1-4074-9b65-71f35b872e17">
+      <ID>EST INDICADOR REGIONAL</ID>
+      <Name>EST INDICADOR REGIONAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f82cab2b-08a1-4c5d-9b1f-94f6ad26df2f">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="aa8ab737-710b-4986-a36f-9862380af457">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_INDICADOR_REGIONAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="1eab1c34-0e2f-4e69-a328-42a7062c97cf">
+          <Language>9226</Language>
+          <Caption>Indicador Regional</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7a0af278-d1de-48ac-8344-efe19b74809f">
+      <ID>EST INSTITUCION PRIVADA</ID>
+      <Name>EST INSTITUCION PRIVADA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="66cab491-801b-4d7c-8de5-7aafd73f0af6">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2b47ad90-b8ec-4788-8699-6dea5f92e8d8">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_INSTITUCION_PRIVADA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="d5370e55-b4bc-4afb-8094-73416287a5fc">
+          <Language>9226</Language>
+          <Caption>Institución Privada</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="798368d8-1580-4dc9-abe6-d2ec2f427a6f">
+      <ID>EST INSTITUCION PROCEDENCIA</ID>
+      <Name>EST INSTITUCION PROCEDENCIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="52895e3b-7d37-4aaf-9a2a-56c58c7e84cd">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5edffa4b-33e0-4677-a305-5c5cb8a05933">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_INSTITUCION_PROCEDENCIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="f2050543-4d6b-4d66-8c11-164761345f09">
+          <Language>9226</Language>
+          <Caption>Institución Procedencia</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="19bb965f-ddc5-4510-a08b-a3a106f9a16a">
+      <ID>EST LIBRETA MILITAR</ID>
+      <Name>EST LIBRETA MILITAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74a46188-8786-4c9d-a5f6-b614e3dfb612">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="28615f59-d39e-451d-bc80-777e7004274b">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_LIBRETA_MILITAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="ed711168-1017-491b-96dc-a36595fa5e2a">
+          <Language>9226</Language>
+          <Caption>Libreta Militar</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1e0c9173-7ff3-4602-92de-ac29ca74c869">
+      <ID>EST NOMBRE COMPLETO</ID>
+      <Name>EST NOMBRE COMPLETO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="749256cf-cdd5-4b86-a362-1caf3c7fcc2c">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a9b8e428-0521-40db-906a-a0e4add30882">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="8cde9f2d-4250-4858-93fd-c454a2c4b361">
+          <Language>9226</Language>
+          <Caption>Nombre Estudiante</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d6d60c16-714b-40b9-a232-746ea5f19f39">
+      <ID>EST NUMERO CELULAR</ID>
+      <Name>EST NUMERO CELULAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8875efe9-a822-479e-8c8d-9af37088ebe4">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20480e1e-5b44-4558-8f4e-384e4e8c5b29">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NUMERO_CELULAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="9e34ad77-8818-43d4-bbd5-e21dd4fb8bae">
+          <Language>9226</Language>
+          <Caption>Celular</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a5aae343-0036-41cb-8b1b-ddd3d9213ca0">
+      <ID>EST NUMERO IDENTIDAD</ID>
+      <Name>EST NUMERO IDENTIDAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d7f64808-3d1a-4af7-8a92-7144c5f27ad0">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7b1eba6-ccbe-46d4-aeb8-1f6b663eab37">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NUMERO_IDENTIDAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="3d26a358-c9a9-45c3-ad0f-43788016ceac">
+          <Language>9226</Language>
+          <Caption>Número Identidad</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c7f890dc-9e15-487e-b9dc-8200375a2492">
+      <ID>EST NUMERO TELEFONO</ID>
+      <Name>EST NUMERO TELEFONO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c9550a88-5624-41f5-8420-31fb27b90288">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="88f123c6-6d9b-4dd9-b111-be661b5cc32e">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NUMERO_TELEFONO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="3b556b9e-8d16-4e7e-a50c-2d6a131fef8d">
+          <Language>9226</Language>
+          <Caption>Teléfono</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="939d1a58-1361-46e7-a8be-02507e8afc5d">
+      <ID>EST PERIODO INGRESO</ID>
+      <Name>EST PERIODO INGRESO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b89e8590-f497-477c-bb1a-21ccca62af06">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5d5fb88e-ba3c-4b23-9ba6-0e2e1019fc89">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_PERIODO_INGRESO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="e27bc27b-57bf-47d9-857e-8d6c9a4bc956">
+          <Language>9226</Language>
+          <Caption>Periodo Ingreso</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="27054f48-e80d-4ced-8112-a859c08a7abf">
+      <ID>EST PUEBLO COMUNIDAD</ID>
+      <Name>EST PUEBLO COMUNIDAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="beb16460-469d-483f-b030-ceb57c197575">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="14ada7f9-1762-474f-8715-8709d0425b5c">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_PUEBLO_COMUNIDAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="092e49ff-6650-4efd-8b0d-2b4e91b3b862">
+          <Language>9226</Language>
+          <Caption>Pueblo o Comunidad</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f088557-4731-41e3-8740-8e728bf3197c">
+      <ID>EST PUESTO ADMISION</ID>
+      <Name>EST PUESTO ADMISION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e69ab5c7-5eeb-4f61-a785-ec414f3ea802">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2d30a600-50c8-4266-b52f-934077b294d4">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_PUESTO_ADMISION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="fbbcd49c-39d8-4d14-b2ea-8336581a94b1">
+          <Language>9226</Language>
+          <Caption>Puesto Admisión</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="99d67449-56e8-4b87-96cb-ef117cfc83a1">
+      <ID>EST TIPO ADMISION</ID>
+      <Name>EST TIPO ADMISION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cdfec9c7-2cbc-46a5-821c-6de423ed3973">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e281ad2b-826b-4d1c-a084-e57a739d06b9">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_TIPO_ADMISION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="51eb6b92-e946-4465-9696-7b71d6af4d6d">
+          <Language>9226</Language>
+          <Caption>Tipo Admisión</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d38e32e9-f9db-4994-aec9-d4fd638611bc">
+      <ID>EST TIPO IDENTIFICACION</ID>
+      <Name>EST TIPO IDENTIFICACION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="27d03c9e-67a7-4223-87e3-33717ec334e9">
+          <DataType>WChar</DataType>
+          <DataSize>40</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00453743-d005-4fff-8bdb-39c0ba05ec0f">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_TIPO_IDENTIFICACION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="731c06fb-7343-4803-94fb-d5ed8cb1aa1e">
+          <Language>9226</Language>
+          <Caption>Tipo Identificación</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e01bff55-9153-4da5-9b37-82b88bd95021">
+      <ID>EST TIPO INSTITUCION</ID>
+      <Name>EST TIPO INSTITUCION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a552056d-44c8-4db4-91a8-74cfcb8f57b8">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3254b0c1-1fb9-4f40-9764-18b4a2983f71">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_TIPO_INSTITUCION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="d8ebd395-46d3-4a33-b5f9-c18a4afbd234">
+          <Language>9226</Language>
+          <Caption>Tipo Institución</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0734d698-d7b3-42da-a555-83166cb91dfe">
+      <ID>DEM DESPLAZADO 1</ID>
+      <Name>DEM DESPLAZADO_DEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="58800517-04ec-4295-a770-955af64e39c5">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b4eebb55-e3cf-45c8-9a85-d635c9bcdc7c">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_DESPLAZADO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="82da9be0-7e2f-432d-8aa4-eced2957a89a">
+        <DataType>WChar</DataType>
+        <DataSize>25</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0ab8cc27-992b-42de-9aed-68eee0c07674">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_DESPLAZADO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="072c15d0-e985-465f-920d-37f87868a2ed">
+      <ID>DEM ESTRATO 1</ID>
+      <Name>DEM ESTRATO_DEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6ad6ce7-cdad-4c69-9236-f89529616a45">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6693fb3c-c3dd-42ed-b15b-26a59ad5544f">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_DESPLAZADO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="088db43f-5922-478f-8fc3-74b53c2cefee">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2d94f7fa-498c-43fb-9319-ab5a088d9319">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="be016fe1-7d48-48b9-8a56-00a1be4e9058">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0525de18-8949-4de4-ade0-7fef86a43a49">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="3f5e6913-601d-4dff-bacc-53d597b89b70">
+          <AttributeID>DEM DESPLAZADO 1</AttributeID>
+          <Name>DEM DESPLAZADO_DEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="770c3ea7-2414-4e19-aee0-bf3b907edd1c">
+      <ID>DEM ESTRATO 2</ID>
+      <Name>DEM ESTRATO_ENN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6b256e66-6876-4482-b12d-dc38d88a859c">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8035d7cc-044d-40a8-9db3-eda91ac55ffc">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="42ccb456-a0ba-49c8-9ab1-7e9dabd5b493">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="35d103f7-22fe-4b34-89ea-4d594ee7ed08">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b6040d34-7de5-4b32-824c-ede59def6454">
+      <ID>DEM ESTRATO 3</ID>
+      <Name>DEM ESTRATO_EVN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b8a2d140-a09f-4aa8-b3ea-4701f8f5966b">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d7ac954e-b582-48be-b9e0-a10c8017cda9">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7c702fda-91e5-420c-b73d-19c5125f5e6b">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5e234799-9ea1-4420-911e-766115fd3d39">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a0c19ec4-6566-4e6a-968b-0c800efe39f4">
+      <ID>DEM ESTRATO 5</ID>
+      <Name>DEM ESTRATO_VEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a4f53060-9622-458a-ba99-fc1fb49c9ce9">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b8edd819-9af0-4f87-93c6-1544758a014d">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="986ec590-6dbb-403f-bd7c-83bcc5de6afd">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="96bf0b17-f4b0-43d6-86c2-cf9dd8239004">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6a24a3a4-89ff-4b5c-a70d-5358f93bb26e">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="636ac747-2542-428d-99c6-928159f787ef">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f6d4697a-ce0c-42cd-9dde-5d2f773404db">
+          <AttributeID>DEM VIVIENDA PROPIA 2</AttributeID>
+          <Name>DEM VIVIENDA PROPIA_VEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d04182da-152a-4042-9e10-c408dc579ad2">
+      <ID>DEM NUMERO HERMANOS 1</ID>
+      <Name>DEM NUMERO HERMANOS_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="73b1e3be-d79c-4cd1-992d-1bdd38c43e85">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e1981e4c-aaba-46e5-8b0b-e132a091be0f">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_NUMERO_HERMANOS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="2de28398-ab2b-4f8d-b742-cb065ec2a3fd">
+          <Language>9226</Language>
+          <Caption>Número Hermanos</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="63cdba61-2c27-4b2f-84db-1b4ddf1ce364">
+      <ID>DEM VIVIENDA PROPIA 1</ID>
+      <Name>DEM VIVIENDA PROPIA_EVN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9d55650d-9e53-431f-bcbe-4c8765e1ca8b">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f038d931-1ed6-416d-a787-2592d5de54e0">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="cf770bca-dd42-4884-b647-4064d586db06">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e6f934e3-c5c4-437f-b40f-26b690bb5acf">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="df7630a6-8bf5-4b6e-a640-7041e0ba352c">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="480b0564-30ac-4bc5-9e35-eeb7e1880a60">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1fc7e42c-427f-4e62-8c33-b83132a5b716">
+          <AttributeID>DEM ESTRATO 3</AttributeID>
+          <Name>DEM ESTRATO_EVN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c9b7229c-84ad-4132-9a3f-aeee79b15fa8">
+      <ID>DEM VIVIENDA PROPIA 2</ID>
+      <Name>DEM VIVIENDA PROPIA_VEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f90f155-a912-4d6c-b17e-fba6b05261aa">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb026ea0-dc87-41a7-9203-02fdee0a16a2">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="ba5a5310-73d3-46a3-a912-9d6a4b93e706">
+        <DataType>WChar</DataType>
+        <DataSize>30</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d4ff860d-4003-4a12-9f6a-ce0e4edbfa86">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1a2588e3-4e21-4049-956a-53d8a653d160">
+      <ID>EST NOMBRE COMPLETO 1</ID>
+      <Name>EST NOMBRE COMPLETO_DEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b5b1438a-c680-400f-a010-27d22069e3a3">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f11dd90d-5966-4a0a-aced-39fb983bcee5">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_DESPLAZADO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="026008a1-fbf1-4aee-b133-df0ffce9aec1">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e504eced-4f33-478b-a86c-5628ae0eeb7a">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ccce73fd-a948-40ce-864f-0676b0177487">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c6d9e76c-0946-4ce6-9b1d-3b2243ab8880">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="220a51da-abee-4422-8ee8-4b21833f387d">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f31d2803-58b8-45ae-b8a9-d0288e5c6d0d">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1ccabb46-5cc0-4997-93a6-f3c6bedde5d5">
+          <AttributeID>DEM ESTRATO 1</AttributeID>
+          <Name>DEM ESTRATO_DEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bad9b7c5-da79-4b02-bd0f-2ff9513217aa">
+      <ID>EST NOMBRE COMPLETO 2</ID>
+      <Name>EST NOMBRE COMPLETO_ENN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="16bb945a-7b8c-46c6-97f4-329cb362fcbd">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="48d0d9f4-85ce-4970-889e-014028993417">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="50a181cf-2c76-487e-b692-834b0833a7d5">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3aedc5d6-e67a-4e45-b452-c5fee616390e">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_NUMERO_HERMANOS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="58d3961b-cdd1-47c9-8486-db78e25fa057">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="902938e9-b1a4-400b-a9fe-d7293a69cadc">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0debbea7-e8cf-440e-bfaf-0cfa01d2bcb2">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="32172227-a8b7-485a-90b8-ba0f0785407b">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="06f159c9-9a11-48c4-ba64-a475e2a02a50">
+          <AttributeID>DEM NUMERO HERMANOS</AttributeID>
+          <Name>DEM NUMERO HERMANOS_ENN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b2f85b7b-7be3-4789-9941-b84aebe93e11">
+      <ID>EST NOMBRE COMPLETO 3</ID>
+      <Name>EST NOMBRE COMPLETO_EVN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="74b164a8-a091-4dba-89c4-c227787fee51">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bbaeb25c-4f35-4851-887b-b7b6a9a9e514">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="77190458-ef71-4400-8320-910823a99106">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="06a3ec28-bbaf-4bf8-8ec9-7a6a124c8358">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="36ecc6f1-c1df-4b56-babf-f63156cd3572">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0069433e-607d-4440-b7cf-e30982020986">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="870c1e66-41ea-4fa9-86f0-562c4fb18c10">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="52cbe78b-9d7b-4c7b-beee-518b4f648742">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="838f0d89-f67a-4ecc-8c53-44d2bb933e48">
+          <AttributeID>DEM VIVIENDA PROPIA 1</AttributeID>
+          <Name>DEM VIVIENDA PROPIA_EVN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="90c51731-e79e-4b13-a99b-8a62477b583d">
+      <ID>EST NOMBRE COMPLETO 5</ID>
+      <Name>EST NOMBRE COMPLETO_VEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="816cffca-d7ed-448c-aa5d-cec925cbbbcf">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0ed2f3d1-0748-4cd8-b29e-9b23ddef4c6f">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="1d784b65-ce51-4d25-9f47-97959e073485">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="430d6701-a38d-4f0e-9404-0b4c38402a81">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="5a2f6fd9-0616-4914-b0d5-88984eea2421">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="38aad527-6d53-417e-9772-407178cc156e">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b1a27b24-d86f-45e5-bb49-adf8414d9715">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5d1cfbcb-2575-40cc-9b23-d38a00b81b50">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="9a6db41d-c77b-415d-9b9c-cca5b485c88c">
+          <AttributeID>DEM ESTRATO 5</AttributeID>
+          <Name>DEM ESTRATO_VEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="826c595f-cdf2-4f50-8308-f2a2a1e44a2b">
+      <ID>DEM MADRE CABEZA</ID>
+      <Name>DEM MADRE CABEZA_MEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="761d2fe8-6fb4-4cfe-b102-eaf6cdbd2dd7">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9d8e8431-22a3-477e-8e75-457c0c255cab">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="807785b7-7fe0-46d0-a6ba-ba8df7fb7bce">
+      <ID>EST ANDRES BELLO</ID>
+      <Name>EST ANDRES BELLO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fe74b320-9fcf-42d7-992f-375e567ccefa">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1aa90c52-0ca0-4c3c-95e5-e9350aea344a">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_ANDRES_BELLO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="be9d5687-5179-47ab-832c-d38425b8db90">
+          <Language>9226</Language>
+          <Caption>Andres Bello</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="515c9509-70aa-4908-8d1c-62c2e6653c6c">
+      <ID>EST EDAD ACTUAL</ID>
+      <Name>EST EDAD ACTUAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9f217459-f4f8-4f2d-84b9-169403f2c92c">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c865ac9-2529-4996-af66-53cefe7f043f">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_EDAD_ACTUAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="07d5a942-2197-49a5-a5ba-611d7ff5ec14">
+          <Language>9226</Language>
+          <Caption>Edad Actual</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e0eb17d9-7c45-46a6-bfb7-ef6fda067c8c">
+      <ID>EST PENSUM ACTUAL</ID>
+      <Name>EST PENSUM ACTUAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dcb3cec3-0c4e-4bbf-97db-98797084165f">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="15da7f7e-a57a-4f0c-b959-c60d748b1448">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_PENSUM_ACTUAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="5d12f293-fb94-4c04-87bc-76173450c85d">
+          <Language>9226</Language>
+          <Caption>Pensum Actual</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="056c84a7-9c17-41da-8c01-3713b17bb20a">
+      <ID>DEM MADRE CABEZA 1</ID>
+      <Name>DEM MADRE CABEZA_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d57ce2d-9245-4b25-b810-fba38b80eaf2">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e7b0973b-e77d-43d4-8b20-94f6222edb54">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="4becdfa0-7658-4416-b722-4149e682a957">
+          <Language>9226</Language>
+          <Caption>Madre Cabeza</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5b220824-800f-404d-b521-92d7115c731c">
+      <ID>DEM ESTRATO 4</ID>
+      <Name>DEM ESTRATO_MEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f6661ca1-2ebe-46a0-bf51-b2d61503b41d">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f2c4bb3a-01b5-40de-a2ce-11e35f884b86">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_ESTUDIANTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="4397006b-e8f4-4f54-9798-2d4b073a03e1">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c7e83e95-e68f-4abb-8ba5-daca322b47b0">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_MADRE_CABEZA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="18526e9f-56cb-4e4c-a1c5-d25df407fb7b">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d996088c-9f22-4b9b-90fa-78dbf680a477">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="c5997538-f781-445d-89c9-eb965753c776">
+        <DataType>WChar</DataType>
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="37d51d73-0165-43e4-a1f9-47418fc24892">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>DEM_ESTRATO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="22084070-69ce-4bbc-9ed4-817a3ee0ab28">
+          <AttributeID>DEM MADRE CABEZA</AttributeID>
+          <Name>DEM MADRE CABEZA_MEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ba3e343b-b8bf-451a-bd4f-6373f0309aef">
+      <ID>EST NOMBRE COMPLETO 4</ID>
+      <Name>EST NOMBRE COMPLETO_MEN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7eb8d53d-1b90-4afd-83df-e779a1ca7f8a">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16210f10-ad20-4375-8b70-2e2f38b9d0bf">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_VIVIENDA_PROPIA</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="8eaa887b-33ac-43a9-a911-11ac97099576">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b9ac5308-ff41-4128-87d7-dfc3f61fafc9">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>DEM_ESTRATO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="a073a122-c1d3-4174-941e-33904f73bab3">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dfb7aad6-bb76-412b-aa80-9af47c04dae5">
+            <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+            <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="7a909b73-040c-4542-a390-e2ef2bd4aac1">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="aed5757f-0284-4506-9623-2af004c50ff0">
+          <TableID>DW_ACADEMICO_LABOR_EST_DEM_ECONOMICA_VIEW</TableID>
+          <ColumnID>EST_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="75dede9f-0888-4b6a-bdb9-87bad4bb7523">
+          <AttributeID>DEM ESTRATO 4</AttributeID>
+          <Name>DEM ESTRATO_MEN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="cb9c8eb6-6ab8-48ec-a7af-0319e1b28f52">
+      <ID>Hierarchy</ID>
+      <Name>Jerarquia_DEN</Name>
+      <Levels>
+        <Level dwd:design-time-name="012f98c3-1cd9-4137-a571-1a2dc657ac59">
+          <ID>DEM DESPLAZADO_DEN</ID>
+          <Name>DEM DESPLAZADO_DEN</Name>
+          <SourceAttributeID>DEM DESPLAZADO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="df006644-87bd-4a12-952d-06b0a4f8cb8b">
+              <Language>9226</Language>
+              <Caption>Desplazado</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="dea29f21-dbc8-4973-8754-adf18c8cb9c5">
+          <ID>DEM ESTRATO_DEN</ID>
+          <Name>DEM ESTRATO_DEN</Name>
+          <SourceAttributeID>DEM ESTRATO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="516ad4ae-b922-4810-b18a-9278254bea97">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="cb9cb60a-d18d-4c0e-8cbc-f2725f016b37">
+          <ID>EST NOMBRE COMPLETO_DEN</ID>
+          <Name>EST NOMBRE COMPLETO_DEN</Name>
+          <SourceAttributeID>EST NOMBRE COMPLETO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="9b99a8a4-454d-431c-bb98-ed89a29e7f7a">
+              <Language>9226</Language>
+              <Caption>Nombre Estudiante</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="93937d8e-8476-48b5-a01f-f79705f7c346">
+      <ID>Hierarchy 1</ID>
+      <Name>Jerarquia_ENN</Name>
+      <Levels>
+        <Level dwd:design-time-name="0da97c96-4acc-4645-9fd8-0177fd82517b">
+          <ID>DEM ESTRATO_ENN</ID>
+          <Name>DEM ESTRATO_ENN</Name>
+          <SourceAttributeID>DEM ESTRATO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="9aa00923-bdee-4d68-9846-4ebb6501aaeb">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="d3bd26eb-4b99-44f4-91bb-350e86004c05">
+          <ID>DEM NUMERO HERMANOS_ENN</ID>
+          <Name>DEM NUMERO HERMANOS_ENN</Name>
+          <SourceAttributeID>DEM NUMERO HERMANOS</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="d8d5d5d2-f17e-48d4-9533-9e48de11cd8c">
+              <Language>9226</Language>
+              <Caption>Número Hermanos</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="8e1ceeaf-68e0-419b-b2eb-d51fd40b99d9">
+          <ID>EST NOMBRE COMPLETO_ENN</ID>
+          <Name>EST NOMBRE COMPLETO_ENN</Name>
+          <SourceAttributeID>EST NOMBRE COMPLETO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="f60ec5b2-4cbf-48bf-8ca6-819815dd06eb">
+              <Language>9226</Language>
+              <Caption>Nombre Estudiante</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="40b6e68d-183e-4e16-8467-55abf50166ae">
+      <ID>Hierarchy 2</ID>
+      <Name>Jerarquia_EVN</Name>
+      <Levels>
+        <Level dwd:design-time-name="061ada53-70dd-4058-9a67-556119050fc6">
+          <ID>DEM ESTRATO_EVN</ID>
+          <Name>DEM ESTRATO_EVN</Name>
+          <SourceAttributeID>DEM ESTRATO 3</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="4a5b4465-51f3-43ee-aaba-7c4117994a58">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="87fbc80f-c38b-4d6f-8708-da81cb95855d">
+          <ID>DEM VIVIENDA PROPIA_EVN</ID>
+          <Name>DEM VIVIENDA PROPIA_EVN</Name>
+          <SourceAttributeID>DEM VIVIENDA PROPIA 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="afa5f496-9043-48d3-ac5b-a28ab5c758cc">
+              <Language>9226</Language>
+              <Caption>Vivienda Propia</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="6a52a789-dcfb-41ca-927c-40cb323a83d2">
+          <ID>EST NOMBRE COMPLETO_EVN</ID>
+          <Name>EST NOMBRE COMPLETO_EVN</Name>
+          <SourceAttributeID>EST NOMBRE COMPLETO 3</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="dc68fe99-6075-4c75-a047-0af522a6a546">
+              <Language>9226</Language>
+              <Caption>Nombre Estudiante</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="29775f54-e59a-4792-afca-f23c237fb2ad">
+      <ID>Hierarchy 3</ID>
+      <Name>Jerarquia_MEN</Name>
+      <Levels>
+        <Level dwd:design-time-name="5797b82b-7ded-4a73-b702-9d8a15aa301a">
+          <ID>DEM MADRE CABEZA_MEN</ID>
+          <Name>DEM MADRE CABEZA_MEN</Name>
+          <SourceAttributeID>DEM MADRE CABEZA</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="75086e72-b423-4732-a1eb-1bde5dd799a5">
+              <Language>9226</Language>
+              <Caption>Madre Cabeza</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="313dc6cc-4a01-457c-b406-829e0a1ded9f">
+          <ID>DEM ESTRATO_MEN</ID>
+          <Name>DEM ESTRATO_MEN</Name>
+          <SourceAttributeID>DEM ESTRATO 4</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="88655157-76d6-47f8-b2e9-c51f5a773c0f">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="b37ed617-ca75-440b-a126-2d34e211bd35">
+          <ID>EST NOMBRE COMPLETO_MEN</ID>
+          <Name>EST NOMBRE COMPLETO_MEN</Name>
+          <SourceAttributeID>EST NOMBRE COMPLETO 4</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="3e50e180-a684-4bb2-bd4d-a9ee01ef6f78">
+              <Language>9226</Language>
+              <Caption>Nombre Estudiante</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="59ebcf25-e404-4f07-b13a-0a6a0a15fbe8">
+      <ID>Hierarchy 4</ID>
+      <Name>Jerarquia_VEN</Name>
+      <Levels>
+        <Level dwd:design-time-name="4d86451c-2023-4ffc-8dd0-490e389d466f">
+          <ID>DEM VIVIENDA PROPIA_VEN</ID>
+          <Name>DEM VIVIENDA PROPIA_VEN</Name>
+          <SourceAttributeID>DEM VIVIENDA PROPIA 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="164b7459-d32e-4493-a6da-5ed1e3affc17">
+              <Language>9226</Language>
+              <Caption>Vivienda Propia</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="83ef6b29-fcda-46c1-883c-f47020b47c2e">
+          <ID>DEM ESTRATO_VEN</ID>
+          <Name>DEM ESTRATO_VEN</Name>
+          <SourceAttributeID>DEM ESTRATO 5</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="012c6e2e-7c39-4263-b4fe-a7375e88bd13">
+              <Language>9226</Language>
+              <Caption>Estrato</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="ce9b9f9d-7a94-42a0-8be2-cef9d14b4a8c">
+          <ID>EST NOMBRE COMPLETO_VEN</ID>
+          <Name>EST NOMBRE COMPLETO_VEN</Name>
+          <SourceAttributeID>EST NOMBRE COMPLETO 5</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1daf1a74-f98c-4e54-b26f-e55cbc36869e">
+              <Language>9226</Language>
+              <Caption>Nombre Estudiante</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

@@ -1,0 +1,1440 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="92b05179-f7b7-4410-abe3-3c410d70b6ca" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DOCENTE - LUGAR NACIMIENTO</ID>
+  <Name>DOCENTE - LUGAR NACIMIENTO</Name>
+  <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1223" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6747" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE_LUGAR_NACIMIENTO_VIEW" left="20" top="-344" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4974" height="7249" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000c00006e130000511c0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1223</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4220</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-344</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="202" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="260">
+            <Shape Id="DOC DOCENTE ID" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC DOCENTE ID" />
+                <Attribute Id="DOC CELULAR" />
+                <Attribute Id="DOC CORREO" />
+                <Attribute Id="DOC DEPARTAMENTO" />
+                <Attribute Id="DOC FACULTAD" />
+                <Attribute Id="DOC GENERO" />
+                <Attribute Id="DOC NOMBRE COMPLETO" />
+                <Attribute Id="DOC NUMERO IDENTIDAD" />
+                <Attribute Id="DOC NUMERO TELEFONO" />
+                <Attribute Id="LOC DEPARTAMENTO" />
+                <Attribute Id="LOC LOCALIZACION ID" />
+                <Attribute Id="LOC MUNICIPIO" />
+                <Attribute Id="LOC PAIS" />
+              </Attributes>
+              <Position x="222" y="20" />
+            </Shape>
+            <Shape Id="DOC NOMBRE COMPLETO 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC NOMBRE COMPLETO 2" />
+              </Attributes>
+              <Position x="552" y="20" />
+            </Shape>
+            <Shape Id="DOC DEPARTAMENTO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC DEPARTAMENTO 1" />
+              </Attributes>
+              <Position x="882" y="20" />
+            </Shape>
+            <Shape Id="DOC FACULTAD 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC FACULTAD 1" />
+              </Attributes>
+              <Position x="1212" y="20" />
+            </Shape>
+            <Shape Id="LOC MUNICIPIO 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC MUNICIPIO 2" />
+              </Attributes>
+              <Position x="1542" y="20" />
+            </Shape>
+            <Shape Id="LOC DEPARTAMENTO 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC DEPARTAMENTO 2" />
+              </Attributes>
+              <Position x="1872" y="20" />
+            </Shape>
+            <Shape Id="LOC PAIS 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC PAIS 2" />
+              </Attributes>
+              <Position x="2202" y="20" />
+            </Shape>
+            <Shape Id="DOC NOMBRE COMPLETO 1 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC NOMBRE COMPLETO 1 1" />
+              </Attributes>
+              <Position x="552" y="68" />
+            </Shape>
+            <Shape Id="LOC MUNICIPIO 1 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC MUNICIPIO 1 1" />
+              </Attributes>
+              <Position x="882" y="68" />
+            </Shape>
+            <Shape Id="LOC DEPARTAMENTO 1 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC DEPARTAMENTO 1 1" />
+              </Attributes>
+              <Position x="1212" y="68" />
+            </Shape>
+            <Shape Id="LOC PAIS 1 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC PAIS 1 1" />
+              </Attributes>
+              <Position x="1542" y="68" />
+            </Shape>
+            <Shape Id="DOC NOMBRE COMPLETO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC NOMBRE COMPLETO 1" />
+              </Attributes>
+              <Position x="552" y="116" />
+            </Shape>
+            <Shape Id="DOC GENERO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="DOC GENERO 1" />
+              </Attributes>
+              <Position x="882" y="116" />
+            </Shape>
+            <Shape Id="LOC MUNICIPIO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC MUNICIPIO 1" />
+              </Attributes>
+              <Position x="1212" y="116" />
+            </Shape>
+            <Shape Id="LOC DEPARTAMENTO 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC DEPARTAMENTO 1" />
+              </Attributes>
+              <Position x="1542" y="116" />
+            </Shape>
+            <Shape Id="LOC PAIS 1" Expanded="false">
+              <Attributes>
+                <Attribute Id="LOC PAIS 1" />
+              </Attributes>
+              <Position x="1872" y="116" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0ae19917-e85c-4490-b72a-b338d341137f">
+    <DataSourceViewID>DW Academico Labor</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="b237ad5a-2ab5-4ba6-b220-1fb8c50aceab">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="3889393c-26e6-4c00-aca6-988348d165d0">
+      <ID>DOC DOCENTE ID</ID>
+      <Name>DOC DOCENTE ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="10dbaea5-a24e-47eb-aeeb-0f45fc182772">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34301db6-8349-43b1-a076-c2cec12dd863">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="676dd145-d78a-4920-9772-f3ebce573e2b">
+          <AttributeID>LOC LOCALIZACION ID</AttributeID>
+          <Name>LOC LOCALIZACION ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d773c5a-2ef2-431b-beea-bdce8c74453e">
+          <AttributeID>LOC PAIS</AttributeID>
+          <Name>LOC PAIS</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6f9138dc-b397-464d-aaae-1ebbc4b5b529">
+          <AttributeID>LOC DEPARTAMENTO</AttributeID>
+          <Name>LOC DEPARTAMENTO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7fa97eed-453e-4f8c-90c5-6d217e6537c5">
+          <AttributeID>LOC MUNICIPIO</AttributeID>
+          <Name>LOC MUNICIPIO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fc2f66ec-db0f-4320-88e2-75b1fd59f927">
+          <AttributeID>DOC CELULAR</AttributeID>
+          <Name>DOC CELULAR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="6ec74344-3979-46d5-8d95-399f063049bf">
+          <AttributeID>DOC CORREO</AttributeID>
+          <Name>DOC CORREO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="03411178-fcde-470f-ab40-5dfbdfb66b65">
+          <AttributeID>DOC DEPARTAMENTO</AttributeID>
+          <Name>DOC DEPARTAMENTO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e91cf49a-0295-4f30-addd-d82e3a994551">
+          <AttributeID>DOC GENERO</AttributeID>
+          <Name>DOC GENERO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e34453cc-8213-486a-a313-fdeec1ce7628">
+          <AttributeID>DOC NOMBRE COMPLETO</AttributeID>
+          <Name>DOC NOMBRE COMPLETO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d9259572-7e2c-43aa-9b83-875b898a6e2b">
+          <AttributeID>DOC NUMERO IDENTIDAD</AttributeID>
+          <Name>DOC NUMERO IDENTIDAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fdd70263-1db2-4e2d-af04-8c0dad679a97">
+          <AttributeID>DOC NUMERO TELEFONO</AttributeID>
+          <Name>DOC NUMERO TELEFONO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c974ca99-2d62-4e8e-ba65-42ab852d9163">
+          <AttributeID>DOC FACULTAD</AttributeID>
+          <Name>DOC FACULTAD</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="58cbf1e3-5124-4760-aa6c-7bebe0c3168d">
+          <AttributeID>DOC NOMBRE COMPLETO 1</AttributeID>
+          <Name>DOC NOMBRE COMPLETO_PDMGN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="64fcc3f7-9000-4b12-8473-bd79a132fd76">
+          <AttributeID>DOC NOMBRE COMPLETO 1 1</AttributeID>
+          <Name>DOC NOMBRE COMPLETO_PDMN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="109f4283-239a-47c8-a23b-dea366711e6f">
+          <AttributeID>DOC NOMBRE COMPLETO 2</AttributeID>
+          <Name>DOC NOMBRE COMPLETO_PDMFDN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="79d6b8c6-a5ee-40cf-8332-c11a113cc896">
+          <AttributeID>DOC FACULTAD COMPLETA</AttributeID>
+          <Name>DOC FACULTAD COMPLETA</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7dddb12a-7a58-4a2b-8043-cf405df6a9ea">
+      <ID>LOC LOCALIZACION ID</ID>
+      <Name>LOC LOCALIZACION ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6996562-1f0d-47e7-acf7-1431411d003b">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1b9fd3e7-2da5-4671-bd70-7ce3acb60ec7">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_LOCALIZACION_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7b7e2d6c-bee6-4502-ae10-bc555000edb7">
+      <ID>LOC PAIS</ID>
+      <Name>LOC PAIS_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c40ba238-c4a1-4a33-9d17-22eaa48dfb8d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b96f6ce7-873f-4eb0-b692-0afbd46e26d8">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="212e1586-8c8c-488c-80b5-7e5748b9caff">
+          <Language>9226</Language>
+          <Caption>País</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="05c9eb6c-b084-4940-ba13-4745ebe3929c">
+      <ID>LOC DEPARTAMENTO</ID>
+      <Name>LOC DEPARTAMENTO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="86c4438c-76c0-4cef-9527-e530b76785e8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5606fa64-9d71-41b5-9b1c-b13836aec740">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="99e3a5d5-2c17-4883-96b4-0744b4bb7145">
+          <Language>9226</Language>
+          <Caption>Departamento - País</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5d2bff01-a5d0-4a1c-b059-eb8143ce9b60">
+      <ID>LOC MUNICIPIO</ID>
+      <Name>LOC MUNICIPIO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a3c8794-e438-4ba7-811a-a8d208fab1a1">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="30906f1e-8d69-4b27-9d22-fa7c0fc85422">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="24f91067-806d-4950-ad8b-8939266ea191">
+          <Language>9226</Language>
+          <Caption>Municipio</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="49b37b8a-32ab-4da9-af7d-6dea73a07b04">
+      <ID>DOC CELULAR</ID>
+      <Name>DOC CELULAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7e3f1c52-361b-460a-932b-c2a078fb0646">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cfe026c0-02a9-4e57-bab9-bc5306ce3db8">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_CELULAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="c8ff3fa1-6960-4687-a3f3-00994adcb26c">
+          <Language>9226</Language>
+          <Caption>Celular Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3c5b64a0-8f34-4b84-95a6-cb40831f75a5">
+      <ID>DOC CORREO</ID>
+      <Name>DOC CORREO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e32911f3-8398-4dfe-ad09-c9e897fa8e4a">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2fd2ebb0-10e5-4b59-afde-bf403b61b140">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_CORREO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="93fa1e5f-0739-47b6-90bb-13291e8417d3">
+          <Language>9226</Language>
+          <Caption>Correo Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eac5d408-acf7-4a5d-805e-34bde33527cc">
+      <ID>DOC DEPARTAMENTO</ID>
+      <Name>DOC DEPARTAMENTO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4f7e2c8e-a329-44ee-9641-282b17a18717">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2ef4f2d8-d3d3-4080-9781-98bb0c129ed9">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="8b48b698-383b-4f1a-96d5-8fa30febb21a">
+          <Language>9226</Language>
+          <Caption>Departamento - Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="14eefe63-99ef-4ccc-abac-fc7b2249b71d">
+      <ID>DOC GENERO</ID>
+      <Name>DOC GENERO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1eff92ef-e278-42a9-8e3d-185993286ae3">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4482508d-1eb9-4450-a1eb-ff41c317963a">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_GENERO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="d56f202a-ed5b-4e2e-b00f-6fd587678fd8">
+          <Language>9226</Language>
+          <Caption>Género Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2a11877c-1605-486e-8db8-24b845a25969">
+      <ID>DOC NOMBRE COMPLETO</ID>
+      <Name>DOC NOMBRE COMPLETO_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ba69080-efb6-4b7f-90a9-970dbe6857fc">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f527b144-9564-4ece-a6b8-b9fe6a6e25e8">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="9abbc32d-e110-4078-94dd-8bed14366b48">
+          <Language>9226</Language>
+          <Caption>Nombre Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fbee7e3f-12af-49bb-b180-b122b9e9e43e">
+      <ID>DOC NUMERO IDENTIDAD</ID>
+      <Name>DOC NUMERO IDENTIDAD</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="afc213cb-f47a-416e-8d57-aa08c8f60f71">
+          <DataType>WChar</DataType>
+          <DataSize>30</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6b0cd470-b52a-489f-aa84-b380aad6a9c7">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NUMERO_IDENTIDAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="6b2ae460-59d6-4601-9acc-5a1cf65521e7">
+          <Language>9226</Language>
+          <Caption>Número Identidad Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9ecfc422-36ce-4f2f-b97e-f4cc769a7774">
+      <ID>DOC NUMERO TELEFONO</ID>
+      <Name>DOC NUMERO TELEFONO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f9cdc241-311c-4983-843e-367f37efae5e">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b8b28d5-6761-4913-8048-da258d5513c9">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NUMERO_TELEFONO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="ac3ad63d-3618-46b9-8093-70ff092edecf">
+          <Language>9226</Language>
+          <Caption>Número Teléfono Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d3de9db8-700b-4a60-b686-d1623cb367e2">
+      <ID>DOC FACULTAD</ID>
+      <Name>DOC FACULTAD_SINJERARQUIA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e1f6cc3b-adaa-4c3f-a86a-8bfcf4ea06fb">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="242df4cf-7256-43bd-8c7f-f568f14ca1b4">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="1cd777fe-d130-4276-ba48-392b05dd2bbf">
+          <Language>9226</Language>
+          <Caption>Sigla Facultad Docente</Caption>
+        </Translation>
+      </Translations>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="26ada889-d804-46d8-b90f-1af0f9a2f406">
+      <ID>LOC PAIS 1</ID>
+      <Name>LOC PAIS_PDMGN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f292e698-1992-4cd6-93a9-20bc490b9c86">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c8308ad2-5138-475b-9c88-88f8ee4658d8">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f2b57b14-246b-4c24-a1e2-1304d1a30f16">
+      <ID>LOC DEPARTAMENTO 1</ID>
+      <Name>LOC DEPARTAMENTO_PDMGN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="07fbda7e-8f34-4b21-ac84-2e3e1534962c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7a114d74-491c-43ba-af14-16214e92517d">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="2c3730ae-5c2d-4d66-83ca-3a1835dd8f70">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fed48de1-81b4-44c3-ba2e-3730fe1f2e2e">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="31c327d3-8bf1-4560-a57e-7d5604a007db">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ff094de4-ffdc-4bcd-b19b-54e2a0924e8b">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f35e6ac0-b79d-45df-ab80-8a3334ecb586">
+          <AttributeID>LOC PAIS 1</AttributeID>
+          <Name>LOC PAIS_PDMGN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="3bc63344-51a8-4f41-a621-c6eabde64073">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e5d4e9f4-836d-450e-9b80-237cfb59e66c">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f3dcdf75-c8f3-4b7a-86bc-b092df6c69cd">
+      <ID>LOC MUNICIPIO 1</ID>
+      <Name>LOC MUNICIPIO_PDMGN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="33d7eb24-28a2-452c-8943-f85d7cbbe9d9">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9d027192-ebe2-4862-bbd2-95af9c3cff40">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e57121fe-467d-42e1-b3c2-c30ff8ae26c2">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d782dd19-d21a-4c7a-90b6-9ee1a9a39e48">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b6af5d99-9ba9-4067-b09d-3a48a9eee75b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="59e51001-d794-40d8-bc95-617ab81bddbb">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="eda32769-d011-418a-95f3-531b52c79132">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0716bc8b-753a-4f9c-a80c-356809cf70c0">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_MUNICIPIO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="dff08605-12f7-4fe2-af9b-c7d8cd8f1a4a">
+          <AttributeID>LOC DEPARTAMENTO 1</AttributeID>
+          <Name>LOC DEPARTAMENTO_PDMGN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="ffe26135-6082-4979-9f05-568c2dd8e72e">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="faf091bd-2dca-4c27-9c2c-18d968b17a65">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_MUNICIPIO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b61f1344-9c38-4f80-aabc-4a6a39aea819">
+      <ID>DOC GENERO 1</ID>
+      <Name>DOC GENERO_PDMGN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d4c97434-57bd-4698-af11-3e1e4108b96a">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d63fda00-7782-4cda-ae05-e8b3cbd2ef1d">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="57bfea1f-9361-40b8-9476-bb1468bdaa18">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="19d28cb5-9c4d-4700-9c0b-c163bed58d0f">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_GENERO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="d9ef2d8a-18a0-409a-b970-7477b4d46d50">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="89cb6158-fbc1-4d69-9776-5a873f6a28a1">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_GENERO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f216886b-bb0b-4bbb-9257-27f33101f216">
+          <AttributeID>LOC MUNICIPIO 1</AttributeID>
+          <Name>LOC MUNICIPIO_PDMGN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="6d8d74c1-d261-46ad-ab3f-6b76d4d935ab">
+        <DataType>WChar</DataType>
+        <DataSize>20</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0296760f-23ab-4777-98b1-28dc592b6adb">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_GENERO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3097ea2f-adcf-4692-bbdc-36b6f4f19936">
+      <ID>DOC NOMBRE COMPLETO 1</ID>
+      <Name>DOC NOMBRE COMPLETO_PDMGN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="037c4f3b-93e8-4b3f-858d-3f49aeacfa09">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68af69db-3ff0-4217-8972-9dc25ad2513a">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_GENERO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="d0ea737f-1d99-4bd4-a8d4-255b13b8efec">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bbeb5217-c93c-4e83-b2b9-33a1a44818a8">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="0435b032-321a-43c8-9ccd-728080965340">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c38605b8-3911-45b9-bed5-50f8a821a7bd">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="05477eaa-d61d-441c-8294-1cec28062387">
+          <AttributeID>DOC GENERO 1</AttributeID>
+          <Name>DOC GENERO_PDMGN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="e4e70f1a-c125-4721-b467-1514ed797c33">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="63da6386-66c7-438b-bb63-8dd87d600a20">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="28317795-eedd-4327-8cfd-696fe86d6c71">
+      <ID>LOC PAIS 1 1</ID>
+      <Name>LOC PAIS_PDMN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="719e1c95-1228-41b2-9869-dcdd1741ffee">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a37c5194-d4a2-419a-b435-a336395b6a53">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aefeb172-0cde-4955-b605-7409882088c2">
+      <ID>LOC MUNICIPIO 1 1</ID>
+      <Name>LOC MUNICIPIO_PDMN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0e5dc862-0e55-4cc1-aaaf-396d12feefc8">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e156048d-434a-4e9b-88df-0b1ee12eb4ea">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="209ee3da-b964-4b60-a7ad-c99c21194d79">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="686ca40c-8e03-4648-a5da-ea3f1ca75f76">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="42f39712-42a2-4bff-a643-b46f8de2ff36">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="584923c2-1819-4c39-955f-c373ad7186f4">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="85d90770-9cdc-42b6-8fb6-8a9be67c2cc2">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="38a1180f-292b-4bb5-818c-8a4b0b803ed3">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_MUNICIPIO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5a2f55b8-f8a3-44f7-8189-6b51d38747e1">
+          <AttributeID>LOC DEPARTAMENTO 1 1</AttributeID>
+          <Name>LOC DEPARTAMENTO_PDMN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="2a5eae56-266e-492f-9991-77b30cc02c5a">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0f03b2b3-f1c7-44d3-8552-b1a2214c5ea3">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_MUNICIPIO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bcc084ae-5352-425f-a180-7dcd7c6d2e03">
+      <ID>DOC NOMBRE COMPLETO 1 1</ID>
+      <Name>DOC NOMBRE COMPLETO_PDMN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6cfbf205-ecad-4c6b-acd6-a94923be4188">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2513bf9-ad17-4dfd-bff1-3968529b355c">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="b0a5e916-3c7b-453b-84ff-679f0ccb6a30">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8bfd6b89-1323-4624-b7a3-8afcc06fda76">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3cc42534-a8a5-44b3-948d-dd63477ec002">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="9335e031-7aec-4d03-9dae-6c2796bf3533">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="c9177d69-34a9-4f3a-9e32-e231ea51e66e">
+          <AttributeID>LOC MUNICIPIO 1 1</AttributeID>
+          <Name>LOC MUNICIPIO_PDMN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="0d80ad46-a7d8-46f5-b323-fd1011728e6b">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="a7341694-1994-4080-9ea8-db01e01cbad8">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5b16cc2c-9d2f-48f2-bbce-c63f30afbf2e">
+      <ID>LOC DEPARTAMENTO 1 1</ID>
+      <Name>LOC DEPARTAMENTO_PDMN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a887d7ec-75b4-41dd-83bf-4a5446bd4241">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3452b6a7-8d44-46c4-b948-34b5f162c6b0">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="c7431b3e-330c-4d67-b768-5a80143e887e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cf8256ad-757d-4b5e-b05e-1ed9f19aa2d6">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b42fbd93-d46b-4123-b87e-49825da57404">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="5e0860fd-ce09-4e2d-8337-764e3d36e320">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="908fedeb-7af8-4f46-a95e-3fc0688fce6c">
+          <AttributeID>LOC PAIS 1 1</AttributeID>
+          <Name>LOC PAIS_PDMN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ValueColumn dwd:design-time-name="1c43c678-eec5-4b90-b5f9-fae29a27e7da">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="21bfdc7f-b53a-4136-8f34-185ad613f82e">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </ValueColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f261ed78-fdb9-4649-bb0c-1c5f9f054ca0">
+      <ID>DOC DEPARTAMENTO 1</ID>
+      <Name>DOC DEPARTAMENTO_PDMFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2e8f9059-8b3d-479e-9ed8-a9ace3a0cc91">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c34408f6-fa72-42bf-a113-c08246a2e835">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="ae6eee2e-f14a-4c20-917d-3083a98d4fb3">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b253cf08-6523-4504-bcbc-ca0864ad1ec0">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="fb5e43d0-8d97-4082-8ea2-48f74d0276cb">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2fa8bc5a-7a66-40eb-9e7a-8d1fa68968a8">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="38d7726f-3cba-433e-96ee-d6c72f9fd44d">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee6865e1-4131-41ba-8f99-745c2452ec52">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="9f7b5782-e5c6-40e8-a417-4ad47cd893ee">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f91c0d2-48e3-40f4-9c57-62060447b2a4">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="63d60769-4f34-42f4-a749-e2c4f1695818">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e006c4ab-7a4b-464e-9fa5-fce26d378372">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="4d30f9c0-37d8-4904-b292-9bb0390b9f30">
+          <AttributeID>DOC FACULTAD 1</AttributeID>
+          <Name>DOC FACULTAD_PDMFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6ed2ae38-9c04-481e-83eb-cb5e999e999f">
+      <ID>DOC FACULTAD 1</ID>
+      <Name>DOC FACULTAD_PDMFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0880e0d1-0136-4113-acf6-d8902be097e4">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0b0140fe-bc29-4786-9238-280209c7e02c">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="9c0a0ec8-e974-40cb-b9fb-c159b35bd668">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6489a732-8ffb-425a-979e-f26514e75671">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="5f28c158-8ab3-4937-8184-835dd4b944ce">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cee763ad-894b-418e-9607-46c2efdcfa02">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="7782c543-cd0e-4dbe-80dd-d5d22003f0fa">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="04885cc8-c037-46d7-9300-d5f76d2af33e">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3b9e414a-fb29-4283-81dc-1de0306071c3">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="37c2ba4d-1713-44ff-ba38-3a13b1e8f51c">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_FACULTAD</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="81a2fabe-7935-456e-a648-910537d92f6d">
+          <AttributeID>LOC MUNICIPIO 2</AttributeID>
+          <Name>LOC MUNICIPIO_PDMFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3d259d1a-6514-480d-abaa-6a50fbb5b059">
+      <ID>DOC NOMBRE COMPLETO 2</ID>
+      <Name>DOC NOMBRE COMPLETO_PDMFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb7104b1-5be3-44e9-b83f-9af7a9697070">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="db8b1b42-86a6-4ab3-a30d-c3419dacf802">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="21905f8a-0d22-4b49-baa1-2caaefeb6171">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="827444ec-d8d9-4eaf-b81f-ec7eca9a7f07">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="288e1fda-8242-4efb-84a8-07b17d03b058">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1f62d04c-a0d9-40be-ace1-abca348660b5">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="9c99ca53-5483-4277-a421-f739364588e7">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="626cabaf-3058-430f-be72-7b6691c6a151">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="56f9215f-4dca-4688-80c3-7e417c2b04fd">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="34fa0528-63fe-409d-b448-108024e63e8c">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="89497c67-bee0-4035-a35c-70e26e5c2810">
+          <DataType>WChar</DataType>
+          <DataSize>120</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8bb86e5a-97fa-4dcf-81e4-2d607f0a0f07">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="84f49b2b-4bc5-4e83-90b7-42b0b7af9a8f">
+        <DataType>WChar</DataType>
+        <DataSize>120</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ed8c3ec0-1a49-483d-8b33-b612df67903d">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>DOC_NOMBRE_COMPLETO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="5024d298-2d08-4337-9efa-a6055e92f895">
+          <AttributeID>DOC DEPARTAMENTO 1</AttributeID>
+          <Name>DOC DEPARTAMENTO_PDMFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3641324b-78ae-45fe-81f4-ea0a403fd1f0">
+      <ID>LOC PAIS 2</ID>
+      <Name>LOC PAIS_PDMFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dccb85f7-d26d-4c71-9ffe-146c90ace322">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4057c027-dba2-4c3d-8975-e8beb666e29a">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="b923db83-65e6-4096-92c9-4b65d8e2f83f">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="6c4250fc-76ab-4138-adc4-2fe2a0af8d06">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_PAIS</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="22318f5e-f649-4828-a8bc-6a519bc359c8">
+      <ID>LOC DEPARTAMENTO 2</ID>
+      <Name>LOC DEPARTAMENTO_PDMFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dfb65463-162f-4f3d-8773-13f6f2b4f90c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5ccba5d0-7abf-48fd-ab98-d61c80814b3f">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="86dc70d9-428d-4126-a46e-cfcbd1dedd0c">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="89fb7298-dc85-4a92-a066-24a3547ca3b2">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="5e1e5ec3-3761-4650-ac05-86e4a819b431">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="1f91c319-0a79-4292-8b09-bb60655fe86d">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="25ab35f4-5c6a-48c1-bcfd-4c0a8a829992">
+          <AttributeID>LOC PAIS 2</AttributeID>
+          <Name>LOC PAIS_PDMFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4d6992d3-76e5-4c35-9e60-b53ffc6689d7">
+      <ID>LOC MUNICIPIO 2</ID>
+      <Name>LOC MUNICIPIO_PDMFDN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b6a8d4d6-4fb5-48e3-a12e-46515338b595">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4b970c69-e6f9-4fad-afcd-8bbac659a9a5">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="9628d63c-b2e9-412a-af62-afa7b7676c0f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4347cbe7-c8bd-4248-b048-14c2d329104e">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="52e9a883-3652-47c9-a232-3fbe4c4791bb">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6b7e188-e390-45ed-a72a-8fae6d9dbc6c">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_MUNICIPIO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="eec216b3-9134-4e94-932c-1f8c473519c0">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="95390661-9f8c-4485-b7db-b3f52feea296">
+          <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+          <ColumnID>LOC_MUNICIPIO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d184845a-d559-4827-a0d2-e2b939f57909">
+          <AttributeID>LOC DEPARTAMENTO 2</AttributeID>
+          <Name>LOC DEPARTAMENTO_PDMFDN</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9945cdba-09fd-48ec-a060-ff747512c2ed">
+      <ID>DOC FACULTAD COMPLETA</ID>
+      <Name>DOC FACULTAD COMPLETA</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7b203a12-e7bf-470a-ba87-5ea8887d573a">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cb7d92d9-d69c-4d69-bc8a-e260305790d5">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_FACULTAD_COMPLETA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="06b2b0d4-1b21-4525-b0e0-d738fac838d7">
+          <Language>9226</Language>
+          <Caption>Facultad Docente</Caption>
+        </Translation>
+      </Translations>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="3fc3c7b9-cde2-4330-ac7a-6778f8af6616">
+      <ID>Hierarchy</ID>
+      <Name>Jerarquia_Doc_Nacimiento_Gen</Name>
+      <Levels>
+        <Level dwd:design-time-name="ff966714-6107-44e1-a50b-86bb49502945">
+          <ID>LOC PAIS_PDMGN</ID>
+          <Name>LOC PAIS_PDMGN</Name>
+          <SourceAttributeID>LOC PAIS 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="74000e87-8060-4524-b0ca-a6468f4a7ec6">
+              <Language>9226</Language>
+              <Caption>País</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="c8493258-5ce0-410a-8641-61b3f2f06170">
+          <ID>LOC DEPARTAMENTO_PDMGN</ID>
+          <Name>LOC DEPARTAMENTO_PDMGN</Name>
+          <SourceAttributeID>LOC DEPARTAMENTO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="69f79c44-79de-41d4-a9bf-5150132ac8b8">
+              <Language>9226</Language>
+              <Caption>Departamento</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="c77eba4b-cb51-446c-9b07-71f6d33527fb">
+          <ID>LOC MUNICIPIO_PDMGN</ID>
+          <Name>LOC MUNICIPIO_PDMGN</Name>
+          <SourceAttributeID>LOC MUNICIPIO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="92be7449-c209-4353-83d2-3a12ca3c4490">
+              <Language>9226</Language>
+              <Caption>Municipio</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="cb22edda-9f67-4ff5-acff-92b64cd2f266">
+          <ID>DOC GENERO_PDMGN</ID>
+          <Name>DOC GENERO_PDMGN</Name>
+          <SourceAttributeID>DOC GENERO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5bc8eed1-e1ec-429c-b94a-ec3458b41665">
+              <Language>9226</Language>
+              <Caption>Género Docente</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="0f791774-a196-41d8-9965-4eceafd2f098">
+          <ID>DOC NOMBRE COMPLETO_PDMGN</ID>
+          <Name>DOC NOMBRE COMPLETO_PDMGN</Name>
+          <SourceAttributeID>DOC NOMBRE COMPLETO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="deff78d4-6da9-440f-9772-1e2a720f0c8f">
+              <Language>9226</Language>
+              <Caption>Nombre Docente</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="fac6b583-33d9-4447-9095-6d9aa29f15f3">
+      <ID>Hierarchy 1</ID>
+      <Name>Jerarquia_Doc_Nacimiento</Name>
+      <Levels>
+        <Level dwd:design-time-name="ffaa7ac1-4c21-4cb4-8637-f98c5b9a3fa9">
+          <ID>LOC PAIS_PDMN</ID>
+          <Name>LOC PAIS_PDMN</Name>
+          <SourceAttributeID>LOC PAIS 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1769a9e6-a939-453a-940d-70ceeaed7c95">
+              <Language>9226</Language>
+              <Caption>País</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="4bc8e1ca-e413-4082-b099-d1253543c3e9">
+          <ID>LOC DEPARTAMENTO_PDMN</ID>
+          <Name>LOC DEPARTAMENTO_PDMN</Name>
+          <SourceAttributeID>LOC DEPARTAMENTO 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="a22e6f10-23ff-4aea-9053-c5fd860bed2a">
+              <Language>9226</Language>
+              <Caption>Departamento</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="5a0896dd-2778-436f-b546-35135dbacb34">
+          <ID>LOC MUNICIPIO_PDMN</ID>
+          <Name>LOC MUNICIPIO_PDMN</Name>
+          <SourceAttributeID>LOC MUNICIPIO 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="40a14f33-310c-4a30-8d22-3fdd775d6940">
+              <Language>9226</Language>
+              <Caption>Municipio</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="752a570e-b59d-42d4-ba31-fc2e36393b76">
+          <ID>DOC NOMBRE COMPLETO_PDMN</ID>
+          <Name>DOC NOMBRE COMPLETO_PDMN</Name>
+          <SourceAttributeID>DOC NOMBRE COMPLETO 1 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="92502c9f-4abb-49d6-87b8-fdb92ff0b33f">
+              <Language>9226</Language>
+              <Caption>Nombre Docente</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="03d23f88-3d91-49e8-a114-7475842b7d43">
+      <ID>Hierarchy 2</ID>
+      <Name>Jerarquia_Doc_Nacimiento_Facultad</Name>
+      <Levels>
+        <Level dwd:design-time-name="9716f891-8c45-4b41-a604-74fac8fa7306">
+          <ID>LOC PAIS_PDMFDN</ID>
+          <Name>LOC PAIS_PDMFDN</Name>
+          <SourceAttributeID>LOC PAIS 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="0a916def-6ea1-4add-98e1-d5dee4d1d7a2">
+              <Language>9226</Language>
+              <Caption>País</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="b7bdbeab-e2a8-4c59-b938-50d9d212eb60">
+          <ID>LOC DEPARTAMENTO_PDMFDN</ID>
+          <Name>LOC DEPARTAMENTO_PDMFDN</Name>
+          <SourceAttributeID>LOC DEPARTAMENTO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="1c69f2e1-bbdf-4bf0-8eff-b4525d131419">
+              <Language>9226</Language>
+              <Caption>Departamento</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="b4c16185-9558-4094-ad8e-c8b14ad78712">
+          <ID>LOC MUNICIPIO_PDMFDN</ID>
+          <Name>LOC MUNICIPIO_PDMFDN</Name>
+          <SourceAttributeID>LOC MUNICIPIO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="6bb22df1-905f-40da-bc72-3871ce2b26a7">
+              <Language>9226</Language>
+              <Caption>Municipio</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="5c5261a2-b715-4180-9ee8-9c7e117173f7">
+          <ID>DOC FACULTAD_PDMFDN</ID>
+          <Name>DOC FACULTAD_PDMFDN</Name>
+          <SourceAttributeID>DOC FACULTAD 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="57fac949-12e5-4b25-a09e-888882c1790d">
+              <Language>9226</Language>
+              <Caption>Sigla Facultad</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="fa28b5db-f7a6-465e-81cf-5793f0ba9ca1">
+          <ID>DOC DEPARTAMENTO_PDMFDN</ID>
+          <Name>DOC DEPARTAMENTO_PDMFDN</Name>
+          <SourceAttributeID>DOC DEPARTAMENTO 1</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="5c0a086f-894c-4ba2-aa17-cc71b2a76dc1">
+              <Language>9226</Language>
+              <Caption>Departamento</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+        <Level dwd:design-time-name="8d173fec-3bc0-4d1b-b873-0c9fba413062">
+          <ID>DOC NOMBRE COMPLETO_PDMFDN</ID>
+          <Name>DOC NOMBRE COMPLETO_PDMFDN</Name>
+          <SourceAttributeID>DOC NOMBRE COMPLETO 2</SourceAttributeID>
+          <Translations>
+            <Translation dwd:design-time-name="0c5ae4a5-53e5-4cc8-a2dc-6c1bae678cea">
+              <Language>9226</Language>
+              <Caption>Nombre Docente</Caption>
+            </Translation>
+          </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
