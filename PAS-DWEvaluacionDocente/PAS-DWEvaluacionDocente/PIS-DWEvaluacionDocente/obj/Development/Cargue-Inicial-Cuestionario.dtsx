@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue-Inicial-Cuestionario"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{9AC2414D-5B25-4388-97D2-5E890FA7EA02}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{2D055138-3EF3-4404-90AE-9F281944A5F0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -86,13 +86,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Expresión de columna derivada"
-                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos\Fuente Cuestionario.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]}) ? "CUESTIONARIO SIN NOMBRE" : #{Package\Tarea Flujo de datos\Fuente Cuestionario.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]}</property>
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos\Fuente Cuestionario.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]}) ? "Cuestionario Sin Nombre" : #{Package\Tarea Flujo de datos\Fuente Cuestionario.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]}</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Expresión descriptiva de columna derivada"
                           expressionType="Notify"
-                          name="FriendlyExpression">ISNULL(DESCRIPCION) ? "CUESTIONARIO SIN NOMBRE" : DESCRIPCION</property>
+                          name="FriendlyExpression">ISNULL(DESCRIPCION) ? "Cuestionario Sin Nombre" : DESCRIPCION</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -389,7 +389,7 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ACADEMICO.EVALUACIONCUESTIONARIOS.DESCRIPCION,   ACADEMICO.EVALUACIONCUESTIONARIOS.FECHAAPLICACION FROM ACADEMICO.EVALUACIONCUESTIONARIOS</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT INITCAP(ACADEMICO.EVALUACIONCUESTIONARIOS.DESCRIPCION) DESCRIPCION,   ACADEMICO.EVALUACIONCUESTIONARIOS.FECHAAPLICACION FROM ACADEMICO.EVALUACIONCUESTIONARIOS</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -603,11 +603,15 @@
         <NodeLayout
           Size="173,42"
           Id="Package\Tarea Flujo de datos\Fuente Cuestionario"
-          TopLeft="273,42" />
+          TopLeft="272,42" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Conversión de datos"
           TopLeft="270,190" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Tarea Flujo de datos\DimCuestionario"
+          TopLeft="282,347" />
         <NodeLayout
           Size="164,42"
           Id="Package\Tarea Flujo de datos\Columna derivada"
@@ -616,35 +620,9 @@
           Size="205,42"
           Id="Package\Tarea Flujo de datos\Llave Sustituta cuestonario"
           TopLeft="255,272" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Tarea Flujo de datos\DimCuestionario"
-          TopLeft="282,347" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
-          TopLeft="358.75,314">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="356.75,84">
+          TopLeft="356.25,84">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -656,6 +634,28 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="357.5,232">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -687,19 +687,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="357.5,232">
+          Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
+          TopLeft="358.75,314">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40"
+              EndConnector="0,33"
               Start="0,0"
-              End="0,32.5">
+              End="0,25.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
+                    End="0,25.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -712,14 +712,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Fuente Cuestionario">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\DimCuestionario">
     <Properties>
       <Property>
@@ -729,6 +721,14 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Fuente Cuestionario">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

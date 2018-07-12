@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1223" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6747" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1223" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7144" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -672,18 +672,41 @@
       <ID>DOC GENERO 1</ID>
       <Name>DOC GENERO_PDMGN</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="d4c97434-57bd-4698-af11-3e1e4108b96a">
+        <KeyColumn dwd:design-time-name="b1e044dd-fd3b-426f-bd6c-4648a149dfdf">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46095bda-3256-4279-bf73-d632be9b06c1">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>DOC_DOCENTE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="5625f97d-e12c-4b51-bdf1-515c8d05c0a3">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d63fda00-7782-4cda-ae05-e8b3cbd2ef1d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="319654c4-3d53-4463-938d-8f832f907ec0">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_PAIS</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="006a34e5-f4ab-4e78-aa06-4f6a813eb10e">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="48188296-93d0-47ff-b9e7-b1c18baa2b0e">
+            <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
+            <ColumnID>LOC_DEPARTAMENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="611c106b-1db6-4e34-b3c1-bf94b301fb19">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9f21a8b0-870f-4b88-8e5d-455f0d696600">
             <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
             <ColumnID>LOC_MUNICIPIO</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="57bfea1f-9361-40b8-9476-bb1468bdaa18">
+        <KeyColumn dwd:design-time-name="2bfd8c52-b9a0-40b5-b528-45b5448c89fd">
           <DataType>WChar</DataType>
           <DataSize>20</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="19d28cb5-9c4d-4700-9c0b-c163bed58d0f">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a197cb9a-8dbe-4dec-aeaa-b018ca5e0294">
             <TableID>DW_ACADEMICO_LABOR_DOCENTE_LUGAR_NACIMIENTO_VIEW</TableID>
             <ColumnID>DOC_GENERO</ColumnID>
           </Source>

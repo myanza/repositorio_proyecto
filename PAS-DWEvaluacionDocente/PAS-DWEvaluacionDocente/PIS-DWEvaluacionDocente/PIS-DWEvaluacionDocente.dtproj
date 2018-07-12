@@ -26,19 +26,45 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-N341SEE</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAADd0y/hhG5hXnMRQ3f4xg70rqAgI42CT7MIwR2nSCWOPAAAAAAOgAAAAAIAACAAAAC9cYyBAgsrFSs325xWPF/rERVhp3dVyhmU676W50Mo35AAAADkJ9EfZT8LKTtvHtI3yAojHbOy1NmYDG29zBOAeuhfjeJc1RU2fA7CGOdosAsdeu7bU1EG0zhPCbqwmCkA22XW8SryKe3xKH0UHVikdn+c88xYDKEmXYV5j4KrjwZyVTwicw6i1PQE3inGWqzNidWqO7KIbGmvegarbMOo1VrAMmUNa6uvoUj2SyB1R26DrrxAAAAApLxrzMPbEQDe2jAw/cn5J/WQ6s1GWCWo5PULtoRZjzCcY8jDj6BkoXp1HY5e9FO2Lc7X9DErlSXJBTv+lTad0A==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlGNIBEoIDUaJ77uMMmZGUQAAAAACAAAAAAAQZgAAAAEAACAAAAAEA6phNPwlfd7uK72qhG7woEyRa22kmujFEAENa7B+7AAAAAAOgAAAAAIAACAAAACn1mXhGM+Zb/yiRQ3yXVMsWFAvfGZmIayg4tBlLnabmJAAAADB5ck+5B7nyPGJExqIqlRusVfMjAubl6YfF/g2IwIcqEgmZXjjpG3s+YoHyxIt4l+6Bs7A3SI11j4+QBED0aW4NQ2Wjdb8tc27YB7q3W61GWgA5Esarlt9jUxFKllLTg4g4G3ZNQUBotu3fW2dlLHAACJ2D5WJWF10kbfi12flOPyDYv3qrx9H1Cq53T13JoJAAAAAAqAb1C4jJacEWlwwGbH8u3LJ/uEXue5LJkRUgkpz3TjG9t1M4VBNO0378D+/bsx9H23Ue8STbpBMQ1ss6HU2iQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Cargue-Inicial-Localizacion.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Cargue-Inicial-Docente.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue-Rango.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue-Inicial-Pregunta.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="Cargue-Inicial-Cuestionario.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Cargue_Fuente_Evaluacion.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Cargue_Periodo.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Cargue_Datos_Demograficos.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Cargue_Demografia_Datos_Economicos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Docente.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Fuente-Evaluacion.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Contratacion.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Datos-Demograficos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Datos-Demograficos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Demografia-Datos-Economicos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Contratacion.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Cuestionario.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Localizacion.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Datos-Ad-Materia.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Indicadores-Estudiantes.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Indicadores-Estudiantes.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Datos-Ad-Materia.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Demografia-Datos-Economicos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Semestre.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Semestre.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Docente.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Tabla-Hechos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Estudiante.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Materia.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Pensum.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Periodo.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Programa.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Estudiante.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Materia.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Pensum.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Periodo.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Programa.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Inicial-Tabla-Hechos 1.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Cargue-Incremental-Tabla-Hechos.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Segundo-Cargue-Incremental-Tabla-Hechos.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Origen_Excel_Evaluacion.conmgr" />
@@ -437,27 +463,10 @@
                 <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Localizacion</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">17</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">22</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{890B943F-06FB-41B4-B9B1-A91803B6380D}</SSIS:Property>
-                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
-                <SSIS:Property SSIS:Name="Description">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
-              </SSIS:Properties>
-              <SSIS:Parameters />
-            </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Docente.dtsx">
-              <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{697B9E4E-13C3-4D68-B290-B241B945472F}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Docente</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">31</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionComments">
-                </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{24A4F6C1-F6ED-4C17-B8FA-2DF83ABD249B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5C9AE7A5-0974-4077-8135-EB1BD231BF99}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -471,10 +480,10 @@
                 <SSIS:Property SSIS:Name="Name">Cargue-Rango</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">30</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">33</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{9CAA5A16-DCA9-44FB-A30A-C9DB255C27CB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7588A7A8-E14D-4A59-9CDE-DDF08674A11D}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -488,10 +497,10 @@
                 <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Pregunta</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{A8E895D3-A286-48CF-BB87-F47088034F68}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{84916E32-E940-49CF-AFBE-C42996828958}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -516,16 +525,298 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Cargue_Fuente_Evaluacion.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Docente.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{087906AA-8F09-4935-BF91-5A3E1A762A50}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Cargue_Fuente_Evaluacion</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{D0B6E2E2-8A9F-4FA4-87D7-69F504317917}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Docente</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">19</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">165</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{096BB22A-0C3D-45ED-815C-387565416187}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{95EA933A-5556-425B-BF61-3F53B6953D29}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=DW_ACADEMICO_LABOR;Provider=OraOLEDB.Oracle.1;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">localhost</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DW_ACADEMICO_LABOR</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 1.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=DW_ACADEMICO_LABOR;Provider=OraOLEDB.Oracle.1;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 1.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 1.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 1.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 1.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">localhost</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 1.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DW_ACADEMICO_LABOR</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 2.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=localhost;User ID=DW_ACADEMICO_LABOR;Provider=OraOLEDB.Oracle.1;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 2.InitialCatalog">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 2.Password">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 2.RetainSameConnection">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">false</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 2.ServerName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">localhost</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.localhost.DW_ACADEMICO_LABOR1 2.UserName">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DW_ACADEMICO_LABOR</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Fuente-Evaluacion.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{50503CA7-52A3-4B25-B811-4957BC0315DD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Fuente-Evaluacion</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">20</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F496935B-D67E-4555-9618-0EBCD2BF5563}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -533,16 +824,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Cargue_Periodo.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Contratacion.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{48329AD8-07D7-4E36-A870-2B3B592AEC52}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Cargue_Periodo</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{8C449F22-A24F-4331-9689-CC3CCAC2055F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Contratacion</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">45</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{331B16C3-0684-4916-8B0F-F8EFF1BB4B97}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B6A5571C-886B-4045-A326-A7F2385F0A88}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -550,16 +841,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Cargue_Datos_Demograficos.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Datos-Demograficos.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{F3198473-F155-46D0-9A37-294B3C9E15B5}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Cargue_Datos_Demograficos</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{EE7FE180-F4E8-4CAE-853A-94FB98AFCA36}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Datos-Demograficos</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">28</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">103</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{12FCEC35-15F8-49CA-B6BF-AE29866BE447}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F568A6D9-741E-48A3-88AC-FA4AB964EC6C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -567,16 +858,458 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Cargue_Demografia_Datos_Economicos.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Datos-Demograficos.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{E3FCA4FB-0846-4306-AF18-F9F3755DF668}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Cargue_Demografia_Datos_Economicos</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{3ABE289C-F6CB-447F-A613-DC38E3E62C25}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Datos-Demograficos</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">115</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5C2BF4DE-0C43-445C-BF8B-6E1419A6C9BA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{DCEB85A6-DC93-4CE1-9184-077DF86D4824}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Demografia-Datos-Economicos.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{9E08C915-18FB-4619-B880-B874DA207195}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Demografia-Datos-Economicos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">97</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F61AD225-D32B-4295-949C-E29AABEE8FE2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Contratacion.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{556ADD87-7E84-4FC5-80E2-98325AE1A9E6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Contratacion</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">50</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{126F9570-533A-41B2-BCCD-21890D381427}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Cuestionario.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{BF82EB57-37D8-44B1-B496-C3B9930E717E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Cuestionario</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4B5FC619-5F22-49D5-A2C9-DCA6162EF6A5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Localizacion.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{49F1547C-C316-40DA-A1FF-691FECF3AB6C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Localizacion</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">102</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CA812B04-C921-4D91-B725-69E0F8B0AF4A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Datos-Ad-Materia.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{620B12FB-ABAD-4719-A7B8-8D68052FA0D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Datos-Ad-Materia</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">24</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{50415175-06F1-4536-A8D0-773CEF2FB680}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Indicadores-Estudiantes.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{AF28CC1B-FEEF-4F1C-AA2B-D1BD75541E78}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Indicadores-Estudiantes</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">36</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{D42951D4-D7C0-47E6-8532-AB9ECB9F1744}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Indicadores-Estudiantes.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E0B50A87-BF77-4EFE-96C3-57F64C8C4A73}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Indicadores-Estudiantes</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">32</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{7D460F5F-5CD2-4B1B-8EBE-2A30A41B7A02}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Datos-Ad-Materia.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{FCDD694B-15DE-4162-A97D-0E59FD13D141}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Datos-Ad-Materia</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{254A40CD-77FA-455D-9F58-A65D33391502}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Demografia-Datos-Economicos.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{C0FD717B-3D6C-4A50-AAC1-1C503F4EC0F4}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Demografia-Datos-Economicos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">109</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{A53EB061-63D0-4D79-8011-C12A00A0E8FC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Semestre.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{42E76802-7FE5-49DC-943D-8AB20DF2236F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Semestre</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">58</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{3E252C3F-D768-471E-92BD-F2279ACFC95C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Semestre.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{6662A77E-2D2C-4BE8-BDDB-343DBB81815F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Semestre</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">55</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6C94663D-9209-48AD-BB7C-7F56EE11102F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Docente.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F04B212D-2DA5-4AEA-86BB-30C5B47C6D9D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Docente</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">97</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{55737483-0242-4EC0-8F82-DF40E1A2F1BB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Tabla-Hechos.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{7D9F30C2-A1B8-411F-9D8E-81BE93FE6FC4}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Tabla-Hechos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">282</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{B94B94B5-D56A-46A1-B3CD-9008A1FF8FBB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Estudiante.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{740ED3A4-7860-4A3A-BC30-65F866F3252A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Estudiante</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EF1A0FB6-A523-4491-BCC7-7F21127E0BA0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Materia.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E451EF44-B2B8-48E7-AB7E-54695DE7BA2B}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Materia</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0A1809DE-F7C4-4A5F-A15F-FE2687570A56}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Pensum.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F1E2D735-4A55-47E9-8025-6D4441AC4FC7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">InicialDimensionPensum</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">25</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{805CDF2B-4D53-4F85-8B41-4034ED5CB81F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Periodo.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{7755B67A-27CE-42FD-B045-CB1586FC3754}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Periodo</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0AB2426D-A01D-47B2-A2E4-5B152A9EF1AB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Programa.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{41634EE1-93EF-4BD8-842A-BCF9056ADFF6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Programa</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F0EB3DDD-5EA4-4DBE-9C70-C0F95084F0D1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Estudiante.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{035EC742-87B2-47C4-8755-4DD2A8DD179E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Estudiante</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{973B5021-74E0-4CE3-A0FA-6E18B30FD33E}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Materia.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{E8B21F63-9040-4419-96AB-256D3B0D45E8}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Materia</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{27F3744D-1917-453D-AC86-A3B5BF9A0AFC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Pensum.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{EEB40983-B393-4F65-BC96-EE5CD0248FEF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">IncrementalDimensionPensum</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">34</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F1AE2612-EC35-4F21-8C10-32D908F19491}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Periodo.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{EA5A4440-2092-4E14-AFDD-62F84C7ACECC}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Periodo</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C9D5FADD-4269-4F4F-A89A-6A5C08DFF1B5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Programa.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{457CC125-4FF4-4DE1-A227-ACCCD2BD30FD}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Programa</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{754622C2-9E09-411F-B48E-C3ED91418131}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Inicial-Tabla-Hechos 1.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{ACCC1AE6-AE42-4801-B885-E33FB306B0ED}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Inicial-Tabla-Hechos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">250</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{94D2320F-8185-4909-BAFA-8B544FA9F48F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Cargue-Incremental-Tabla-Hechos.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{005F8AA2-D439-4A46-8481-128C8A5725DF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Cargue-Incremental-Tabla-Hechos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">271</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{675022BE-9144-443A-83F2-EABA4F4E9EDA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Segundo-Cargue-Incremental-Tabla-Hechos.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{39967F1F-F812-4EE4-AFF2-2F9B2F07A0F0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Segundo-Cargue-Incremental-Tabla-Hechos</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">272</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{42257AE4-D8E1-4B68-8BD9-4B3C3A925080}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

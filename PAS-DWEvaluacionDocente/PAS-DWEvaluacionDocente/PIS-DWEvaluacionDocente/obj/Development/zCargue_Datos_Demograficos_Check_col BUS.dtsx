@@ -1,24 +1,24 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="6/4/2018 2:45:48 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SEBASTIAN"
   DTS:CreatorName="SEBASTIAN\Sebastian Jimenez"
-  DTS:DTSID="{F3198473-F155-46D0-9A37-294B3C9E15B5}"
+  DTS:DTSID="{47D551B4-FFB2-4816-A9E2-1E8C320C6F1F}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2165.0"
   DTS:LocaleID="3082"
-  DTS:ObjectName="Cargue_Datos_Demograficos"
+  DTS:ObjectName="zCargue_Datos_Demograficos_Check_col BUS"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{4A531F98-3FD3-4FDB-A23B-5B63D2288BAE}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{0C2F22F9-E5E9-496E-9937-747CD057AB80}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{F5BBE070-0BCA-456C-ADF7-36E49F0FA9C7}"
+      DTS:DTSID="{AB3725B6-BA79-4412-A97E-16C0B5B1E00C}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="MaxKey">
@@ -31,7 +31,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{b6a21bf1-0bfa-4f0d-95f0-0b69906bd282}"
+      DTS:DTSID="{6DA8F450-0DCA-41C5-96CD-58AAE340B57F}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -53,7 +53,7 @@
       DTS:refId="Package\Tarea Flujo de datos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{84783E58-4CAC-4252-A780-B3FC21F629C1}"
+      DTS:DTSID="{91C078EA-F032-4D42-B247-37EE4F5943F9}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Tarea Flujo de datos"
@@ -64,11 +64,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos"
+              refId="Package\Tarea Flujo de datos\Búsqueda"
               componentClassID="Microsoft.Lookup"
               contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
               description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
-              name="Búsqueda Datos demograficos"
+              name="Búsqueda"
               usesDispositions="true"
               version="6">
               <properties>
@@ -77,14 +77,14 @@
                   description="Especifica la instrucción SQL que genera la tabla de búsqueda."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS"</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CHECKSUM checksum_dimension  FROM DATOS_DEMOGRAFICOS</property>
                 <property
                   dataType="System.String"
                   description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS") "refTable"
-where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable"."DEPORTISTA" = ? and "refTable"."ESTADO_CIVIL" = ? and "refTable"."DISCAPACIDAD" = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT CHECKSUM checksum_dimension  FROM DATOS_DEMOGRAFICOS) "refTable"
+where "refTable"."CHECKSUM_DIMENSION" = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
@@ -115,12 +115,12 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                 <property
                   dataType="System.String"
                   description="Indica si se debe hacer referencia a metadatos en formato XML."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DEMOGRAFIA_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RANGO_EDAD" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ESTADO_CIVIL" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ACUDIENTE" dataType="DT_WSTR" length="25" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DISCAPACIDAD" dataType="DT_WSTR" length="30" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPORTISTA" dataType="DT_WSTR" length="20" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CHECKSUM_DIMENSION" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]};#{Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[Copia de Checksum]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -132,7 +132,7 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </properties>
               <connections>
                 <connection
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Connections[OleDbConnection]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Connections[OleDbConnection]"
                   connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
                   connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
                   description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
@@ -140,88 +140,20 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </connections>
               <inputs>
                 <input
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]"
                   name="Entrada de búsqueda">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de RANGO_EDAD]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de RANGO_EDAD"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">RANGO_EDAD</property>
-                        <property
-                          dataType="System.Null"
-                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de ESTADO_CIVIL]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de ESTADO_CIVIL"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">ESTADO_CIVIL</property>
-                        <property
-                          dataType="System.Null"
-                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de DISCAPACIDAD]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda].Columns[Copia de Checksum]"
                       cachedDataType="wstr"
                       cachedLength="50"
-                      cachedName="Copia de DISCAPACIDAD"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]">
+                      cachedName="Copia de Checksum"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[Copia de Checksum]">
                       <properties>
                         <property
                           dataType="System.String"
                           description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">DISCAPACIDAD</property>
-                        <property
-                          dataType="System.Null"
-                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de DEPORTISTA]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Copia de DEPORTISTA"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">DEPORTISTA</property>
-                        <property
-                          dataType="System.Null"
-                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda].Columns[Copia de ACUDIENTE]"
-                      cachedDataType="wstr"
-                      cachedLength="25"
-                      cachedName="Copia de ACUDIENTE"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
-                          name="JoinToReferenceColumn">ACUDIENTE</property>
+                          name="JoinToReferenceColumn">CHECKSUM_DIMENSION</property>
                         <property
                           dataType="System.Null"
                           description="Especifica la columna de la tabla de referencia de la que se copia una columna."
@@ -234,40 +166,122 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
                   errorOrTruncationOperation="Búsqueda"
                   exclusionGroup="1"
                   name="Salida de entradas coincidentes de búsqueda"
-                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
                   description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en &quot;Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes&quot;."
                   exclusionGroup="1"
                   name="Salida de entradas no coincidentes de búsqueda"
-                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda]"
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Salida de error de búsqueda"
-                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]">
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Checksum Transformation; Konesans Ltd; Copyright © 2016 Konesans Ltd; http://www.konesans.com"
+              description="Checksum Transformation for SQL Server Integration Services 2016"
+              name="Checksum Transformation Fuente"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The Checksum Transformation algorithm used to produce the resulting checksum value."
+                  name="ChecksumAlgorithm"
+                  typeConverter="Konesans.Dts.Pipeline.ChecksumTransform.ChecksumTransform+ChecksumAlgorithm, Konesans.Dts.Pipeline.ChecksumTransform, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b2ab4a111192992b">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Konesans.ChecksumTransformation</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput]"
+                  errorRowDisposition="FailComponent"
+                  name="ChecksumInput">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput].Columns[Copia de RANGO_EDAD]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de RANGO_EDAD"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de RANGO_EDAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput].Columns[Copia de DEPORTISTA]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de DEPORTISTA"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DEPORTISTA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput].Columns[Copia de ESTADO_CIVIL]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de ESTADO_CIVIL"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ESTADO_CIVIL]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput].Columns[Copia de DISCAPACIDAD]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copia de DISCAPACIDAD"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de DISCAPACIDAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput].Columns[Copia de ACUDIENTE]"
+                      cachedDataType="wstr"
+                      cachedLength="25"
+                      cachedName="Copia de ACUDIENTE"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput]"
+                  exclusionGroup="1"
+                  name="ChecksumOutput"
+                  synchronousInputId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput].Columns[Checksum]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput].Columns[Checksum]"
+                      name="Checksum">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Checksum transformation result column indicator."
+                          name="Checksum">Checksum</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -627,6 +641,82 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
               </outputs>
             </component>
             <component
+              refId="Package\Tarea Flujo de datos\Conversión de datos 1"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Conversión de datos 1.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos 1.Inputs[Entrada de conversión de datos].Columns[Checksum]"
+                      cachedDataType="i4"
+                      cachedName="Checksum"
+                      lineageId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput].Columns[Checksum]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos 1.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[Copia de Checksum]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de conversión de datos].Columns[Copia de Checksum]"
+                      name="Copia de Checksum"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput].Columns[Checksum]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Tarea Flujo de datos\Conversión de datos 1.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Tarea Flujo de datos\DimDatosDemograficos"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
@@ -739,6 +829,12 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       cachedName="Copia de ACUDIENTE"
                       externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACUDIENTE]"
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de ACUDIENTE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].Columns[Checksum]"
+                      cachedDataType="i4"
+                      cachedName="Checksum"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM]"
+                      lineageId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput].Columns[Checksum]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -772,6 +868,11 @@ where "refTable"."ACUDIENTE" = ? and "refTable"."RANGO_EDAD" = ? and "refTable".
                       dataType="wstr"
                       length="20"
                       name="DEPORTISTA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM]"
+                      dataType="wstr"
+                      length="100"
+                      name="CHECKSUM" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1837,6 +1938,11 @@ ORDER BY 1</property>
           </components>
           <paths>
             <path
+              refId="Package\Tarea Flujo de datos.Paths[ChecksumOutput]"
+              endId="Package\Tarea Flujo de datos\Conversión de datos 1.Inputs[Entrada de conversión de datos]"
+              name="ChecksumOutput"
+              startId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Outputs[ChecksumOutput]" />
+            <path
               refId="Package\Tarea Flujo de datos.Paths[Output 0]"
               endId="Package\Tarea Flujo de datos\DimDatosDemograficos.Inputs[Entrada de destino de OLE DB]"
               name="Output 0"
@@ -1848,14 +1954,19 @@ ORDER BY 1</property>
               startId="Package\Tarea Flujo de datos\Combinación de mezcla.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Inputs[Entrada de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de conversión de datos"
+              startId="Package\Tarea Flujo de datos\Conversión de datos 1.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
+              endId="Package\Tarea Flujo de datos\Checksum Transformation Fuente.Inputs[ChecksumInput]"
               name="Salida de conversión de datos"
               startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
               endId="Package\Tarea Flujo de datos\Llave primaria Demografia.Inputs[Input 0]"
               name="Salida de entradas no coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Datos demograficos.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla.Inputs[Entrada izquierda de combinación de mezcla]"
@@ -1875,7 +1986,7 @@ ORDER BY 1</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Restricción]"
       DTS:CreationName=""
-      DTS:DTSID="{ADA66549-4428-499A-A98B-2CB0BB0AC3E0}"
+      DTS:DTSID="{26943CBD-D86D-451B-8A78-3FF97F6DC573}"
       DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción"
@@ -1930,61 +2041,69 @@ ORDER BY 1</property>
     design-time-name="Package\Tarea Flujo de datos">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Tarea Flujo de datos\Fuente Academico"
-          TopLeft="360,45" />
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Tarea Flujo de datos\DimDatosDemograficos"
-          TopLeft="223,476" />
-        <NodeLayout
-          Size="175,42"
-          Id="Package\Tarea Flujo de datos\Conversión de datos"
-          TopLeft="231,222" />
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="153,42"
           Id="Package\Tarea Flujo de datos\Origen de Excel"
-          TopLeft="119,47" />
-        <NodeLayout
-          Size="203,42"
-          Id="Package\Tarea Flujo de datos\Llave primaria Demografia"
-          TopLeft="221,391" />
+          TopLeft="129,45" />
         <NodeLayout
           Size="190,42"
           Id="Package\Tarea Flujo de datos\Combinación de mezcla"
-          TopLeft="216,156" />
+          TopLeft="211,143" />
         <NodeLayout
-          Size="221,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Datos demograficos"
-          TopLeft="205,297" />
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Conversión de datos"
+          TopLeft="219,221.111111111111" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Tarea Flujo de datos\Fuente Academico"
+          TopLeft="348,45" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Tarea Flujo de datos\Checksum Transformation Fuente"
+          TopLeft="187.285714285714,306.142857142857" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Tarea Flujo de datos\DimDatosDemograficos"
+          TopLeft="214,635" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Tarea Flujo de datos\Conversión de datos 1"
+          TopLeft="216,384" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda"
+          TopLeft="242,467" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Tarea Flujo de datos\Llave primaria Demografia"
+          TopLeft="209,560" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="442.5,87">
+          TopLeft="430.5,87">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-101.166666666667,69"
+              EndConnector="-94.1666666666667,56"
               Start="0,0"
-              End="-101.166666666667,61.5">
+              End="-94.1666666666667,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.0542797494781" />
+                    End="0,29.3194154488518" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,37.0542797494781"
-                    Point2="0,41.0542797494781"
-                    Point3="-4,41.0542797494781" />
+                    Point1="0,29.3194154488518"
+                    Point2="0,33.3194154488518"
+                    Point3="-4,33.3194154488518" />
                   <mssgle:LineSegment
-                    End="-97.1666666666667,41.0542797494781" />
+                    End="-90.1666666666667,33.3194154488518" />
                   <mssgle:CubicBezierSegment
-                    Point1="-97.1666666666667,41.0542797494781"
-                    Point2="-101.166666666667,41.0542797494781"
-                    Point3="-101.166666666667,45.0542797494781" />
+                    Point1="-90.1666666666667,33.3194154488518"
+                    Point2="-94.1666666666667,33.3194154488518"
+                    Point3="-94.1666666666667,37.3194154488518" />
                   <mssgle:LineSegment
-                    End="-101.166666666667,61.5" />
+                    End="-94.1666666666667,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1995,30 +2114,30 @@ ORDER BY 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
-          TopLeft="195.5,89">
+          TopLeft="205.5,87">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="85.1666666666667,67"
+              EndConnector="70.1666666666667,56"
               Start="0,0"
-              End="85.1666666666667,59.5">
+              End="70.1666666666667,48.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.8643006263048" />
+                    End="0,29.3194154488518" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,35.8643006263048"
-                    Point2="0,39.8643006263048"
-                    Point3="4,39.8643006263048" />
+                    Point1="0,29.3194154488518"
+                    Point2="0,33.3194154488518"
+                    Point3="4,33.3194154488518" />
                   <mssgle:LineSegment
-                    End="81.1666666666667,39.8643006263048" />
+                    End="66.1666666666667,33.3194154488518" />
                   <mssgle:CubicBezierSegment
-                    Point1="81.1666666666667,39.8643006263048"
-                    Point2="85.1666666666667,39.8643006263048"
-                    Point3="85.1666666666667,43.8643006263048" />
+                    Point1="66.1666666666667,33.3194154488518"
+                    Point2="70.1666666666667,33.3194154488518"
+                    Point3="70.1666666666667,37.3194154488518" />
                   <mssgle:LineSegment
-                    End="85.1666666666667,59.5" />
+                    End="70.1666666666667,48.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2029,31 +2148,97 @@ ORDER BY 1</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
-          TopLeft="319,339">
+          TopLeft="307.5,509">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52"
+              EndConnector="0,51"
               Start="0,0"
-              End="0,44.5">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.5" />
+                    End="0,43.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-106.8890234375,16.15234375,213.778046875,12.1953125"
+              BoundingBox="-106.8890234375,15.65234375,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
+          TopLeft="306.392857142857,263.111111111111">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.031746031746"
+              Start="0,0"
+              End="0,35.531746031746">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.531746031746" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="317,264">
+          TopLeft="306.25,426">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
+          TopLeft="306.25,185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.111111111111"
+              Start="0,0"
+              End="0,28.611111111111">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.611111111111" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Output 0]"
+          TopLeft="309.5,602">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -2074,41 +2259,19 @@ ORDER BY 1</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
-          TopLeft="314.75,198">
+          Id="Package\Tarea Flujo de datos.Paths[ChecksumOutput]"
+          TopLeft="307.142857142857,348.142857142857">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24"
+              EndConnector="0,35.857142857143"
               Start="0,0"
-              End="0,16.5">
+              End="0,28.357142857143">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Output 0]"
-          TopLeft="320,433">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
+                    End="0,28.357142857143" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2120,6 +2283,19 @@ ORDER BY 1</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Origen de Excel">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Fuente Academico">
     <Properties>
@@ -2147,35 +2323,22 @@ ORDER BY 1</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Origen de Excel">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Búsqueda Datos demograficos">
+    design-time-name="Package\Tarea Flujo de datos\Búsqueda">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">"DW_ACADEMICO_LABOR"."DATOS_DEMOGRAFICOS"</Value>
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

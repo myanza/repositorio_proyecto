@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Inicial-Localizacion"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{890B943F-06FB-41B4-B9B1-A91803B6380D}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{485B5B61-774B-4733-9EE6-9C56FB6179BB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -50,6 +50,175 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Checksum Transformation; Konesans Ltd; Copyright © 2016 Konesans Ltd; http://www.konesans.com"
+              description="Checksum Transformation for SQL Server Integration Services 2016"
+              name="Checksum Transformation"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The Checksum Transformation algorithm used to produce the resulting checksum value."
+                  name="ChecksumAlgorithm"
+                  typeConverter="Konesans.Dts.Pipeline.ChecksumTransform.ChecksumTransform+ChecksumAlgorithm, Konesans.Dts.Pipeline.ChecksumTransform, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b2ab4a111192992b">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Konesans.ChecksumTransformation</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Inputs[ChecksumInput]"
+                  errorRowDisposition="FailComponent"
+                  name="ChecksumInput">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Inputs[ChecksumInput].Columns[Copy of PAIS]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of PAIS"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of PAIS]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Inputs[ChecksumInput].Columns[Copy of DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of DEPARTAMENTO"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Inputs[ChecksumInput].Columns[Copy of MUNICIPIO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of MUNICIPIO"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Outputs[ChecksumOutput]"
+                  exclusionGroup="1"
+                  name="ChecksumOutput"
+                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Inputs[ChecksumInput]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Outputs[ChecksumOutput].Columns[Checksum]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Outputs[ChecksumOutput].Columns[Checksum]"
+                      name="Checksum">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Checksum transformation result column indicator."
+                          name="Checksum">Checksum</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Columna Derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Inputs[Derived Column Input].Columns[Copy of CODIGO MUNICIPIO]"
+                      cachedDataType="wstr"
+                      cachedLength="11"
+                      cachedName="Copy of CODIGO MUNICIPIO"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]}) ? "Sin Codigo" : #{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copy of CODIGO MUNICIPIO]) ? "Sin Codigo" : [Copy of CODIGO MUNICIPIO]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Inputs[Derived Column Input].Columns[Copy of MUNICIPIO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of MUNICIPIO"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]}) ? "No Especifica Municipio" : #{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copy of MUNICIPIO]) ? "No Especifica Municipio" : [Copy of MUNICIPIO]</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion"
               componentClassID="Microsoft.DataConvert"
@@ -102,7 +271,7 @@
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="10"
+                      length="11"
                       lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]"
                       name="Copy of CODIGO MUNICIPIO"
                       truncationRowDisposition="FailComponent">
@@ -201,105 +370,6 @@
                       refId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Tarea Flujo de datos Localizacion\Derived Column"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input].Columns[Copy of CODIGO MUNICIPIO]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="Copy of CODIGO MUNICIPIO"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]}) ? "SIN CODIGO" : #{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL([Copy of CODIGO MUNICIPIO]) ? "SIN CODIGO" : [Copy of CODIGO MUNICIPIO]</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input].Columns[Copy of MUNICIPIO]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="Copy of MUNICIPIO"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]"
-                      truncationRowDisposition="FailComponent"
-                      usageType="readWrite">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[ISNULL](#{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]}) ? "NO ESPECIFICA MUNICIPIO" : #{Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of MUNICIPIO]}</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">ISNULL([Copy of MUNICIPIO]) ? "NO ESPECIFICA MUNICIPIO" : [Copy of MUNICIPIO]</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -409,10 +479,16 @@
                     <inputColumn
                       refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[Copy of CODIGO MUNICIPIO]"
                       cachedDataType="wstr"
-                      cachedLength="10"
+                      cachedLength="11"
                       cachedName="Copy of CODIGO MUNICIPIO"
                       externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CODIGO_MUNICIPIO]"
                       lineageId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output].Columns[Copy of CODIGO MUNICIPIO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].Columns[Checksum]"
+                      cachedDataType="i4"
+                      cachedName="Checksum"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM]"
+                      lineageId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Outputs[ChecksumOutput].Columns[Checksum]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -439,8 +515,13 @@
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CODIGO_MUNICIPIO]"
                       dataType="wstr"
-                      length="10"
+                      length="11"
                       name="CODIGO_MUNICIPIO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM]"
+                      dataType="wstr"
+                      length="38"
+                      name="CHECKSUM" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -494,12 +575,14 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  PAISES.DESCRIPCION "PAIS",
-        DEPARTAMENTOS.DESCRIPCION "DEPARTAMENTO", 
-        MUNICIPIOS.CODIGO "CODIGO MUNICIPIO", 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT  
+        INITCAP(MUNICIPIOS.CODIGO) "CODIGO MUNICIPIO", 
+        INITCAP(PAISES.DESCRIPCION) "PAIS",
+        INITCAP(DEPARTAMENTOS.DESCRIPCION) "DEPARTAMENTO",         
         MUNICIPIOS.DESCRIPCION "MUNICIPIO"
 FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DEPARTAMENTOS 
-      ON (MUNICIPIOS.DEPARTAMENTO = DEPARTAMENTOS.OID)</property>
+      ON (MUNICIPIOS.DEPARTAMENTO = DEPARTAMENTOS.OID)
+ORDER BY 1</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -707,18 +790,23 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
           </components>
           <paths>
             <path
+              refId="Package\Tarea Flujo de datos Localizacion.Paths[ChecksumOutput]"
+              endId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB]"
+              name="ChecksumOutput"
+              startId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Outputs[ChecksumOutput]" />
+            <path
               refId="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
-              endId="Package\Tarea Flujo de datos Localizacion\Derived Column.Inputs[Derived Column Input]"
+              endId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Inputs[Derived Column Input]"
               name="Data Conversion Output"
               startId="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Tarea Flujo de datos Localizacion.Paths[Derived Column Output]"
               endId="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion.Inputs[Row Number Input]"
               name="Derived Column Output"
-              startId="Package\Tarea Flujo de datos Localizacion\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\Tarea Flujo de datos Localizacion\Columna Derivada.Outputs[Derived Column Output]" />
             <path
               refId="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
-              endId="Package\Tarea Flujo de datos Localizacion\DimLocalizacion.Inputs[Entrada de destino de OLE DB]"
+              endId="Package\Tarea Flujo de datos Localizacion\Checksum Transformation.Inputs[ChecksumInput]"
               name="Row Number Output"
               startId="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion.Outputs[Row Number Output]" />
             <path
@@ -756,42 +844,32 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="190,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion"
-          TopLeft="415,119" />
+          Size="171,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
+          TopLeft="430,38" />
         <NodeLayout
           Size="154,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Derived Column"
+          Id="Package\Tarea Flujo de datos Localizacion\DimLocalizacion"
+          TopLeft="438,439" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Columna Derivada"
           TopLeft="429,200" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Conversion Localizacion"
+          TopLeft="416,119" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Tarea Flujo de datos Localizacion\Checksum Transformation"
+          TopLeft="408,357" />
         <NodeLayout
           Size="207,42"
           Id="Package\Tarea Flujo de datos Localizacion\Llave Sustituta Localizacion"
-          TopLeft="409,284" />
+          TopLeft="409,283" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Derived Column Output]"
-          TopLeft="509.25,242">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42"
-              Start="0,0"
-              End="0,34.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
-          TopLeft="508,161">
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Salida de origen de OLE DB]"
+          TopLeft="513.25,80">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -811,36 +889,20 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Tarea Flujo de datos Localizacion\Fuente Localizacion"
-          TopLeft="433,32" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Salida de origen de OLE DB]"
-          TopLeft="518.5,74">
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
+          TopLeft="510.75,325">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-8.5,45"
+              EndConnector="0,32"
               Start="0,0"
-              End="-8.5,37.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.5"
-                    Point2="0,22.5"
-                    Point3="-4,22.5" />
-                  <mssgle:LineSegment
-                    End="-4.5,22.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-4.5,22.5"
-                    Point2="-8.5,22.5"
-                    Point3="-8.5,26.5" />
-                  <mssgle:LineSegment
-                    End="-8.5,37.5" />
+                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -849,24 +911,64 @@ FROM MUNICIPIOS JOIN PAISES ON (MUNICIPIOS.PAIS = PAISES.OID) LEFT OUTER JOIN DE
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Tarea Flujo de datos Localizacion\DimLocalizacion"
-          TopLeft="440,379" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos Localizacion.Paths[Row Number Output]"
-          TopLeft="514.75,326">
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Derived Column Output]"
+          TopLeft="512,242">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53"
+              EndConnector="0,41"
               Start="0,0"
-              End="0,45.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.5" />
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[Data Conversion Output]"
+          TopLeft="511.25,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos Localizacion.Paths[ChecksumOutput]"
+          TopLeft="512,399">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40"
+              Start="0,0"
+              End="0,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
