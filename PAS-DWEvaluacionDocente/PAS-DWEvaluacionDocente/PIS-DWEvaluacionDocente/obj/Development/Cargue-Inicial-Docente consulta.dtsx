@@ -1,0 +1,2450 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/1/2018 10:31:57 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-N341SEE"
+  DTS:CreatorName="DESKTOP-N341SEE\Win10Pro"
+  DTS:DTSID="{609ABD5D-FFA4-4371-9A74-8999F5FF02B6}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="Cargue-Inicial-Docente consulta"
+  DTS:PackageType="5"
+  DTS:VersionBuild="81"
+  DTS:VersionGUID="{A56529E3-2D95-473F-9397-E4D881F95469}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4753F3D0-8B59-4476-A2A0-E4E7BC5779A4}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="DOCENTE_ID">
+      <DTS:VariableValue
+        DTS:DataType="20">1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de Datos Docente"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{095F1F50-8D37-4F46-96ED-95734A61EAB0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de Datos Docente"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Busqueda Nacimiento"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."LOCALIZACION"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."LOCALIZACION") "refTable"
+where "refTable"."CODIGO_MUNICIPIO" = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LOCALIZACION_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PAIS" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTAMENTO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MUNICIPIO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CODIGO_MUNICIPIO" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Connections[OleDbConnection]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de CODIGO_MUNICIPIO_NAC"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">CODIGO_MUNICIPIO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_NACIMIENTO]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_NACIMIENTO]"
+                      name="LOCALIZACION_ID_NACIMIENTO"
+                      precision="38"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LOCALIZACION_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Busqueda Procedencia"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from "DW_ACADEMICO_LABOR"."LOCALIZACION"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from "DW_ACADEMICO_LABOR"."LOCALIZACION") "refTable"
+where "refTable"."CODIGO_MUNICIPIO" = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="LOCALIZACION_ID" dataType="DT_NUMERIC" length="0" precision="38" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PAIS" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTAMENTO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MUNICIPIO" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CODIGO_MUNICIPIO" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Connections[OleDbConnection]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de CODIGO_MUNICIPIO_PRO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">CODIGO_MUNICIPIO</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_PROCEDENCIA]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_PROCEDENCIA]"
+                      name="LOCALIZACION_ID_PROCEDENCIA"
+                      precision="38"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">LOCALIZACION_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Checksum Transformation; Konesans Ltd; Copyright © 2016 Konesans Ltd; http://www.konesans.com"
+              description="Checksum Transformation for SQL Server Integration Services 2016"
+              name="Checksum Transformation Tipo 1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The Checksum Transformation algorithm used to produce the resulting checksum value."
+                  name="ChecksumAlgorithm"
+                  typeConverter="Konesans.Dts.Pipeline.ChecksumTransform.ChecksumTransform+ChecksumAlgorithm, Konesans.Dts.Pipeline.ChecksumTransform, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b2ab4a111192992b">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Konesans.ChecksumTransformation</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput]"
+                  errorRowDisposition="FailComponent"
+                  name="ChecksumInput">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[Copia de IDENTIFICACION]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de IDENTIFICACION"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[Copia de EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Copia de EMAIL"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[Copia de CELULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copia de CELULAR"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[Copia de TELEFONO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de TELEFONO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[LOCALIZACION_ID_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="LOCALIZACION_ID_NACIMIENTO"
+                      cachedPrecision="38"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[LOCALIZACION_ID_PROCEDENCIA]"
+                      cachedDataType="numeric"
+                      cachedName="LOCALIZACION_ID_PROCEDENCIA"
+                      cachedPrecision="38"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_PROCEDENCIA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[Copy of NOMBRE_COMPLETO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of NOMBRE_COMPLETO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput].Columns[Copy of GENERO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of GENERO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Outputs[ChecksumOutput]"
+                  exclusionGroup="1"
+                  name="ChecksumOutput"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Outputs[ChecksumOutput].Columns[CHECKSUM_TIPO1]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Outputs[ChecksumOutput].Columns[CHECKSUM_TIPO1]"
+                      name="CHECKSUM_TIPO1">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Checksum transformation result column indicator."
+                          name="Checksum">Checksum</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Checksum Transformation; Konesans Ltd; Copyright © 2016 Konesans Ltd; http://www.konesans.com"
+              description="Checksum Transformation for SQL Server Integration Services 2016"
+              name="Checksum Transformation Tipo 2"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The Checksum Transformation algorithm used to produce the resulting checksum value."
+                  name="ChecksumAlgorithm"
+                  typeConverter="Konesans.Dts.Pipeline.ChecksumTransform.ChecksumTransform+ChecksumAlgorithm, Konesans.Dts.Pipeline.ChecksumTransform, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b2ab4a111192992b">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Konesans.ChecksumTransformation</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Inputs[ChecksumInput]"
+                  errorRowDisposition="FailComponent"
+                  name="ChecksumInput">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Inputs[ChecksumInput].Columns[Copia de DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Copia de DEPARTAMENTO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Inputs[ChecksumInput].Columns[Copia de SIGLA_FACULTAD]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de SIGLA_FACULTAD"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Outputs[ChecksumOutput]"
+                  exclusionGroup="1"
+                  name="ChecksumOutput"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Inputs[ChecksumInput]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Outputs[ChecksumOutput].Columns[CHECKSUM_TIPO2]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Outputs[ChecksumOutput].Columns[CHECKSUM_TIPO2]"
+                      name="CHECKSUM_TIPO2">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Checksum transformation result column indicator."
+                          name="Checksum">Checksum</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[PRIMERNOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="PRIMERNOMBRE"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[SEGUNDONOMBRE]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="SEGUNDONOMBRE"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[PRIMERAPELLIDO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="PRIMERAPELLIDO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[SEGUNDOAPELLIDO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="SEGUNDOAPELLIDO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copy of GENERO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of GENERO"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]}) ? "NO ESPECIFICA" : (#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]} == "M" ? "Masculino" : "Femenino")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copy of GENERO]) ? "NO ESPECIFICA" : ([Copy of GENERO] == "M" ? "Masculino" : "Femenino")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Copia de EMAIL"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]}) ? "NO ESPECIFICA CORREO" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de EMAIL]) ? "NO ESPECIFICA CORREO" : [Copia de EMAIL]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de CELULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copia de CELULAR"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]}) ? "SIN CELULAR" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de CELULAR]) ? "SIN CELULAR" : [Copia de CELULAR]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de TELEFONO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de TELEFONO"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]}) ? "SIN TELEFONO" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de TELEFONO]) ? "SIN TELEFONO" : [Copia de TELEFONO]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Copia de DEPARTAMENTO"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]}) ? "SIN DEPARTAMENTO" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de DEPARTAMENTO]) ? "SIN DEPARTAMENTO" : [Copia de DEPARTAMENTO]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de SIGLA_FACULTAD]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de SIGLA_FACULTAD"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]}) ? "SIN SIGLA" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de SIGLA_FACULTAD]) ? "SIN SIGLA" : [Copia de SIGLA_FACULTAD]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de CODIGO_MUNICIPIO_NAC"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]}) ? "Sin Codigo" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de CODIGO_MUNICIPIO_NAC]) ? "Sin Codigo" : [Copia de CODIGO_MUNICIPIO_NAC]</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de CODIGO_MUNICIPIO_PRO"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]}) ? "Sin Codigo" : #{Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL([Copia de CODIGO_MUNICIPIO_PRO]) ? "Sin Codigo" : [Copia de CODIGO_MUNICIPIO_PRO]</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[NOMBRE_COMPLETO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="113"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[NOMBRE_COMPLETO]"
+                      name="NOMBRE_COMPLETO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]}) ? (#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]} + " " + #{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]} + " " + #{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]}) : (#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]} + " " + #{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]} + " " + #{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]} + " " + #{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(SEGUNDONOMBRE) ? (PRIMERNOMBRE + " " + PRIMERAPELLIDO + " " + SEGUNDOAPELLIDO) : (PRIMERNOMBRE + " " + SEGUNDONOMBRE + " " + PRIMERAPELLIDO + " " + SEGUNDOAPELLIDO)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[ACTUAL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="6"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[ACTUAL]"
+                      name="ACTUAL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Actual"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Actual"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EFECTIVA]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EFECTIVA]"
+                      name="FECHA_EFECTIVA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EXPIRACION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EXPIRACION]"
+                      name="FECHA_EXPIRACION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"9999/12/31"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"9999/12/31"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Conversion datos nombre"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input].Columns[NOMBRE_COMPLETO]"
+                      cachedDataType="wstr"
+                      cachedLength="113"
+                      cachedName="NOMBRE_COMPLETO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[NOMBRE_COMPLETO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input].Columns[FECHA_EFECTIVA]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="FECHA_EFECTIVA"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EFECTIVA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input].Columns[FECHA_EXPIRACION]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="FECHA_EXPIRACION"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EXPIRACION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input].Columns[ACTUAL]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="ACTUAL"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[ACTUAL]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]"
+                      name="Copy of NOMBRE_COMPLETO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[NOMBRE_COMPLETO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of FECHA_EFECTIVA]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of FECHA_EFECTIVA]"
+                      name="Copy of FECHA_EFECTIVA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EFECTIVA]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of FECHA_EXPIRACION]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of FECHA_EXPIRACION]"
+                      name="Copy of FECHA_EXPIRACION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[FECHA_EXPIRACION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of ACTUAL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of ACTUAL]"
+                      name="Copy of ACTUAL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output].Columns[ACTUAL]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Conversion de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Conversion de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[GENERO]"
+                      cachedDataType="wstr"
+                      cachedLength="1"
+                      cachedName="GENERO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[IDENTIFICACION]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="IDENTIFICACION"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="EMAIL"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[CELULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="CELULAR"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[TELEFONO]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="TELEFONO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="DEPARTAMENTO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[SIGLA_FACULTAD]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="SIGLA_FACULTAD"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[CODIGO_MUNICIPIO_NAC]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CODIGO_MUNICIPIO_NAC"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input].Columns[CODIGO_MUNICIPIO_PRO]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="CODIGO_MUNICIPIO_PRO"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]"
+                      name="Copy of GENERO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]"
+                      name="Copia de IDENTIFICACION"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]"
+                      name="Copia de EMAIL"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]"
+                      name="Copia de CELULAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]"
+                      name="Copia de TELEFONO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]"
+                      name="Copia de DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]"
+                      name="Copia de SIGLA_FACULTAD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_NAC]"
+                      name="Copia de CODIGO_MUNICIPIO_NAC"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CODIGO_MUNICIPIO_PRO]"
+                      name="Copia de CODIGO_MUNICIPIO_PRO"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\DimDocente"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="DimDocente"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">"DW_ACADEMICO_LABOR"."DOCENTE"</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,ROWS_PER_BATCH = 10000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Connections[OleDbConnection]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[DOCENTE_ID]"
+                      cachedDataType="i4"
+                      cachedName="DOCENTE_ID"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DOCENTE_ID]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output].Columns[DOCENTE_ID]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of NOMBRE_COMPLETO]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of NOMBRE_COMPLETO"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_COMPLETO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of NOMBRE_COMPLETO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de IDENTIFICACION]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de IDENTIFICACION"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_IDENTIDAD]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de IDENTIFICACION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de DEPARTAMENTO]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Copia de DEPARTAMENTO"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de DEPARTAMENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de SIGLA_FACULTAD]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copia de SIGLA_FACULTAD"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de SIGLA_FACULTAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of GENERO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copy of GENERO"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[GENERO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copy of GENERO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de EMAIL]"
+                      cachedDataType="wstr"
+                      cachedLength="80"
+                      cachedName="Copia de EMAIL"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CORREO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de EMAIL]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de TELEFONO]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Copia de TELEFONO"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_TELEFONO]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de TELEFONO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copia de CELULAR]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Copia de CELULAR"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CELULAR]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output].Columns[Copia de CELULAR]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[LOCALIZACION_ID_NACIMIENTO]"
+                      cachedDataType="numeric"
+                      cachedName="LOCALIZACION_ID_NACIMIENTO"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_NACIMIENTO_ID]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_NACIMIENTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[LOCALIZACION_ID_PROCEDENCIA]"
+                      cachedDataType="numeric"
+                      cachedName="LOCALIZACION_ID_PROCEDENCIA"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_PROCEDENCIA_ID]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output].Columns[LOCALIZACION_ID_PROCEDENCIA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of ACTUAL]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="Copy of ACTUAL"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACTUAL]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of ACTUAL]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of FECHA_EFECTIVA]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of FECHA_EFECTIVA"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EFECTIVA]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of FECHA_EFECTIVA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[Copy of FECHA_EXPIRACION]"
+                      cachedDataType="dbDate"
+                      cachedName="Copy of FECHA_EXPIRACION"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EXPIRACION]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output].Columns[Copy of FECHA_EXPIRACION]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[CHECKSUM_TIPO1]"
+                      cachedDataType="i4"
+                      cachedName="CHECKSUM_TIPO1"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM_TIPO1]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Outputs[ChecksumOutput].Columns[CHECKSUM_TIPO1]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].Columns[CHECKSUM_TIPO2]"
+                      cachedDataType="i4"
+                      cachedName="CHECKSUM_TIPO2"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM_TIPO2]"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Outputs[ChecksumOutput].Columns[CHECKSUM_TIPO2]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DOCENTE_ID]"
+                      dataType="numeric"
+                      name="DOCENTE_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NOMBRE_COMPLETO]"
+                      dataType="wstr"
+                      length="120"
+                      name="NOMBRE_COMPLETO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_IDENTIDAD]"
+                      dataType="wstr"
+                      length="30"
+                      name="NUMERO_IDENTIDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      dataType="wstr"
+                      length="80"
+                      name="DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      length="10"
+                      name="SIGLA_FACULTAD" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[GENERO]"
+                      dataType="wstr"
+                      length="20"
+                      name="GENERO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CORREO]"
+                      dataType="wstr"
+                      length="80"
+                      name="CORREO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[NUMERO_TELEFONO]"
+                      dataType="wstr"
+                      length="20"
+                      name="NUMERO_TELEFONO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CELULAR]"
+                      dataType="wstr"
+                      length="15"
+                      name="CELULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_NACIMIENTO_ID]"
+                      dataType="numeric"
+                      name="LUGAR_NACIMIENTO_ID"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[LUGAR_PROCEDENCIA_ID]"
+                      dataType="numeric"
+                      name="LUGAR_PROCEDENCIA_ID"
+                      precision="10" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[ACTUAL]"
+                      dataType="wstr"
+                      length="10"
+                      name="ACTUAL" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EFECTIVA]"
+                      dataType="dbTimeStamp"
+                      name="FECHA_EFECTIVA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[FECHA_EXPIRACION]"
+                      dataType="dbTimeStamp"
+                      name="FECHA_EXPIRACION" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM_TIPO1]"
+                      dataType="wstr"
+                      length="38"
+                      name="CHECKSUM_TIPO1" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM_TIPO2]"
+                      dataType="wstr"
+                      length="38"
+                      name="CHECKSUM_TIPO2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\DimDocente.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Fuente Terceros"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+        TERCEROS.PRIMERNOMBRE,
+        TERCEROS.SEGUNDONOMBRE,
+        TERCEROS.PRIMERAPELLIDO,
+        TERCEROS.SEGUNDOAPELLIDO,
+        TERCEROS.IDENTIFICACION,
+        TERCEROS.GENERO,
+        TERCEROS.EMAIL,
+        TERCEROS.CELULAR,
+        TERCEROS.TELEFONO,
+        MUNNACIMIENTO.CODIGO "CODIGO_MUNICIPIO_NAC",
+        MUNPROCEDENCIA.CODIGO "CODIGO_MUNICIPIO_PRO",    
+        FACULTADUNIDADES.DESCRIPCION "DEPARTAMENTO",
+        FACULTADES.SIGLA "SIGLA_FACULTAD"
+FROM TERCEROS JOIN DOCENTES ON (TERCEROS.OID = DOCENTES.TERCERO) 
+     LEFT JOIN MUNICIPIOS "MUNNACIMIENTO" ON (TERCEROS.MUNICIPIONACIMIENTO = MUNNACIMIENTO.OID)
+     LEFT JOIN MUNICIPIOS "MUNPROCEDENCIA" ON (TERCEROS.MUNICIPIOPROCEDENCIA = MUNPROCEDENCIA.OID)
+     LEFT JOIN FACULTADUNIDADES ON (DOCENTES.UNIDAD=FACULTADUNIDADES.OID)
+     LEFT JOIN FACULTADES ON (FACULTADES.OID = FACULTADUNIDADES.FACULTAD)</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Connections[OleDbConnection]"
+                  connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERNOMBRE]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERNOMBRE]"
+                      name="PRIMERNOMBRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDONOMBRE]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDONOMBRE]"
+                      name="SEGUNDONOMBRE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERAPELLIDO]"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[PRIMERAPELLIDO]"
+                      name="PRIMERAPELLIDO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDOAPELLIDO]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
+                      name="SEGUNDOAPELLIDO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[IDENTIFICACION]"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[IDENTIFICACION]"
+                      name="IDENTIFICACION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[GENERO]"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[GENERO]"
+                      name="GENERO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[EMAIL]"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[EMAIL]"
+                      name="EMAIL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CELULAR]"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CELULAR]"
+                      name="CELULAR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[TELEFONO]"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[TELEFONO]"
+                      name="TELEFONO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_NAC]"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
+                      name="CODIGO_MUNICIPIO_NAC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_PRO]"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
+                      name="CODIGO_MUNICIPIO_PRO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      name="DEPARTAMENTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].Columns[SIGLA_FACULTAD]"
+                      name="SIGLA_FACULTAD"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERNOMBRE]"
+                      dataType="wstr"
+                      length="30"
+                      name="PRIMERNOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDONOMBRE]"
+                      dataType="wstr"
+                      length="30"
+                      name="SEGUNDONOMBRE" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[PRIMERAPELLIDO]"
+                      dataType="wstr"
+                      length="20"
+                      name="PRIMERAPELLIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SEGUNDOAPELLIDO]"
+                      dataType="wstr"
+                      length="30"
+                      name="SEGUNDOAPELLIDO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[IDENTIFICACION]"
+                      dataType="wstr"
+                      length="20"
+                      name="IDENTIFICACION" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[GENERO]"
+                      dataType="wstr"
+                      length="1"
+                      name="GENERO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[EMAIL]"
+                      dataType="wstr"
+                      length="80"
+                      name="EMAIL" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CELULAR]"
+                      dataType="wstr"
+                      length="15"
+                      name="CELULAR" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[TELEFONO]"
+                      dataType="wstr"
+                      length="30"
+                      name="TELEFONO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
+                      length="10"
+                      name="CODIGO_MUNICIPIO_NAC" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
+                      length="10"
+                      name="CODIGO_MUNICIPIO_PRO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO]"
+                      dataType="wstr"
+                      length="80"
+                      name="DEPARTAMENTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB].ExternalColumns[SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      length="10"
+                      name="SIGLA_FACULTAD" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERNOMBRE]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERNOMBRE]"
+                      name="PRIMERNOMBRE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDONOMBRE]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDONOMBRE]"
+                      name="SEGUNDONOMBRE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERAPELLIDO]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[PRIMERAPELLIDO]"
+                      name="PRIMERAPELLIDO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SEGUNDOAPELLIDO]"
+                      name="SEGUNDOAPELLIDO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[IDENTIFICACION]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[IDENTIFICACION]"
+                      name="IDENTIFICACION" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[GENERO]"
+                      dataType="wstr"
+                      length="1"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[GENERO]"
+                      name="GENERO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[EMAIL]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[EMAIL]"
+                      name="EMAIL" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CELULAR]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CELULAR]"
+                      name="CELULAR" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[TELEFONO]"
+                      dataType="wstr"
+                      length="30"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[TELEFONO]"
+                      name="TELEFONO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_NAC]"
+                      name="CODIGO_MUNICIPIO_NAC" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_PRO]"
+                      name="CODIGO_MUNICIPIO_PRO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      dataType="wstr"
+                      length="80"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO]"
+                      name="DEPARTAMENTO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SIGLA_FACULTAD]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[SIGLA_FACULTAD]"
+                      name="SIGLA_FACULTAD" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Row Number Transformation; Konesans Ltd; Copyright © 2016 Konesans Ltd; http://www.konesans.com"
+              description="Row Number Transformation for SQL Server Integration Services 2016"
+              name="Llave Sustituta docente"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Konesans.RowNumberTransformation</property>
+                <property
+                  dataType="System.Decimal"
+                  description="The first row number."
+                  expressionType="Notify"
+                  name="Seed">1</property>
+                <property
+                  dataType="System.Decimal"
+                  description="The value added to the previous row number to make the next row number."
+                  expressionType="Notify"
+                  name="Increment">1</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the variable into which the final row number is written post execution. (Optional)."
+                  expressionType="Notify"
+                  name="OutputVariable">User::DOCENTE_ID</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Inputs[Row Number Input]"
+                  description="Row Number input data."
+                  name="Row Number Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output]"
+                  name="Row Number Output"
+                  synchronousInputId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Inputs[Row Number Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output].Columns[DOCENTE_ID]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output].Columns[DOCENTE_ID]"
+                      name="DOCENTE_ID">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Row Number Column Indicator"
+                          name="RowNumber">RowNumber</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[ChecksumOutput]"
+              endId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Inputs[ChecksumInput]"
+              name="ChecksumOutput"
+              startId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Outputs[ChecksumOutput]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[ChecksumOutput1]"
+              endId="Package\Tarea Flujo de Datos Docente\DimDocente.Inputs[Entrada de destino de OLE DB]"
+              name="ChecksumOutput"
+              startId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2.Outputs[ChecksumOutput]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Data Conversion Output]"
+              endId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Inputs[Lookup Input]"
+              name="Data Conversion Output"
+              startId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Data Conversion Output1]"
+              endId="Package\Tarea Flujo de Datos Docente\Columna derivada.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Derived Column Output]"
+              endId="Package\Tarea Flujo de Datos Docente\Conversion datos nombre.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Tarea Flujo de Datos Docente\Columna derivada.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Lookup Match Output]"
+              endId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Lookup Match Output1]"
+              endId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Inputs[Row Number Input]"
+              name="Lookup Match Output"
+              startId="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Row Number Output]"
+              endId="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1.Inputs[ChecksumInput]"
+              name="Row Number Output"
+              startId="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente.Outputs[Row Number Output]" />
+            <path
+              refId="Package\Tarea Flujo de Datos Docente.Paths[Salida de origen de OLE DB]"
+              endId="Package\Tarea Flujo de Datos Docente\Conversion de datos.Inputs[Data Conversion Input]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de Datos Docente\Fuente Terceros.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="219,42"
+          Id="Package\Tarea Flujo de Datos Docente"
+          TopLeft="237,113" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de Datos Docente">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 2"
+          TopLeft="431,79" />
+        <NodeLayout
+          Size="185,42"
+          Id="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia"
+          TopLeft="447,340" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Tarea Flujo de Datos Docente\Llave Sustituta docente"
+          TopLeft="449,244" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Tarea Flujo de Datos Docente\Conversion datos nombre"
+          TopLeft="220,445" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Tarea Flujo de Datos Docente\Columna derivada"
+          TopLeft="231,357" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Tarea Flujo de Datos Docente\Checksum Transformation Tipo 1"
+          TopLeft="430,160" />
+        <NodeLayout
+          Size="136,42"
+          Id="Package\Tarea Flujo de Datos Docente\DimDocente"
+          TopLeft="478,0" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Tarea Flujo de Datos Docente\Fuente Terceros"
+          TopLeft="238,167" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Tarea Flujo de Datos Docente\Conversion de datos"
+          TopLeft="231,271" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento"
+          TopLeft="453,448" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Lookup Match Output]"
+          TopLeft="541.5,448">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-66"
+              Start="0,0"
+              End="0,-58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,-35.0546875,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Derived Column Output]"
+          TopLeft="316.25,399">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Data Conversion Output1]"
+          TopLeft="315.75,313">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Data Conversion Output]"
+          TopLeft="419,467.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34,0"
+              Start="0,0"
+              End="26.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="26.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[ChecksumOutput1]"
+          TopLeft="547.25,79">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-37"
+              Start="0,0"
+              End="0,-29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[ChecksumOutput]"
+          TopLeft="548,160">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-39"
+              Start="0,0"
+              End="0,-31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Row Number Output]"
+          TopLeft="545.5,244">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-42"
+              Start="0,0"
+              End="0,-34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Lookup Match Output1]"
+          TopLeft="541.5,340">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-54"
+              Start="0,0"
+              End="0,-46.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-46.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,-29.0546875,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de Datos Docente.Paths[Salida de origen de OLE DB]"
+          TopLeft="317,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62"
+              Start="0,0"
+              End="0,54.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\DimDocente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Procedencia">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"DW_ACADEMICO_LABOR"."LOCALIZACION"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\Fuente Terceros">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de Datos Docente\Busqueda Nacimiento">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">"DW_ACADEMICO_LABOR"."LOCALIZACION"</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

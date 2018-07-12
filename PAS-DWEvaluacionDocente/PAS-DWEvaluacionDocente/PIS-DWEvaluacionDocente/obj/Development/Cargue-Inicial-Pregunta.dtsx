@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue-Inicial-Pregunta"
   DTS:PackageType="5"
-  DTS:VersionBuild="20"
-  DTS:VersionGUID="{A8E895D3-A286-48CF-BB87-F47088034F68}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{D44FE6AD-E135-4898-9965-33F5DD23F2CA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -645,6 +645,11 @@
                       dataType="wstr"
                       length="30"
                       name="CATEGORIA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\DimPregunta.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM]"
+                      dataType="wstr"
+                      length="38"
+                      name="CHECKSUM" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -828,7 +833,7 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA, ACADEMICO.EVALUACIONPREGUNTAS.TEXTO,     ACADEMICO.EVALUACIONPREGUNTAS.TIPO,  ROW_NUMBER() OVER (PARTITION BY ACADEMICO.EVALUACIONPREGUNTASMATERIAS.CUESTIONARIO ORDER BY ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA) AS NUMERO_PREGUNTA FROM ACADEMICO.EVALUACIONPREGUNTASMATERIAS  JOIN ACADEMICO.EVALUACIONPREGUNTAS     ON (ACADEMICO.EVALUACIONPREGUNTAS.OID = ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA) WHERE (ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA IS NOT NULL AND ACADEMICO.EVALUACIONPREGUNTASMATERIAS.CUESTIONARIO IS NOT NULL)  AND ACADEMICO.EVALUACIONPREGUNTAS.TEXTO IS NOT NULL</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA, INITCAP(ACADEMICO.EVALUACIONPREGUNTAS.TEXTO) TEXTO,     ACADEMICO.EVALUACIONPREGUNTAS.TIPO,  ROW_NUMBER() OVER (PARTITION BY ACADEMICO.EVALUACIONPREGUNTASMATERIAS.CUESTIONARIO ORDER BY ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA) AS NUMERO_PREGUNTA FROM ACADEMICO.EVALUACIONPREGUNTASMATERIAS  JOIN ACADEMICO.EVALUACIONPREGUNTAS     ON (ACADEMICO.EVALUACIONPREGUNTAS.OID = ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA) WHERE (ACADEMICO.EVALUACIONPREGUNTASMATERIAS.PREGUNTA IS NOT NULL AND ACADEMICO.EVALUACIONPREGUNTASMATERIAS.CUESTIONARIO IS NOT NULL)  AND ACADEMICO.EVALUACIONPREGUNTAS.TEXTO IS NOT NULL</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -875,16 +880,6 @@
                       name="PREGUNTA"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].Columns[TEXTO]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].ExternalColumns[TEXTO]"
-                      length="500"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].Columns[TEXTO]"
-                      name="TEXTO"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].Columns[TIPO]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
@@ -904,6 +899,16 @@
                       lineageId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].Columns[NUMERO_PREGUNTA]"
                       name="NUMERO_PREGUNTA"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].Columns[TEXTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].ExternalColumns[TEXTO]"
+                      length="500"
+                      lineageId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].Columns[TEXTO]"
+                      name="TEXTO"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -912,11 +917,6 @@
                       dataType="wstr"
                       length="38"
                       name="PREGUNTA" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].ExternalColumns[TEXTO]"
-                      dataType="wstr"
-                      length="500"
-                      name="TEXTO" />
                     <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].ExternalColumns[TIPO]"
                       dataType="wstr"
@@ -927,6 +927,11 @@
                       dataType="wstr"
                       length="38"
                       name="NUMERO_PREGUNTA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\Fuente Pregunta.Outputs[Salida de origen de OLE DB].ExternalColumns[TEXTO]"
+                      dataType="wstr"
+                      length="500"
+                      name="TEXTO" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1560,61 +1565,59 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="157,42"
-          Id="Package\Tarea Flujo de datos\Fuente Pregunta"
-          TopLeft="151,13" />
+          Size="140,42"
+          Id="Package\Tarea Flujo de datos\DimPregunta"
+          TopLeft="154,511" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Tarea Flujo de datos\Conversion Categoria"
+          TopLeft="371,174" />
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Tarea Flujo de datos\Combinación de mezcla"
+          TopLeft="134,265" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Conversión de datos"
           TopLeft="143,100" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="230,55">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,45"
-              Start="0,0"
-              End="0,37.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Tarea Flujo de datos\Ordenacion Categoria"
+          TopLeft="373,260" />
         <NodeLayout
           Size="159,42"
           Id="Package\Tarea Flujo de datos\Fuente Categoria"
           TopLeft="379,98" />
         <NodeLayout
+          Size="157,42"
+          Id="Package\Tarea Flujo de datos\Fuente Pregunta"
+          TopLeft="151,13" />
+        <NodeLayout
+          Size="194,42"
+          Id="Package\Tarea Flujo de datos\Llave Sustituta Pregunta"
+          TopLeft="130,432" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Tarea Flujo de datos\Columna derivada"
+          TopLeft="143,348" />
+        <NodeLayout
           Size="178,42"
           Id="Package\Tarea Flujo de datos\Ordenacion pregunta"
           TopLeft="137,180" />
-        <NodeLayout
-          Size="181,42"
-          Id="Package\Tarea Flujo de datos\Ordenacion Categoria"
-          TopLeft="373,260" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="228.25,142">
+          Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
+          TopLeft="225.5,474">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38"
+              EndConnector="0,37"
               Start="0,0"
-              End="0,30.5">
+              End="0,29.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,29.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1623,10 +1626,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Tarea Flujo de datos\Conversion Categoria"
-          TopLeft="371,174" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB1]"
           TopLeft="459.5,140">
@@ -1650,45 +1649,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
-          TopLeft="462,216">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+          TopLeft="230,55">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="0,45"
               Start="0,0"
-              End="0,36.5">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="190,42"
-          Id="Package\Tarea Flujo de datos\Combinación de mezcla"
-          TopLeft="134,265" />
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-          TopLeft="227.5,222">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43"
-              Start="0,0"
-              End="0,35.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.5" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1719,28 +1692,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="194,42"
-          Id="Package\Tarea Flujo de datos\Llave Sustituta Pregunta"
-          TopLeft="130,432" />
-        <NodeLayout
-          Size="140,42"
-          Id="Package\Tarea Flujo de datos\DimPregunta"
-          TopLeft="154,511" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
-          TopLeft="225.5,474">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
+          TopLeft="227.5,222">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,43"
               Start="0,0"
-              End="0,29.5">
+              End="0,35.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,35.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1749,10 +1714,50 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Tarea Flujo de datos\Columna derivada"
-          TopLeft="143,348" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
+          TopLeft="462,216">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="228.25,142">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38"
+              Start="0,0"
+              End="0,30.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
           TopLeft="227,307">
@@ -1801,10 +1806,15 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Fuente Pregunta">
+    design-time-name="Package\Tarea Flujo de datos\DimPregunta">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1822,15 +1832,10 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\DimPregunta">
+    design-time-name="Package\Tarea Flujo de datos\Fuente Pregunta">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="Cargue-Rango"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{D309DE9E-C791-403C-BC94-20675E84CD58}">
+  DTS:VersionBuild="35"
+  DTS:VersionGUID="{120FE98F-54E2-4CC2-9256-2F2DEDB2CE69}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -577,7 +577,7 @@ where "refTable"."NOMBRE_RANGO" = ? and "refTable"."RANGO" = ? and "refTable"."L
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">RANGO$</property>
+                  name="OpenRowset">DIMRANGO$</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1629,11 +1629,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <NodeLayout
           Size="178,42"
           Id="Package\Data Flow Task\Llave primaria Rango"
-          TopLeft="266,285" />
+          TopLeft="255,285" />
         <NodeLayout
           Size="127,42"
           Id="Package\Data Flow Task\DimRango"
-          TopLeft="278,367" />
+          TopLeft="286,368" />
         <NodeLayout
           Size="158,42"
           Id="Package\Data Flow Task\Busqueda Rango"
@@ -1644,30 +1644,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           TopLeft="268,119" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="355,327">
+          TopLeft="346.75,327">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-13.5,40"
+              EndConnector="0,41"
               Start="0,0"
-              End="-13.5,32.5">
+              End="0,33.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16"
-                    Point2="0,20"
-                    Point3="-4,20" />
-                  <mssgle:LineSegment
-                    End="-9.5,20" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.5,20"
-                    Point2="-13.5,20"
-                    Point3="-13.5,24" />
-                  <mssgle:LineSegment
-                    End="-13.5,32.5" />
+                    End="0,33.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1678,37 +1666,25 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="347,239">
+          TopLeft="345.5,239">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="8,46"
+              EndConnector="0,46"
               Start="0,0"
-              End="8,38.5">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19"
-                    Point2="0,23"
-                    Point3="4,23" />
-                  <mssgle:LineSegment
-                    End="4,23" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4,23"
-                    Point2="8,23"
-                    Point3="8,27" />
-                  <mssgle:LineSegment
-                    End="8,38.5" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-51.80638671875,28,111.6127734375,11.609375"
+              BoundingBox="-55.80638671875,13.4453125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

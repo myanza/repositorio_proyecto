@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/4/2018 4:22:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="EDUARDO"
+  DTS:CreatorName="EDUARDO\Eduardo"
+  DTS:DTSID="{F1E2D735-4A55-47E9-8025-6D4441AC4FC7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.2165.0"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="InicialDimensionPensum"
+  DTS:PackageType="5"
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{55E3E6AD-FEB9-47FB-9F8F-90C99CEE52FB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4DFF5A3F-5DE1-4E88-971A-9A662E7E453D}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="Pensum_Id">
+      <DTS:VariableValue
+        DTS:DataType="20">1</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{21F8CE9B-A078-440C-80F6-5FDA386303B7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Academico Pensums"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Academico Pensums"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select oid,initcap(descripcion) as descripcion,initcap(resolucion) as resolucion,maximocreditos
+from pensums
+order by oid desc</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Academico Pensums.Connections[OleDbConnection]"
+                  connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[OID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[OID]"
+                      length="38"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[OID]"
+                      name="OID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[DESCRIPCION]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]"
+                      name="DESCRIPCION"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[MAXIMOCREDITOS]"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]"
+                      name="MAXIMOCREDITOS"
+                      precision="3"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[RESOLUCION]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[RESOLUCION]"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[RESOLUCION]"
+                      name="RESOLUCION"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[OID]"
+                      dataType="wstr"
+                      length="38"
+                      name="OID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[DESCRIPCION]"
+                      dataType="wstr"
+                      length="100"
+                      name="DESCRIPCION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[MAXIMOCREDITOS]"
+                      dataType="numeric"
+                      name="MAXIMOCREDITOS"
+                      precision="3" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].ExternalColumns[RESOLUCION]"
+                      dataType="wstr"
+                      length="100"
+                      name="RESOLUCION" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[OID]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[OID]"
+                      name="OID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[DESCRIPCION]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[DESCRIPCION]"
+                      name="DESCRIPCION" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[MAXIMOCREDITOS]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[MAXIMOCREDITOS]"
+                      name="MAXIMOCREDITOS"
+                      precision="3" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[RESOLUCION]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[RESOLUCION]"
+                      name="RESOLUCION" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Columna derivada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Columna derivada;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Crea nuevas columnas o sobrescribe las columnas existentes. Por ejemplo, se concatenan los valores de las columnas 'nombre' y 'apellidos' para crear una columna 'nombre completo'."
+              name="Columna derivada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada]"
+                  description="Entrada en la transformación Columna derivada"
+                  name="Entrada de columna derivada">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada].Columns[DESCRIPCION1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="DESCRIPCION1"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DESCRIPCION1]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DESCRIPCION1]}) ? "No Registra" : #{Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DESCRIPCION1]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(DESCRIPCION1) ? "No Registra" : DESCRIPCION1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada].Columns[MAXIMOCREDITOS]"
+                      cachedDataType="numeric"
+                      cachedName="MAXIMOCREDITOS"
+                      cachedPrecision="3"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada].Columns[MAXIMOCREDITOS1]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="MAXIMOCREDITOS1"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[MAXIMOCREDITOS1]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]}) ? "No Registra" : #{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]} &lt; 100 ? "Menor que 100 creditos" : #{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]} &gt;= 100 &amp;&amp; #{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]} &lt; 140 ? "Entre 100 Y 139 creditos" : #{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]} &gt;= 140 &amp;&amp; #{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]} &lt; 160 ? "Entre 140 Y 160 creditos" : "Mas de 160 creditos"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(MAXIMOCREDITOS) ? "No Registra" : MAXIMOCREDITOS &lt; 100 ? "Menor que 100 creditos" : MAXIMOCREDITOS &gt;= 100 &amp;&amp; MAXIMOCREDITOS &lt; 140 ? "Entre 100 Y 139 creditos" : MAXIMOCREDITOS &gt;= 140 &amp;&amp; MAXIMOCREDITOS &lt; 160 ? "Entre 140 Y 160 creditos" : "Mas de 160 creditos"</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada].Columns[RESOLUCION1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="RESOLUCION1"
+                      errorOrTruncationOperation="Cálculo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[RESOLUCION1]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión de columna derivada"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[RESOLUCION1]}) ? "No Registra" : #{Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[RESOLUCION1]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Expresión descriptiva de columna derivada"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(RESOLUCION1) ? "No Registra" : RESOLUCION1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Columna derivada.Outputs[Salida de columna derivada]"
+                  description="Salida predeterminada de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  name="Salida de columna derivada"
+                  synchronousInputId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Columna derivada.Outputs[Salida de error de columna derivada]"
+                  description="Salida de error de la transformación Columna derivada"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de columna derivada"
+                  synchronousInputId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Columna derivada.Outputs[Salida de error de columna derivada].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Conversión de datos"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Conversión de datos;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;0"
+              description="Conversión de datos"
+              name="Conversión de datos"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos]"
+                  name="Entrada de conversión de datos">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[DESCRIPCION]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="DESCRIPCION"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[OID]"
+                      cachedDataType="wstr"
+                      cachedLength="38"
+                      cachedName="OID"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[OID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[MAXIMOCREDITOS]"
+                      cachedDataType="numeric"
+                      cachedName="MAXIMOCREDITOS"
+                      cachedPrecision="3"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[RESOLUCION]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="RESOLUCION"
+                      lineageId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[RESOLUCION]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos]"
+                  exclusionGroup="1"
+                  name="Salida de conversión de datos"
+                  synchronousInputId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DESCRIPCION1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DESCRIPCION1]"
+                      name="DESCRIPCION1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[DESCRIPCION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[OID1]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[OID1]"
+                      name="OID1"
+                      precision="38"
+                      scale="4"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[OID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[MAXIMOCREDITOS1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[MAXIMOCREDITOS1]"
+                      name="MAXIMOCREDITOS1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[MAXIMOCREDITOS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[RESOLUCION1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="100"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[RESOLUCION1]"
+                      name="RESOLUCION1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB].Columns[RESOLUCION]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de error de conversión de datos]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de conversión de datos"
+                  synchronousInputId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de error de conversión de datos].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Dw Pensum"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="Dw Pensum"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">"DW_ACADEMICO_LABOR"."PENSUM"</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Sólo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Dw Pensum.Connections[OleDbConnection]"
+                  connectionManagerID="{4C06743C-E1D1-43F4-AC6C-A2777ABD670A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost ACADEMICO]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].Columns[PENSUM_ID]"
+                      cachedDataType="i4"
+                      cachedName="PENSUM_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[PENSUM_ID]"
+                      lineageId="Package\Data Flow Task\Identificador Pensum.Outputs[Row Number Output].Columns[PENSUM_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].Columns[DESCRIPCION1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="DESCRIPCION1"
+                      externalMetadataColumnId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[DESCRIPCION]"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[DESCRIPCION1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].Columns[RESOLUCION1]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="RESOLUCION1"
+                      externalMetadataColumnId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[RESOLUCION]"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[RESOLUCION1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].Columns[MAXIMOCREDITOS1]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="MAXIMOCREDITOS1"
+                      externalMetadataColumnId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGOS_CREDITOS]"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[MAXIMOCREDITOS1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].Columns[OID1]"
+                      cachedDataType="numeric"
+                      cachedName="OID1"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[CODIGO_PENSUM]"
+                      lineageId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos].Columns[OID1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[PENSUM_ID]"
+                      dataType="numeric"
+                      name="PENSUM_ID"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[DESCRIPCION]"
+                      dataType="wstr"
+                      length="100"
+                      name="DESCRIPCION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[RESOLUCION]"
+                      dataType="wstr"
+                      length="100"
+                      name="RESOLUCION" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[RANGOS_CREDITOS]"
+                      dataType="wstr"
+                      length="50"
+                      name="RANGOS_CREDITOS" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB].ExternalColumns[CODIGO_PENSUM]"
+                      dataType="wstr"
+                      length="38"
+                      name="CODIGO_PENSUM" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Dw Pensum.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dw Pensum.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Dw Pensum.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Dw Pensum.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Identificador Pensum"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Row Number Transformation; Konesans Ltd; Copyright © 2016 Konesans Ltd; http://www.konesans.com"
+              description="Row Number Transformation for SQL Server Integration Services 2016"
+              name="Identificador Pensum"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Konesans.RowNumberTransformation</property>
+                <property
+                  dataType="System.Decimal"
+                  description="The first row number."
+                  expressionType="Notify"
+                  name="Seed">1</property>
+                <property
+                  dataType="System.Decimal"
+                  description="The value added to the previous row number to make the next row number."
+                  expressionType="Notify"
+                  name="Increment">1</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the variable into which the final row number is written post execution. (Optional)."
+                  expressionType="Notify"
+                  name="OutputVariable">User::Pensum_Id</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Identificador Pensum.Inputs[Row Number Input]"
+                  description="Row Number input data."
+                  name="Row Number Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Identificador Pensum.Outputs[Row Number Output]"
+                  name="Row Number Output"
+                  synchronousInputId="Package\Data Flow Task\Identificador Pensum.Inputs[Row Number Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Identificador Pensum.Outputs[Row Number Output].Columns[PENSUM_ID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Identificador Pensum.Outputs[Row Number Output].Columns[PENSUM_ID]"
+                      name="PENSUM_ID">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Row Number Column Indicator"
+                          name="RowNumber">RowNumber</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Row Number Output]"
+              endId="Package\Data Flow Task\Dw Pensum.Inputs[Entrada de destino de OLE DB]"
+              name="Row Number Output"
+              startId="Package\Data Flow Task\Identificador Pensum.Outputs[Row Number Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Salida de columna derivada]"
+              endId="Package\Data Flow Task\Identificador Pensum.Inputs[Row Number Input]"
+              name="Salida de columna derivada"
+              startId="Package\Data Flow Task\Columna derivada.Outputs[Salida de columna derivada]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Salida de conversión de datos]"
+              endId="Package\Data Flow Task\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de conversión de datos"
+              startId="Package\Data Flow Task\Conversión de datos.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Salida de origen de OLE DB]"
+              endId="Package\Data Flow Task\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Data Flow Task\Academico Pensums.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="269,100" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Data Flow Task\Dw Pensum"
+          TopLeft="297,369" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Data Flow Task\Columna derivada"
+          TopLeft="284,207" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Data Flow Task\Conversión de datos"
+          TopLeft="280,119" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Data Flow Task\Identificador Pensum"
+          TopLeft="271,293" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Data Flow Task\Academico Pensums"
+          TopLeft="277,40" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Salida de columna derivada]"
+          TopLeft="363.25,249">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44"
+              Start="0,0"
+              End="0,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Row Number Output]"
+          TopLeft="362.5,335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Salida de origen de OLE DB]"
+          TopLeft="366,82">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Salida de conversión de datos]"
+          TopLeft="366.75,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Dw Pensum">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Academico Pensums">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
