@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1091" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7011" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1091" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6720" y="12250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -227,10 +227,6 @@
           <AttributeID>NUCLEO BASICO</AttributeID>
           <Name>NUCLEO BASICO</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="4e339c53-522f-4a23-82fc-b295bb8158a1">
-          <AttributeID>NOMBRE 3</AttributeID>
-          <Name>NOMBRE_ADMPRO</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="3e32e00e-4eb9-47e8-b093-7f2a5cf0c253">
           <AttributeID>NOMBRE</AttributeID>
           <Name>NOMBRE_JORSIG</Name>
@@ -242,10 +238,6 @@
         <AttributeRelationship dwd:design-time-name="8f3604f8-e578-437b-adef-02b7293a28ef">
           <AttributeID>NOMBRE 2</AttributeID>
           <Name>NOMBRE_SEDPRO</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="758296ea-7ca8-47a6-bf47-80958a4cfa3e">
-          <AttributeID>NOMBRE 4</AttributeID>
-          <Name>NOMBRE_REG</Name>
         </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="9aa961a7-43c9-4375-afa5-9445a05ccaa8">
           <AttributeID>NOMBRE 5</AttributeID>
@@ -447,37 +439,6 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="21063237-58db-4e3b-a476-0c8229c0dfcf">
-      <ID>INDICADOR REGIONAL</ID>
-      <Name>INDICADOR REGIONAL</Name>
-      <EstimatedCount>2</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="c3cbaf75-0309-480f-9f5f-a5670e8480fa">
-          <DataType>WChar</DataType>
-          <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="9271ab47-1980-49ba-a775-3a9c975683dd">
-            <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-            <ColumnID>INDICADOR_REGIONAL</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="75abbb63-f59f-4ea0-af57-b16751ea823c">
-        <DataType>WChar</DataType>
-        <DataSize>30</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="365a90f9-40e2-4173-8fae-a230267a6c35">
-          <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-          <ColumnID>INDICADOR_REGIONAL</ColumnID>
-        </Source>
-      </NameColumn>
-      <Translations>
-        <Translation dwd:design-time-name="7652a515-7c28-4d45-81bb-f271f7043133">
-          <Language>9226</Language>
-          <Caption>Indicador Regional</Caption>
-        </Translation>
-      </Translations>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
     <Attribute dwd:design-time-name="7123e813-02bc-4240-8557-a873dcf98614">
       <ID>PREFIJO CODIGO</ID>
       <Name>PREFIJO CODIGO</Name>
@@ -495,37 +456,6 @@
         <Translation dwd:design-time-name="2469904c-330b-4604-900f-d2b097295be8">
           <Language>9226</Language>
           <Caption>Prefijo Código</Caption>
-        </Translation>
-      </Translations>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="2da700b1-34ff-4483-b1b5-d2c5a15c642a">
-      <ID>ADMISION</ID>
-      <Name>ADMISION</Name>
-      <EstimatedCount>3</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="1235134b-991c-4654-806c-65b2a9641ab9">
-          <DataType>WChar</DataType>
-          <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ee6b758e-9e64-459a-b75d-b29c106d8d9c">
-            <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-            <ColumnID>ADMISION</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="f392f60f-5fc9-483a-b3de-75695bc103dc">
-        <DataType>WChar</DataType>
-        <DataSize>30</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="19b838ee-335d-4a83-aa21-ce4c6ecab6c1">
-          <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-          <ColumnID>ADMISION</ColumnID>
-        </Source>
-      </NameColumn>
-      <Translations>
-        <Translation dwd:design-time-name="0d5c8a04-4f95-4c22-b2a7-79ef2dc20489">
-          <Language>9226</Language>
-          <Caption>Admisión</Caption>
         </Translation>
       </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
@@ -760,78 +690,6 @@
         <AttributeRelationship dwd:design-time-name="903510a4-0651-4db1-814b-f06e15195728">
           <AttributeID>SEDE 1</AttributeID>
           <Name>SEDE_SEDPRO</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="258a2c04-cf96-4ec6-877d-de91924b784c">
-      <ID>NOMBRE 3</ID>
-      <Name>NOMBRE_ADMPRO</Name>
-      <EstimatedCount>61</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="71fb9a8f-c8c5-4738-9bfa-94ba1e124229">
-          <DataType>WChar</DataType>
-          <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="69b4540e-96c6-4cc2-ab08-6b710f1fe431">
-            <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-            <ColumnID>ADMISION</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="54fb1513-2434-4c25-978b-892e703aebef">
-          <DataType>WChar</DataType>
-          <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="2050d5a8-fc0d-4efd-a577-c7f16e066814">
-            <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-            <ColumnID>NOMBRE</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="29b7ca1a-7ac4-4038-883c-e9004ae1ee4f">
-        <DataType>WChar</DataType>
-        <DataSize>100</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="31e037d0-d857-45d8-80fc-4e72b6156a97">
-          <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-          <ColumnID>NOMBRE</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="01ebec6b-d21f-4033-94a0-7eaf03c91ec3">
-          <AttributeID>ADMISION</AttributeID>
-          <Name>ADMISION</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="5a4da651-cf80-480d-9518-b51a2c56c1f7">
-      <ID>NOMBRE 4</ID>
-      <Name>NOMBRE_REG</Name>
-      <EstimatedCount>61</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="c119d465-3510-434a-9f42-00d2edc39e87">
-          <DataType>WChar</DataType>
-          <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a24e7a7c-f886-4caa-bbb4-9016fb23f2d1">
-            <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-            <ColumnID>NOMBRE</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="5c771df5-28b4-4abf-a2e0-79128635049e">
-        <DataType>WChar</DataType>
-        <DataSize>100</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="27a998bc-053d-46c5-866d-36ccc22c1e0d">
-          <TableID>DW_ACADEMICO_LABOR_PROGRAMA</TableID>
-          <ColumnID>NOMBRE</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="1c6d2cf1-d761-4970-af28-cb4c8ac97449">
-          <AttributeID>INDICADOR REGIONAL</AttributeID>
-          <Name>INDICADOR REGIONAL</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
@@ -1131,62 +989,6 @@
           <SourceAttributeID>NOMBRE 2</SourceAttributeID>
           <Translations>
             <Translation dwd:design-time-name="56df6a99-b805-40d2-8366-aada642b35d8">
-              <Language>9226</Language>
-              <Caption>Nombre Programa</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-      </Levels>
-    </Hierarchy>
-    <Hierarchy dwd:design-time-name="7cfdca5d-72ea-4b66-afc3-a9bb8d129230">
-      <ID>Hierarchy 3</ID>
-      <Name>Jerarquia_Admision_Programa</Name>
-      <Levels>
-        <Level dwd:design-time-name="465bbf0c-d792-48a8-a356-42f7fad35eb0">
-          <ID>ADMISION</ID>
-          <Name>ADMISION</Name>
-          <SourceAttributeID>ADMISION</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="6e51f9c5-848c-47f3-9682-afb89f30d932">
-              <Language>9226</Language>
-              <Caption>Admisión</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-        <Level dwd:design-time-name="4a6b6cb1-83bd-438b-9627-65d0fd11f7e1">
-          <ID>NOMBRE_ADMPRO</ID>
-          <Name>NOMBRE_ADMPRO</Name>
-          <SourceAttributeID>NOMBRE 3</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="c150cb34-5afd-4414-92d1-f96cee3223c0">
-              <Language>9226</Language>
-              <Caption>Nombre Programa</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-      </Levels>
-    </Hierarchy>
-    <Hierarchy dwd:design-time-name="4aedd888-22dd-4fd8-9a97-a2b3f74d0c25">
-      <ID>Hierarchy 4</ID>
-      <Name>Jerarquia_Regional_Programa</Name>
-      <Levels>
-        <Level dwd:design-time-name="15281cee-1e01-49b0-b006-d842c68b2032">
-          <ID>INDICADOR REGIONAL</ID>
-          <Name>INDICADOR REGIONAL</Name>
-          <SourceAttributeID>INDICADOR REGIONAL</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="e3cf56d6-f094-49ab-9ec3-60242b0e941c">
-              <Language>9226</Language>
-              <Caption>Indicador Regional</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-        <Level dwd:design-time-name="8395c7eb-e102-445e-97a1-ac06d2df8096">
-          <ID>NOMBRE_REG</ID>
-          <Name>NOMBRE_REG</Name>
-          <SourceAttributeID>NOMBRE 4</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="31be2dcf-e74e-4bf9-96f7-e30df7a8be02">
               <Language>9226</Language>
               <Caption>Nombre Programa</Caption>
             </Translation>
