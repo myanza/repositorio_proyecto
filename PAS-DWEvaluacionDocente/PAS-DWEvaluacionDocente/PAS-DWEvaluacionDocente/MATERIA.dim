@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-548" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6932" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-548" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5689" y="10980" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -68,7 +68,7 @@
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
       <Value>
-        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+        <DiagramLayout ZoomPercent="100" ViewPortX="10" ViewPortY="0" xmlns="">
           <Shapes NodeWidth="223">
             <Shape Id="MATERIA ID" Expanded="false">
               <Attributes>
@@ -85,59 +85,71 @@
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
+            <Shape Id="NOMBRE MATERIA 4" Expanded="false">
+              <Attributes>
+                <Attribute Id="NOMBRE MATERIA 4" />
+              </Attributes>
+              <Position x="303" y="20" />
+            </Shape>
+            <Shape Id="AREA CONOCIMIENTO 2" Expanded="false">
+              <Attributes>
+                <Attribute Id="AREA CONOCIMIENTO 2" />
+              </Attributes>
+              <Position x="587" y="20" />
+            </Shape>
             <Shape Id="NOMBRE CURSO 2" Expanded="false">
               <Attributes>
                 <Attribute Id="NOMBRE CURSO 2" />
               </Attributes>
-              <Position x="303" y="20" />
+              <Position x="303" y="68" />
             </Shape>
             <Shape Id="NOMBRE MATERIA 2" Expanded="false">
               <Attributes>
                 <Attribute Id="NOMBRE MATERIA 2" />
               </Attributes>
-              <Position x="587" y="20" />
+              <Position x="587" y="68" />
             </Shape>
             <Shape Id="TIPO MATERIA" Expanded="false">
               <Attributes>
                 <Attribute Id="TIPO MATERIA" />
               </Attributes>
-              <Position x="871" y="20" />
+              <Position x="871" y="68" />
             </Shape>
             <Shape Id="NOMBRE CURSO 1" Expanded="false">
               <Attributes>
                 <Attribute Id="NOMBRE CURSO 1" />
               </Attributes>
-              <Position x="303" y="68" />
+              <Position x="303" y="116" />
             </Shape>
             <Shape Id="NOMBRE MATERIA 1" Expanded="false">
               <Attributes>
                 <Attribute Id="NOMBRE MATERIA 1" />
               </Attributes>
-              <Position x="587" y="68" />
+              <Position x="587" y="116" />
             </Shape>
             <Shape Id="INDICADOR PROMEDIO" Expanded="false">
               <Attributes>
                 <Attribute Id="INDICADOR PROMEDIO" />
               </Attributes>
-              <Position x="871" y="68" />
+              <Position x="871" y="116" />
             </Shape>
             <Shape Id="NOMBRE CURSO" Expanded="false">
               <Attributes>
                 <Attribute Id="NOMBRE CURSO" />
               </Attributes>
-              <Position x="303" y="116" />
+              <Position x="303" y="164" />
             </Shape>
             <Shape Id="NOMBRE MATERIA" Expanded="false">
               <Attributes>
                 <Attribute Id="NOMBRE MATERIA" />
               </Attributes>
-              <Position x="587" y="116" />
+              <Position x="587" y="164" />
             </Shape>
             <Shape Id="AREA CONOCIMIENTO" Expanded="false">
               <Attributes>
                 <Attribute Id="AREA CONOCIMIENTO" />
               </Attributes>
-              <Position x="871" y="116" />
+              <Position x="871" y="164" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -218,6 +230,10 @@
         <AttributeRelationship dwd:design-time-name="ecd24577-49c0-431c-aa7e-a873bbc0f448">
           <AttributeID>NOMBRE CURSO 2</AttributeID>
           <Name>NOMBRE CURSO_TIPOMAT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="41761e5a-476f-4b3c-8e4c-b1dd80ac7969">
+          <AttributeID>NOMBRE MATERIA 4</AttributeID>
+          <Name>NOMBRE MATERIA_AMSC</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -829,11 +845,89 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
+    <Attribute dwd:design-time-name="f5e7dd16-9f5d-4356-887a-da91a448faa2">
+      <ID>AREA CONOCIMIENTO 2</ID>
+      <Name>AREA CONOCIMIENTO_AMSC</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="301f2ca9-ae14-42db-be5a-a428d34c6126">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d37e38e3-4354-4966-aa21-24b1d2f8de01">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>MATERIA_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="e9af978c-86e1-4433-a1e6-6c6ee36072ea">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="739f3319-3a45-44fd-bca5-ff5a3ff57629">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>AREA_CONOCIMIENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="3288a13c-fe37-4218-8dbb-7f17f9890811">
+        <DataType>WChar</DataType>
+        <DataSize>50</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0c33819c-9186-42ec-8c06-2c28f7d58eff">
+          <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+          <ColumnID>AREA_CONOCIMIENTO</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ae407cc5-a8b6-4f0e-b0e8-85094ff9dd0c">
+      <ID>NOMBRE MATERIA 4</ID>
+      <Name>NOMBRE MATERIA_AMSC</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="da4e8c09-4402-4339-a2d3-be6189eef3ab">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="910fa6ce-c85a-4f50-8c49-d5c880326057">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>MATERIA_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="f637dbb8-37e4-43b9-a5a0-66eff42e3ccf">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3430d3ea-a3ab-4e24-ac9f-f52cf8b0bb8c">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>AREA_CONOCIMIENTO</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="1a346666-92b1-4a1e-bf55-921fc625af4d">
+          <DataType>WChar</DataType>
+          <DataSize>80</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6ebb7d7d-debb-4b56-aa12-e4237f9d75d1">
+            <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+            <ColumnID>NOMBRE_MATERIA</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="6a83db1d-829e-4c06-80a2-78c4a7172594">
+        <DataType>WChar</DataType>
+        <DataSize>80</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="d73e10dc-1c2a-4cce-bbdf-867f9a643460">
+          <TableID>DW_ACADEMICO_LABOR_MATERIA</TableID>
+          <ColumnID>NOMBRE_MATERIA</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1abb34e9-1fee-41d5-a181-f5f7466aa0bf">
+          <AttributeID>AREA CONOCIMIENTO 2</AttributeID>
+          <Name>AREA CONOCIMIENTO_AMSC</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
   </Attributes>
   <Hierarchies>
     <Hierarchy dwd:design-time-name="7233b22c-668f-4101-8b63-66e91e037a63">
       <ID>Hierarchy</ID>
-      <Name>Jerarquia_Area_Conocimiento</Name>
+      <Name>Jerarquia_Area_Conocimiento_Curso</Name>
       <Levels>
         <Level dwd:design-time-name="4b0c037a-2a15-4b41-b8cb-1ef0932db5df">
           <ID>AREA CONOCIMIENTO_AREAMAT</ID>
@@ -945,6 +1039,22 @@
               <Caption>Curso</Caption>
             </Translation>
           </Translations>
+        </Level>
+      </Levels>
+    </Hierarchy>
+    <Hierarchy dwd:design-time-name="52e14f76-1057-4732-a008-35179b985b83">
+      <ID>Hierarchy 3</ID>
+      <Name>Jerarquia_Area_Conocimiento</Name>
+      <Levels>
+        <Level dwd:design-time-name="b522b995-a635-4734-8616-312c1cf875c7">
+          <ID>AREA CONOCIMIENTO_AMSC</ID>
+          <Name>AREA CONOCIMIENTO_AMSC</Name>
+          <SourceAttributeID>AREA CONOCIMIENTO 2</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e5671a29-f9cf-44a5-9360-3a8cef8f99b1">
+          <ID>NOMBRE MATERIA_AMSC</ID>
+          <Name>NOMBRE MATERIA_AMSC</Name>
+          <SourceAttributeID>NOMBRE MATERIA 4</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>

@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-758" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="9578" y="12250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-758" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="10663" y="6853" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -848,7 +848,6 @@
       <ID>DEMOGRAFIA DOCENTE</ID>
       <Name>DATOS DEMOGRAFICOS - DOCENTE</Name>
       <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
-      <Visible>false</Visible>
       <Attributes>
         <Attribute dwd:design-time-name="30c4cf68-82d0-490d-8dcd-94a7d57157c6">
           <AttributeID>DEMOGRAFIA ID</AttributeID>
@@ -894,7 +893,6 @@
       <ID>DEMOGRAFIA ESTUDIANTE</ID>
       <Name>DATOS DEMOGRAFICOS - ESTUDIANTE</Name>
       <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
-      <Visible>false</Visible>
       <Attributes>
         <Attribute dwd:design-time-name="e1eaa7da-d0dd-4816-a44a-efd19ac7b79d">
           <AttributeID>DEMOGRAFIA ID</AttributeID>
@@ -1075,7 +1073,6 @@
       <ID>DEM ECO DOC</ID>
       <Name>DEMOGRAFIA ECONOMICA - DOCENTE</Name>
       <DimensionID>DEMOGRAFIA DATOS ECONOMICOS</DimensionID>
-      <Visible>false</Visible>
       <Attributes>
         <Attribute dwd:design-time-name="c7e260f1-fa98-4c9c-b475-4fbd1d2e8393">
           <AttributeID>DEM ECONOMICOS ID</AttributeID>
@@ -1133,7 +1130,6 @@
       <ID>DEM ECO EST</ID>
       <Name>DEMOGRAFIA ECONOMICA - ESTUDIANTE</Name>
       <DimensionID>DEMOGRAFIA DATOS ECONOMICOS</DimensionID>
-      <Visible>false</Visible>
       <Attributes>
         <Attribute dwd:design-time-name="6f1c4c71-5c03-4901-b6dc-14ccb0bd00d3">
           <AttributeID>DEM ECONOMICOS ID</AttributeID>
@@ -1870,6 +1866,12 @@
         <Attribute dwd:design-time-name="0f936676-9e02-47b5-8775-04d66d77fa77">
           <AttributeID>NOMBRE CURSO 2</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="3c28c8b4-3322-4ce0-a5ee-3a1f60cde979">
+          <AttributeID>AREA CONOCIMIENTO 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc17f5d7-247c-4bb6-ba94-9eef0a2c272f">
+          <AttributeID>NOMBRE MATERIA 4</AttributeID>
+        </Attribute>
       </Attributes>
       <Hierarchies>
         <Hierarchy dwd:design-time-name="6a31ae83-f3d5-46cb-9f16-7c1a2e19f0c6">
@@ -1880,6 +1882,9 @@
         </Hierarchy>
         <Hierarchy dwd:design-time-name="63dfc2b0-992d-4c98-9e8f-23297b5c78a7">
           <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="2106e0b8-5fdb-402b-859a-ce90e4de0f92">
+          <HierarchyID>Hierarchy 3</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
@@ -2213,30 +2218,22 @@
       <Name>TIPO CONTRATACION</Name>
       <DimensionID>TIPO CONTRATACION</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="4d163acc-0b61-44e8-80fe-efc88bcaaaa0">
-          <AttributeID>DEDICACION</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="ca444eb8-76ac-4d34-a1d2-1f999e030d60">
-          <AttributeID>CATEGORIA</AttributeID>
-        </Attribute>
         <Attribute dwd:design-time-name="4ec06dc3-f862-4c1d-9eea-544a62f97dfa">
           <AttributeID>CONTRATACION ID</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="97f3ac7c-e7ed-4816-a7c0-655f2c4a6e2b">
-          <AttributeID>TIPO CONTRATO</AttributeID>
-        </Attribute>
-        <Attribute dwd:design-time-name="8d280e61-0f5b-4c0a-8ad2-0c09e009a76d">
+        <Attribute dwd:design-time-name="a748612a-68dc-4c83-b42f-4bcaaf332cb6">
           <AttributeID>NIVELES ESTUDIO</AttributeID>
         </Attribute>
+        <Attribute dwd:design-time-name="d63fcbfc-167d-4bca-9f06-32f4d824b7c6">
+          <AttributeID>TIPO CONTRATO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc1c40ab-8d6b-4b1f-961c-3c445e77d6af">
+          <AttributeID>DEDICACION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1d61ae88-ec86-4f59-becd-0430f0d126db">
+          <AttributeID>CATEGORIA</AttributeID>
+        </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy dwd:design-time-name="e5ead7db-476c-4cc7-a2ac-b48e34f466e8">
-          <HierarchyID>Hierarchy</HierarchyID>
-        </Hierarchy>
-        <Hierarchy dwd:design-time-name="06825b16-f6cd-456b-8faf-dd2e95dfae82">
-          <HierarchyID>Hierarchy 1</HierarchyID>
-        </Hierarchy>
-      </Hierarchies>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
@@ -2798,6 +2795,547 @@
           <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
           <Attributes>
             <Attribute dwd:design-time-name="f540c6b1-b0d2-43f7-94fa-b151f95a669b">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>JEFE DEPARTAMENTO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID 1</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="38598049-d44e-45d8-8975-dfcb03bf3236">
+      <ID>HECHO ENCUESTA DOCENCIA 1</ID>
+      <Name>CANTIDAD DOCENTES</Name>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Translations>
+        <Translation dwd:design-time-name="4e67bd7f-9722-4a22-b003-2c8b4f361871">
+          <Language>9226</Language>
+          <Caption>Encuesta Docencia</Caption>
+        </Translation>
+      </Translations>
+      <Measures>
+        <Measure dwd:design-time-name="dcfe7432-e7ef-4f10-a84a-9680fe9164ee">
+          <ID>DOCENTE ID Distinct Count</ID>
+          <Name>CANTIDAD DOCENTES</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="b3a97ab4-ad7c-47b7-bb73-a2059c3fd7b1">
+            <DataType>BigInt</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2fe1e131-633c-4365-888a-0a91f1242573">
+              <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+              <ColumnID>DOCENTE_ID</ColumnID>
+            </Source>
+          </Source>
+          <Translations>
+            <Translation dwd:design-time-name="99b60bda-d02c-4e15-9353-2c014843f35b">
+              <Language>9226</Language>
+              <Caption>Cantidad Docentes</Caption>
+            </Translation>
+          </Translations>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedRows>4</EstimatedRows>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cdfc720a-c911-40b4-891a-125fefe1224d">
+          <CubeDimensionID>RANGO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="314978b4-4cb3-4a0e-8509-5b9adae79a73">
+              <AttributeID>RANGO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d734ee27-69f5-4319-93e8-af74137b4cd3">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f7fc529e-130f-4ea3-9009-dc41940503fa">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>RANGO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9024db5e-5f4a-4139-905f-60a7a7ec138c">
+          <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f2f16d1c-683a-4b10-999f-3dafb21f5834">
+              <AttributeID>FUENTE EVALUACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="23630d47-3996-4d31-acd2-a85a88a347aa">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b57cb79f-7072-4a3e-aa57-e8611691dadf">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>FUENTE_EVALUACION_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3b655e06-3c29-4d6d-b9b0-0581684e4e77">
+          <CubeDimensionID>PREGUNTA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1f26827c-ceed-4c56-ae5e-9305ebbd7d92">
+              <AttributeID>PREGUNTA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="735f229e-a7c4-47de-8ff7-8ec061e4e1bd">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="69b97ab4-4617-4541-b938-82e213ba092d">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PREGUNTA_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e4a8078d-2df5-41b4-9da0-b46b6601276c">
+          <CubeDimensionID>DEM ECO EST</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="27023dc7-7c17-4106-8046-ed553d3805e9">
+              <AttributeID>DEM ECONOMICOS ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="add069b4-591c-4b92-ad50-94aec08169db">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9315f491-2b50-4414-a069-3bbfc9923542">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEM_ECO_EST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="93fcfda6-924b-4342-ba9c-fd41025c204b">
+          <CubeDimensionID>SEMESTRE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0ed8564d-e2df-4af1-ada1-01da03c9bf7a">
+              <AttributeID>SEMESTRE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9a11772a-b80c-48ef-bcf8-fc2e07d64af1">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f7e8dc42-4ce7-4233-9feb-c251c18598a1">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>SEMESTRE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b6db9708-342a-46f4-a0f8-7519fc2e490c">
+          <CubeDimensionID>PROGRAMA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="74f00d9a-ca70-4019-9387-1b48177add3d">
+              <AttributeID>PROGRAMA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fd5572f5-e584-40bf-8085-16f47674da59">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2d46d440-58f3-4e05-ac8a-ad7938be269f">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PROGRAMA_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4b81b85c-abbf-43b2-a7f9-482835d5f64f">
+          <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2b3cee02-2def-43f0-8ffb-647ff2553f3b">
+              <AttributeID>MATER AD ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f6704113-98c7-46fa-a183-c5e3f7e553f6">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c2ba149e-1d14-4ca9-8792-6e239b22ee05">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>MATER_AD_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="48e36a9b-8237-4d2f-881c-2942fbc54aae">
+          <CubeDimensionID>PERIODO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="95bb8264-f67d-43b5-9c15-a6778ab9b6cf">
+              <AttributeID>PERIODO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="11085b30-c7f9-4c0d-a3ff-fa9cea9f01b0">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8d5e7229-3b51-44dd-a766-c9cf58e95094">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PERIODO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a0e4a65b-a360-4c5d-b127-30694f0a2ef5">
+          <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="63055ac3-7f15-438c-9c0e-7d4e163ce5a4">
+              <AttributeID>CUESTIONARIO ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4ecc7887-69a0-4955-a1f6-7f3714d8de4e">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7b31bec2-2a6c-49a3-a900-364683a1247f">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>CUESTIONARIO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="685c104b-060c-4332-a278-9e1f498f1a2e">
+          <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0ca15ab3-640f-4234-8e2d-d1cef9f66a60">
+              <AttributeID>DEMOGRAFIA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c0e6a2a3-22f0-4b0b-9f8f-3f7f5ac61ea4">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fbe72df4-1c1b-4ade-9ffd-76135bd6ef05">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEMOGRAFIA_ESTUDIANTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f3009de8-a771-4bd2-b162-b1a731221bc9">
+          <CubeDimensionID>PENSUM EST</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a4d1a056-8cc4-4ab2-ba60-39eab5858cdd">
+              <AttributeID>PENSUM ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6ce8f9ee-a7f9-45eb-b8ce-2bde097ad729">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1a6bffd5-f8c0-4cf8-80d1-bf8053676c64">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PENSUM_EST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="44124367-8c1c-453a-8186-6cc58c27196b">
+          <CubeDimensionID>MATERIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2b9143f5-3ca9-45cc-8f40-5b22ff43c347">
+              <AttributeID>MATERIA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="02558b46-0fde-4f57-a4d6-d7f28a54dd7e">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7b61e5ed-3ffa-4659-a78a-8d627584318d">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>MATERIA_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="97b13249-d1ed-4d30-ae3e-4d786711acd5">
+          <CubeDimensionID>PENSUM MAT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d8e2c6b8-8b2e-48aa-9e09-f2a6d0c5e1d2">
+              <AttributeID>PENSUM ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a008c1ca-2a31-4614-91c7-5ad82ff3c53b">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="74a73c77-b05b-4198-abfb-dea4290de854">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>PENSUM_MAT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f63c957b-87c5-4b9d-ab9b-be0d1aa68d4e">
+          <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="391fe628-1ee6-413c-8025-043edddbbf2b">
+              <AttributeID>DEMOGRAFIA ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="825225a5-f2bb-4a92-b8ad-5038ef2ae396">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0d92f690-a941-44e7-ae63-810fd4dcac19">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEMOGRAFIA_DOCENTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="256f2c9e-1639-4acd-8c10-62e79413876a">
+          <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b36cf6b2-4c9d-48d1-abed-4ea6696e37e6">
+              <AttributeID>DEM ECONOMICOS ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dd98d44a-c85e-4fc6-9b05-3366f203945f">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2ffa900b-afb1-43c5-8a43-57483a93b002">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DEM_ECO_DOC_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="822f1c1a-b222-4192-b13b-0e01e9adb13c">
+          <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8e2557d2-1d30-4210-9d89-d8a851c2319d">
+              <AttributeID>ESTUDIANTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="9b8a662a-e7c8-427d-b60a-f0ee53311ae4">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="831adccf-6c42-4ac0-9a16-2393239535a4">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>ESTUDIANTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8a1120a4-ea3f-4096-a22a-b6ea87eddeb7">
+          <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5e58c0a3-5b9e-4994-9888-bd8307b21bb4">
+              <AttributeID>CONTRATACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="eba6a0a7-5bbd-4fe5-83fb-b80c77eee796">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b72b1000-4705-4917-80fc-c11d7c4174b3">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>CONTRATACION_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="71d2ac4c-9aa8-44f9-87d1-a4a654ac3378">
+          <CubeDimensionID>DECANO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d35e1fcf-eb52-43e2-a2fe-d9ec3d6ab62c">
+              <AttributeID>DOCENTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="221c46c9-f5a7-4a21-95dd-599edb571615">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1822a2e1-cd85-4fa5-93a0-7346744270ad">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DECANO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6ecfc9ae-d23a-4ddd-b4ec-b8ce1c56d5f1">
+          <CubeDimensionID>DOCENTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="006205e0-7360-4a91-ba90-533c555013a4">
+              <AttributeID>DOCENTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3ecd08cb-1995-4362-a592-465034f7303a">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3902ae18-9ecc-4b12-b342-3c412d87f921">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>DOCENTE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="22e3b309-d47b-4bc7-bfe8-0f85006a1357">
+          <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7bfd161e-bc2c-4064-a313-f44c9f3c7405">
+              <AttributeID>DOCENTE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="65bace66-e5e5-42f2-a944-bb5ee68ae453">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d1797ab6-ca5a-4829-b325-311b94bf9ddf">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>JEFE_DEPARTAMENTO_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="033cd7b1-8627-4fbb-b10c-3888fb0acfb8">
+          <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2c1d60a9-6eb5-43cb-a7b3-d03cbda2911c">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ba99a24f-13cc-4cf0-bcf9-c94221f54b4f">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1f5cc797-3b83-4f87-8bce-dede324a5146">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>LUGAR_RESIDENCIA_EST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="aa3ebcfc-39fd-4a02-9107-4e374cb63cd4">
+          <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="815a4f41-ad3c-4a14-9ec8-f75319fe6c2c">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e9b80f60-1813-4691-9fa1-2d7d4e10075a">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2cab26b4-5ff0-452f-bd78-eb7840a1ae00">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>LUGAR_RESIDENCIA_DOC_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="0d76d45f-dc1a-40f9-9cfd-bd7ae6a7b8d8">
+          <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d1898add-c248-4ade-885d-93667b7e3795">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ESTUDIANTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="4d3ef285-cec8-4385-82f2-5d628e54685f">
+          <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6685482b-b1d6-49f2-a056-f5328569ae80">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>ESTUDIANTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="5524ce35-4460-4ce6-ae6c-622ccccf5687">
+          <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fb50c74a-f398-49bf-abbd-53f3a7c4e92e">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DECANO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID 1</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d2cd1a11-0af3-4da9-9e6f-5d682f5f9877">
+          <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="03b095c6-9e98-4cf8-b642-a16060dbd8e3">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DECANO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID 1</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="3d7a19f6-41dd-4e9b-8ae3-1a94a2cc3ce4">
+          <CubeDimensionID>LOCALIZACION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="387821b7-cab4-4db3-ba7d-420aac29ba08">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DOCENTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID 1</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="2fa2357e-ec9b-40ee-970c-b66cf4496b8f">
+          <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3ecab5c0-6790-4e88-8008-729e38b66e00">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>DOCENTE</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR PROCEDENCIA ID 1</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="ae78473f-2b4e-4d36-9706-de2251abdc15">
+          <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e013b04a-0b71-498f-9706-048deb0a7ac2">
+              <AttributeID>LOCALIZACION ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>JEFE DEPARTAMENTO</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>LUGAR NACIMIENTO ID 1</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="36a26a60-1e70-4dbc-9db4-360edfdc74a5">
+          <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b4296bd0-09f2-4b73-ac1f-d842127f18b0">
               <AttributeID>LOCALIZACION ID</AttributeID>
               <Type>Granularity</Type>
             </Attribute>

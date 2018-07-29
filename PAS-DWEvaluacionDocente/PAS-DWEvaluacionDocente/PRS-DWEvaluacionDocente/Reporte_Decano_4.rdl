@@ -13,7 +13,7 @@
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DS_Consultas_MD</DataSourceName>
-        <CommandText>SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS * [DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DECANO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [JEFE DEPARTAMENTO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cubo_Evaluacion_Docente] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS * [DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DECANO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [JEFE DEPARTAMENTO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -106,7 +106,16 @@
               </Select>
               <From>Cubo_Evaluacion_Docente</From>
               <Filter>
-                <FilterItems />
+                <FilterItems>
+                  <FilterItem>
+                    <HierarchyUniqueName>[PERIODO].[PERIODO COMPLETO]</HierarchyUniqueName>
+                    <Condition xsi:type="Range">
+                      <Basis>Member</Basis>
+                      <From>[PERIODO].[PERIODO COMPLETO].&amp;[2015.2]</From>
+                      <To>[PERIODO].[PERIODO COMPLETO].&amp;[2018.1]</To>
+                    </Condition>
+                  </FilterItem>
+                </FilterItems>
               </Filter>
               <Calculations />
               <Aggregates />
@@ -115,7 +124,7 @@
               </QueryProperties>
             </QuerySpecification>
             <Query>
-              <Statement> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS * [DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DECANO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [JEFE DEPARTAMENTO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cubo_Evaluacion_Docente] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <Statement> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS * [DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DECANO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [JEFE DEPARTAMENTO].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions />
             </Query>
           </QueryDefinition>
@@ -2729,7 +2738,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Nombre_Completo.Value</Value>
+                          <Value>=Fields!Periodo_Completo.Value</Value>
                         </SortExpression>
                       </SortExpressions>
                       <TablixMembers>
@@ -3334,7 +3343,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                       </Group>
                       <SortExpressions>
                         <SortExpression>
-                          <Value>=Fields!Periodo_Completo.Value</Value>
+                          <Value>=Fields!Facultad.Value</Value>
                         </SortExpression>
                       </SortExpressions>
                       <TablixMembers>
@@ -3377,7 +3386,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>29.42495cm</Height>
+        <Height>43.31558cm</Height>
         <Style />
       </Body>
       <Width>26.14242cm</Width>

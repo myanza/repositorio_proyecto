@@ -22,5 +22,26 @@
         </Partition>
       </Partitions>
     </MeasureGroup>
+    <MeasureGroup>
+      <ID>HECHO ENCUESTA DOCENCIA 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="35ac0dfb-145e-4e96-a7b4-3081b441e20b">
+          <ID>HECHO ENCUESTA DOCENCIA</ID>
+          <Name>HECHO ENCUESTA DOCENCIA</Name>
+          <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T05:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="91716b28-25aa-44a8-9ae0-1f66da143aaf">
+            <DataSourceViewID>DW Academico Labor</DataSourceViewID>
+            <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>4</EstimatedRows>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
   </MeasureGroups>
 </Cube>
