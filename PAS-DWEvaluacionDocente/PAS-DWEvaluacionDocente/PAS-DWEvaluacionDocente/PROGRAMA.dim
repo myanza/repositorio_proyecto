@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1091" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6720" y="12250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1091" scrolltop="-4220" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6588" y="10319" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -74,6 +74,7 @@
               <Attributes>
                 <Attribute Id="PROGRAMA ID" />
                 <Attribute Id="DURACION" />
+                <Attribute Id="FACULTAD" />
                 <Attribute Id="FASE ACREDITACION" />
                 <Attribute Id="NOMBRE 6" />
                 <Attribute Id="NUCLEO BASICO" />
@@ -102,18 +103,6 @@
                 <Attribute Id="SIGLA FACULTAD 1" />
               </Attributes>
               <Position x="661" y="20" />
-            </Shape>
-            <Shape Id="NOMBRE 4" Expanded="false">
-              <Attributes>
-                <Attribute Id="NOMBRE 4" />
-              </Attributes>
-              <Position x="233" y="68" />
-            </Shape>
-            <Shape Id="INDICADOR REGIONAL" Expanded="false">
-              <Attributes>
-                <Attribute Id="INDICADOR REGIONAL" />
-              </Attributes>
-              <Position x="447" y="68" />
             </Shape>
             <Shape Id="NOMBRE 2" Expanded="false">
               <Attributes>
@@ -162,18 +151,6 @@
                 <Attribute Id="JORNADA" />
               </Attributes>
               <Position x="661" y="212" />
-            </Shape>
-            <Shape Id="NOMBRE 3" Expanded="false">
-              <Attributes>
-                <Attribute Id="NOMBRE 3" />
-              </Attributes>
-              <Position x="233" y="260" />
-            </Shape>
-            <Shape Id="ADMISION" Expanded="false">
-              <Attributes>
-                <Attribute Id="ADMISION" />
-              </Attributes>
-              <Position x="447" y="260" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -375,6 +352,7 @@
     <Attribute dwd:design-time-name="92a0413f-247d-4637-9216-a7da6ea2a4a8">
       <ID>DURACION</ID>
       <Name>DURACION</Name>
+      <EstimatedCount>9</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="8839dd53-cf1a-47b3-83fa-6df39c115f0d">
           <DataType>WChar</DataType>
@@ -787,6 +765,7 @@
     <Attribute dwd:design-time-name="1c8c275f-fcc2-4fcc-8b0b-ed10cc395ba8">
       <ID>SEDE 1 1</ID>
       <Name>SEDE_SINJERARQUIA</Name>
+      <EstimatedCount>2</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="d1e0b8fc-331d-4005-aab4-888e6a5e8558">
           <DataType>WChar</DataType>
@@ -817,6 +796,7 @@
     <Attribute dwd:design-time-name="986bdb7e-e908-41bc-9d2c-524a7abad885">
       <ID>SIGLA FACULTAD 1 1</ID>
       <Name>SIGLA FACULTAD_SINJERARQUIA</Name>
+      <EstimatedCount>9</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="dcdb7984-ac2d-4df1-8c36-515856245e6e">
           <DataType>WChar</DataType>
@@ -869,6 +849,7 @@
     <Attribute dwd:design-time-name="e8702ecd-ed53-4c98-bade-0b0c661743c5">
       <ID>FACULTAD</ID>
       <Name>FACULTAD</Name>
+      <EstimatedCount>9</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="34b58d26-d4a1-4557-81d2-27618df5a20e">
           <DataType>WChar</DataType>
@@ -893,6 +874,12 @@
     <Hierarchy dwd:design-time-name="315809c0-8fe6-4b9f-b42e-33c33d5edff3">
       <ID>Hierarchy</ID>
       <Name>Jerarquia_Jornada_Facultad</Name>
+      <Translations>
+        <Translation dwd:design-time-name="64b172af-bf50-4798-b2ff-02e101781753">
+          <Language>9226</Language>
+          <Caption>Jerarquia Jornada - Facultad</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="2443ec54-00d9-40bf-acae-122bab3fdc14">
           <ID>JORNADA</ID>
@@ -932,6 +919,12 @@
     <Hierarchy dwd:design-time-name="efacc92a-83af-4931-9bc4-2ba0cee7e49d">
       <ID>Hierarchy 1</ID>
       <Name>Jerarquia_Sede_Metodologia</Name>
+      <Translations>
+        <Translation dwd:design-time-name="10f092a4-5102-4bce-9867-78aa60763a9e">
+          <Language>9226</Language>
+          <Caption>Jerarquia Sede - Metodologia</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="eef5c045-f05c-4fd1-a106-e5447ffdb0a0">
           <ID>SEDE</ID>
@@ -971,6 +964,12 @@
     <Hierarchy dwd:design-time-name="2ea8aa51-015c-4a2b-a790-19590563a486">
       <ID>Hierarchy 2</ID>
       <Name>Jerarquia_Sede_Programa</Name>
+      <Translations>
+        <Translation dwd:design-time-name="0a9156be-49f7-4e46-891a-6fe95b6cefff">
+          <Language>9226</Language>
+          <Caption>Jerarquia Sede - Porgrama</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="b71fd990-d5b5-4999-9c95-e4cbac91f527">
           <ID>SEDE_SEDPRO</ID>
@@ -999,6 +998,12 @@
     <Hierarchy dwd:design-time-name="3af9e439-99e6-44e7-886d-c03c497f11e8">
       <ID>Hierarchy 5</ID>
       <Name>Jerarquia_Facultad_Area</Name>
+      <Translations>
+        <Translation dwd:design-time-name="d45119ca-37d9-4ee6-a4f6-bafcbb511da1">
+          <Language>9226</Language>
+          <Caption>Jerarquia Facultad - Area</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="efb82297-6aac-4257-82f0-652693de7ac9">
           <ID>SIGLA FACULTAD_FACAREA</ID>

@@ -207,13 +207,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox56</rd:DefaultName>
@@ -245,13 +247,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox53</rd:DefaultName>
@@ -283,13 +287,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox49</rd:DefaultName>
@@ -321,13 +327,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Puntaje</rd:DefaultName>

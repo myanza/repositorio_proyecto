@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="10" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-1408" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5741" y="12250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-1408" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6376" y="10319" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE" left="258" top="607" logicalid="5" controlid="1" masterid="0" hint1="0" hint2="0" width="4842" height="9047" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE" left="258" top="607" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4842" height="9047" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000c0000ea12000057230000" />
             </control>
@@ -660,6 +660,7 @@
     <Attribute dwd:design-time-name="11dd774e-d180-45f7-8b08-388e2701ede1">
       <ID>DEPARTAMENTO 3</ID>
       <Name>DEPARTAMENTO_SINJERARQUIA</Name>
+      <EstimatedCount>46</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="a478d59d-e978-4398-97c5-49e26fac0304">
           <DataType>WChar</DataType>
@@ -690,6 +691,7 @@
     <Attribute dwd:design-time-name="a22b28cb-2d64-45a5-83aa-b5d90259e416">
       <ID>GENERO 3</ID>
       <Name>GENERO_SINJERARQUIA</Name>
+      <EstimatedCount>2</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="8b7503f7-5811-488b-89de-81d122a500eb">
           <DataType>WChar</DataType>
@@ -720,6 +722,7 @@
     <Attribute dwd:design-time-name="cd56abe6-24e0-46ed-83ca-216814276b41">
       <ID>NOMBRE COMPLETO 4</ID>
       <Name>NOMBRE COMPLETO_SINJERARQUIA</Name>
+      <EstimatedCount>3000</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="f85406d2-bebd-4a11-84a2-8239dffbba1f">
           <DataType>WChar</DataType>
@@ -750,6 +753,7 @@
     <Attribute dwd:design-time-name="84af7a5f-3a69-4480-9bbc-01dfb735ea2a">
       <ID>SIGLA FACULTAD 2</ID>
       <Name>SIGLA FACULTAD_SINJERARQUIA</Name>
+      <EstimatedCount>9</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="0cebaa6b-150c-4dcd-91eb-c602efbfbd67">
           <DataType>WChar</DataType>
@@ -780,6 +784,7 @@
     <Attribute dwd:design-time-name="42bf407c-3a68-48d1-ae81-393a9f29c74a">
       <ID>FACULTAD</ID>
       <Name>FACULTAD</Name>
+      <EstimatedCount>9</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="72312d50-2bfb-4f53-8c1d-fd2c0cd3c12f">
           <DataType>WChar</DataType>
@@ -834,6 +839,12 @@
     <Hierarchy dwd:design-time-name="369d669d-c79c-4abc-adb2-1d3064265724">
       <ID>Hierarchy 2</ID>
       <Name>Jerarquia_Facultad</Name>
+      <Translations>
+        <Translation dwd:design-time-name="3fc20148-916a-435e-b9fd-1437aa91694d">
+          <Language>9226</Language>
+          <Caption>Jerarquia Facultad - Genero</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="0374d6df-893d-454c-8cfc-abe9ac3a58f3">
           <ID>SIGLA FACULTAD_FACULTAD</ID>
@@ -884,6 +895,12 @@
     <Hierarchy dwd:design-time-name="9c13ef45-824e-467e-ab13-5c7d674aa3ba">
       <ID>Hierarchy 3</ID>
       <Name>Jerarquia_Docente</Name>
+      <Translations>
+        <Translation dwd:design-time-name="ac9fbb0b-8a16-4d08-b4f1-cc8553be2aca">
+          <Language>9226</Language>
+          <Caption>Jerarquia Facultad - Docente</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="7a31b1a4-f586-4ac8-901a-57a94e623849">
           <ID>SIGLA FACULTAD_DOCENTE</ID>

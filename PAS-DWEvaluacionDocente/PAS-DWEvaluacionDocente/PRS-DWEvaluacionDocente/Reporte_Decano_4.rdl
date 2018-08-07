@@ -754,10 +754,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
                                     <FontFamily />
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1002,10 +1002,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
                                     <FontFamily />
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1262,10 +1262,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
                                     <FontFamily />
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1523,10 +1523,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
                                     <FontFamily />
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -1807,10 +1807,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Fields!Puntaje.Value,2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
                                     <FontFamily />
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                     <Color>#333333</Color>
                                   </Style>
                                 </TextRun>
@@ -2453,13 +2453,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Puntaje7</rd:DefaultName>
@@ -2526,13 +2528,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Puntaje6</rd:DefaultName>
@@ -2596,10 +2600,10 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <MarkupType>HTML</MarkupType>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2998,13 +3002,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox119</rd:DefaultName>
@@ -3071,13 +3077,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox107</rd:DefaultName>
@@ -3141,13 +3149,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Round(Avg(Fields!Puntaje.Value),2)</Value>
+                                  <Value>=IIF( IsNothing(Fields!Puntaje.Value) = true, "N/A", Round(Avg(Fields!Puntaje.Value),2) )</Value>
                                   <Style>
-                                    <FontSize>11pt</FontSize>
+                                    <FontSize>=IIF( IsNothing(Fields!Puntaje.Value) = true, "8pt", "11pt" )</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Puntaje8</rd:DefaultName>

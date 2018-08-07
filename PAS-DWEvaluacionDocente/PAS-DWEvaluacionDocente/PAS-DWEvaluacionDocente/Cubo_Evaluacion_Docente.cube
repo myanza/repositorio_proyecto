@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-758" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="10319" y="11007" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-758" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="9578" y="10319" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -799,6 +799,12 @@
     <Dimension dwd:design-time-name="3a441eed-7744-4f35-9881-1a191e9f7f76">
       <ID>CUESTIONARIO</ID>
       <Name>CUESTIONARIO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="715c7293-a06a-4c78-848d-e9a95f1a8abb">
+          <Language>9226</Language>
+          <Caption>EVALUACIÓN - CUESTIONARIO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>CUESTIONARIO</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="36e7b7c7-595d-42f9-ae32-8b1e33ad7dcb">
@@ -806,9 +812,11 @@
         </Attribute>
         <Attribute dwd:design-time-name="137e7000-c627-4db6-98d1-5f23bac1659e">
           <AttributeID>NOMBRE CUESTIONARIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d0d4b4fd-a94d-4809-bed4-2c2427cb60b2">
           <AttributeID>PERIODO INICIAL VIGENCIA</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -820,6 +828,12 @@
     <Dimension dwd:design-time-name="b0795e70-2a20-4591-9ccd-e92999ec4f61">
       <ID>DATOS AD MATERIA</ID>
       <Name>DATOS ADICIONALES MATERIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="d071814e-7e6f-47c6-bdd2-269a41d12c21">
+          <Language>9226</Language>
+          <Caption>MATERIA - DATOS ADICIONALES MATERIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DATOS AD MATERIA</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="5432cbf9-4c7a-4a6a-a70b-1a9f698e2ac5">
@@ -827,15 +841,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="f3347039-50ae-4f1c-bef2-ec3004612f11">
           <AttributeID>SEMESTRE MATERIA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3534791d-0a4a-4573-92d1-8c132829ec02">
           <AttributeID>CREDITOS MATERIA</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fd458e67-20a8-4172-9de3-01b6307d6021">
           <AttributeID>HORAS SEMANA</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="965ea7ca-245c-4b87-86bc-4d8c2a288103">
           <AttributeID>MAXIMO FALTAS</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -847,6 +865,12 @@
     <Dimension dwd:design-time-name="63e97f0a-a009-43d9-bbd4-9f6d8bf05e8a">
       <ID>DEMOGRAFIA DOCENTE</ID>
       <Name>DATOS DEMOGRAFICOS - DOCENTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="adfafd3a-f940-4f28-ae8d-3508940359d4">
+          <Language>9226</Language>
+          <Caption>DOCENTE - DATOS DEMOGRAFICOS</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="30c4cf68-82d0-490d-8dcd-94a7d57157c6">
@@ -854,29 +878,37 @@
         </Attribute>
         <Attribute dwd:design-time-name="c9c729fb-a750-43d6-9893-9bb957ff3d35">
           <AttributeID>RANGO EDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fa70b024-78b8-4d2b-bf25-a2553262f8d7">
           <AttributeID>ESTADO CIVIL</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="c2c39660-bf80-4413-bc08-725d7733763b">
           <AttributeID>ACUDIENTE</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="9d3ff403-a17b-4084-ad3b-3772363a2fb9">
           <AttributeID>DISCAPACIDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fc96646e-6f2b-44d4-9a7b-17b6737bcfc8">
           <AttributeID>DEPORTISTA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="e5acb74d-7ae8-4ed7-9af7-93a9de92480b">
           <AttributeID>RANGO EDAD 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2d81b62f-07f2-4748-bb15-dd70f89d39da">
           <AttributeID>RANGO EDAD 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a2112f11-c3a3-480b-9e8e-6cc0c0273c1d">
           <AttributeID>RANGO EDAD 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -895,6 +927,12 @@
     <Dimension dwd:design-time-name="ec10d6f5-1d25-4a4b-88e7-643fc21bab74">
       <ID>DEMOGRAFIA ESTUDIANTE</ID>
       <Name>DATOS DEMOGRAFICOS - ESTUDIANTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2608a5c7-d59b-47ad-a85f-2954f9acb03e">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - DATOS DEMOGRAFICOS</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="e1eaa7da-d0dd-4816-a44a-efd19ac7b79d">
@@ -902,27 +940,35 @@
         </Attribute>
         <Attribute dwd:design-time-name="1e3ee87a-0764-4895-97c8-438f640ee753">
           <AttributeID>RANGO EDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="95953998-1bd8-4b4b-8446-84109e8ce884">
           <AttributeID>ESTADO CIVIL</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ae5b2bc5-4d1e-4a24-953c-936369e08cd6">
           <AttributeID>ACUDIENTE</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="605882eb-c28f-42c4-824d-7aff6e6abd8f">
           <AttributeID>DISCAPACIDAD</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2532efa4-753b-4014-a3aa-4734ebd6c194">
           <AttributeID>DEPORTISTA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="08c19481-bab2-44d6-bbdf-b466c36241be">
           <AttributeID>RANGO EDAD 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8ed18c95-dbef-4bc7-9b87-70b30ff02d08">
           <AttributeID>RANGO EDAD 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="00d4cb27-c642-4a0a-b71e-17897763b771">
           <AttributeID>RANGO EDAD 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -940,73 +986,100 @@
     <Dimension dwd:design-time-name="775eb157-ed7e-4755-a54a-f155ad1171e7">
       <ID>DECANO</ID>
       <Name>DECANO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="5e50ecf1-f1e3-4117-9f3b-c60c6059b079">
+          <Language>9226</Language>
+          <Caption>DECANO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DOCENTE</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="9ecdbc77-cd88-4443-b7da-6ace86b01fe6">
           <AttributeID>NUMERO IDENTIDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="794d69cf-e842-4293-92ef-b123298a77d7">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b0b9436d-2806-4e8f-95e4-8b9603c920be">
           <AttributeID>SIGLA FACULTAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="822a8edc-ee27-4679-8f70-d7a1d018e2d3">
           <AttributeID>CORREO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="76d81ad3-ac63-4174-8de4-15037fd28f33">
           <AttributeID>NUMERO TELEFONO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="54794164-6a9b-4b80-9eef-b7de1cedf132">
           <AttributeID>CELULAR</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="37d7ea6f-e8a0-4037-aca8-f128c54ae29a">
           <AttributeID>ACTUAL</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="725ee8d8-1f27-4aa8-b50f-6a656459628a">
           <AttributeID>FECHA EFECTIVA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="caff27cf-e9e6-4943-98b2-521c03d81062">
           <AttributeID>FECHA EXPIRACION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3e717b7f-9bf3-4fc8-86d8-7f85c8edd09a">
           <AttributeID>DOCENTE ID</AttributeID>
         </Attribute>
         <Attribute dwd:design-time-name="984ba9f0-6c3f-446b-9d3d-2e4e694eeccb">
           <AttributeID>GENERO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="de509ae5-f662-4f12-82a9-302504f08d3f">
           <AttributeID>NOMBRE COMPLETO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="bfff39f9-dc6d-4ab9-b6fd-594dafd248b0">
           <AttributeID>SIGLA FACULTAD 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="0cfa0754-71e0-48b3-b5b1-948536601e31">
           <AttributeID>DEPARTAMENTO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="0188c00a-026f-41ee-9834-cd67a1e58eb5">
           <AttributeID>NOMBRE COMPLETO 3</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="85fc464d-d2b0-41a3-9758-fe022ce49048">
           <AttributeID>DEPARTAMENTO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="7578b18e-46cd-4176-b5f1-4454d42ce91a">
           <AttributeID>GENERO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8838d17c-de40-4702-a688-80095aa473a8">
           <AttributeID>NOMBRE COMPLETO 4</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="10db5519-efc4-4598-b24e-f5b54075b69c">
           <AttributeID>SIGLA FACULTAD 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fd18d180-e7e9-404e-8638-069f51227e1a">
           <AttributeID>FACULTAD</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="67d2aed0-2f07-403f-a4a4-2c359f07d01b">
           <AttributeID>LUGAR NACIMIENTO ID 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="c1a6a9dc-fe7a-4808-887a-036c09070723">
           <AttributeID>LUGAR PROCEDENCIA ID 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1021,6 +1094,12 @@
     <Dimension dwd:design-time-name="e96a2e8c-43ea-4571-83c9-cd06d3774bf1">
       <ID>LOCALIZACION 1 1</ID>
       <Name>DECANO - LUGAR NACIMIENTO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="164b202a-9213-47a0-8db7-e4a58af7fd8f">
+          <Language>9226</Language>
+          <Caption>DECANO - LUGAR NACIMIENTO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="6f94c764-5dd6-494b-be16-1a2e3d60c023">
@@ -1028,15 +1107,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="5c6cdf26-5102-4847-9507-2e7727092499">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b92c47b9-9e6c-4fa8-af27-a48dbcfdaa80">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ba1162fb-65cd-4ec8-8514-35b1cd7da8fa">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fc35586f-136d-4b2e-a772-825d707b4db3">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1048,6 +1131,12 @@
     <Dimension dwd:design-time-name="cd35c6cb-fa85-4cde-8836-095e2569b83b">
       <ID>LOCALIZACION 1 2</ID>
       <Name>DECANO - LUGAR PROCEDENCIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="5037db64-104f-4425-b10b-439a4ac15968">
+          <Language>9226</Language>
+          <Caption>DECANO - LUGAR PROCEDENCIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="b3f8652b-910f-40bf-a476-65561cc4d5f6">
@@ -1055,15 +1144,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="de97333f-c68b-46a6-a856-198acdff78fa">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a6528b38-3764-45c5-a655-b652e046c8fa">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a34cf585-032f-4f21-bda0-acc6a6c8c8c0">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f5eabdc6-da2e-43af-b11f-23dc7c712787">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1075,6 +1168,12 @@
     <Dimension dwd:design-time-name="1582f9ba-cfc3-42ef-a25c-7fbff6828b00">
       <ID>DEM ECO DOC</ID>
       <Name>DEMOGRAFIA ECONOMICA - DOCENTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="ae60c158-4f3d-457d-a30d-aa5f5899632d">
+          <Language>9226</Language>
+          <Caption>DOCENTE - DEMOGRAFIA ECONOMICA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DEMOGRAFIA DATOS ECONOMICOS</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="c7e260f1-fa98-4c9c-b475-4fbd1d2e8393">
@@ -1082,42 +1181,53 @@
         </Attribute>
         <Attribute dwd:design-time-name="9152fa07-28b8-4224-a566-839d19147c1a">
           <AttributeID>ESTRATO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="475e4bc5-7f49-4e6f-9b6c-b236c40fb1ac">
           <AttributeID>VIVIENDA PROPIA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="13ff4c2a-e951-4dbf-ae6e-0767251d3633">
           <AttributeID>DESPLAZADO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="0c3e1fa7-9388-4cca-84c1-ebda384431aa">
           <AttributeID>ESTRATO 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="c4df3892-7b57-4e9b-bce3-54101a89dbe9">
           <AttributeID>ESTRATO 1 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="87c3177e-d8bf-4e56-8593-e0de3d68afca">
           <AttributeID>ESTRATO 1 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="756c9cf2-788c-4fbc-b2d8-fc5483e247fe">
           <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a78ee162-a474-4e74-a029-7330aeb640a1">
           <AttributeID>POSICION HERMANOS</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="78a3a678-e7d0-4f69-9eb7-e437d5437936">
           <AttributeID>MADRE CABEZA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
         <Attribute dwd:design-time-name="d1197434-e8a9-4c7b-bc1d-f2ac5359d061">
           <AttributeID>NUMERO HERMANOS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="55aeb3bc-8e30-42f9-88be-89a8ab0049f9">
           <AttributeID>ESTRATO 1 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
           <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
         </Attribute>
       </Attributes>
@@ -1143,6 +1253,12 @@
     <Dimension dwd:design-time-name="14f284e9-969f-4cdc-b116-7fbbcf8c4e1a">
       <ID>DEM ECO EST</ID>
       <Name>DEMOGRAFIA ECONOMICA - ESTUDIANTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="3756ef91-5b0f-4666-a369-46eefd11acd5">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - DEMOGRAFIA ECONOMICA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DEMOGRAFIA DATOS ECONOMICOS</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="6f1c4c71-5c03-4901-b6dc-14ccb0bd00d3">
@@ -1150,36 +1266,47 @@
         </Attribute>
         <Attribute dwd:design-time-name="1691abc1-e5b4-4858-88b1-d599088367dc">
           <AttributeID>ESTRATO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a21c4a69-c3fd-40c7-8007-993632757b20">
           <AttributeID>VIVIENDA PROPIA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b3a67b48-f37e-4f6c-a263-0d632af4a97c">
           <AttributeID>DESPLAZADO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="bd03182a-e85d-4400-b8dd-785acea9f766">
           <AttributeID>ESTRATO 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3850824b-91be-49fd-ae60-1957cb584e0c">
           <AttributeID>ESTRATO 1 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="6bc947b8-aaeb-421f-89c6-186abc73deef">
           <AttributeID>ESTRATO 1 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a6f039d1-c3e0-4702-8010-81381063985c">
           <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3d4b6f84-520b-472e-be41-e4f378932a5e">
           <AttributeID>POSICION HERMANOS</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a3b4b396-77b7-43c3-9fe5-064354a3561a">
           <AttributeID>MADRE CABEZA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d979c96b-3c46-4960-abe8-0d3b6f30d818">
           <AttributeID>NUMERO HERMANOS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="163edad9-15a9-4f06-9522-864547af8297">
           <AttributeID>ESTRATO 1 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1200,73 +1327,100 @@
     <Dimension dwd:design-time-name="2f3dbd13-8bc5-4159-80e6-bc24f3d4d6b9">
       <ID>DOCENTE</ID>
       <Name>DOCENTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2df0cf60-cf6f-47ea-b00e-33691b1ba693">
+          <Language>9226</Language>
+          <Caption>DOCENTE</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DOCENTE</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="bc1961e9-1b44-4fa3-bc6d-90c861f29240">
           <AttributeID>NUMERO IDENTIDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="c20ed4a7-e60c-4240-b8fc-56dc5c7b324f">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fd24b52d-eeee-46e3-965c-0af9403f3971">
           <AttributeID>SIGLA FACULTAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5834ffa8-1dfa-4e89-ae99-ac42d6e749fa">
           <AttributeID>CORREO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="399a5e03-e3f9-4fd4-94b6-f5aa3a01fdef">
           <AttributeID>NUMERO TELEFONO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="29ba53ac-cd51-4898-9bc4-1ddda9c6d1b9">
           <AttributeID>CELULAR</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="cd347450-9c37-4c6f-907a-0c52a8760a8b">
           <AttributeID>ACTUAL</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="330e5b1b-ea70-4c22-b10e-e5e3797ecd4c">
           <AttributeID>FECHA EFECTIVA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ca5b6d1c-5687-4f29-96e8-49cc2ef8d5d5">
           <AttributeID>FECHA EXPIRACION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b6efdb21-8a4d-44fa-be7d-a2e8bd4cdba8">
           <AttributeID>DOCENTE ID</AttributeID>
         </Attribute>
         <Attribute dwd:design-time-name="cc9c1618-c647-4e1d-b698-402a94fbce1f">
           <AttributeID>GENERO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e4ee180a-a081-42a8-97cb-393fa8a8c9b1">
           <AttributeID>NOMBRE COMPLETO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5b9ea5b6-3a4b-4f26-b004-94b27cf017b9">
           <AttributeID>SIGLA FACULTAD 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="dc3d6148-eb69-48de-b0e2-0ae0e3985893">
           <AttributeID>DEPARTAMENTO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a2ea2f52-3abd-47ec-9cc3-c8e1fcb1a460">
           <AttributeID>NOMBRE COMPLETO 3</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="013f9172-f970-4050-8a19-6f6fb578466f">
           <AttributeID>DEPARTAMENTO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="329ee17d-383b-46f0-ad23-b2869619536c">
           <AttributeID>GENERO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="68a6ec02-b33f-43d5-8b8b-fdcb99d70b1a">
           <AttributeID>NOMBRE COMPLETO 4</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8de21b6d-fa55-4b39-83a0-1849475d9580">
           <AttributeID>SIGLA FACULTAD 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5fab4b37-b759-417e-974b-26be5515f899">
           <AttributeID>FACULTAD</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="dfdca8b9-3cc4-4d4c-82c6-5cf314f3e2c4">
           <AttributeID>LUGAR NACIMIENTO ID 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="52017c13-e6b7-4b80-a03e-51ae1875b4d0">
           <AttributeID>LUGAR PROCEDENCIA ID 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1281,6 +1435,12 @@
     <Dimension dwd:design-time-name="5d0b018a-d2b5-487a-92f0-e1dd6cfc2676">
       <ID>LOCALIZACION</ID>
       <Name>DOCENTE - LUGAR NACIMIENTO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="ecc04bfe-82e7-443e-9a9c-895673847f2b">
+          <Language>9226</Language>
+          <Caption>DOCENTE - LUGAR NACIMIENTO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="a00a1813-2fc2-4821-b7b5-34fbd6af587e">
@@ -1288,15 +1448,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="ff994db9-dcbc-44ce-bf18-6ede35b65df6">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="7d302640-bcff-478f-b80d-9b133cbe13ad">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9be448b1-36fe-4772-be6a-df5693913022">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="635c139e-e740-449c-b1d2-7b30b665ccfd">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1308,6 +1472,12 @@
     <Dimension dwd:design-time-name="a3735ede-941f-4a1a-beac-ac8e22a16921">
       <ID>LOCALIZACION 1</ID>
       <Name>DOCENTE - LUGAR PROCEDENCIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="40cfe13e-5b2c-4472-abfe-c7a29ad69e4b">
+          <Language>9226</Language>
+          <Caption>DOCENTE - LUGAR PROCEDENCIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="a4870ee0-0256-4550-b6b8-a63669dfdd48">
@@ -1315,15 +1485,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="e8666029-6bf6-4708-9696-dd514c08ccd3">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="82f54518-5dcb-4f8a-8855-5bdd3fa36087">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d1dacea3-21fc-4428-9af8-13af33bb9e41">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="30f0385c-3cb0-4d28-9698-581615618d2f">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1335,6 +1509,12 @@
     <Dimension dwd:design-time-name="06dc4073-8b96-4621-847e-d16b7bd2e36e">
       <ID>LUGAR RESIDENCIA DOC</ID>
       <Name>DOCENTE - LUGAR RESIDENCIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="4bc0c30c-0016-4e85-a927-dd4e1b2f3941">
+          <Language>9226</Language>
+          <Caption>DOCENTE - LUGAR RESIDENCIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="98a41b58-e3cb-4b9d-aae6-f3dba029b967">
@@ -1342,15 +1522,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="24937f9a-28e4-44f9-adb3-31c741aee65d">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8f4784fa-56b9-45c2-93ec-1161aff4c6c3">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fd005b3f-ba64-416e-81b7-b8884d3fa0b9">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b9bd0e18-5d94-499a-960c-6abd3f65a062">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1362,6 +1546,12 @@
     <Dimension dwd:design-time-name="d9d81e28-92a0-49f6-945c-026d2bec2c82">
       <ID>ESTUDIANTE</ID>
       <Name>ESTUDIANTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="0aa84868-50c6-4bcd-8a98-1d0a1fd63adb">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>ESTUDIANTE</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="7446b183-4950-474a-ac48-9bc7ff495b1d">
@@ -1369,138 +1559,183 @@
         </Attribute>
         <Attribute dwd:design-time-name="869ed92b-8771-4ab3-93f7-529b917c6b26">
           <AttributeID>NOMBRE COMPLETO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f9a45e34-b993-4286-a4ee-f36f4b7a7c16">
           <AttributeID>NUMERO TELEFONO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ae95e6ee-f8d4-4b8a-aeab-de5bd53efb36">
           <AttributeID>CODIGO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d0758531-b28e-474c-83a9-30ce8016e863">
           <AttributeID>CORREO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8a4ae4ea-ffa0-47db-a288-8d0b48a816b1">
           <AttributeID>TIPO IDENTIFICACION</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b1196b9a-1ffb-4371-8c31-f7615dd6e59e">
           <AttributeID>NUMERO IDENTIDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="279bd565-45d4-4412-9a3b-e4a4133746c6">
           <AttributeID>DIRECCION ACTUAL</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="76841454-cfee-4283-8b23-fcfec5b30cc4">
           <AttributeID>INDICADOR INGRESO</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1853b475-3496-4fdb-8ffc-62359cecdb8a">
           <AttributeID>INDICADOR REGIONAL</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2f3e8368-aa0b-4f4c-bb38-308ff4884225">
           <AttributeID>PERIODO INGRESO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4e2cfbe8-be3b-4299-8e76-36a88afa7aa3">
           <AttributeID>LIBRETA MILITAR</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="bd1c2b2f-edb5-432d-a859-c0c4560ef240">
           <AttributeID>NUMERO CELULAR</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="cbc7dfae-55be-454b-ba9e-5cfaa1c02854">
           <AttributeID>FACTOR RH</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="42821390-de07-4aa5-8a42-6766ed79bb01">
           <AttributeID>ENFASIS</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9c35d14b-5058-496c-816b-55dba40a3180">
           <AttributeID>GENERO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="be40306a-092d-4968-82f9-17beda3366af">
           <AttributeID>TIPO INSTITUCION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3940e277-fc1b-4aaf-ac89-271e65b4d136">
           <AttributeID>INSTITUCION PRIVADA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d0f1fc18-161a-4be3-8167-f64609d32a94">
           <AttributeID>INSTITUCION PROCEDENCIA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="991216c9-6d81-4a2e-8d41-6984fafa76db">
           <AttributeID>GRUPO ETNICO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a57dada3-1e91-4d40-8cf7-38c57e93efcb">
           <AttributeID>PUEBLO COMUNIDAD</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="506bc4f6-30c7-427b-ae25-5db6a50c74f0">
           <AttributeID>CAPACIDAD EXCEPCIONAL</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b33f9e4a-6fd8-46c4-b582-81c973ac4b8d">
           <AttributeID>BACHILLER INDIGENA</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4cc7ae44-b51a-4a68-9d5e-20d3dfa0d0ed">
           <AttributeID>TIPO ADMISION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8df0088a-1af8-4416-89da-f765f94e885d">
           <AttributeID>PUESTO ADMISION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="48502382-b789-455f-afe5-5f357264f87c">
           <AttributeID>TIPO INSTITUCION 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9007f77e-ce6b-4a9d-a5e4-c25c3115d7c1">
           <AttributeID>NOMBRE COMPLETO 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9ec060ba-d348-488f-a22a-50400d5bda27">
           <AttributeID>NOMBRE COMPLETO 1 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9d40f01e-805c-4118-975e-fddedc8d5d17">
           <AttributeID>NOMBRE COMPLETO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="245f3187-c6d9-4241-b5c4-b757cffb6f7f">
           <AttributeID>NOMBRE COMPLETO 3</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="c8bc1a77-f444-444f-8176-e0f904a29139">
           <AttributeID>NOMBRE COMPLETO 4</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a968d40c-757e-43e5-8ed0-af464a1d0898">
           <AttributeID>NOMBRE COMPLETO 5</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ffd727c4-b84f-4ff0-9a7c-c9a890b9d37f">
           <AttributeID>NOMBRE COMPLETO 6</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="26b85ea8-8eef-498c-975f-4e02074d2c4c">
           <AttributeID>INSTITUCION PRIVADA 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d32d9ceb-d233-4dcb-889f-d63756b80d48">
           <AttributeID>INSTITUCION PROCEDENCIA 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="685cd735-ac00-4341-b762-341787219cfb">
           <AttributeID>NOMBRE COMPLETO 8</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3bf616ac-7c0e-499b-a2c0-4ebd59201ce8">
           <AttributeID>INSTITUCION PRIVADA 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="97ff3d89-6392-439a-8ce1-61fbaa5a1211">
           <AttributeID>INSTITUCION PROCEDENCIA 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3020b922-b1bc-4b9e-98fb-baaae3a49335">
           <AttributeID>GENERO 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="484b32db-38dc-4fbf-8cc3-021d9ced2987">
           <AttributeID>NOMBRE COMPLETO 9</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5914b6ce-80a6-4558-9378-8417fd23076a">
           <AttributeID>PERIODO INGRESO 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="25a98b38-d2da-49be-8e6e-2f397ab11bb9">
           <AttributeID>INSTITUCION PRIVADA 3</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9dd0dc0c-d310-4672-8497-3f92d4e43d6f">
           <AttributeID>INSTITUCION PROCEDENCIA 3</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4725630d-f417-44a0-a5ca-20c49cfe1209">
           <AttributeID>NOMBRE COMPLETO 10</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1069417b-93cd-4022-9969-9c3e79a04138">
           <AttributeID>GENERO 1 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="57ac38e7-ede7-4c4a-8c2a-05c60b3bda7a">
           <AttributeID>GENERO 1 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9d94b718-a88f-4146-95b3-4f36af5a7c27">
           <AttributeID>INSTITUCION PRIVADA 4</AttributeID>
@@ -1510,36 +1745,47 @@
         </Attribute>
         <Attribute dwd:design-time-name="938859aa-2d89-458f-98b2-e15b2aeafb29">
           <AttributeID>NOMBRE COMPLETO 11</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="047245f5-86dd-4bbf-bc19-bb870b2c24be">
           <AttributeID>PERIODO INGRESO 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="969282fd-fba7-46b9-b074-6b06859caf96">
           <AttributeID>TIPO INSTITUCION 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="bea3889e-65b8-4316-b258-5061b4be7d55">
           <AttributeID>TIPO ADMISION 1</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="6b63997b-9ae6-41e0-bbbf-000d8f0acab5">
           <AttributeID>LUGAR NACIMIENTO ID</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2deb3851-660e-481c-ae0b-8302c883afff">
           <AttributeID>LUGAR PROCEDENCIA ID</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f285edf1-bfe3-40a2-b31e-0595084a8299">
           <AttributeID>EDAD ACTUAL</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3b6b5364-8ea5-4184-a5e7-8079075a09e6">
           <AttributeID>PENSUM ACTUAL</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="30897feb-f5d3-4ebe-b516-880f80ebdc26">
           <AttributeID>ANDRES BELLO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8d928359-9601-44dd-b090-1e704edeae47">
           <AttributeID>NOMBRE COMPLETO 7</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9702b9e3-6bfa-4a17-8729-1ecfc64a487b">
           <AttributeID>TIPO INGRESO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1584,6 +1830,12 @@
     <Dimension dwd:design-time-name="3cf50267-1995-477e-998d-e42d73345278">
       <ID>ESTUDIANTE - LUGAR NACIMIENTO 1</ID>
       <Name>ESTUDIANTE - LUGAR NACIMIENTO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="f3e8f7e2-3aa8-4bfd-a823-375b34a992c7">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - LUGAR NACIMIENTO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="10c9ee72-e1e3-4fc6-baf4-dc77dce201fd">
@@ -1591,15 +1843,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="28ddc994-0918-40aa-af0a-4d66b7550635">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="cf4a4fdb-b815-4a26-bac1-163ce61cd271">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1d725b06-6415-4299-8287-be7e61d5f6f5">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5bfa0287-7ed9-4eb7-b360-d709f85877a4">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1611,6 +1867,12 @@
     <Dimension dwd:design-time-name="b464a95e-4487-44c6-a031-2111a2e6bc7b">
       <ID>ESTUDIANTE - LUGAR PROCEDENCIA</ID>
       <Name>ESTUDIANTE - LUGAR PROCEDENCIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="a567438e-2567-4571-8049-cdf7cdf20bc5">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - LUGAR PROCEDENCIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="ba694b82-5984-449e-a5cd-ddb1c03aa7c9">
@@ -1618,15 +1880,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="00f61b38-0e72-4c4d-b70f-7e1910628c73">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="6e835d03-3a71-4b6c-95eb-2a8d831ff85d">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5f4bfe51-02a1-4ff9-80a7-3fbaa0babb54">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="68be692c-acb4-4868-a071-281667510802">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1638,6 +1904,12 @@
     <Dimension dwd:design-time-name="1989ef4d-4f39-435d-8d7a-3ce60a208e29">
       <ID>LUGAR RESIDENCIA EST</ID>
       <Name>ESTUDIANTE - LUGAR RESIDENCIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="ba5ac375-c937-44f3-b01c-08398b9cfd32">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - LUGAR RESIDENCIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="e222cba5-5a0d-41c6-8f17-d89ca2fbceb1">
@@ -1645,15 +1917,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="861c00d0-10b6-4abd-aca4-e0f706da7ffc">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e22f04c5-94b9-42b1-95f1-cae8c2c90318">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e84ab241-2111-48e2-ac3a-3354b596064c">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b0e03b0e-5f45-45ae-8ac5-f29fec38a496">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1665,6 +1941,12 @@
     <Dimension dwd:design-time-name="a857da5e-0bd6-4f76-82f6-ea72795e54f8">
       <ID>FUENTE EVALUACION</ID>
       <Name>FUENTE EVALUACION</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2d96a943-7f83-47dc-97c4-fb505bb1d497">
+          <Language>9226</Language>
+          <Caption>EVALUACION - FUENTE EVALUACION</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>FUENTE EVALUACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="5833c92b-5d00-4ff0-8c4c-75dadabfbd28">
@@ -1672,9 +1954,11 @@
         </Attribute>
         <Attribute dwd:design-time-name="1e1808c1-8b99-4455-aa4f-619dcfddcdbb">
           <AttributeID>NOMBRE</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8e4f4972-e362-4095-9ded-ea88379798ee">
           <AttributeID>CATEGORIA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1683,76 +1967,163 @@
         </Hierarchy>
       </Hierarchies>
     </Dimension>
+    <Dimension dwd:design-time-name="fdc3beb8-1c3a-4196-81f6-56cad07c6a98">
+      <ID>INDICADORES ESTUDIANTES</ID>
+      <Name>INDICADORES ESTUDIANTES</Name>
+      <Translations>
+        <Translation dwd:design-time-name="00d19b95-2b0b-4e0a-a4e9-c11f044ffa80">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - INDICADORES ESTUDIANTES</Caption>
+        </Translation>
+      </Translations>
+      <DimensionID>INDICADORES ESTUDIANTES</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b0f954ab-1463-44bd-8aa0-e2b5e6132b60">
+          <AttributeID>INDEST ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0a7c7a1-0c6d-45b7-a504-bddeeda55463">
+          <AttributeID>AMINISTIADO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="20fc02a3-803b-463e-afb4-0f26554648a7">
+          <AttributeID>MONITORIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="774f7f1f-c6d5-4e9b-9564-9511557dd57d">
+          <AttributeID>PILO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0cf86255-14a7-4183-8069-274ca3e56ba4">
+          <AttributeID>JOVENES ACCION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4459f9aa-8022-4501-8cb5-0a484bfdb51d">
+          <AttributeID>BECADO ICETEX</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cdc129df-44b0-4514-a81f-c117e7c4e20a">
+          <AttributeID>AYUDA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8feca9b1-3c01-4454-8d18-dead25c00bf3">
+          <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a1a48be8-d1e3-4b09-8125-a8c9c42db3e4">
+          <AttributeID>CHECKSUM</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="43bc8874-9c92-4c58-8909-d585800b4e69">
+          <AttributeID>AYUDA 1</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c675899-821e-4149-9740-87d78627a991">
+          <AttributeID>AYUDA 2</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46bf2e7c-1a4d-41fc-bd88-0cfcb87e2da3">
+          <AttributeID>AYUDA 3</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="79149f11-430c-4dcd-8841-c10a7ab5c918">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="9c0ae4f5-1d59-49c4-a36d-d1ff9716d538">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="27fc5677-ba58-467c-823c-fa55c9cb8873">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
     <Dimension dwd:design-time-name="2e09d98d-6c03-4140-b3c6-1e8dd88b0eaa">
       <ID>JEFE DEPARTAMENTO</ID>
       <Name>JEFE DEPARTAMENTO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="a14d748e-b485-4145-be18-f7648a63e94e">
+          <Language>9226</Language>
+          <Caption>JEFE DEPARTAMENTO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>DOCENTE</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="65cb1980-867d-418f-98ee-faa8c503fc64">
           <AttributeID>NUMERO IDENTIDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3a42c5b6-ccd4-400e-87b8-35b6e3e4ae9e">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="42316989-a79e-4d97-b376-71a3d2e7f462">
           <AttributeID>SIGLA FACULTAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="985d2048-8894-46c3-9c6b-f3e1c181af00">
           <AttributeID>CORREO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="11d41b14-0b8a-413c-bcc7-44987e209302">
           <AttributeID>NUMERO TELEFONO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e2b215b9-2a4c-43d9-af82-06f41a3453b3">
           <AttributeID>CELULAR</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="19c5f7a1-bb64-4d3b-92b1-6c646fe4bbf0">
           <AttributeID>ACTUAL</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1a5d374b-6df5-4b0f-a1fe-c0c86044f4be">
           <AttributeID>FECHA EFECTIVA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9d797ead-39d0-4717-a956-48bb21cc4076">
           <AttributeID>FECHA EXPIRACION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9592cada-3719-467f-88b6-17752ba36c29">
           <AttributeID>DOCENTE ID</AttributeID>
         </Attribute>
         <Attribute dwd:design-time-name="36fb0fdc-2e74-4f95-80b6-62df119f37e0">
           <AttributeID>GENERO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="0c65c265-8013-4b2c-9054-d2acea26ffde">
           <AttributeID>NOMBRE COMPLETO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="38368238-011e-4949-a5c6-53784506c38e">
           <AttributeID>SIGLA FACULTAD 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="28aad24a-b92f-49c5-92fc-b2bcfa47e452">
           <AttributeID>DEPARTAMENTO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="aa2c07e0-77a4-4279-b2aa-a0c8339dbeeb">
           <AttributeID>NOMBRE COMPLETO 3</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4a927b12-f7dc-4bb4-9056-a568b2760b79">
           <AttributeID>DEPARTAMENTO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="0064e138-ef89-4708-8d09-997a70b69824">
           <AttributeID>GENERO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="424bf8d9-da12-4028-9a14-374b6d9711e0">
           <AttributeID>NOMBRE COMPLETO 4</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="52861212-239f-46c2-9dea-c13b3e22e41f">
           <AttributeID>SIGLA FACULTAD 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="196a20fa-cd14-46f9-82e4-99ae1740fa7f">
           <AttributeID>FACULTAD</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a751fdcb-3cb3-4678-9d5b-5ada7bd96e7a">
           <AttributeID>LUGAR NACIMIENTO ID 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="bd87aeb8-5de0-45c0-884a-5b2c60cdcfae">
           <AttributeID>LUGAR PROCEDENCIA ID 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1767,6 +2138,12 @@
     <Dimension dwd:design-time-name="cb6e242e-98ff-4cd9-a189-2357632cf09c">
       <ID>LOCALIZACION 1 3</ID>
       <Name>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="01e3d8f4-6f6a-4d0a-8b42-1fda841a93a4">
+          <Language>9226</Language>
+          <Caption>JEFE DEPARTAMENTO - LUGAR NACIMIENTO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="4d12fbeb-8b24-4481-9db4-0fba9f477bdd">
@@ -1774,15 +2151,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="e4693ae2-9b46-488b-84c7-f3948332511d">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e5d1f0f3-5c61-4bc7-a3ea-cd4cde1646ee">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4b37a750-8392-433b-a68e-5be0bbc2a0bd">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="6c925f5c-1853-4713-8d7b-76a990877a8a">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1794,6 +2175,12 @@
     <Dimension dwd:design-time-name="9ad91ac9-0db7-4775-9f86-929f490b590d">
       <ID>LOCALIZACION 1 4</ID>
       <Name>JEFE DEPARTAMENTO - LUGAR PROCEDENCIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="1b47b23b-8f0e-4570-86ec-d617eb413758">
+          <Language>9226</Language>
+          <Caption>JEFE DEPARTAMENTO - LUGAR PROCEDENCIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>LOCALIZACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="4f671bdd-68d1-40cf-8ac5-9bcc23de3c37">
@@ -1801,15 +2188,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="b4b5dc1a-b0b3-4857-8287-3a0d1942d9f7">
           <AttributeID>PAIS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f5c0aeea-6917-4cc9-b6aa-263d6ed5e1b3">
           <AttributeID>DEPARTAMENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="8399e7f7-7b8d-484d-ba1e-1aaaa3bf5d5d">
           <AttributeID>MUNICIPIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="57e74d2b-0f54-493d-9552-c479162570e9">
           <AttributeID>CODIGO MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1821,6 +2212,12 @@
     <Dimension dwd:design-time-name="81750828-9e50-4313-8c5b-72670201433b">
       <ID>MATERIA</ID>
       <Name>MATERIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="aee99ad9-8b30-414c-833b-86ab80c9aeea">
+          <Language>9226</Language>
+          <Caption>MATERIA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>MATERIA</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="ea697253-33ef-49fb-971f-e7c454af7222">
@@ -1828,63 +2225,83 @@
         </Attribute>
         <Attribute dwd:design-time-name="9409aee1-1ce2-4be2-b21b-1e8b5df2c283">
           <AttributeID>CODIGO MATERIA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="82a3639f-7214-47ef-951b-9b0119942c32">
           <AttributeID>INDICADOR PROMEDIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="9a491aea-e653-44ca-aeb2-4d964c4cf273">
           <AttributeID>AREA CONOCIMIENTO ICFES</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="bdf08598-8cd0-4cec-99a8-39f8a1610216">
           <AttributeID>AREA CONOCIMIENTO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ced281f0-016f-414b-99fa-bc9e0a5d15b0">
           <AttributeID>INDICADOR ELECTIVA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="30a65e30-8878-4c8b-b7f1-bce4e159b498">
           <AttributeID>INDICADOR NOTA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="92bd1541-c4ea-4dbf-9961-e8b566f258de">
           <AttributeID>TIPO MATERIA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="dc3e59ad-ef6a-4447-9a31-2971835763d4">
           <AttributeID>PERIODICIDAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2e608c03-dab2-4061-bbd5-854b80a9a345">
           <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="def3b989-a4d8-4d78-bdfe-62bc6d597d12">
           <AttributeID>INDICADOR PROMEDIO 1</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="129d963d-3bf2-440a-ae64-5f081b563af7">
           <AttributeID>NOMBRE MATERIA 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e6383bad-d6d7-4e13-aad1-6e498af68ee5">
           <AttributeID>NOMBRE MATERIA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d69ba009-54f0-40ab-8277-1aeb23aa481a">
           <AttributeID>NOMBRE MATERIA 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1f97fdb8-8c80-4831-b2a8-deed4a87474a">
           <AttributeID>NOMBRE MATERIA 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5dadaed1-b770-4427-bac1-8befe3ba4406">
           <AttributeID>NOMBRE CURSO 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d00f5f47-4eb4-4c74-a7fc-4790ba0b95d4">
           <AttributeID>NOMBRE CURSO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e2691f70-6a15-4589-b4d2-fe76c7596943">
           <AttributeID>NOMBRE CURSO 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="0f936676-9e02-47b5-8775-04d66d77fa77">
           <AttributeID>NOMBRE CURSO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3c28c8b4-3322-4ce0-a5ee-3a1f60cde979">
           <AttributeID>AREA CONOCIMIENTO 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="fc17f5d7-247c-4bb6-ba94-9eef0a2c272f">
           <AttributeID>NOMBRE MATERIA 4</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1905,6 +2322,12 @@
     <Dimension dwd:design-time-name="a2792492-0e20-4420-b064-8789280dc842">
       <ID>PENSUM EST</ID>
       <Name>PENSUM ESTUDIANTE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="dfb4e270-84be-440b-bfd0-7a9e109f2417">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - PENSUM</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>PENSUM</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="567e85de-7c61-4492-a12f-b6247c1947f9">
@@ -1912,15 +2335,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="60c09edc-9f54-433a-9e2a-17e434e220c6">
           <AttributeID>RESOLUCION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="6c583109-a2ec-423c-b421-45bc58b4aab5">
           <AttributeID>RANGOS CREDITOS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a33ff4bb-c2b1-4b16-81c0-5a5b8f66214e">
           <AttributeID>DESCRIPCION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ff5f7d8c-80ad-40f8-ab1c-7970d40693ea">
           <AttributeID>CODIGO PENSUM</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1932,6 +2359,12 @@
     <Dimension dwd:design-time-name="780b38f5-9d86-45ef-b2e9-cbfc2c5c7157">
       <ID>PENSUM MAT</ID>
       <Name>PENSUM MATERIA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="2ddfa1ce-46f6-4532-b11c-47575c56c994">
+          <Language>9226</Language>
+          <Caption>MATERIA - PENSUM</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>PENSUM</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="b6e8f1a8-5e2d-4710-8c5d-6cbf840bbfa1">
@@ -1939,15 +2372,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="42532ea2-f953-43fc-9f08-f2a730bdc057">
           <AttributeID>RESOLUCION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f357b452-8532-4b1d-962e-52797bd50dbf">
           <AttributeID>RANGOS CREDITOS</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="690952ca-f6da-40a7-9d55-cbfcb1f41fc3">
           <AttributeID>DESCRIPCION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="7ba99caf-e3e3-4e70-9a90-a714ce217bbb">
           <AttributeID>CODIGO PENSUM</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1959,6 +2396,12 @@
     <Dimension dwd:design-time-name="7e9b3896-c6fa-43d1-b58b-573d4575cb21">
       <ID>PERIODO</ID>
       <Name>PERIODO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="8bfa90fd-5b4f-4ea6-a5bc-ba86b1ab37cd">
+          <Language>9226</Language>
+          <Caption>EVALUACIÓN - PERIODO ACADEMICO</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>PERIODO</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="86613a94-101c-44e9-902a-173d89ce337d">
@@ -1966,21 +2409,27 @@
         </Attribute>
         <Attribute dwd:design-time-name="96fdb869-758e-4a73-bce2-bccbc9d3387b">
           <AttributeID>PERIODO COMPLETO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e6e84828-ba96-4c0f-9d00-2ec771bd98e7">
           <AttributeID>AÑO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ca9b7253-5448-42f3-a747-15dd5e37b313">
           <AttributeID>PERIODO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="7ff10231-8395-42ba-871a-facb1ea2f80d">
           <AttributeID>FECHA INICIO</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2d464422-2275-4be0-852a-53df1c539a60">
           <AttributeID>FECHA FIN</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2d8f998b-c5b6-4d69-bfcc-89f78cc14d5c">
           <AttributeID>TIPO PERIODO</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -1995,6 +2444,12 @@
     <Dimension dwd:design-time-name="3180b3eb-ea4f-4757-a348-ba4276fab2d5">
       <ID>PREGUNTA</ID>
       <Name>PREGUNTA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="62097625-9d57-4f76-b92e-9d55fd2337d0">
+          <Language>9226</Language>
+          <Caption>EVALUACIÓN - PREGUNTA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>PREGUNTA</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="ae39aefc-127b-48e8-9a6d-9c734fd6715d">
@@ -2002,18 +2457,23 @@
         </Attribute>
         <Attribute dwd:design-time-name="fd6fe75a-2507-48c4-a395-82bce78b9977">
           <AttributeID>PREGUNTA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="647a5753-57a5-4fa8-8048-a9f66c92789a">
           <AttributeID>NUMERO PREGUNTA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="33cac417-9cfd-4421-894e-03f5b5b60b8d">
           <AttributeID>CATEGORIA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1c42ab18-107c-408c-ab7f-0cbc94c8a636">
           <AttributeID>CATEGORIA 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d295d47b-215c-4bdf-9402-58031f3311a6">
           <AttributeID>CATEGORIA 2</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -2028,6 +2488,12 @@
     <Dimension dwd:design-time-name="6bbe28c7-2cd3-4124-84f4-f6dab93a3fa2">
       <ID>PROGRAMA</ID>
       <Name>PROGRAMA</Name>
+      <Translations>
+        <Translation dwd:design-time-name="69e506c6-59e9-46d3-a255-96c957c5e7a9">
+          <Language>9226</Language>
+          <Caption>PROGRAMA</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>PROGRAMA</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="a082f145-306e-497d-a900-b77d7fd5a16e">
@@ -2035,66 +2501,87 @@
         </Attribute>
         <Attribute dwd:design-time-name="e89058f4-4620-46a2-a586-bb4f5e161879">
           <AttributeID>NOMBRE</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="973fb9a0-6b13-4a5b-8694-7c26b20baec5">
           <AttributeID>SIGLA FACULTAD</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="3736d731-9e15-460b-905e-7554b12abfb5">
           <AttributeID>JORNADA</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="b8178234-6585-4449-9c5a-d3e9c54694a5">
           <AttributeID>DURACION</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="0ab78431-e5c1-4c41-bac1-687ce19b3b21">
           <AttributeID>METODOLOGIA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="96103b54-7c49-44bf-9eb9-958787d5f78a">
           <AttributeID>PREFIJO CODIGO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="32ade9ce-9652-406a-afd0-1d7a0a7732d2">
           <AttributeID>FASE ACREDITACION</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f8c432af-293f-4d00-a41b-cd0de6a4f2fc">
           <AttributeID>AREA CONOCIMIENTO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e2d5dbb2-008f-434a-8734-119780e1e67c">
           <AttributeID>SNIES PROGRAMA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="67e872df-f841-438d-8989-44e30158d3f4">
           <AttributeID>SEDE</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d7b79e20-3c0c-49a9-9adf-493f351d1862">
           <AttributeID>NUCLEO BASICO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="372ee4ad-f216-4b4c-bf4c-80a7d5bf14ae">
           <AttributeID>NOMBRE 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d8ef83de-bded-4097-946b-c78a2dbf11e0">
           <AttributeID>SEDE 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="890b2f87-6529-4510-bd96-8101619ec337">
           <AttributeID>NOMBRE 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="91e3d132-6145-4136-9cc5-12497bd247ce">
           <AttributeID>SIGLA FACULTAD 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="5bac0532-9a49-47f7-9074-216e11554356">
           <AttributeID>NOMBRE 5</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2f16b6f0-02f4-4468-82b6-891aced44f52">
           <AttributeID>NOMBRE 6</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="90fe4333-4973-4e0d-9826-fa9c7c914760">
           <AttributeID>SEDE 1 1</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="13580cd2-6952-496f-bea3-4e15e1c291b8">
           <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4e85adc6-f33c-445a-b5cf-5b54a288dc84">
           <AttributeID>SNIES MUNICIPIO</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2651a0f6-34f3-402d-9269-c2ae37f710c6">
           <AttributeID>FACULTAD</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -2115,6 +2602,12 @@
     <Dimension dwd:design-time-name="72ef3609-d35d-46cd-91d5-c4aa260c0000">
       <ID>RANGO</ID>
       <Name>RANGO</Name>
+      <Translations>
+        <Translation dwd:design-time-name="c5112f2e-9ca0-4aea-9d82-3c723aefcd2d">
+          <Language>9226</Language>
+          <Caption>EVALUACIÓN - RANGO PUNTAJE</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>RANGO</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="64d8ffd6-cb5f-4bdf-9c07-7c805a382646">
@@ -2122,21 +2615,31 @@
         </Attribute>
         <Attribute dwd:design-time-name="b227436b-4673-49bd-a318-ffee45a056f9">
           <AttributeID>NOMBRE RANGO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="a1bf6de6-b275-491d-8aa5-c355e8fdc8bd">
           <AttributeID>RANGO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="07721eb3-bdae-41dc-b6c1-c38aef209aa1">
           <AttributeID>LIMITE INFERIOR</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="97e85115-fe08-45f5-aa8c-01e6a150b8d1">
           <AttributeID>LIMITE SUPERIOR</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
     </Dimension>
     <Dimension dwd:design-time-name="abad6cb6-b460-472a-be48-04e984f8e75a">
       <ID>SEMESTRE</ID>
       <Name>SEMESTRE</Name>
+      <Translations>
+        <Translation dwd:design-time-name="71703e26-7034-480f-ae3f-75feeb25fc2e">
+          <Language>9226</Language>
+          <Caption>ESTUDIANTE - SEMESTRE</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>SEMESTRE</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="594eccff-e395-461f-8f3a-6ab16dca3add">
@@ -2144,18 +2647,23 @@
         </Attribute>
         <Attribute dwd:design-time-name="a531e2b7-fa80-4292-b0b5-d83c0aebf066">
           <AttributeID>ESTADO ESTUDIANTE</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="50340c7e-2479-4854-ba71-bd3e817d689a">
           <AttributeID>REINGRESO</AttributeID>
+          <AggregationUsage>Unrestricted</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="ce48617a-69f4-4f71-a809-dfcf0b1fd765">
           <AttributeID>ESTADO ESTUDIANTE 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d78b183f-64b1-48b3-96a8-86eef08140d8">
           <AttributeID>PROMEDIO SEMESTRE 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="dbab872a-1ee2-427c-9111-921af1c7af3e">
           <AttributeID>CALIFICACION SEMESTRE 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="2971f86c-8796-4cf1-a674-bfb453b4cb58">
           <AttributeID>CALIFICACION SEMESTRE 2</AttributeID>
@@ -2174,36 +2682,47 @@
         </Attribute>
         <Attribute dwd:design-time-name="67101996-cde4-41b2-a395-fa523ee1964c">
           <AttributeID>SEMESTRE</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="7b2d4514-0496-47d1-94c0-f2a4e390991b">
           <AttributeID>SEMESTRE 2</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4ada98cb-0913-4b8b-a867-05d27628eb28">
           <AttributeID>SEMESTRE 1</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d3d7f0dd-1dbe-4727-a0cd-d3a0b1222fe3">
           <AttributeID>SEMESTRE 4</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="77f81021-5633-4b45-bf20-7b655dc659c1">
           <AttributeID>SEMESTRE 3</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="4d75175f-d706-4273-9fea-3a6530ef0afd">
           <AttributeID>PROMEDIO SEMESTRE</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="f517008c-b6a5-4772-9db5-933e94ab1941">
           <AttributeID>PROMEDIO CARRERA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="e1d3a8bf-aefa-41bb-bc42-6b528ca7c80a">
           <AttributeID>CALIFICACION SEMESTRE</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d86f76e9-2414-4a20-b73f-c43feaf61d89">
           <AttributeID>CALIFICACION CARRERA</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="09d46095-3c7f-4e63-8a56-bf598cb81a59">
           <AttributeID>SITUACIONACADEMICA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d81cd06a-abea-42cd-bb08-4360fdc12873">
           <AttributeID>TIPO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
       <Hierarchies>
@@ -2230,6 +2749,12 @@
     <Dimension dwd:design-time-name="71045d97-5d52-4ef5-a5e6-766f9523a2df">
       <ID>TIPO CONTRATACION</ID>
       <Name>TIPO CONTRATACION</Name>
+      <Translations>
+        <Translation dwd:design-time-name="8a9a8340-bc9f-48d5-8a9d-3424601ee0a7">
+          <Language>9226</Language>
+          <Caption>DOCENTE - TIPO CONTRATACION</Caption>
+        </Translation>
+      </Translations>
       <DimensionID>TIPO CONTRATACION</DimensionID>
       <Attributes>
         <Attribute dwd:design-time-name="4ec06dc3-f862-4c1d-9eea-544a62f97dfa">
@@ -2237,15 +2762,19 @@
         </Attribute>
         <Attribute dwd:design-time-name="a748612a-68dc-4c83-b42f-4bcaaf332cb6">
           <AttributeID>NIVELES ESTUDIO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="d63fcbfc-167d-4bca-9f06-32f4d824b7c6">
           <AttributeID>TIPO CONTRATO</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="dc1c40ab-8d6b-4b1f-961c-3c445e77d6af">
           <AttributeID>DEDICACION</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
         <Attribute dwd:design-time-name="1d61ae88-ec86-4f59-becd-0430f0d126db">
           <AttributeID>CATEGORIA</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
         </Attribute>
       </Attributes>
     </Dimension>
@@ -2291,7 +2820,7 @@
           <Translations>
             <Translation dwd:design-time-name="25ad66f4-6d1e-4b0c-abb9-3fa8f94462ae">
               <Language>9226</Language>
-              <Caption>No. Estudiantes</Caption>
+              <Caption>Cantidad Estudiantes</Caption>
             </Translation>
           </Translations>
         </Measure>
@@ -2309,7 +2838,7 @@
           <Translations>
             <Translation dwd:design-time-name="49469595-34c4-4cd0-b204-c6f214d9f2e4">
               <Language>9226</Language>
-              <Caption>No. registros</Caption>
+              <Caption>Cantidad Registros</Caption>
             </Translation>
           </Translations>
         </Measure>
@@ -2818,8 +3347,27 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ce7f6fa9-f401-48de-acb5-992759da061a">
+          <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b8ce7e14-398a-4df0-a52e-981cf0e14102">
+              <AttributeID>INDEST ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="74e045eb-75f9-441d-81bc-3b792afaec6e">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="652fb6e1-88e7-45ae-a093-87334dd303d0">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>INDEST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
       </Dimensions>
       <Partitions />
+      <AggregationDesigns />
     </MeasureGroup>
     <MeasureGroup dwd:design-time-name="38598049-d44e-45d8-8975-dfcb03bf3236">
       <ID>HECHO ENCUESTA DOCENCIA 1</ID>
@@ -2831,7 +3379,7 @@
       <Translations>
         <Translation dwd:design-time-name="4e67bd7f-9722-4a22-b003-2c8b4f361871">
           <Language>9226</Language>
-          <Caption>Encuesta Docencia</Caption>
+          <Caption>Encuesta Docencia - Docentes</Caption>
         </Translation>
       </Translations>
       <Measures>
@@ -3359,6 +3907,24 @@
           <Materialization>Regular</Materialization>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
         </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e68a583c-52e7-4668-a507-e66caaac50f9">
+          <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dc940b75-97b8-4be8-bc1b-c742de1810d3">
+              <AttributeID>INDEST ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="17c46861-2761-4109-bc47-66acd299bb75">
+                  <DataType>BigInt</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2c2e6a37-f846-436e-91e3-f55ab5c16b5d">
+                    <TableID>DW_ACADEMICO_LABOR_HECHO_ENCUESTA_DOCENCIA</TableID>
+                    <ColumnID>INDEST_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
@@ -3379,9 +3945,11 @@ The CALCULATE command controls the aggregation of leaf cells in the cube.
 If the CALCULATE command is deleted or modified, the data within the cube is affected.
 You should edit this command only if you manually specify how the cube is aggregated.
 */
-CALCULATE; 
+CALCULATE;  
 CREATE MEMBER CURRENTCUBE.[Measures].[PUNTAJE]
- AS [Measures].[PUNTAJE_SUM]/[Measures].[HECHO ENCUESTA DOCENCIA Count], 
+ AS Round(
+[Measures].[PUNTAJE_SUM]/[Measures].[HECHO ENCUESTA DOCENCIA Count]
+, 2), 
 FORMAT_STRING = "Standard", 
 VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
         </Command>

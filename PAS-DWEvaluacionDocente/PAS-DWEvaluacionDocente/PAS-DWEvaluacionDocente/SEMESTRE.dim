@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6720" y="12250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-879" scrolltop="-4511" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6588" y="10319" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -80,6 +80,8 @@
                 <Attribute Id="PROMEDIO SEMESTRE 2" />
                 <Attribute Id="REINGRESO" />
                 <Attribute Id="SEMESTRE 3" />
+                <Attribute Id="SITUACIONACADEMICA" />
+                <Attribute Id="TIPO" />
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
@@ -143,18 +145,6 @@
               </Attributes>
               <Position x="615" y="212" />
             </Shape>
-            <Shape Id="PROMEDIO CARRERA 1" Expanded="false">
-              <Attributes>
-                <Attribute Id="PROMEDIO CARRERA 1" />
-              </Attributes>
-              <Position x="317" y="260" />
-            </Shape>
-            <Shape Id="ESTADO ESTUDIANTE 1" Expanded="false">
-              <Attributes>
-                <Attribute Id="ESTADO ESTUDIANTE 1" />
-              </Attributes>
-              <Position x="615" y="260" />
-            </Shape>
             <Shape Id="CALIFICACION SEMESTRE 1" Expanded="false">
               <Attributes>
                 <Attribute Id="CALIFICACION SEMESTRE 1" />
@@ -166,18 +156,6 @@
                 <Attribute Id="ESTADO ESTUDIANTE 2" />
               </Attributes>
               <Position x="615" y="308" />
-            </Shape>
-            <Shape Id="CALIFICACION CARRERA 1" Expanded="false">
-              <Attributes>
-                <Attribute Id="CALIFICACION CARRERA 1" />
-              </Attributes>
-              <Position x="317" y="356" />
-            </Shape>
-            <Shape Id="ESTADO ESTUDIANTE 3" Expanded="false">
-              <Attributes>
-                <Attribute Id="ESTADO ESTUDIANTE 3" />
-              </Attributes>
-              <Position x="615" y="356" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -306,6 +284,7 @@
     <Attribute dwd:design-time-name="2e3b8237-8f9b-4a0c-a8d5-f05d86cdc7ec">
       <ID>REINGRESO</ID>
       <Name>REINGRESO</Name>
+      <EstimatedCount>2</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="e5f85dc4-0736-4e3e-bf1a-67f67beef8c9">
           <DataType>WChar</DataType>
@@ -584,6 +563,7 @@
     <Attribute dwd:design-time-name="c18472b3-5bab-4df9-bc3d-2905f488bdde">
       <ID>SEMESTRE</ID>
       <Name>SEMESTRE_PROM_SEMESTRE</Name>
+      <EstimatedCount>13</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="ec2efbde-5078-4d7c-a147-9edd474e679d">
           <DataType>WChar</DataType>
@@ -601,6 +581,7 @@
     <Attribute dwd:design-time-name="1df379cd-d3a7-4c69-b48d-da47aef8ff0d">
       <ID>SEMESTRE 2</ID>
       <Name>SEMESTRE_CAL_CARRERA</Name>
+      <EstimatedCount>13</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="98ebbda6-5c84-4c62-86ef-a63d2523296f">
           <DataType>WChar</DataType>
@@ -618,6 +599,7 @@
     <Attribute dwd:design-time-name="44bec136-2fdc-46f1-8965-e46e9bb810de">
       <ID>SEMESTRE 1</ID>
       <Name>SEMESTRE_PROM_CARRERA</Name>
+      <EstimatedCount>13</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="8806a859-f211-47b6-a915-aafaee53d02b">
           <DataType>WChar</DataType>
@@ -635,6 +617,7 @@
     <Attribute dwd:design-time-name="1ca416ba-0cc7-46a7-97e0-54627f481fc1">
       <ID>SEMESTRE 4</ID>
       <Name>SEMESTRE_CAL_SEMESTRE</Name>
+      <EstimatedCount>13</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="2087eb93-a6c8-4c52-a510-b161d6043804">
           <DataType>WChar</DataType>
@@ -652,6 +635,7 @@
     <Attribute dwd:design-time-name="95b5cb68-9802-45fe-8b0c-6bd21d7a785c">
       <ID>SEMESTRE 3</ID>
       <Name>SEMESTRE_SINJERARQUIA</Name>
+      <EstimatedCount>13</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="326e4fe5-57ae-4362-8f5a-19185616228a">
           <DataType>WChar</DataType>
@@ -674,6 +658,7 @@
     <Attribute dwd:design-time-name="1e9425cb-3e17-4faa-a056-f1fdfef29b81">
       <ID>PROMEDIO SEMESTRE</ID>
       <Name>PROMEDIO SEMESTRE_SEMESTRE</Name>
+      <EstimatedCount>65</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="5ef7e840-1dcd-4338-8f6d-a07424b9825f">
           <DataType>WChar</DataType>
@@ -713,6 +698,7 @@
     <Attribute dwd:design-time-name="997cf930-6c76-4c82-a33b-1dc5f4ea0735">
       <ID>PROMEDIO CARRERA</ID>
       <Name>PROMEDIO CARRERA_SEMESTRE</Name>
+      <EstimatedCount>65</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="4cb40504-88dd-4c3a-8674-525d3c250371">
           <DataType>WChar</DataType>
@@ -752,6 +738,7 @@
     <Attribute dwd:design-time-name="7cc859a4-30ee-4c6b-a8b1-0e0ce5cedee5">
       <ID>CALIFICACION SEMESTRE</ID>
       <Name>CALIFICACION SEMESTRE_SEMESTRE</Name>
+      <EstimatedCount>65</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="6c94c865-1774-4ca5-8f8e-c3a9ad9f30b2">
           <DataType>WChar</DataType>
@@ -791,6 +778,7 @@
     <Attribute dwd:design-time-name="3df1e10f-d1ea-4480-bdfc-be73de3a14e0">
       <ID>CALIFICACION CARRERA</ID>
       <Name>CALIFICACION CARRERA_SEMESTRE</Name>
+      <EstimatedCount>65</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="d86e441e-708f-48db-910e-9db071e2b292">
           <DataType>WChar</DataType>
@@ -830,6 +818,7 @@
     <Attribute dwd:design-time-name="e4b2f2ef-9ea5-4cd9-8e4e-2204380dd68e">
       <ID>SITUACIONACADEMICA</ID>
       <Name>SITUACIONACADEMICA</Name>
+      <EstimatedCount>4</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="a4c87d11-3643-4abd-af76-40894d76271b">
           <DataType>WChar</DataType>
@@ -852,6 +841,7 @@
     <Attribute dwd:design-time-name="e2002aa5-8ca8-402e-a552-9dff9bdcaf0c">
       <ID>TIPO</ID>
       <Name>TIPO</Name>
+      <EstimatedCount>6</EstimatedCount>
       <KeyColumns>
         <KeyColumn dwd:design-time-name="8de7dcab-5531-463e-8898-1ff2b5f8fa59">
           <DataType>WChar</DataType>
@@ -876,6 +866,12 @@
     <Hierarchy dwd:design-time-name="3a53c465-c620-4d60-892d-d14ee620b7ee">
       <ID>Hierarchy</ID>
       <Name>Jerarquia_Semestre_Promedio_Semestre</Name>
+      <Translations>
+        <Translation dwd:design-time-name="141e745d-b052-4e23-9660-7bb3bca67456">
+          <Language>9226</Language>
+          <Caption>Jerarquia Semestre - Promedio Semestre</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="322ded8b-a4de-43f9-9c97-75c67108b4dd">
           <ID>SEMESTRE_PROM_SEMESTRE</ID>
@@ -904,6 +900,12 @@
     <Hierarchy dwd:design-time-name="30093a77-1027-4d5e-a36d-caac2009fdee">
       <ID>Hierarchy 1</ID>
       <Name>Jerarquia_Semestre_Promedio_Carrera</Name>
+      <Translations>
+        <Translation dwd:design-time-name="7bbd127b-9b6c-4122-ae21-1499dde09bee">
+          <Language>9226</Language>
+          <Caption>Jerarquia Semestre - Promedio Carrera</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="35758375-6c9d-4852-9372-64920d25f5d3">
           <ID>SEMESTRE_PROM_CARRERA</ID>
@@ -932,6 +934,12 @@
     <Hierarchy dwd:design-time-name="2bd9908c-6691-43c7-8165-e478d4885ee4">
       <ID>Hierarchy 2</ID>
       <Name>Jerarquia_Semestre_Calificacion_Semestre</Name>
+      <Translations>
+        <Translation dwd:design-time-name="b90ca62f-52bb-409b-b3be-61c6f059ce54">
+          <Language>9226</Language>
+          <Caption>Jerarquia Semestre - Calificacion Semestre</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="ee4b5bb4-7f03-4704-8b60-e4ae1619f2fa">
           <ID>SEMESTRE_CAL_SEMESTRE</ID>
@@ -960,6 +968,12 @@
     <Hierarchy dwd:design-time-name="cc8779cb-fbde-4b90-b0e1-b093a01df5a2">
       <ID>Hierarchy 3</ID>
       <Name>Jerarquia_Semestre_Calificacion_Carrera</Name>
+      <Translations>
+        <Translation dwd:design-time-name="7e4fead8-73a5-48d8-b13d-0d31009feab1">
+          <Language>9226</Language>
+          <Caption>Jerarquia Semestre - Calificacion Carrera</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="5eb1df42-35fa-425a-bf44-f0b70cd2e9da">
           <ID>SEMESTRE_CAL_CARRERA</ID>
@@ -988,6 +1002,12 @@
     <Hierarchy dwd:design-time-name="1b3a4541-0810-478f-9154-04e354bf615d">
       <ID>Hierarchy 1 1</ID>
       <Name>Jerarquia_Estado_Calificacion_Semestre</Name>
+      <Translations>
+        <Translation dwd:design-time-name="99d9eff0-751c-4f0d-87e8-d7905bc54f23">
+          <Language>9226</Language>
+          <Caption>Jerarquia Estado - Calificacion Semestre</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="443199ac-5034-49f5-8159-8b4a0fe3831c">
           <ID>ESTADO_CAL_SEMESTRE</ID>
@@ -1016,6 +1036,12 @@
     <Hierarchy dwd:design-time-name="e7d1aa58-0d60-4726-be1b-dc0fb2aac749">
       <ID>Hierarchy 3 1</ID>
       <Name>Jerarquia_Estado_Promedio_Semestre</Name>
+      <Translations>
+        <Translation dwd:design-time-name="05a9b162-85a3-4f73-b23a-8224054e39af">
+          <Language>9226</Language>
+          <Caption>Jerarquia Estado - Promedio Semestre</Caption>
+        </Translation>
+      </Translations>
       <Levels>
         <Level dwd:design-time-name="be8c1320-1605-444e-bb4f-cbdaae6b7f52">
           <ID>ESTADO_PROM_SEMESTRE</ID>
