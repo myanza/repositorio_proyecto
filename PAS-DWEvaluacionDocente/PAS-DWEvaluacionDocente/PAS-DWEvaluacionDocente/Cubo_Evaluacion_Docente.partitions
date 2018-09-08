@@ -19,15 +19,15 @@
           <CurrentStorageMode>Molap</CurrentStorageMode>
           <ProcessingMode>Regular</ProcessingMode>
           <EstimatedRows>4</EstimatedRows>
-          <AggregationDesignID>Agregacion1</AggregationDesignID>
+          <AggregationDesignID>Aggregation-4</AggregationDesignID>
         </Partition>
       </Partitions>
       <AggregationDesigns>
         <AggregationDesign>
-          <ID>Agregacion1</ID>
-          <Name>Agregacion1</Name>
-          <CreatedTimestamp>2018-08-04T23:50:14.41Z</CreatedTimestamp>
-          <LastSchemaUpdate>2018-08-04T23:50:14.41Z</LastSchemaUpdate>
+          <ID>Aggregation-4</ID>
+          <Name>Diseño-Aggregacion-Inicial</Name>
+          <CreatedTimestamp>2018-09-01T02:29:36.753333Z</CreatedTimestamp>
+          <LastSchemaUpdate>2018-09-01T02:29:36.753333Z</LastSchemaUpdate>
           <EstimatedRows>4</EstimatedRows>
           <Dimensions>
             <Dimension>
@@ -189,12 +189,15 @@
                 </Attribute>
                 <Attribute>
                   <AttributeID>ESTADO ESTUDIANTE 4</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                  <EstimatedCount>5</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>SEMESTRE</AttributeID>
@@ -274,6 +277,7 @@
                 </Attribute>
                 <Attribute>
                   <AttributeID>FASE ACREDITACION</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>AREA CONOCIMIENTO</AttributeID>
@@ -311,6 +315,7 @@
                 </Attribute>
                 <Attribute>
                   <AttributeID>NOMBRE 6</AttributeID>
+                  <EstimatedCount>61</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>SEDE 1 1</AttributeID>
@@ -850,9 +855,11 @@
                 </Attribute>
                 <Attribute>
                   <AttributeID>INSTITUCION PRIVADA 4</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>INSTITUCION PROCEDENCIA 4</AttributeID>
+                  <EstimatedCount>294</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>NOMBRE COMPLETO 11</AttributeID>
@@ -928,6 +935,7 @@
               <Attributes>
                 <Attribute>
                   <AttributeID>NUMERO IDENTIDAD</AttributeID>
+                  <EstimatedCount>3000</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>DEPARTAMENTO</AttributeID>
@@ -1012,6 +1020,7 @@
               <Attributes>
                 <Attribute>
                   <AttributeID>NUMERO IDENTIDAD</AttributeID>
+                  <EstimatedCount>3000</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>DEPARTAMENTO</AttributeID>
@@ -1096,6 +1105,7 @@
               <Attributes>
                 <Attribute>
                   <AttributeID>NUMERO IDENTIDAD</AttributeID>
+                  <EstimatedCount>3000</EstimatedCount>
                 </Attribute>
                 <Attribute>
                   <AttributeID>DEPARTAMENTO</AttributeID>
@@ -1415,6 +1425,58 @@
                 </Attribute>
               </Attributes>
             </Dimension>
+            <Dimension>
+              <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>INDEST ID</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>AMINISTIADO</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>MONITORIA</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>PILO</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>JOVENES ACCION</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>BECADO ICETEX</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>AYUDA</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>CHECKSUM</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>AYUDA 1</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>AYUDA 2</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>AYUDA 3</AttributeID>
+                  <EstimatedCount>64</EstimatedCount>
+                </Attribute>
+              </Attributes>
+            </Dimension>
           </Dimensions>
           <Aggregations>
             <Aggregation>
@@ -1425,30 +1487,32 @@
                   <CubeDimensionID>RANGO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>RANGO ID</AttributeID>
+                      <AttributeID>NOMBRE RANGO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RANGO</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PREGUNTA</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
+                      <AttributeID>PREGUNTA</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEM ECO EST</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>MADRE CABEZA</AttributeID>
                     </Attribute>
@@ -1465,13 +1529,18 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>SEMESTRE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PROGRAMA</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>METODOLOGIA</AttributeID>
                     </Attribute>
@@ -1479,7 +1548,7 @@
                       <AttributeID>AREA CONOCIMIENTO</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
+                      <AttributeID>NOMBRE 6</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
@@ -1494,14 +1563,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PERIODO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PERIODO COMPLETO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
@@ -1512,15 +1581,6 @@
                     <Attribute>
                       <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
@@ -1528,6 +1588,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>MATERIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NOMBRE MATERIA 3</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PENSUM MAT</CubeDimensionID>
@@ -1539,10 +1607,7 @@
                       <AttributeID>ESTADO CIVIL</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
+                      <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1550,33 +1615,49 @@
                   <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>GENERO 1 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NIVELES ESTUDIO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO CONTRATO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DEDICACION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CATEGORIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DECANO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1584,7 +1665,16 @@
                   <CubeDimensionID>DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1592,15 +1682,34 @@
                   <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>DEPARTAMENTO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>MUNICIPIO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
@@ -1613,6 +1722,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION</CubeDimensionID>
@@ -1625,6 +1739,23 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>JOVENES ACCION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BECADO ICETEX</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PILO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -1634,27 +1765,34 @@
               <Dimensions>
                 <Dimension>
                   <CubeDimensionID>RANGO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE RANGO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RANGO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PREGUNTA</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
+                      <AttributeID>PREGUNTA</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEM ECO EST</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>MADRE CABEZA</AttributeID>
                     </Attribute>
@@ -1671,13 +1809,18 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>SEMESTRE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PROGRAMA</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>METODOLOGIA</AttributeID>
                     </Attribute>
@@ -1685,7 +1828,7 @@
                       <AttributeID>AREA CONOCIMIENTO</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
+                      <AttributeID>NOMBRE 6</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
@@ -1700,14 +1843,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PERIODO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PERIODO COMPLETO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
@@ -1718,15 +1861,6 @@
                     <Attribute>
                       <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
@@ -1734,6 +1868,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>MATERIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NOMBRE MATERIA 3</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PENSUM MAT</CubeDimensionID>
@@ -1742,7 +1884,10 @@
                   <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>DEMOGRAFIA ID</AttributeID>
+                      <AttributeID>ESTADO CIVIL</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1750,33 +1895,49 @@
                   <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>GENERO 1 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NIVELES ESTUDIO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO CONTRATO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DEDICACION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CATEGORIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DECANO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1784,7 +1945,16 @@
                   <CubeDimensionID>DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1792,15 +1962,34 @@
                   <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>MUNICIPIO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
@@ -1825,6 +2014,28 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>JOVENES ACCION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BECADO ICETEX</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PILO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -1834,27 +2045,34 @@
               <Dimensions>
                 <Dimension>
                   <CubeDimensionID>RANGO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE RANGO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RANGO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PREGUNTA</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
+                      <AttributeID>PREGUNTA</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEM ECO EST</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>MADRE CABEZA</AttributeID>
                     </Attribute>
@@ -1871,13 +2089,18 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>SEMESTRE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PROGRAMA</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>METODOLOGIA</AttributeID>
                     </Attribute>
@@ -1885,7 +2108,7 @@
                       <AttributeID>AREA CONOCIMIENTO</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
+                      <AttributeID>NOMBRE 6</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
@@ -1900,14 +2123,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PERIODO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PERIODO COMPLETO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
@@ -1918,15 +2141,6 @@
                     <Attribute>
                       <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
@@ -1934,6 +2148,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>MATERIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NOMBRE MATERIA 3</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PENSUM MAT</CubeDimensionID>
@@ -1945,10 +2167,7 @@
                       <AttributeID>ESTADO CIVIL</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
+                      <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1956,33 +2175,52 @@
                   <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>GENERO 1 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO INSTITUCION 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NIVELES ESTUDIO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO CONTRATO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DEDICACION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CATEGORIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DECANO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1990,7 +2228,16 @@
                   <CubeDimensionID>DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -1998,15 +2245,34 @@
                   <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>MUNICIPIO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
@@ -2028,14 +2294,26 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>JOVENES ACCION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BECADO ICETEX</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PILO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -2045,27 +2323,34 @@
               <Dimensions>
                 <Dimension>
                   <CubeDimensionID>RANGO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE RANGO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RANGO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PREGUNTA</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
+                      <AttributeID>PREGUNTA</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEM ECO EST</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>MADRE CABEZA</AttributeID>
                     </Attribute>
@@ -2082,13 +2367,18 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>SEMESTRE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PROGRAMA</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>METODOLOGIA</AttributeID>
                     </Attribute>
@@ -2096,7 +2386,7 @@
                       <AttributeID>AREA CONOCIMIENTO</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
+                      <AttributeID>NOMBRE 6</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
@@ -2111,14 +2401,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PERIODO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PERIODO COMPLETO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
@@ -2129,15 +2419,6 @@
                     <Attribute>
                       <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
@@ -2145,6 +2426,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>MATERIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NOMBRE MATERIA 3</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PENSUM MAT</CubeDimensionID>
@@ -2156,10 +2445,7 @@
                       <AttributeID>ESTADO CIVIL</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
+                      <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2167,33 +2453,49 @@
                   <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>GENERO 1 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NIVELES ESTUDIO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO CONTRATO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DEDICACION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CATEGORIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DECANO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2201,7 +2503,16 @@
                   <CubeDimensionID>DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2209,18 +2520,42 @@
                   <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>MUNICIPIO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
@@ -2230,11 +2565,6 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION</CubeDimensionID>
@@ -2247,6 +2577,23 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>JOVENES ACCION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BECADO ICETEX</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PILO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -2256,27 +2603,34 @@
               <Dimensions>
                 <Dimension>
                   <CubeDimensionID>RANGO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE RANGO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RANGO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PREGUNTA</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
+                      <AttributeID>PREGUNTA</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEM ECO EST</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>MADRE CABEZA</AttributeID>
                     </Attribute>
@@ -2293,13 +2647,21 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>SEMESTRE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PROGRAMA</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>METODOLOGIA</AttributeID>
                     </Attribute>
@@ -2307,7 +2669,7 @@
                       <AttributeID>AREA CONOCIMIENTO</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
+                      <AttributeID>NOMBRE 6</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
@@ -2322,14 +2684,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PERIODO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PERIODO COMPLETO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
@@ -2340,15 +2702,6 @@
                     <Attribute>
                       <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
@@ -2356,6 +2709,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>MATERIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NOMBRE MATERIA 3</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PENSUM MAT</CubeDimensionID>
@@ -2367,10 +2728,7 @@
                       <AttributeID>ESTADO CIVIL</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
+                      <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2378,33 +2736,49 @@
                   <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>GENERO 1 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NIVELES ESTUDIO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO CONTRATO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DEDICACION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CATEGORIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DECANO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2412,7 +2786,16 @@
                   <CubeDimensionID>DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2420,18 +2803,32 @@
                   <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>FACULTAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
+                      <AttributeID>MUNICIPIO</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -2458,6 +2855,23 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>JOVENES ACCION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>BECADO ICETEX</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PILO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
               </Dimensions>
             </Aggregation>
@@ -2467,27 +2881,34 @@
               <Dimensions>
                 <Dimension>
                   <CubeDimensionID>RANGO</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE RANGO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>RANGO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NOMBRE</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PREGUNTA</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
+                      <AttributeID>PREGUNTA</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEM ECO EST</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>MADRE CABEZA</AttributeID>
                     </Attribute>
@@ -2504,13 +2925,18 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>SEMESTRE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PROMEDIO SEMESTRE 2</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>PROMEDIO CARRERA 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PROGRAMA</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
                     <Attribute>
                       <AttributeID>METODOLOGIA</AttributeID>
                     </Attribute>
@@ -2518,846 +2944,7 @@
                       <AttributeID>AREA CONOCIMIENTO</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 6</ID>
-              <Name>Aggregation 6</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 7</ID>
-              <Name>Aggregation 7</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>PREGUNTA ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 8</ID>
-              <Name>Aggregation 8</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>PENSUM ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 9</ID>
-              <Name>Aggregation 9</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
+                      <AttributeID>NOMBRE 6</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
@@ -3374,17 +2961,12 @@
                   <CubeDimensionID>PERIODO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>PERIODO ID</AttributeID>
+                      <AttributeID>PERIODO COMPLETO</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
@@ -3395,15 +2977,6 @@
                     <Attribute>
                       <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
@@ -3411,6 +2984,14 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>MATERIA</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>AREA CONOCIMIENTO 1</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>NOMBRE MATERIA 3</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>PENSUM MAT</CubeDimensionID>
@@ -3422,10 +3003,7 @@
                       <AttributeID>ESTADO CIVIL</AttributeID>
                     </Attribute>
                     <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
+                      <AttributeID>DISCAPACIDAD</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
@@ -3433,145 +3011,46 @@
                   <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
                       <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
                     </Attribute>
                   </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>GENERO 1 2</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>NIVELES ESTUDIO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>TIPO CONTRATO</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>DEDICACION</AttributeID>
+                    </Attribute>
+                    <Attribute>
+                      <AttributeID>CATEGORIA</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>DECANO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation a</ID>
-              <Name>Aggregation a</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>FACULTAD</AttributeID>
@@ -3579,210 +3058,16 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>DOCENTE</CubeDimensionID>
                   <Attributes>
                     <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation b</ID>
-              <Name>Aggregation b</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>FACULTAD</AttributeID>
@@ -3790,210 +3075,16 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CONTRATACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
                   <Attributes>
                     <Attribute>
+                      <AttributeID>DEPARTAMENTO 3</AttributeID>
+                    </Attribute>
+                    <Attribute>
                       <AttributeID>GENERO 3</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation c</ID>
-              <Name>Aggregation c</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
+                      <AttributeID>SIGLA FACULTAD 2</AttributeID>
                     </Attribute>
                     <Attribute>
                       <AttributeID>FACULTAD</AttributeID>
@@ -4001,122 +3092,20 @@
                   </Attributes>
                 </Dimension>
                 <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTUDIANTE ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>MUNICIPIO</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
@@ -4135,6 +3124,11 @@
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>PAIS</AttributeID>
+                    </Attribute>
+                  </Attributes>
                 </Dimension>
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
@@ -4142,1435 +3136,22 @@
                 <Dimension>
                   <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
                 </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation d</ID>
-              <Name>Aggregation d</Name>
-              <Dimensions>
                 <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>DEM ECONOMICOS ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation e</ID>
-              <Name>Aggregation e</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation f</ID>
-              <Name>Aggregation f</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>LOCALIZACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 10</ID>
-              <Name>Aggregation 10</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>MATERIA ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 11</ID>
-              <Name>Aggregation 11</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>DOCENTE ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 12</ID>
-              <Name>Aggregation 12</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>FUENTE EVALUACION ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>JORNADA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>METODOLOGIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>AREA CONOCIMIENTO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SEDE 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>SIGLA FACULTAD 1 1</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>FACULTAD</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CUESTIONARIO ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
-                </Dimension>
-              </Dimensions>
-            </Aggregation>
-            <Aggregation>
-              <ID>Aggregation 13</ID>
-              <Name>Aggregation 13</Name>
-              <Dimensions>
-                <Dimension>
-                  <CubeDimensionID>RANGO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>FUENTE EVALUACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PREGUNTA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>CATEGORIA 2</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO EST</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>SEMESTRE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PROGRAMA</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>PROGRAMA ID</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DATOS AD MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PERIODO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>CUESTIONARIO</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA ESTUDIANTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DISCAPACIDAD</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>DEPORTISTA</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>MATERIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>PENSUM MAT</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEMOGRAFIA DOCENTE</CubeDimensionID>
-                  <Attributes>
-                    <Attribute>
-                      <AttributeID>ESTADO CIVIL</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>ACUDIENTE</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>RANGO EDAD 3</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DEM ECO DOC</CubeDimensionID>
+                  <CubeDimensionID>INDICADORES ESTUDIANTES</CubeDimensionID>
                   <Attributes>
-                    <Attribute>
-                      <AttributeID>NUMERO HERMANOS</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>MADRE CABEZA</AttributeID>
-                    </Attribute>
                     <Attribute>
-                      <AttributeID>DESPLAZADO</AttributeID>
+                      <AttributeID>JOVENES ACCION</AttributeID>
                     </Attribute>
-                    <Attribute>
-                      <AttributeID>ESTRATO 1 3</AttributeID>
-                    </Attribute>
-                    <Attribute>
-                      <AttributeID>VIVIENDA PROPIA 1 1</AttributeID>
-                    </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>TIPO CONTRATACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DECANO</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
+                      <AttributeID>BECADO ICETEX</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>DOCENTE</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
+                      <AttributeID>PILO</AttributeID>
                     </Attribute>
-                  </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>JEFE DEPARTAMENTO</CubeDimensionID>
-                  <Attributes>
                     <Attribute>
-                      <AttributeID>GENERO 3</AttributeID>
+                      <AttributeID>RESIDENCIA UNIVERSITARIA</AttributeID>
                     </Attribute>
                   </Attributes>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA EST</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LUGAR RESIDENCIA DOC</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR PROCEDENCIA</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>ESTUDIANTE - LUGAR NACIMIENTO 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 2</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 3</CubeDimensionID>
-                </Dimension>
-                <Dimension>
-                  <CubeDimensionID>LOCALIZACION 1 4</CubeDimensionID>
                 </Dimension>
               </Dimensions>
             </Aggregation>

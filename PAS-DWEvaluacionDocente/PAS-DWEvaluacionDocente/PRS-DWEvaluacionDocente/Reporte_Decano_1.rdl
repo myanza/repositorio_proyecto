@@ -13,7 +13,7 @@
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DS_Consultas_MD</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [PREGUNTA].[PREGUNTA].[PREGUNTA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText>SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [PREGUNTA].[PREGUNTA].[PREGUNTA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -145,6 +145,164 @@
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
+    </DataSet>
+    <DataSet Name="listado_facultades">
+      <Query>
+        <DataSourceName>DS_Consultas_MD</DataSourceName>
+        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cubo_Evaluacion_Docente] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>DOCENTE</DimensionName>
+                      <HierarchyName>FACULTAD</HierarchyName>
+                      <HierarchyUniqueName>[DOCENTE].[FACULTAD]</HierarchyUniqueName>
+                      <LevelName>FACULTAD</LevelName>
+                      <UniqueName>[DOCENTE].[FACULTAD].[FACULTAD]</UniqueName>
+                    </ID>
+                    <ItemCaption>Facultad</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>PUNTAJE</MeasureName>
+                      <UniqueName>[Measures].[PUNTAJE]</UniqueName>
+                    </ID>
+                    <ItemCaption>Puntaje</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <From>Cubo_Evaluacion_Docente</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties>
+                <IncludeMemberValue>true</IncludeMemberValue>
+              </QueryProperties>
+            </QuerySpecification>
+            <Query>
+              <Statement> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cubo_Evaluacion_Docente] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="Facultad">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[DOCENTE].[FACULTAD].[FACULTAD]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Puntaje">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[PUNTAJE]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="listado_departamentos">
+      <Query>
+        <DataSourceName>DS_Consultas_MD</DataSourceName>
+        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cubo_Evaluacion_Docente] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <rd:DesignerState>
+          <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+            <CommandType>MDX</CommandType>
+            <QuerySpecification xsi:type="MDXQuerySpecification">
+              <Select>
+                <Items>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>DOCENTE</DimensionName>
+                      <HierarchyName>FACULTAD</HierarchyName>
+                      <HierarchyUniqueName>[DOCENTE].[FACULTAD]</HierarchyUniqueName>
+                      <LevelName>FACULTAD</LevelName>
+                      <UniqueName>[DOCENTE].[FACULTAD].[FACULTAD]</UniqueName>
+                    </ID>
+                    <ItemCaption>Facultad</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Level">
+                      <DimensionName>DOCENTE</DimensionName>
+                      <HierarchyName>DEPARTAMENTO_SINJERARQUIA</HierarchyName>
+                      <HierarchyUniqueName>[DOCENTE].[DEPARTAMENTO_SINJERARQUIA]</HierarchyUniqueName>
+                      <LevelName>DEPARTAMENTO_SINJERARQUIA</LevelName>
+                      <UniqueName>[DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA]</UniqueName>
+                    </ID>
+                    <ItemCaption>Departamento-Docente</ItemCaption>
+                    <UniqueName>true</UniqueName>
+                  </Item>
+                  <Item>
+                    <ID xsi:type="Measure">
+                      <MeasureName>PUNTAJE</MeasureName>
+                      <UniqueName>[Measures].[PUNTAJE]</UniqueName>
+                    </ID>
+                    <ItemCaption>Puntaje</ItemCaption>
+                    <BackColor>true</BackColor>
+                    <ForeColor>true</ForeColor>
+                    <FontFamily>true</FontFamily>
+                    <FontSize>true</FontSize>
+                    <FontWeight>true</FontWeight>
+                    <FontStyle>true</FontStyle>
+                    <FontDecoration>true</FontDecoration>
+                    <FormattedValue>true</FormattedValue>
+                    <FormatString>true</FormatString>
+                  </Item>
+                </Items>
+              </Select>
+              <From>Cubo_Evaluacion_Docente</From>
+              <Filter>
+                <FilterItems />
+              </Filter>
+              <Calculations />
+              <Aggregates />
+              <QueryProperties>
+                <IncludeMemberValue>true</IncludeMemberValue>
+              </QueryProperties>
+            </QuerySpecification>
+            <Query>
+              <Statement> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Cubo_Evaluacion_Docente] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <ParameterDefinitions />
+            </Query>
+          </QueryDefinition>
+        </rd:DesignerState>
+      </Query>
+      <Fields>
+        <Field Name="Facultad">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[DOCENTE].[FACULTAD].[FACULTAD]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Departamento_Docente">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA]" /&gt;</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Puntaje">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Measure" UniqueName="[Measures].[PUNTAJE]" /&gt;</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <Filters>
+        <Filter>
+          <FilterExpression>=Fields!Facultad.Value</FilterExpression>
+          <Operator>In</Operator>
+          <FilterValues>
+            <FilterValue>=Parameters!parametro_facultad.Value</FilterValue>
+          </FilterValues>
+        </Filter>
+      </Filters>
     </DataSet>
   </DataSets>
   <ReportSections>
@@ -576,6 +734,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                     <GroupExpressions>
                       <GroupExpression>=Fields!Facultad.Value</GroupExpression>
                     </GroupExpressions>
+                    <Filters>
+                      <Filter>
+                        <FilterExpression>=Fields!Facultad.Value</FilterExpression>
+                        <Operator>In</Operator>
+                        <FilterValues>
+                          <FilterValue>=Parameters!parametro_facultad.Value</FilterValue>
+                        </FilterValues>
+                      </Filter>
+                    </Filters>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
@@ -618,6 +785,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                               <PaddingBottom>2pt</PaddingBottom>
                             </Style>
                           </Textbox>
+                          <rd:Selected>true</rd:Selected>
                         </CellContents>
                       </TablixHeader>
                       <KeepWithGroup>After</KeepWithGroup>
@@ -627,6 +795,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                         <GroupExpressions>
                           <GroupExpression>=Fields!Departamento_Docente.Value</GroupExpression>
                         </GroupExpressions>
+                        <Filters>
+                          <Filter>
+                            <FilterExpression>=Fields!Departamento_Docente.Value</FilterExpression>
+                            <Operator>In</Operator>
+                            <FilterValues>
+                              <FilterValue>=Parameters!parametro_departamento.Value</FilterValue>
+                            </FilterValues>
+                          </Filter>
+                        </Filters>
                       </Group>
                       <SortExpressions>
                         <SortExpression>
@@ -669,6 +846,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                   <PaddingBottom>2pt</PaddingBottom>
                                 </Style>
                               </Textbox>
+                              <rd:Selected>true</rd:Selected>
                             </CellContents>
                           </TablixHeader>
                           <KeepWithGroup>After</KeepWithGroup>
@@ -719,6 +897,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                               <KeepWithGroup>After</KeepWithGroup>
@@ -763,6 +942,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                               <Visibility>
@@ -800,6 +980,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
+                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                               <KeepWithGroup>Before</KeepWithGroup>
@@ -840,6 +1021,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                   <PaddingBottom>2pt</PaddingBottom>
                                 </Style>
                               </Textbox>
+                              <rd:Selected>true</rd:Selected>
                             </CellContents>
                           </TablixHeader>
                           <KeepWithGroup>Before</KeepWithGroup>
@@ -880,6 +1062,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                               <PaddingBottom>2pt</PaddingBottom>
                             </Style>
                           </Textbox>
+                          <rd:Selected>true</rd:Selected>
                         </CellContents>
                       </TablixHeader>
                       <KeepWithGroup>Before</KeepWithGroup>
@@ -1380,10 +1563,60 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
       </Page>
     </ReportSection>
   </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="parametro_facultad">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>listado_facultades</DataSetName>
+          <ValueField>Facultad</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Seleccione una facultad:</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>listado_facultades</DataSetName>
+          <ValueField>Facultad</ValueField>
+          <LabelField>Facultad</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+    <ReportParameter Name="parametro_departamento">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>listado_departamentos</DataSetName>
+          <ValueField>Departamento_Docente</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Seleccione un departamento:</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>listado_departamentos</DataSetName>
+          <ValueField>Departamento_Docente</ValueField>
+          <LabelField>Departamento_Docente</LabelField>
+        </DataSetReference>
+      </ValidValues>
+      <MultiValue>true</MultiValue>
+    </ReportParameter>
+  </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
       <NumberOfColumns>4</NumberOfColumns>
       <NumberOfRows>2</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>parametro_facultad</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>parametro_departamento</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <EmbeddedImages>

@@ -13,7 +13,7 @@
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DS_Consultas_MD</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [TIPO CONTRATACION].[TIPO CONTRATO].[TIPO CONTRATO].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [DOCENTE].[FACULTAD].&amp;[Facultad De Ingeniería Electrónica Y Telecomunicaciones] } ) ON COLUMNS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente])) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText>SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[FACULTAD].[FACULTAD].ALLMEMBERS * [DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS * [TIPO CONTRATACION].[TIPO CONTRATO].[TIPO CONTRATO].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [DOCENTE].[FACULTAD].&amp;[Facultad De Ingeniería Electrónica Y Telecomunicaciones] } ) ON COLUMNS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente])) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -159,7 +159,7 @@
     <DataSet Name="listado_departamentos">
       <Query>
         <DataSourceName>DS_Consultas_MD</DataSourceName>
-        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [DOCENTE].[FACULTAD].&amp;[Facultad De Ingeniería Electrónica Y Telecomunicaciones] } ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) WHERE ( [DOCENTE].[FACULTAD].&amp;[Facultad De Ingeniería Electrónica Y Telecomunicaciones] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText>SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([DOCENTE].[DEPARTAMENTO_SINJERARQUIA].[DEPARTAMENTO_SINJERARQUIA].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [DOCENTE].[FACULTAD].&amp;[Facultad De Ingeniería Electrónica Y Telecomunicaciones] } ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) WHERE ( [DOCENTE].[FACULTAD].&amp;[Facultad De Ingeniería Electrónica Y Telecomunicaciones] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -246,7 +246,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>EVALUACIÓN DE ENCUESTA ESTUDIANTIL POR TIPO DE CONTRATACIÓN PARA LOS DEPARTAMENTOS DE LA FIET EN LOS TRES ÚLTIMOS AÑOS</Value>
+                    <Value>REPORTE DE ENCUESTA ESTUDIANTIL POR TIPO DE CONTRATACIÓN PARA LOS DEPARTAMENTOS DE LA FIET EN LOS TRES ÚLTIMOS AÑOS</Value>
                     <Style>
                       <FontStyle>Italic</FontStyle>
                       <FontFamily>Segoe UI Light</FontFamily>
