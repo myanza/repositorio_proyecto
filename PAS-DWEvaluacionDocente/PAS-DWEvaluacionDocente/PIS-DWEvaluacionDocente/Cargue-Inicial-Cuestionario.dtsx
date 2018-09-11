@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue-Inicial-Cuestionario"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{2D055138-3EF3-4404-90AE-9F281944A5F0}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{A63010C3-31E1-4CB3-9B3D-95B96C8A3AD0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -389,7 +389,8 @@
                   dataType="System.String"
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT INITCAP(ACADEMICO.EVALUACIONCUESTIONARIOS.DESCRIPCION) DESCRIPCION,   ACADEMICO.EVALUACIONCUESTIONARIOS.FECHAAPLICACION FROM ACADEMICO.EVALUACIONCUESTIONARIOS</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT INITCAP(ACADEMICO.EVALUACIONCUESTIONARIOS.DESCRIPCION) DESCRIPCION,   ACADEMICO.EVALUACIONCUESTIONARIOS.FECHAAPLICACION
+FROM ACADEMICO.EVALUACIONCUESTIONARIOS</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."

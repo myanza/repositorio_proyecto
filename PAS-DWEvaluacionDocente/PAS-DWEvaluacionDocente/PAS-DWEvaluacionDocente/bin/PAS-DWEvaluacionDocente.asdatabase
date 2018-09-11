@@ -865,7 +865,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1342" scrolltop="-2922" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6562" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1342" scrolltop="-2922" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -936,26 +936,16 @@
                 <Shape Id="NIVELES ESTUDIO" Expanded="false">
                   <Attributes>
                     <Attribute Id="NIVELES ESTUDIO" />
-                  </Attributes>
-                  <Position x="192" y="20" />
-                </Shape>
-                <Shape Id="TIPO CONTRATO" Expanded="false">
-                  <Attributes>
                     <Attribute Id="TIPO CONTRATO" />
                   </Attributes>
-                  <Position x="365" y="20" />
+                  <Position x="192" y="20" />
                 </Shape>
                 <Shape Id="DEDICACION" Expanded="false">
                   <Attributes>
                     <Attribute Id="DEDICACION" />
-                  </Attributes>
-                  <Position x="192" y="68" />
-                </Shape>
-                <Shape Id="CATEGORIA" Expanded="false">
-                  <Attributes>
                     <Attribute Id="CATEGORIA" />
                   </Attributes>
-                  <Position x="365" y="68" />
+                  <Position x="192" y="68" />
                 </Shape>
               </Shapes>
             </DiagramLayout>
@@ -980,11 +970,10 @@
           <EstimatedCount>1</EstimatedCount>
           <KeyColumns>
             <KeyColumn>
-              <DataType>WChar</DataType>
-              <DataSize>50</DataSize>
+              <DataType>BigInt</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
-                <ColumnID>CATEGORIA</ColumnID>
+                <ColumnID>CONTRATACION_ID</ColumnID>
               </Source>
             </KeyColumn>
             <KeyColumn>
@@ -1114,11 +1103,10 @@
           <Name>NIVELES ESTUDIO</Name>
           <KeyColumns>
             <KeyColumn>
-              <DataType>WChar</DataType>
-              <DataSize>50</DataSize>
+              <DataType>BigInt</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
-                <ColumnID>TIPO_CONTRATO</ColumnID>
+                <ColumnID>CONTRATACION_ID</ColumnID>
               </Source>
             </KeyColumn>
             <KeyColumn>
@@ -1154,64 +1142,6 @@
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
       </Attributes>
-      <Hierarchies>
-        <Hierarchy>
-          <ID>Hierarchy</ID>
-          <Name>Jerarquia_Contrato_Niveles</Name>
-          <Levels>
-            <Level>
-              <ID>TIPO CONTRATO</ID>
-              <Name>TIPO CONTRATO</Name>
-              <SourceAttributeID>TIPO CONTRATO</SourceAttributeID>
-              <Translations>
-                <Translation>
-                  <Language>9226</Language>
-                  <Caption>Tipo Contrato</Caption>
-                </Translation>
-              </Translations>
-            </Level>
-            <Level>
-              <ID>NIVELES ESTUDIO</ID>
-              <Name>NIVELES ESTUDIO</Name>
-              <SourceAttributeID>NIVELES ESTUDIO</SourceAttributeID>
-              <Translations>
-                <Translation>
-                  <Language>9226</Language>
-                  <Caption>Nivel Estudio</Caption>
-                </Translation>
-              </Translations>
-            </Level>
-          </Levels>
-        </Hierarchy>
-        <Hierarchy>
-          <ID>Hierarchy 1</ID>
-          <Name>Jerarquia_Categoria_Dedicacion</Name>
-          <Levels>
-            <Level>
-              <ID>CATEGORIA</ID>
-              <Name>CATEGORIA</Name>
-              <SourceAttributeID>CATEGORIA</SourceAttributeID>
-              <Translations>
-                <Translation>
-                  <Language>9226</Language>
-                  <Caption>Categoría</Caption>
-                </Translation>
-              </Translations>
-            </Level>
-            <Level>
-              <ID>DEDICACION</ID>
-              <Name>DEDICACION</Name>
-              <SourceAttributeID>DEDICACION</SourceAttributeID>
-              <Translations>
-                <Translation>
-                  <Language>9226</Language>
-                  <Caption>Dedicación</Caption>
-                </Translation>
-              </Translations>
-            </Level>
-          </Levels>
-        </Hierarchy>
-      </Hierarchies>
       <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
     </Dimension>
     <Dimension>
@@ -11467,7 +11397,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-758" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="9578" y="12250" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-758" scrolltop="-2783" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="20690" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -12307,7 +12237,6 @@
           <ID>DEMOGRAFIA DOCENTE</ID>
           <Name>DATOS DEMOGRAFICOS - DOCENTE</Name>
           <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
-          <Visible>false</Visible>
           <Attributes>
             <Attribute>
               <AttributeID>DEMOGRAFIA ID</AttributeID>
@@ -12353,7 +12282,6 @@
           <ID>DEMOGRAFIA ESTUDIANTE</ID>
           <Name>DATOS DEMOGRAFICOS - ESTUDIANTE</Name>
           <DimensionID>DATOS DEMOGRAFICOS</DimensionID>
-          <Visible>false</Visible>
           <Attributes>
             <Attribute>
               <AttributeID>DEMOGRAFIA ID</AttributeID>
@@ -13688,14 +13616,6 @@
               <AttributeID>NIVELES ESTUDIO</AttributeID>
             </Attribute>
           </Attributes>
-          <Hierarchies>
-            <Hierarchy>
-              <HierarchyID>Hierarchy</HierarchyID>
-            </Hierarchy>
-            <Hierarchy>
-              <HierarchyID>Hierarchy 1</HierarchyID>
-            </Hierarchy>
-          </Hierarchies>
         </Dimension>
       </Dimensions>
       <MeasureGroups>
@@ -14374,7 +14294,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="92" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="21683" scrolltop="-41" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="13441" y="8334" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="124" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="21683" scrolltop="-41" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="11986" y="13573" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -14385,7 +14305,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                     <layoutmanager>
                       <ddsxmlobj />
                     </layoutmanager>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="HECHO_ENCUESTA_DOCENCIA" left="16226" top="14797" logicalid="46" controlid="1" masterid="0" hint1="0" hint2="0" width="5530" height="7504" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="HECHO_ENCUESTA_DOCENCIA" left="16226" top="25020" logicalid="62" controlid="1" masterid="0" hint1="0" hint2="0" width="5530" height="7504" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00009a150000501d0000" />
                       </control>
@@ -14396,7 +14316,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PENSUM" left="24156" top="7400" logicalid="47" controlid="2" masterid="0" hint1="0" hint2="0" width="4048" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PENSUM" left="24156" top="17623" logicalid="63" controlid="2" masterid="0" hint1="0" hint2="0" width="4048" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000d00f0000a50a0000" />
                       </control>
@@ -14407,7 +14327,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DEMOGRAFIA_DATOS_ECONOMICOS" left="5932" top="29594" logicalid="48" controlid="3" masterid="0" hint1="0" hint2="0" width="4366" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DEMOGRAFIA_DATOS_ECONOMICOS" left="5932" top="39817" logicalid="64" controlid="3" masterid="0" hint1="0" hint2="0" width="4366" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00000e1100009b0f0000" />
                       </control>
@@ -14418,7 +14338,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="INDICADORES_ESTUDIANTES" left="24156" top="12525" logicalid="49" controlid="4" masterid="0" hint1="0" hint2="0" width="4233" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="INDICADORES_ESTUDIANTES" left="24156" top="22748" logicalid="65" controlid="4" masterid="0" hint1="0" hint2="0" width="4233" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00008910000043110000" />
                       </control>
@@ -14429,7 +14349,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FUENTE_EVALUACION" left="9063" top="22330" logicalid="50" controlid="5" masterid="0" hint1="0" hint2="0" width="4763" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="FUENTE_EVALUACION" left="9063" top="32553" logicalid="66" controlid="5" masterid="0" hint1="0" hint2="0" width="4763" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00009b120000fe080000" />
                       </control>
@@ -14440,7 +14360,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="CUESTIONARIO" left="24156" top="19344" logicalid="51" controlid="6" masterid="0" hint1="0" hint2="0" width="5133" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="CUESTIONARIO" left="24156" top="29567" logicalid="67" controlid="6" masterid="0" hint1="0" hint2="0" width="5133" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00000d140000fe080000" />
                       </control>
@@ -14451,7 +14371,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="MATERIA" left="19517" top="29594" logicalid="52" controlid="7" masterid="0" hint1="0" hint2="0" width="5292" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="MATERIA" left="19517" top="39817" logicalid="68" controlid="7" masterid="0" hint1="0" hint2="0" width="5292" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000ac14000088130000" />
                       </control>
@@ -14462,7 +14382,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="ESTUDIANTE" left="13611" top="0" logicalid="53" controlid="8" masterid="0" hint1="0" hint2="0" width="5239" height="6164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="ESTUDIANTE" left="13611" top="10223" logicalid="69" controlid="8" masterid="0" hint1="0" hint2="0" width="5239" height="6164" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00007714000014180000" />
                       </control>
@@ -14473,7 +14393,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="LOCALIZACION" left="7242" top="925" logicalid="54" controlid="9" masterid="0" hint1="0" hint2="0" width="3969" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="LOCALIZACION" left="7242" top="11148" logicalid="70" controlid="9" masterid="0" hint1="0" hint2="0" width="3969" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000810f00004d0c0000" />
                       </control>
@@ -14484,7 +14404,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_DEMOGRAFICOS" left="10281" top="9963" logicalid="55" controlid="10" masterid="0" hint1="0" hint2="0" width="3545" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_DEMOGRAFICOS" left="10281" top="20186" logicalid="71" controlid="10" masterid="0" hint1="0" hint2="0" width="3545" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000d90d0000f40d0000" />
                       </control>
@@ -14495,7 +14415,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PREGUNTA" left="33750" top="2275" logicalid="56" controlid="11" masterid="0" hint1="0" hint2="0" width="4233" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PREGUNTA" left="33750" top="12498" logicalid="72" controlid="11" masterid="0" hint1="0" hint2="0" width="4233" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c000089100000a50a0000" />
                       </control>
@@ -14506,7 +14426,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE" left="0" top="0" logicalid="57" controlid="12" masterid="0" hint1="0" hint2="0" width="4842" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DOCENTE" left="0" top="10223" logicalid="73" controlid="12" masterid="0" hint1="0" hint2="0" width="4842" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000ea12000088130000" />
                       </control>
@@ -14517,7 +14437,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PROGRAMA" left="12698" top="29594" logicalid="58" controlid="13" masterid="0" hint1="0" hint2="0" width="4419" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PROGRAMA" left="12698" top="39817" logicalid="74" controlid="13" masterid="0" hint1="0" hint2="0" width="4419" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00004311000088130000" />
                       </control>
@@ -14528,7 +14448,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PERIODO" left="9593" top="15935" logicalid="59" controlid="14" masterid="0" hint1="0" hint2="0" width="4233" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="PERIODO" left="9593" top="26158" logicalid="75" controlid="14" masterid="0" hint1="0" hint2="0" width="4233" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000891000009b0f0000" />
                       </control>
@@ -14539,7 +14459,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_AD_MATERIA" left="24156" top="24046" logicalid="60" controlid="15" masterid="0" hint1="0" hint2="0" width="4207" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="DATOS_AD_MATERIA" left="24156" top="34269" logicalid="76" controlid="15" masterid="0" hint1="0" hint2="0" width="4207" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00006f1000004d0c0000" />
                       </control>
@@ -14550,7 +14470,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="SEMESTRE" left="27209" top="29594" logicalid="61" controlid="16" masterid="0" hint1="0" hint2="0" width="4842" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="SEMESTRE" left="27209" top="39817" logicalid="77" controlid="16" masterid="0" hint1="0" hint2="0" width="4842" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000ea12000043110000" />
                       </control>
@@ -14561,7 +14481,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="TIPO_CONTRATACION" left="21250" top="1851" logicalid="62" controlid="17" masterid="0" hint1="0" hint2="0" width="3916" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="TIPO_CONTRATACION" left="21250" top="12074" logicalid="78" controlid="17" masterid="0" hint1="0" hint2="0" width="3916" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c00004c0f00004d0c0000" />
                       </control>
@@ -14572,7 +14492,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="RANGO" left="27566" top="1851" logicalid="63" controlid="18" masterid="0" hint1="0" hint2="0" width="3784" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.3" tooltip="RANGO" left="27566" top="12074" logicalid="79" controlid="18" masterid="0" hint1="0" hint2="0" width="3784" height="3149" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobjectstreaminitwrapper binary="000c0000c80e00004d0c0000" />
                       </control>
@@ -14583,7 +14503,7 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                       </layoutobject>
                       <shape groupshapeid="0" groupnode="0" />
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="1550" logicalid="64" controlid="19" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="11773" logicalid="90" controlid="29" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14597,13 +14517,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="12" sourceattachpoint="16" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="7242" y="1949" />
-                        <point x="6042" y="1949" />
-                        <point x="6042" y="1950" />
-                        <point x="4842" y="1950" />
+                        <point x="7242" y="12172" />
+                        <point x="6042" y="12172" />
+                        <point x="6042" y="12173" />
+                        <point x="4842" y="12173" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="1000" logicalid="65" controlid="20" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="11223" logicalid="95" controlid="34" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14617,13 +14537,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="12" sourceattachpoint="14" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="7242" y="1399" />
-                        <point x="6042" y="1399" />
-                        <point x="6042" y="1400" />
-                        <point x="4842" y="1400" />
+                        <point x="7242" y="11622" />
+                        <point x="6042" y="11622" />
+                        <point x="6042" y="11623" />
+                        <point x="4842" y="11623" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="10911" top="1550" logicalid="66" controlid="21" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="10911" top="11773" logicalid="96" controlid="35" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14637,13 +14557,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="8" sourceattachpoint="17" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="11211" y="1949" />
-                        <point x="12411" y="1949" />
-                        <point x="12411" y="1982" />
-                        <point x="13611" y="1982" />
+                        <point x="11211" y="12172" />
+                        <point x="12411" y="12172" />
+                        <point x="12411" y="12205" />
+                        <point x="13611" y="12205" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="10911" top="1000" logicalid="67" controlid="22" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="10911" top="11223" logicalid="97" controlid="36" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14657,13 +14577,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="8" sourceattachpoint="15" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="11211" y="1399" />
-                        <point x="12411" y="1399" />
-                        <point x="12411" y="1432" />
-                        <point x="13611" y="1432" />
+                        <point x="11211" y="11622" />
+                        <point x="12411" y="11622" />
+                        <point x="12411" y="11655" />
+                        <point x="13611" y="11655" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="19241" top="4501" logicalid="68" controlid="23" masterid="0" hint1="0" hint2="0" width="8967" height="10596" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="19241" top="14724" logicalid="98" controlid="37" masterid="0" hint1="0" hint2="0" width="8967" height="10596" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14677,13 +14597,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="18" destid="1" sourceattachpoint="1" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="27808" y="5000" />
-                        <point x="27808" y="9898" />
-                        <point x="19541" y="9898" />
-                        <point x="19541" y="14797" />
+                        <point x="27808" y="15223" />
+                        <point x="27808" y="20121" />
+                        <point x="19541" y="20121" />
+                        <point x="19541" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="21549" logicalid="69" controlid="24" masterid="0" hint1="0" hint2="0" width="3000" height="1782" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="31772" logicalid="99" controlid="38" masterid="0" hint1="0" hint2="0" width="3000" height="1782" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14697,13 +14617,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="1" sourceattachpoint="19" destattachpoint="42" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="13826" y="22931" />
-                        <point x="15026" y="22931" />
-                        <point x="15026" y="21849" />
-                        <point x="16226" y="21849" />
+                        <point x="13826" y="33154" />
+                        <point x="15026" y="33154" />
+                        <point x="15026" y="32072" />
+                        <point x="16226" y="32072" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="4338" logicalid="70" controlid="25" masterid="0" hint1="0" hint2="0" width="12594" height="11211" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="14561" logicalid="100" controlid="39" masterid="0" hint1="0" hint2="0" width="12594" height="11211" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14717,13 +14637,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="1" sourceattachpoint="22" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="33750" y="4737" />
-                        <point x="27753" y="4737" />
-                        <point x="27753" y="15249" />
-                        <point x="21756" y="15249" />
+                        <point x="33750" y="14960" />
+                        <point x="27753" y="14960" />
+                        <point x="27753" y="25472" />
+                        <point x="21756" y="25472" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="19241" top="4501" logicalid="71" controlid="26" masterid="0" hint1="0" hint2="0" width="2717" height="10596" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="19241" top="14724" logicalid="101" controlid="40" masterid="0" hint1="0" hint2="0" width="2717" height="10596" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14737,13 +14657,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="17" destid="1" sourceattachpoint="1" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="21558" y="5000" />
-                        <point x="21558" y="9898" />
-                        <point x="19541" y="9898" />
-                        <point x="19541" y="14797" />
+                        <point x="21558" y="15223" />
+                        <point x="21558" y="20121" />
+                        <point x="19541" y="20121" />
+                        <point x="19541" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="9366" top="22001" logicalid="72" controlid="27" masterid="0" hint1="0" hint2="0" width="8825" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="9366" top="32224" logicalid="102" controlid="41" masterid="0" hint1="0" hint2="0" width="8825" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14757,13 +14677,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="12" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="9765" y="29594" />
-                        <point x="9765" y="25948" />
-                        <point x="17891" y="25948" />
-                        <point x="17891" y="22301" />
+                        <point x="9765" y="39817" />
+                        <point x="9765" y="36171" />
+                        <point x="17891" y="36171" />
+                        <point x="17891" y="32524" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="20891" top="22001" logicalid="73" controlid="28" masterid="0" hint1="0" hint2="0" width="6939" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="20891" top="32224" logicalid="103" controlid="42" masterid="0" hint1="0" hint2="0" width="6939" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14777,13 +14697,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="16" destid="1" sourceattachpoint="0" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="27430" y="29594" />
-                        <point x="27430" y="25948" />
-                        <point x="21191" y="25948" />
-                        <point x="21191" y="22301" />
+                        <point x="27430" y="39817" />
+                        <point x="27430" y="36171" />
+                        <point x="21191" y="36171" />
+                        <point x="21191" y="32524" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="16158" top="22001" logicalid="74" controlid="29" masterid="0" hint1="0" hint2="0" width="1483" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="16158" top="32224" logicalid="104" controlid="43" masterid="0" hint1="0" hint2="0" width="1483" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14797,13 +14717,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="1" sourceattachpoint="12" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="16557" y="29594" />
-                        <point x="16557" y="25948" />
-                        <point x="17341" y="25948" />
-                        <point x="17341" y="22301" />
+                        <point x="16557" y="39817" />
+                        <point x="16557" y="36171" />
+                        <point x="17341" y="36171" />
+                        <point x="17341" y="32524" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="10477" top="3575" logicalid="75" controlid="30" masterid="0" hint1="0" hint2="0" width="7714" height="11522" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="10477" top="13798" logicalid="105" controlid="44" masterid="0" hint1="0" hint2="0" width="7714" height="11522" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14817,13 +14737,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="1" sourceattachpoint="13" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="10876" y="4074" />
-                        <point x="10876" y="9435" />
-                        <point x="17891" y="9435" />
-                        <point x="17891" y="14797" />
+                        <point x="10876" y="14297" />
+                        <point x="10876" y="19658" />
+                        <point x="17891" y="19658" />
+                        <point x="17891" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="21549" logicalid="76" controlid="31" masterid="0" hint1="0" hint2="0" width="3000" height="3371" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="31772" logicalid="106" controlid="45" masterid="0" hint1="0" hint2="0" width="3000" height="3371" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14837,13 +14757,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="1" sourceattachpoint="14" destattachpoint="43" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="24156" y="24520" />
-                        <point x="22956" y="24520" />
-                        <point x="22956" y="21849" />
-                        <point x="21756" y="21849" />
+                        <point x="24156" y="34743" />
+                        <point x="22956" y="34743" />
+                        <point x="22956" y="32072" />
+                        <point x="21756" y="32072" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="3201" logicalid="77" controlid="32" masterid="0" hint1="0" hint2="0" width="11984" height="15648" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="13424" logicalid="107" controlid="46" masterid="0" hint1="0" hint2="0" width="11984" height="15648" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14857,13 +14777,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="1" sourceattachpoint="31" destattachpoint="30" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="4842" y="3600" />
-                        <point x="10534" y="3600" />
-                        <point x="10534" y="18549" />
-                        <point x="16226" y="18549" />
+                        <point x="4842" y="13823" />
+                        <point x="10534" y="13823" />
+                        <point x="10534" y="28772" />
+                        <point x="16226" y="28772" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="15883" logicalid="78" controlid="33" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="26106" logicalid="108" controlid="47" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14877,13 +14797,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="14" destid="1" sourceattachpoint="15" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="13826" y="16282" />
-                        <point x="15026" y="16282" />
-                        <point x="15026" y="16349" />
-                        <point x="16226" y="16349" />
+                        <point x="13826" y="26505" />
+                        <point x="15026" y="26505" />
+                        <point x="15026" y="26572" />
+                        <point x="16226" y="26572" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="19546" logicalid="79" controlid="34" masterid="0" hint1="0" hint2="0" width="3000" height="953" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="29769" logicalid="109" controlid="48" masterid="0" hint1="0" hint2="0" width="3000" height="953" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14897,13 +14817,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="1" sourceattachpoint="18" destattachpoint="37" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="24156" y="19945" />
-                        <point x="22956" y="19945" />
-                        <point x="22956" y="20199" />
-                        <point x="21756" y="20199" />
+                        <point x="24156" y="30168" />
+                        <point x="22956" y="30168" />
+                        <point x="22956" y="30422" />
+                        <point x="21756" y="30422" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="4301" logicalid="80" controlid="35" masterid="0" hint1="0" hint2="0" width="11984" height="13448" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="14524" logicalid="110" controlid="49" masterid="0" hint1="0" hint2="0" width="11984" height="13448" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14917,13 +14837,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="1" sourceattachpoint="35" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="4842" y="4700" />
-                        <point x="10534" y="4700" />
-                        <point x="10534" y="17449" />
-                        <point x="16226" y="17449" />
+                        <point x="4842" y="14923" />
+                        <point x="10534" y="14923" />
+                        <point x="10534" y="27672" />
+                        <point x="16226" y="27672" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="13000" logicalid="81" controlid="36" masterid="0" hint1="0" hint2="0" width="3000" height="3099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="23223" logicalid="111" controlid="50" masterid="0" hint1="0" hint2="0" width="3000" height="3099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14937,13 +14857,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="1" sourceattachpoint="27" destattachpoint="20" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="13826" y="13399" />
-                        <point x="15026" y="13399" />
-                        <point x="15026" y="15799" />
-                        <point x="16226" y="15799" />
+                        <point x="13826" y="23622" />
+                        <point x="15026" y="23622" />
+                        <point x="15026" y="26022" />
+                        <point x="16226" y="26022" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="3751" logicalid="82" controlid="37" masterid="0" hint1="0" hint2="0" width="11984" height="14548" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="4542" top="13974" logicalid="112" controlid="51" masterid="0" hint1="0" hint2="0" width="11984" height="14548" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14957,13 +14877,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="12" destid="1" sourceattachpoint="33" destattachpoint="28" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="4842" y="4150" />
-                        <point x="10534" y="4150" />
-                        <point x="10534" y="17999" />
-                        <point x="16226" y="17999" />
+                        <point x="4842" y="14373" />
+                        <point x="10534" y="14373" />
+                        <point x="10534" y="28222" />
+                        <point x="16226" y="28222" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="20341" top="9626" logicalid="83" controlid="38" masterid="0" hint1="0" hint2="0" width="5139" height="5471" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="20341" top="19849" logicalid="113" controlid="52" masterid="0" hint1="0" hint2="0" width="5139" height="5471" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14977,13 +14897,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="3" destattachpoint="14" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="25080" y="10125" />
-                        <point x="25080" y="12461" />
-                        <point x="20641" y="12461" />
-                        <point x="20641" y="14797" />
+                        <point x="25080" y="20348" />
+                        <point x="25080" y="22684" />
+                        <point x="20641" y="22684" />
+                        <point x="20641" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="19564" top="22001" logicalid="84" controlid="39" masterid="0" hint1="0" hint2="0" width="827" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="19564" top="32224" logicalid="114" controlid="53" masterid="0" hint1="0" hint2="0" width="827" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -14997,13 +14917,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="1" sourceattachpoint="0" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="19963" y="29594" />
-                        <point x="19963" y="25948" />
-                        <point x="20091" y="25948" />
-                        <point x="20091" y="22301" />
+                        <point x="19963" y="39817" />
+                        <point x="19963" y="36171" />
+                        <point x="20091" y="36171" />
+                        <point x="20091" y="32524" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="20891" top="9626" logicalid="85" controlid="40" masterid="0" hint1="0" hint2="0" width="4039" height="5471" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="20891" top="19849" logicalid="115" controlid="54" masterid="0" hint1="0" hint2="0" width="4039" height="5471" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -15017,13 +14937,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="1" sourceattachpoint="1" destattachpoint="16" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="24530" y="10125" />
-                        <point x="24530" y="12461" />
-                        <point x="21191" y="12461" />
-                        <point x="21191" y="14797" />
+                        <point x="24530" y="20348" />
+                        <point x="24530" y="22684" />
+                        <point x="21191" y="22684" />
+                        <point x="21191" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="12450" logicalid="86" controlid="41" masterid="0" hint1="0" hint2="0" width="3000" height="3099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="13526" top="22673" logicalid="116" controlid="55" masterid="0" hint1="0" hint2="0" width="3000" height="3099" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -15037,13 +14957,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="1" sourceattachpoint="25" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="13826" y="12849" />
-                        <point x="15026" y="12849" />
-                        <point x="15026" y="15249" />
-                        <point x="16226" y="15249" />
+                        <point x="13826" y="23072" />
+                        <point x="15026" y="23072" />
+                        <point x="15026" y="25472" />
+                        <point x="16226" y="25472" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="8816" top="22001" logicalid="87" controlid="42" masterid="0" hint1="0" hint2="0" width="8275" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="8816" top="32224" logicalid="117" controlid="56" masterid="0" hint1="0" hint2="0" width="8275" height="8093" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -15057,13 +14977,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="1" sourceattachpoint="10" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="9215" y="29594" />
-                        <point x="9215" y="25948" />
-                        <point x="16791" y="25948" />
-                        <point x="16791" y="22301" />
+                        <point x="9215" y="39817" />
+                        <point x="9215" y="36171" />
+                        <point x="16791" y="36171" />
+                        <point x="16791" y="32524" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="16381" top="5665" logicalid="88" controlid="43" masterid="0" hint1="0" hint2="0" width="799" height="9432" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="16381" top="15888" logicalid="118" controlid="57" masterid="0" hint1="0" hint2="0" width="799" height="9432" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -15077,13 +14997,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="11" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="16780" y="6164" />
-                        <point x="16780" y="10480" />
-                        <point x="16791" y="10480" />
-                        <point x="16791" y="14797" />
+                        <point x="16780" y="16387" />
+                        <point x="16780" y="20703" />
+                        <point x="16791" y="20703" />
+                        <point x="16791" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="9927" top="3575" logicalid="89" controlid="44" masterid="0" hint1="0" hint2="0" width="7714" height="11522" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="9927" top="13798" logicalid="119" controlid="58" masterid="0" hint1="0" hint2="0" width="7714" height="11522" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -15097,13 +15017,13 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="1" sourceattachpoint="11" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="10326" y="4074" />
-                        <point x="10326" y="9435" />
-                        <point x="17341" y="9435" />
-                        <point x="17341" y="14797" />
+                        <point x="10326" y="14297" />
+                        <point x="10326" y="19658" />
+                        <point x="17341" y="19658" />
+                        <point x="17341" y="25020" />
                       </connector>
                     </ddscontrol>
-                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="14885" logicalid="90" controlid="45" masterid="0" hint1="0" hint2="0" width="3000" height="1214" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                    <ddscontrol controlprogid="MSDDS.Polyline" left="21456" top="25108" logicalid="120" controlid="59" masterid="0" hint1="0" hint2="0" width="3000" height="1214" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                       <control>
                         <ddsxmlobj>
                           <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -15117,14 +15037,14 @@ VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'HECHO ENCUESTA DOCENCIA'  ; </Text>
                         </ddsxmlobj>
                       </layoutobject>
                       <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="1" sourceattachpoint="22" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
-                        <point x="24156" y="15284" />
-                        <point x="22956" y="15284" />
-                        <point x="22956" y="15799" />
-                        <point x="21756" y="15799" />
+                        <point x="24156" y="25507" />
+                        <point x="22956" y="25507" />
+                        <point x="22956" y="26022" />
+                        <point x="21756" y="26022" />
                       </connector>
                     </ddscontrol>
                   </dds>
-</DiagramLayout>
+                </DiagramLayout>
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>21683</DiagramViewPortLeft>

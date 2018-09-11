@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue-Inicial-Indicadores-Estudiantes"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{D42951D4-D7C0-47E6-8532-AB9ECB9F1744}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{B965831D-A4A2-43A9-8018-8C4F4189B065}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -992,11 +992,11 @@ FROM            AMNISTIA, MONITORIA, RESIDENCIA, PILO, JOVENES_ACCION, BECADO_IC
         <NodeLayout
           Size="207,42"
           Id="Package\Tarea Flujo de datos\Clave Sustituta Indicadores"
-          TopLeft="282,266" />
+          TopLeft="276,264" />
         <NodeLayout
           Size="164,42"
           Id="Package\Tarea Flujo de datos\Columna derivada"
-          TopLeft="300,191" />
+          TopLeft="297,190" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Conversión de datos"
@@ -1008,11 +1008,11 @@ FROM            AMNISTIA, MONITORIA, RESIDENCIA, PILO, JOVENES_ACCION, BECADO_IC
         <NodeLayout
           Size="202,42"
           Id="Package\Tarea Flujo de datos\Checksum Transformation"
-          TopLeft="286,340" />
+          TopLeft="275,340" />
         <NodeLayout
           Size="152,42"
           Id="Package\Tarea Flujo de datos\DimIndicadores"
-          TopLeft="311,419" />
+          TopLeft="298,419" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
           TopLeft="373,68">
@@ -1037,18 +1037,18 @@ FROM            AMNISTIA, MONITORIA, RESIDENCIA, PILO, JOVENES_ACCION, BECADO_IC
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="378.25,152">
+          TopLeft="376.75,152">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,38"
               Start="0,0"
-              End="0,31.5">
+              End="0,30.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,30.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1059,29 +1059,7 @@ FROM            AMNISTIA, MONITORIA, RESIDENCIA, PILO, JOVENES_ACCION, BECADO_IC
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="383.75,233">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33"
-              Start="0,0"
-              End="0,25.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
-          TopLeft="386.25,308">
+          TopLeft="379.25,232">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1102,8 +1080,30 @@ FROM            AMNISTIA, MONITORIA, RESIDENCIA, PILO, JOVENES_ACCION, BECADO_IC
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
+          TopLeft="377.75,306">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[ChecksumOutput]"
-          TopLeft="387,382">
+          TopLeft="375,382">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"

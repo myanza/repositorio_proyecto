@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1342" scrolltop="-2922" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6562" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1342" scrolltop="-2922" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="13441" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -79,26 +79,16 @@
             <Shape Id="NIVELES ESTUDIO" Expanded="false">
               <Attributes>
                 <Attribute Id="NIVELES ESTUDIO" />
-              </Attributes>
-              <Position x="192" y="20" />
-            </Shape>
-            <Shape Id="TIPO CONTRATO" Expanded="false">
-              <Attributes>
                 <Attribute Id="TIPO CONTRATO" />
               </Attributes>
-              <Position x="365" y="20" />
+              <Position x="192" y="20" />
             </Shape>
             <Shape Id="DEDICACION" Expanded="false">
               <Attributes>
                 <Attribute Id="DEDICACION" />
-              </Attributes>
-              <Position x="192" y="68" />
-            </Shape>
-            <Shape Id="CATEGORIA" Expanded="false">
-              <Attributes>
                 <Attribute Id="CATEGORIA" />
               </Attributes>
-              <Position x="365" y="68" />
+              <Position x="192" y="68" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -122,18 +112,17 @@
       <Name>DEDICACION</Name>
       <EstimatedCount>1</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c3363cd9-e4df-4271-94bd-77434170bd97">
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="24ccb655-71e4-4524-8238-ba671f91b983">
+        <KeyColumn dwd:design-time-name="28a7ed40-8576-4cbf-9f30-2b1e28b9c9c1">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6c6a8413-8b43-435e-aa80-a5650c6b4129">
             <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
-            <ColumnID>CATEGORIA</ColumnID>
+            <ColumnID>CONTRATACION_ID</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="f00a1992-38be-46e3-b78c-cd5f328612cd">
+        <KeyColumn dwd:design-time-name="e2c3b789-1b56-4085-944f-f30b7a1b8021">
           <DataType>WChar</DataType>
           <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ce5eecaa-8bf0-43a3-9d41-e8ac75170c62">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c90f53d4-72c1-4f6e-b3db-cd6ffe422120">
             <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
             <ColumnID>DEDICACION</ColumnID>
           </Source>
@@ -179,7 +168,7 @@
       <NameColumn dwd:design-time-name="14f1cac8-9054-4fa6-9aac-de8106a2dd7f">
         <DataType>WChar</DataType>
         <DataSize>50</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="52894c63-b285-48dc-ba5f-55352b2fcd7c">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="f9698973-233c-4224-bc02-2501251b5f21">
           <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
           <ColumnID>CATEGORIA</ColumnID>
         </Source>
@@ -256,18 +245,17 @@
       <ID>NIVELES ESTUDIO</ID>
       <Name>NIVELES ESTUDIO</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="2564d827-0aed-4398-991b-0d5abc593d8e">
-          <DataType>WChar</DataType>
-          <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7b2ee16a-0c80-4e0f-99f5-1f5901e3d059">
+        <KeyColumn dwd:design-time-name="fafd28d9-7ad0-4bf3-a4ad-fa2467550a39">
+          <DataType>BigInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b39c1357-558a-4458-9949-7dbafb779f3e">
             <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
-            <ColumnID>TIPO_CONTRATO</ColumnID>
+            <ColumnID>CONTRATACION_ID</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="5b265e59-a79f-48d7-9279-bde80932f16d">
+        <KeyColumn dwd:design-time-name="f5249741-7dc8-4c32-b2ac-dbc2e9db7eea">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7fecc829-438e-42a5-8693-6e88cc15d3a8">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74f46103-657f-404d-b1b6-f473c8b5bcea">
             <TableID>DW_ACADEMICO_LABOR_TIPO_CONTRATACION</TableID>
             <ColumnID>NIVELES_ESTUDIO</ColumnID>
           </Source>
@@ -297,63 +285,5 @@
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
-  <Hierarchies>
-    <Hierarchy dwd:design-time-name="e32d192f-aabd-4c94-9a2b-0452ddedd33f">
-      <ID>Hierarchy</ID>
-      <Name>Jerarquia_Contrato_Niveles</Name>
-      <Levels>
-        <Level dwd:design-time-name="301f9e7c-5f66-4328-9722-e38979a8f737">
-          <ID>TIPO CONTRATO</ID>
-          <Name>TIPO CONTRATO</Name>
-          <SourceAttributeID>TIPO CONTRATO</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="7d16820c-58f6-4368-b6d4-352e0d7f3cb2">
-              <Language>9226</Language>
-              <Caption>Tipo Contrato</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-        <Level dwd:design-time-name="b06dc46c-4951-402a-8fde-381dc37dcb1c">
-          <ID>NIVELES ESTUDIO</ID>
-          <Name>NIVELES ESTUDIO</Name>
-          <SourceAttributeID>NIVELES ESTUDIO</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="26c4214c-f519-4648-b60b-20459ba3c2fe">
-              <Language>9226</Language>
-              <Caption>Nivel Estudio</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-      </Levels>
-    </Hierarchy>
-    <Hierarchy dwd:design-time-name="6a175bd4-f098-46ce-945d-838ee7bde8ae">
-      <ID>Hierarchy 1</ID>
-      <Name>Jerarquia_Categoria_Dedicacion</Name>
-      <Levels>
-        <Level dwd:design-time-name="6e12f7d1-4558-44e1-ad11-8237580798ef">
-          <ID>CATEGORIA</ID>
-          <Name>CATEGORIA</Name>
-          <SourceAttributeID>CATEGORIA</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="bd7f7947-6a94-42da-87be-9f7933bdbea7">
-              <Language>9226</Language>
-              <Caption>Categoría</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-        <Level dwd:design-time-name="830f49fc-fa78-40c6-b7e9-698bfd288da7">
-          <ID>DEDICACION</ID>
-          <Name>DEDICACION</Name>
-          <SourceAttributeID>DEDICACION</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="166824e3-b2f7-4c78-8eca-fdc591572eaf">
-              <Language>9226</Language>
-              <Caption>Dedicación</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-      </Levels>
-    </Hierarchy>
-  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>
