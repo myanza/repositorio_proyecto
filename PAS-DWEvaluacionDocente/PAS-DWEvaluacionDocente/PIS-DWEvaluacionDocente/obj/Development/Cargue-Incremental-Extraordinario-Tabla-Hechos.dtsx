@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="7/3/2018 8:34:51 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="SEBASTIAN"
   DTS:CreatorName="SEBASTIAN\Sebastian Jimenez"
-  DTS:DTSID="{7D9F30C2-A1B8-411F-9D8E-81BE93FE6FC4}"
+  DTS:DTSID="{B152B7E1-B4A8-4E6F-825A-E06234CC1C27}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="13.0.2165.0"
   DTS:LocaleID="3082"
-  DTS:ObjectName="Cargue-Inicial-Tabla-Hechos"
+  DTS:ObjectName="Cargue-Incremental-Extraordinario-Tabla-Hechos"
   DTS:PackageType="5"
-  DTS:VersionBuild="338"
-  DTS:VersionGUID="{35145A07-A34D-4792-86C1-D5965E66639B}">
+  DTS:VersionBuild="284"
+  DTS:VersionGUID="{B91B044E-C930-498D-B8CF-326BF864A230}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Tarea Flujo de datos"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarea Flujo de datos"
-      DTS:DTSID="{D415262C-2995-4130-A7AC-E9A004A1EFE9}"
+      DTS:DTSID="{4F6AB6EC-E4A7-4EF5-83E1-4FC246A78833}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Tarea Flujo de datos"
@@ -31,6 +31,199 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Tarea Flujo de datos\Búsqueda"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Búsqueda;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;6"
+              description="Combina columnas adicionales con el flujo de datos mediante la búsqueda de valores en una tabla. Por ejemplo, se combina la columna 'id. de empleado' con la tabla de empleados para obtener la 'fecha de contratación' y 'el nombre de empleado'. Se recomienda esta transformación cuando hay suficiente espacio en memoria para la tabla de búsqueda."
+              name="Búsqueda"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL que genera la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM HECHO_ENCUESTA_DOCENCIA WHERE PERIODO_ID=(SELECT MAX(PERIODO_ID) FROM HECHO_ENCUESTA_DOCENCIA)</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica una instrucción SQL que usa parámetros para generar la tabla de búsqueda."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (SELECT * FROM HECHO_ENCUESTA_DOCENCIA WHERE PERIODO_ID=(SELECT MAX(PERIODO_ID) FROM HECHO_ENCUESTA_DOCENCIA)) "refTable"
+where "refTable"."DOCENTE_ID" = ? and "refTable"."PERIODO_ID" = ? and "refTable"."MATERIA_ID" = ? and "refTable"."ESTUDIANTE_ID" = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de conexión utilizado para tener acceso al conjunto de datos de referencia."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el tipo de caché de la tabla de búsqueda."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cómo la transformación de búsquedas trata las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el porcentaje de la caché asignado a las filas sin entradas coincidentes en el conjunto de datos de referencia."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 32 bits."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Uso de memoria máximo para la caché de referencia en una plataforma de 64 bits."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica si se debe hacer referencia a metadatos en formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DOCENTE_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="JEFE_DEPARTAMENTO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DECANO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RANGO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PREGUNTA_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CUESTIONARIO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FUENTE_EVALUACION_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PERIODO_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEMOGRAFIA_DOCENTE_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEMOGRAFIA_ESTUDIANTE_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEM_ECO_DOC_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEM_ECO_EST_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PROGRAMA_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PENSUM_EST_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PENSUM_MAT_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MATER_AD_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MATERIA_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CONTRATACION_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SEMESTRE_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="INDEST_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ESTUDIANTE_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LUGAR_RESIDENCIA_DOC_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LUGAR_RESIDENCIA_EST_ID" dataType="DT_NUMERIC" length="0" precision="10" scale="0" codePage="0"/&gt;&lt;referenceColumn name="PUNTAJE" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\Búsqueda Docente.Outputs[Salida de entradas coincidentes de búsqueda].Columns[DOCENTE_ID]};#{Package\Tarea Flujo de datos\Búsqueda Periodo.Outputs[Salida de entradas coincidentes de búsqueda].Columns[PERIODO_ID]};#{Package\Tarea Flujo de datos\Búsqueda Materia.Outputs[Salida de entradas coincidentes de búsqueda].Columns[MATERIA_ID]};#{Package\Tarea Flujo de datos\Búsqueda Estudiante.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ESTUDIANTE_ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina si las claves duplicadas de los datos de referencia se deben tratar como errores cuando se usa el modo de caché."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Connections[OleDbConnection]"
+                  connectionManagerID="{5797239F-B739-4D39-8315-28285D9C507A}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[localhost DW_ACADEMICO_LABOR]"
+                  description="Administrador de conexiones utilizado para obtener acceso a los datos de búsqueda."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]"
+                  name="Entrada de búsqueda">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda].Columns[DOCENTE_ID]"
+                      cachedDataType="numeric"
+                      cachedName="DOCENTE_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Docente.Outputs[Salida de entradas coincidentes de búsqueda].Columns[DOCENTE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">DOCENTE_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda].Columns[MATERIA_ID]"
+                      cachedDataType="numeric"
+                      cachedName="MATERIA_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Materia.Outputs[Salida de entradas coincidentes de búsqueda].Columns[MATERIA_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">MATERIA_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda].Columns[ESTUDIANTE_ID]"
+                      cachedDataType="numeric"
+                      cachedName="ESTUDIANTE_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Estudiante.Outputs[Salida de entradas coincidentes de búsqueda].Columns[ESTUDIANTE_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">ESTUDIANTE_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda].Columns[PERIODO_ID]"
+                      cachedDataType="numeric"
+                      cachedName="PERIODO_ID"
+                      cachedPrecision="38"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda Periodo.Outputs[Salida de entradas coincidentes de búsqueda].Columns[PERIODO_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Especifica la columna de la tabla de referencia con la que se combina una columna."
+                          name="JoinToReferenceColumn">PERIODO_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Especifica la columna de la tabla de referencia de la que se copia una columna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]"
+                  errorOrTruncationOperation="Búsqueda"
+                  exclusionGroup="1"
+                  name="Salida de entradas coincidentes de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]"
+                  description="Salida de búsqueda que trata las filas sin entradas coincidentes en el conjunto de datos de referencia. Utilice esta salida cuando la propiedad NoMatchBehavior esté establecida en &quot;Enviar las filas sin entradas coincidentes a la salida de entradas no coincidentes&quot;."
+                  exclusionGroup="1"
+                  name="Salida de entradas no coincidentes de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de búsqueda"
+                  synchronousInputId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de error de búsqueda].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Tarea Flujo de datos\Búsqueda Contratacion"
               componentClassID="Microsoft.Lookup"
@@ -98,7 +291,7 @@ where "refTable"."TIPO_CONTRATO" = ? and "refTable"."DEDICACION" = ? and "refTab
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1614:invalid};#{Package\Tarea Flujo de datos\1615:invalid};#{Package\Tarea Flujo de datos\1616:invalid};#{Package\Tarea Flujo de datos\1617:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3380:invalid};#{Package\Tarea Flujo de datos\3381:invalid};#{Package\Tarea Flujo de datos\3382:invalid};#{Package\Tarea Flujo de datos\3383:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -175,7 +368,7 @@ where "refTable"."TIPO_CONTRATO" = ? and "refTable"."DEDICACION" = ? and "refTab
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Búsqueda Contratacion.Inputs[Entrada de búsqueda].Columns[Copia de CATEGORIA]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="50"
                       cachedName="Copia de CATEGORIA"
                       lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]">
                       <properties>
@@ -309,7 +502,7 @@ where "refTable"."NOMBRE_CUESTIONARIO" = ? and "refTable"."PERIODO_INICIAL_VIGEN
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1618:invalid};#{Package\Tarea Flujo de datos\1619:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3384:invalid};#{Package\Tarea Flujo de datos\3385:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -486,7 +679,7 @@ where "refTable"."SEMESTRE_MATERIA" = ? and "refTable"."CREDITOS_MATERIA" = ? an
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1620:invalid};#{Package\Tarea Flujo de datos\1621:invalid};#{Package\Tarea Flujo de datos\1622:invalid};#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[MAXIMO_FALTAS]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3386:invalid};#{Package\Tarea Flujo de datos\3387:invalid};#{Package\Tarea Flujo de datos\3388:invalid};#{Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda].Columns[PERIODO_ID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -699,7 +892,7 @@ where "refTable"."NUMERO_IDENTIDAD" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1623:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3389:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -871,7 +1064,7 @@ where "refTable"."ESTADO_CIVIL" = ? and "refTable"."ACUDIENTE" = ? and "refTable
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1624:invalid};#{Package\Tarea Flujo de datos\1625:invalid};#{Package\Tarea Flujo de datos\1626:invalid};#{Package\Tarea Flujo de datos\1627:invalid};#{Package\Tarea Flujo de datos\Columna derivada Rango Edad.Outputs[Salida de columna derivada].Columns[RANGO_EDAD_DOCENTE]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3390:invalid};#{Package\Tarea Flujo de datos\3391:invalid};#{Package\Tarea Flujo de datos\3392:invalid};#{Package\Tarea Flujo de datos\3393:invalid};#{Package\Tarea Flujo de datos\3394:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -1111,7 +1304,7 @@ where "refTable"."ESTADO_CIVIL" = ? and "refTable"."ACUDIENTE" = ? and "refTable
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1628:invalid};#{Package\Tarea Flujo de datos\1629:invalid};#{Package\Tarea Flujo de datos\1630:invalid};#{Package\Tarea Flujo de datos\1631:invalid};#{Package\Tarea Flujo de datos\Columna derivada Rango Edad.Outputs[Salida de columna derivada].Columns[RANGO_EDAD_ESTUDIANTE]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3395:invalid};#{Package\Tarea Flujo de datos\3396:invalid};#{Package\Tarea Flujo de datos\3397:invalid};#{Package\Tarea Flujo de datos\3398:invalid};#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[AMNISTIADO]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -1341,7 +1534,7 @@ where "refTable"."NUMERO_IDENTIDAD" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1632:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3399:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -1515,7 +1708,7 @@ where "refTable"."ESTRATO" = ? and "refTable"."NUMERO_HERMANOS" = ? and "refTabl
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1633:invalid};#{Package\Tarea Flujo de datos\1634:invalid};#{Package\Tarea Flujo de datos\1635:invalid};#{Package\Tarea Flujo de datos\1636:invalid};#{Package\Tarea Flujo de datos\1637:invalid};#{Package\Tarea Flujo de datos\1638:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3400:invalid};#{Package\Tarea Flujo de datos\3401:invalid};#{Package\Tarea Flujo de datos\3402:invalid};#{Package\Tarea Flujo de datos\3403:invalid};#{Package\Tarea Flujo de datos\3404:invalid};#{Package\Tarea Flujo de datos\3405:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -1774,7 +1967,7 @@ where "refTable"."ESTRATO" = ? and "refTable"."NUMERO_HERMANOS" = ? and "refTabl
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1639:invalid};#{Package\Tarea Flujo de datos\1640:invalid};#{Package\Tarea Flujo de datos\1641:invalid};#{Package\Tarea Flujo de datos\1642:invalid};#{Package\Tarea Flujo de datos\1643:invalid};#{Package\Tarea Flujo de datos\1644:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3406:invalid};#{Package\Tarea Flujo de datos\3407:invalid};#{Package\Tarea Flujo de datos\3408:invalid};#{Package\Tarea Flujo de datos\3409:invalid};#{Package\Tarea Flujo de datos\3410:invalid};#{Package\Tarea Flujo de datos\3411:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2021,7 +2214,7 @@ where "refTable"."CODIGO" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1645:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3412:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2181,7 +2374,7 @@ where "refTable"."NOMBRE" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[FUENTE_EVALUACION]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3413:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2357,7 +2550,7 @@ where "refTable"."AMINISTIADO" = ? and "refTable"."MONITORIA" = ? and "refTable"
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1646:invalid};#{Package\Tarea Flujo de datos\1647:invalid};#{Package\Tarea Flujo de datos\1648:invalid};#{Package\Tarea Flujo de datos\1649:invalid};#{Package\Tarea Flujo de datos\1650:invalid};#{Package\Tarea Flujo de datos\1651:invalid};#{Package\Tarea Flujo de datos\Columna derivada Rango Edad.Outputs[Salida de columna derivada].Columns[AYUDA]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3414:invalid};#{Package\Tarea Flujo de datos\3415:invalid};#{Package\Tarea Flujo de datos\3416:invalid};#{Package\Tarea Flujo de datos\3417:invalid};#{Package\Tarea Flujo de datos\3418:invalid};#{Package\Tarea Flujo de datos\3419:invalid};#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[MONITORIA]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2621,7 +2814,7 @@ where "refTable"."NUMERO_IDENTIDAD" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1652:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3420:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2783,7 +2976,7 @@ where "refTable"."CODIGO_MATERIA" = ? and "refTable"."NOMBRE_CURSO" = ?</propert
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1653:invalid};#{Package\Tarea Flujo de datos\1654:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3421:invalid};#{Package\Tarea Flujo de datos\3422:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -2962,7 +3155,7 @@ where "refTable"."CODIGO_PENSUM" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1655:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3423:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -3124,7 +3317,7 @@ where "refTable"."CODIGO_PENSUM" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1656:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3424:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -3284,7 +3477,7 @@ where "refTable"."PERIODO_COMPLETO" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1657:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3425:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -3444,7 +3637,7 @@ where "refTable"."PREGUNTA" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1658:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3426:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -3604,7 +3797,7 @@ where "refTable"."SNIES_PROGRAMA" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1659:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3427:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -3764,7 +3957,7 @@ where "refTable"."RANGO" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1660:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3428:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -3930,7 +4123,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1661:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3429:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -4096,7 +4289,7 @@ where "refTable"."CODIGO_MUNICIPIO" = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1662:invalid};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3430:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -4274,7 +4467,7 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                   containsID="true"
                   dataType="System.String"
                   description="Especifica la lista de identificadores de linaje que están asignados a los parámetros que usa la instrucción SQL de la propiedad SQLCommand. Las entradas de la lista están separadas por puntos y comas."
-                  name="ParameterMap">#{Package\Tarea Flujo de datos\1663:invalid};#{Package\Tarea Flujo de datos\1664:invalid};#{Package\Tarea Flujo de datos\1665:invalid};#{Package\Tarea Flujo de datos\1666:invalid};#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[TIPO]};#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[PROMEDIO_SEMESTRE_ESTUDIANTE]};#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[PROMEDIO_CARRERA_ESTUDIANTE]};#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[CALIFICACION_SEMESTRE]};#{Package\Tarea Flujo de datos\Columna derivada.Outputs[Salida de columna derivada].Columns[CALIFICACION_CARRERA]};</property>
+                  name="ParameterMap">#{Package\Tarea Flujo de datos\3431:invalid};#{Package\Tarea Flujo de datos\3432:invalid};#{Package\Tarea Flujo de datos\3433:invalid};#{Package\Tarea Flujo de datos\3434:invalid};#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[RESIDENCIA]};#{Package\Tarea Flujo de datos\3435:invalid};#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[PILO]};#{Package\Tarea Flujo de datos\3436:invalid};#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[JOVENES_ACCION]};</property>
                 <property
                   dataType="System.Int32"
                   description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
@@ -5187,7 +5380,7 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                     <inputColumn
                       refId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada].Columns[Copia de CATEGORIA]"
                       cachedDataType="wstr"
-                      cachedLength="100"
+                      cachedLength="50"
                       cachedName="Copia de CATEGORIA"
                       errorOrTruncationOperation="Cálculo"
                       errorRowDisposition="FailComponent"
@@ -7146,20 +7339,6 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[BECADO_ICETEX_ESTUDIANTE]"
-                      dataType="wstr"
-                      length="38"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[BECADO_ICETEX_ESTUDIANTE]"
-                      name="BECADO_ICETEX_ESTUDIANTE">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="La columna de entrada asociada a esta columna de salida"
-                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Inputs[Entrada derecha de combinación de mezcla].Columns[BECADO_ICETEX_ESTUDIANTE]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[DOCUMENTO_IDENTIDAD_JEFE]"
                       dataType="wstr"
                       length="20"
@@ -7185,6 +7364,20 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                           dataType="System.Int32"
                           description="La columna de entrada asociada a esta columna de salida"
                           name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Inputs[Entrada izquierda de combinación de mezcla].Columns[DOCUMENTO_IDENTIDAD_DECANO]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[BECADO_ICETEX_ESTUDIANTE]"
+                      dataType="wstr"
+                      length="38"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[BECADO_ICETEX_ESTUDIANTE]"
+                      name="BECADO_ICETEX_ESTUDIANTE">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="La columna de entrada asociada a esta columna de salida"
+                          name="InputColumnID">#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Inputs[Entrada derecha de combinación de mezcla].Columns[BECADO_ICETEX_ESTUDIANTE]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7450,6 +7643,12 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                       cachedName="NIVEL_ESTUDIO"
                       lineageId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[NIVEL_ESTUDIO]" />
                     <inputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[CATEGORIA]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CATEGORIA"
+                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[CATEGORIA]" />
+                    <inputColumn
                       refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[SEMESTRE]"
                       cachedDataType="numeric"
                       cachedName="SEMESTRE"
@@ -7527,12 +7726,6 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                       cachedLength="38"
                       cachedName="SITUACIONACADEMICA"
                       lineageId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[SITUACIONACADEMICA]" />
-                    <inputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Inputs[Entrada de conversión de datos].Columns[CATEGORIA]"
-                      cachedDataType="wstr"
-                      cachedLength="100"
-                      cachedName="CATEGORIA"
-                      lineageId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[CATEGORIA]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -8406,6 +8599,27 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                       </properties>
                     </outputColumn>
                     <outputColumn
+                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]"
+                      name="Copia de CATEGORIA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
+                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[CATEGORIA]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
                       refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de SEMESTRE]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
@@ -8672,27 +8886,6 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                           dataType="System.Int32"
                           description="Especifica la columna de entrada usada como origen de datos para la conversión."
                           name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[SITUACIONACADEMICA]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      length="100"
-                      lineageId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos].Columns[Copia de CATEGORIA]"
-                      name="Copia de CATEGORIA"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Especifica la columna de entrada usada como origen de datos para la conversión."
-                          name="SourceInputColumnLineageID">#{Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Outputs[Salida de combinación de mezcla].Columns[CATEGORIA]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indica si la columna usa las rutinas de análisis más rápidas independientes de la configuración regional."
@@ -9145,7 +9338,10 @@ where "refTable"."SEMESTRE" = ? and "refTable"."ESTADO_ESTUDIANTE" = ? and "refT
                   description="Comando SQL para ejecutar."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * 
-FROM VM_INICIAL_ENCUESTADOCENCIA</property>
+FROM VM_INCREM_ENCUESTADOCENCIA
+WHERE PERIODO_COMPLETO = (SELECT MAX(DESCRIPCION) 
+                       FROM PERIODOS
+                       WHERE TIPO&lt;&gt;'E')</property>
                 <property
                   dataType="System.String"
                   description="Variable que contiene el comando SQL para ejecutar."
@@ -9674,26 +9870,6 @@ FROM VM_INICIAL_ENCUESTADOCENCIA</property>
                       name="PUNTAJE"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO_DOCENTE]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO_DOCENTE]"
-                      length="80"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[DEPARTAMENTO_DOCENTE]"
-                      name="DEPARTAMENTO_DOCENTE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[FACULTAD_DOCENTE]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[FACULTAD_DOCENTE]"
-                      length="60"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[FACULTAD_DOCENTE]"
-                      name="FACULTAD_DOCENTE"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].Columns[CODIGO_MUNICIPIO_DOCENTE]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversión"
@@ -10029,16 +10205,6 @@ FROM VM_INICIAL_ENCUESTADOCENCIA</property>
                       length="38"
                       name="PUNTAJE" />
                     <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[DEPARTAMENTO_DOCENTE]"
-                      dataType="wstr"
-                      length="80"
-                      name="DEPARTAMENTO_DOCENTE" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[FACULTAD_DOCENTE]"
-                      dataType="wstr"
-                      length="60"
-                      name="FACULTAD_DOCENTE" />
-                    <externalMetadataColumn
                       refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB].ExternalColumns[CODIGO_MUNICIPIO_DOCENTE]"
                       dataType="wstr"
                       length="10"
@@ -10114,18 +10280,6 @@ FROM VM_INICIAL_ENCUESTADOCENCIA</property>
                       length="30"
                       lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[PERIODO_COMPLETO]"
                       name="PERIODO_COMPLETO" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO_DOCENTE]"
-                      dataType="wstr"
-                      length="80"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DEPARTAMENTO_DOCENTE]"
-                      name="DEPARTAMENTO_DOCENTE" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[FACULTAD_DOCENTE]"
-                      dataType="wstr"
-                      length="60"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[FACULTAD_DOCENTE]"
-                      name="FACULTAD_DOCENTE" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[NACIMIENTO_DOCENTE]"
                       dataType="dbTimeStamp"
@@ -10215,18 +10369,6 @@ FROM VM_INICIAL_ENCUESTADOCENCIA</property>
                       length="100"
                       lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[CATEGORIA]"
                       name="CATEGORIA" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_JEFE]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_JEFE]"
-                      name="DOCUMENTO_IDENTIDAD_JEFE" />
-                    <outputColumn
-                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_DECANO]"
-                      dataType="wstr"
-                      length="20"
-                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_DECANO]"
-                      name="DOCUMENTO_IDENTIDAD_DECANO" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[CODIGO_MUNICIPIO_DOCENTE]"
                       dataType="wstr"
@@ -10441,6 +10583,18 @@ FROM VM_INICIAL_ENCUESTADOCENCIA</property>
                       length="38"
                       lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[PENSUM_MATERIA]"
                       name="PENSUM_MATERIA" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_JEFE]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_JEFE]"
+                      name="DOCUMENTO_IDENTIDAD_JEFE" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_DECANO]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[DOCUMENTO_IDENTIDAD_DECANO]"
+                      name="DOCUMENTO_IDENTIDAD_DECANO" />
                     <outputColumn
                       refId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de error de origen de OLE DB].Columns[PUNTAJE]"
                       dataType="wstr"
@@ -10686,64 +10840,64 @@ ORDER BY 1</property>
               startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda22]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Contratacion.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Materia.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda21]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Economicos Docente.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Demografia Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda20]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Materia.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Datos_Ad_Materia.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda19]"
               endId="Package\Tarea Flujo de datos\Búsqueda Pensum_Materia.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda18]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Cuestionario.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda21]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Pregunta.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Pregunta.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Rango.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda17]"
-              endId="Package\Tarea Flujo de datos\Destino TH.Inputs[Entrada de destino de OLE DB]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Residencia Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda16]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Indicadores Estudiante.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Semestre.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda15]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda20]"
               endId="Package\Tarea Flujo de datos\Búsqueda Datos_Ad_Materia.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda Pensum_Materia.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda14]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Estudiante.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda19]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Materia.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Indicadores Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Datos_Ad_Materia.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda13]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Residencia Estudiante.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda18]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Periodo.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Residencia Docente.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda12]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda17]"
               endId="Package\Tarea Flujo de datos\Búsqueda Economicos Estudiante.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda Economicos Docente.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda10]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda16]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Jefe Departamento.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Programa.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Docente.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda15]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Contratacion.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Materia.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda14]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Cuestionario.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda13]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Semestre.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Contratacion.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda12]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Economicos Docente.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Demografia Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda10]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Estudiante.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Indicadores Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda9]"
               endId="Package\Tarea Flujo de datos\Búsqueda Programa.Inputs[Entrada de búsqueda]"
@@ -10751,64 +10905,69 @@ ORDER BY 1</property>
               startId="Package\Tarea Flujo de datos\Búsqueda Economicos Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda8]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Jefe Departamento.Inputs[Entrada de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Indicadores Estudiante.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Docente.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Semestre.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda7]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Rango.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Decano.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda6]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Pregunta.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Rango.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda5]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Semestre.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Contratacion.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda4]"
               endId="Package\Tarea Flujo de datos\Búsqueda Demografia Docente.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda Periodo.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda3]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Decano.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda6]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Rango.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Jefe Departamento.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Decano.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda2]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda5]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Cuestionario.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Cuestionario.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Pregunta.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda4]"
               endId="Package\Tarea Flujo de datos\Búsqueda Residencia Docente.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
-              endId="Package\Tarea Flujo de datos\Búsqueda Periodo.Inputs[Entrada de búsqueda]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda3]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion.Outputs[Salida de entradas coincidentes de búsqueda]" />
+              startId="Package\Tarea Flujo de datos\Búsqueda Programa.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda11]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda2]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Residencia Estudiante.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Residencia Docente.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
               endId="Package\Tarea Flujo de datos\Búsqueda Demografia Estudiante.Inputs[Entrada de búsqueda]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda Demografia Docente.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Inputs[Entrada izquierda de combinación de mezcla]"
-              name="Salida de origen de OLE DB"
-              startId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB]" />
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Residencia Estudiante.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB1]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda11]"
+              endId="Package\Tarea Flujo de datos\Búsqueda Decano.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda Jefe Departamento.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Destino TH.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de entradas no coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas no coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de origen de OLE DB"
               startId="Package\Tarea Flujo de datos\Fuente Usrinscripciones Inscripciones.Outputs[Salida de origen de OLE DB]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB1]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones.Inputs[Entrada izquierda de combinación de mezcla]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Tarea Flujo de datos\Fuente Academico.Outputs[Salida de origen de OLE DB]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -10839,65 +10998,29 @@ ORDER BY 1</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="236,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Indicadores Estudiante"
-          TopLeft="1908,462" />
-        <NodeLayout
-          Size="236,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Economicos Estudiante"
-          TopLeft="115,305" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Pregunta"
-          TopLeft="1938,303" />
-        <NodeLayout
-          Size="253,42"
-          Id="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones"
-          TopLeft="519,145" />
-        <NodeLayout
-          Size="164,42"
-          Id="Package\Tarea Flujo de datos\Columna derivada"
-          TopLeft="1085,145" />
-        <NodeLayout
-          Size="235,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Demografia Estudiante"
-          TopLeft="676,303" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Materia"
-          TopLeft="1228,456" />
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion"
-          TopLeft="1451,299" />
-        <NodeLayout
           Size="164,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Periodo"
-          TopLeft="1245,302" />
+          TopLeft="1552,305" />
         <NodeLayout
           Size="224,42"
           Id="Package\Tarea Flujo de datos\Columna derivada Rango Edad"
-          TopLeft="1306,145" />
+          TopLeft="1196,165" />
         <NodeLayout
-          Size="131,42"
-          Id="Package\Tarea Flujo de datos\Destino TH"
-          TopLeft="1683,571" />
+          Size="218,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Jefe Departamento"
+          TopLeft="1659,163" />
         <NodeLayout
           Size="226,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Economicos Docente"
-          TopLeft="414,304" />
-        <NodeLayout
-          Size="254,42"
-          Id="Package\Tarea Flujo de datos\Fuente Usrinscripciones Inscripciones"
-          TopLeft="143,179" />
+          TopLeft="685,305" />
         <NodeLayout
           Size="158,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Rango"
-          TopLeft="2140,302" />
+          TopLeft="2204,168" />
         <NodeLayout
           Size="186,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Cuestionario"
-          TopLeft="1704,303" />
+          TopLeft="2011,306" />
         <NodeLayout
           Size="178,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Estudiante"
@@ -10905,7 +11028,7 @@ ORDER BY 1</property>
         <NodeLayout
           Size="225,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Demografia Docente"
-          TopLeft="973,302" />
+          TopLeft="1280,305" />
         <NodeLayout
           Size="206,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Pensum_Materia"
@@ -10917,242 +11040,262 @@ ORDER BY 1</property>
         <NodeLayout
           Size="167,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Docente"
-          TopLeft="1593,144" />
-        <NodeLayout
-          Size="165,42"
-          Id="Package\Tarea Flujo de datos\Fuente Academico"
-          TopLeft="240,106" />
-        <NodeLayout
-          Size="214,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Datos_Ad_Materia"
-          TopLeft="986,456" />
-        <NodeLayout
-          Size="218,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Jefe Departamento"
-          TopLeft="1805,146" />
+          TopLeft="1457,164" />
         <NodeLayout
           Size="174,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Programa"
-          TopLeft="153,458" />
+          TopLeft="208,450" />
         <NodeLayout
           Size="163,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Decano"
-          TopLeft="2132,148" />
+          TopLeft="1933,165" />
         <NodeLayout
           Size="220,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Residencia Docente"
-          TopLeft="2212,572" />
-        <NodeLayout
-          Size="221,42"
-          Id="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante"
-          TopLeft="471,456" />
+          TopLeft="2174,587" />
         <NodeLayout
           Size="188,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Contratacion"
           TopLeft="1446,457" />
         <NodeLayout
-          Size="175,42"
-          Id="Package\Tarea Flujo de datos\Conversión de datos"
-          TopLeft="843,146" />
-        <NodeLayout
           Size="231,42"
           Id="Package\Tarea Flujo de datos\Búsqueda Residencia Estudiante"
-          TopLeft="1905,573" />
+          TopLeft="1917,592" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Indicadores Estudiante"
+          TopLeft="1908,462" />
+        <NodeLayout
+          Size="236,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Economicos Estudiante"
+          TopLeft="365,303" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Tarea Flujo de datos\Destino TH"
+          TopLeft="1544,593" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Datos_Ad_Materia"
+          TopLeft="986,456" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Pregunta"
+          TopLeft="2231,306" />
+        <NodeLayout
+          Size="221,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante"
+          TopLeft="471,456" />
+        <NodeLayout
+          Size="164,42"
+          Id="Package\Tarea Flujo de datos\Columna derivada"
+          TopLeft="991,167" />
+        <NodeLayout
+          Size="235,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Demografia Estudiante"
+          TopLeft="983,306" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Materia"
+          TopLeft="1228,456" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda Fuente Evaluacion"
+          TopLeft="1758,302" />
+        <NodeLayout
+          Size="125,42"
+          Id="Package\Tarea Flujo de datos\Búsqueda"
+          TopLeft="1743,592" />
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda12]"
-          TopLeft="414,325.5">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
+          TopLeft="1155,187">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-63,0"
+              EndConnector="41,0"
               Start="0,0"
-              End="-55.5,0">
+              End="33.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-55.5,0" />
+                    End="33.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
+          TopLeft="1420,185.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37,0"
+              Start="0,0"
+              End="29.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
+          TopLeft="1743,613.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-68,0"
+              Start="0,0"
+              End="-60.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-60.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-127.5690234375,5,199.638046875,12.1953125"
+              BoundingBox="-137.1390234375,5,213.778046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda11]"
-          TopLeft="973,323.5">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda2]"
+          TopLeft="2174,610.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-62,0"
+              EndConnector="-26,0"
               Start="0,0"
-              End="-54.5,0">
+              End="-18.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-54.5,0" />
+                    End="-18.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-127.0690234375,5,199.638046875,12.1953125"
+              BoundingBox="-109.0690234375,5,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda10]"
-          TopLeft="327,478">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda3]"
+          TopLeft="382,474">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="144,0"
+              EndConnector="89,0"
               Start="0,0"
-              End="136.5,0">
+              End="81.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="136.5,0" />
+                    End="81.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-31.5690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda9]"
-          TopLeft="236.5,347">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,111"
-              Start="0,0"
-              End="0,103.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,103.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,45.65234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda8]"
-          TopLeft="1760,166">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="45,0"
-              Start="0,0"
-              End="37.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="37.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-81.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda7]"
-          TopLeft="2216.25,190">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,112"
-              Start="0,0"
-              End="0,104.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,104.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,46.15234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda6]"
-          TopLeft="2140,323.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-31,0"
-              Start="0,0"
-              End="-23.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-23.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-111.5690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda5]"
-          TopLeft="1634,479.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="48,0"
-              Start="0,0"
-              End="40.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="40.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-79.5690234375,5,199.638046875,12.1953125"
+              BoundingBox="-59.0690234375,5,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda4]"
-          TopLeft="1245,323">
+          TopLeft="2284,504">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83"
+              Start="0,0"
+              End="0,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,31.65234375,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda5]"
+          TopLeft="2231,327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-34,0"
+              Start="0,0"
+              End="-26.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-26.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-113.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda6]"
+          TopLeft="2096,187.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108,0"
+              Start="0,0"
+              End="100.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda7]"
+          TopLeft="1552,326">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11175,403 +11318,7 @@ ORDER BY 1</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda3]"
-          TopLeft="2023,168">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="109,0"
-              Start="0,0"
-              End="101.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="101.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-49.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda2]"
-          TopLeft="1704,322">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-39,0"
-              Start="0,0"
-              End="-31.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-31.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-115.5690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
-          TopLeft="2285.33333333333,504">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68"
-              Start="0,0"
-              End="0,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,24.15234375,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="1451,321.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-42,0"
-              Start="0,0"
-              End="-34.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-34.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-117.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="1018,166.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="67,0"
-              Start="0,0"
-              End="59.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="59.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
-          TopLeft="772,166.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="71,0"
-              Start="0,0"
-              End="63.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="63.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada1]"
-          TopLeft="1249,166">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="57,0"
-              Start="0,0"
-              End="49.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="49.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="1530,165.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="63,0"
-              Start="0,0"
-              End="55.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="55.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB1]"
-          TopLeft="397,200">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="122,-28.3333333333333"
-              Start="0,0"
-              End="114.5,-28.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="66.5137614678899,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66.5137614678899,0"
-                    Point2="70.5137614678899,0"
-                    Point3="70.5137614678899,-4" />
-                  <mssgle:LineSegment
-                    End="70.5137614678899,-24.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="70.5137614678899,-24.3333333333333"
-                    Point2="70.5137614678899,-28.3333333333333"
-                    Point3="74.5137614678899,-28.3333333333333" />
-                  <mssgle:LineSegment
-                    End="114.5,-28.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="405,127">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="114,33.3333333333333"
-              Start="0,0"
-              End="106.5,33.3333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="61.8899082568807,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="61.8899082568807,0"
-                    Point2="65.8899082568807,0"
-                    Point3="65.8899082568807,4" />
-                  <mssgle:LineSegment
-                    End="65.8899082568807,29.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="65.8899082568807,29.3333333333333"
-                    Point2="65.8899082568807,33.3333333333333"
-                    Point3="69.8899082568807,33.3333333333333" />
-                  <mssgle:LineSegment
-                    End="106.5,33.3333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda22]"
-          TopLeft="1391,477.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="55,0"
-              Start="0,0"
-              End="47.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="47.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-76.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda21]"
-          TopLeft="676,324.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-36,0"
-              Start="0,0"
-              End="-28.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-28.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda20]"
-          TopLeft="1200,477">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="28,0"
-              Start="0,0"
-              End="20.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="20.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-89.5690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda19]"
-          TopLeft="692,476.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="53,0"
-              Start="0,0"
-              End="45.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="45.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-77.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda18]"
-          TopLeft="1938,324">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-48,0"
-              Start="0,0"
-              End="-40.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-40.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-120.0690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda17]"
-          TopLeft="1905,593">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-91,0"
-              Start="0,0"
-              End="-83.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-83.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-141.5690234375,5,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda16]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda8]"
           TopLeft="1854,482">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11595,7 +11342,319 @@ ORDER BY 1</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda9]"
+          TopLeft="483,345">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-188,105"
+              Start="0,0"
+              End="-188,97.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.5"
+                    Point2="0,52.5"
+                    Point3="-4,52.5" />
+                  <mssgle:LineSegment
+                    End="-184,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-184,52.5"
+                    Point2="-188,52.5"
+                    Point3="-188,56.5" />
+                  <mssgle:LineSegment
+                    End="-188,97.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-193.8190234375,57.5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda11]"
+          TopLeft="1877,185">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56,0"
+              Start="0,0"
+              End="48.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="48.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-75.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda21]"
+          TopLeft="2283,210">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.5,96"
+              Start="0,0"
+              End="33.5,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44"
+                    Point2="0,48"
+                    Point3="4,48" />
+                  <mssgle:LineSegment
+                    End="29.5,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.5,48"
+                    Point2="33.5,48"
+                    Point3="33.5,52" />
+                  <mssgle:LineSegment
+                    End="33.5,88.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-83.0690234375,53,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda22]"
+          TopLeft="692,476.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="53,0"
+              Start="0,0"
+              End="45.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="45.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-77.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda12]"
+          TopLeft="983,326.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-72,0"
+              Start="0,0"
+              End="-64.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-64.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-132.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda13]"
+          TopLeft="1634,479.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="48,0"
+              Start="0,0"
+              End="40.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-79.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda14]"
+          TopLeft="2011,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39,0"
+              Start="0,0"
+              End="-31.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-31.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-115.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda15]"
+          TopLeft="1391,477.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55,0"
+              Start="0,0"
+              End="47.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="47.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-76.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda16]"
+          TopLeft="1624,184.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35,0"
+              Start="0,0"
+              End="27.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-86.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda17]"
+          TopLeft="685,325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84,0"
+              Start="0,0"
+              End="-76.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-76.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-138.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda18]"
+          TopLeft="1758,324.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-42,0"
+              Start="0,0"
+              End="-34.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-34.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-117.0690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda19]"
+          TopLeft="1200,477">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28,0"
+              Start="0,0"
+              End="20.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="20.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-89.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda20]"
           TopLeft="951,476.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11619,7 +11678,31 @@ ORDER BY 1</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda14]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
+          TopLeft="1917,613">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-49,0"
+              Start="0,0"
+              End="-41.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-41.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-120.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda10]"
           TopLeft="2144,483">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -11643,40 +11726,160 @@ ORDER BY 1</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda13]"
-          TopLeft="2212,593.5">
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
+          TopLeft="1280,326.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-76,0"
+              EndConnector="-62,0"
               Start="0,0"
-              End="-68.5,0">
+              End="-54.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-68.5,0" />
+                    End="-54.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-134.0690234375,5,199.638046875,12.1953125"
+              BoundingBox="-127.0690234375,5,199.638046875,12.1953125"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Tarea Flujo de datos\Fuente Academico"
+          TopLeft="206,116" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Tarea Flujo de datos\Conversión de datos"
+          TopLeft="758,167" />
+        <NodeLayout
+          Size="253,42"
+          Id="Package\Tarea Flujo de datos\Combinación de mezcla inscripciones"
+          TopLeft="434,166" />
+        <NodeLayout
+          Size="254,42"
+          Id="Package\Tarea Flujo de datos\Fuente Usrinscripciones Inscripciones"
+          TopLeft="110,188" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB1]"
+          TopLeft="371,137">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63,44.3333333333333"
+              Start="0,0"
+              End="55.5,44.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.4128440366972,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.4128440366972,0"
+                    Point2="36.4128440366972,0"
+                    Point3="36.4128440366972,4" />
+                  <mssgle:LineSegment
+                    End="36.4128440366972,40.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.4128440366972,40.3333333333333"
+                    Point2="36.4128440366972,44.3333333333333"
+                    Point3="40.4128440366972,44.3333333333333" />
+                  <mssgle:LineSegment
+                    End="55.5,44.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
+          TopLeft="687,187.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71,0"
+              Start="0,0"
+              End="63.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="63.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
+          TopLeft="364,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="70,-16.3333333333333"
+              Start="0,0"
+              End="62.5,-16.3333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="36.4587155963303,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.4587155963303,0"
+                    Point2="40.4587155963303,0"
+                    Point3="40.4587155963303,-4" />
+                  <mssgle:LineSegment
+                    End="40.4587155963303,-12.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40.4587155963303,-12.3333333333333"
+                    Point2="40.4587155963303,-16.3333333333333"
+                    Point3="44.4587155963303,-16.3333333333333" />
+                  <mssgle:LineSegment
+                    End="62.5,-16.3333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="933,188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58,0"
+              Start="0,0"
+              End="50.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="50.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Destino TH">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Búsqueda Economicos Docente">
     <Properties>
@@ -11701,92 +11904,7 @@ ORDER BY 1</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Fuente Usrinscripciones Inscripciones">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Búsqueda Rango">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Tarea Flujo de datos\Búsqueda Demografia Docente">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Búsqueda Semestre">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Fuente Academico">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -11838,6 +11956,68 @@ ORDER BY 1</property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
           type="q2:string">false</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Destino TH">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Búsqueda Pensum_Estudiante">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Búsqueda">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\Fuente Academico">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

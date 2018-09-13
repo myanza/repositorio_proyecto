@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="InicialDimensionEstudiantev2"
   DTS:PackageType="5"
-  DTS:VersionBuild="84"
-  DTS:VersionGUID="{67903D55-C3C0-47B3-9D95-2C57BA06DBC4}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{A81C8A39-34A1-4172-A20A-25030976F5C2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -13728,14 +13728,14 @@ where inscripciones.oid = resultados.inscripcion</property>
               startId="Package\Tarea Flujo de datos\CONVERSION_TIPOINSCRIPCION.Outputs[Salida de conversión de datos]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
-              endId="Package\Tarea Flujo de datos\Búsqueda 1.Inputs[Entrada de búsqueda]"
-              name="Salida de entradas coincidentes de búsqueda"
-              startId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
               endId="Package\Tarea Flujo de datos\Checksum Transformation.Inputs[ChecksumInput]"
               name="Salida de entradas coincidentes de búsqueda"
               startId="Package\Tarea Flujo de datos\Búsqueda 1.Outputs[Salida de entradas coincidentes de búsqueda]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
+              endId="Package\Tarea Flujo de datos\Búsqueda 1.Inputs[Entrada de búsqueda]"
+              name="Salida de entradas coincidentes de búsqueda"
+              startId="Package\Tarea Flujo de datos\Búsqueda.Outputs[Salida de entradas coincidentes de búsqueda]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla 3.Inputs[Entrada derecha de combinación de mezcla]"
@@ -13826,7 +13826,7 @@ where inscripciones.oid = resultados.inscripcion</property>
         <NodeLayout
           Size="176,42"
           Id="Package\Tarea Flujo de datos"
-          TopLeft="431,95" />
+          TopLeft="370,95" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -14345,30 +14345,6 @@ where inscripciones.oid = resultados.inscripcion</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda]"
-          TopLeft="1050.5,991">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-52"
-              Start="0,0"
-              End="0,-44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.8190234375,-28.34765625,199.638046875,12.1953125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
           TopLeft="890,1012">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -14388,6 +14364,30 @@ where inscripciones.oid = resultados.inscripcion</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-55.5690234375,5,199.638046875,12.1953125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de entradas coincidentes de búsqueda1]"
+          TopLeft="1050.5,991">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-52"
+              Start="0,0"
+              End="0,-44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.8190234375,-28.34765625,199.638046875,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
