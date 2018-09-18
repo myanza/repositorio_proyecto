@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue-Inicial-Pregunta"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{6552D362-0EE6-45B1-AAD7-3466555B10DD}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{32BA86BD-5782-4332-8244-85B2093ABDD8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -645,11 +645,6 @@
                       dataType="wstr"
                       length="30"
                       name="CATEGORIA" />
-                    <externalMetadataColumn
-                      refId="Package\Tarea Flujo de datos\DimPregunta.Inputs[Entrada de destino de OLE DB].ExternalColumns[CHECKSUM]"
-                      dataType="wstr"
-                      length="38"
-                      name="CHECKSUM" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1567,27 +1562,27 @@
         <NodeLayout
           Size="140,42"
           Id="Package\Tarea Flujo de datos\DimPregunta"
-          TopLeft="154,511" />
+          TopLeft="157,425" />
         <NodeLayout
           Size="179,42"
           Id="Package\Tarea Flujo de datos\Conversion Categoria"
-          TopLeft="371,174" />
+          TopLeft="371,144" />
         <NodeLayout
           Size="190,42"
           Id="Package\Tarea Flujo de datos\Combinación de mezcla"
-          TopLeft="134,265" />
+          TopLeft="133,213" />
         <NodeLayout
           Size="175,42"
           Id="Package\Tarea Flujo de datos\Conversión de datos"
-          TopLeft="143,100" />
+          TopLeft="144,79" />
         <NodeLayout
           Size="181,42"
           Id="Package\Tarea Flujo de datos\Ordenacion Categoria"
-          TopLeft="373,260" />
+          TopLeft="369,211" />
         <NodeLayout
           Size="159,42"
           Id="Package\Tarea Flujo de datos\Fuente Categoria"
-          TopLeft="379,98" />
+          TopLeft="379,78" />
         <NodeLayout
           Size="157,42"
           Id="Package\Tarea Flujo de datos\Fuente Pregunta"
@@ -1595,29 +1590,29 @@
         <NodeLayout
           Size="194,42"
           Id="Package\Tarea Flujo de datos\Llave Sustituta Pregunta"
-          TopLeft="130,432" />
+          TopLeft="131,357" />
         <NodeLayout
           Size="164,42"
           Id="Package\Tarea Flujo de datos\Columna derivada"
-          TopLeft="143,348" />
+          TopLeft="141,287" />
         <NodeLayout
           Size="178,42"
           Id="Package\Tarea Flujo de datos\Ordenacion pregunta"
-          TopLeft="137,180" />
+          TopLeft="137,144" />
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Row Number Output]"
-          TopLeft="225.5,474">
+          TopLeft="227.5,399">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,37"
+              EndConnector="0,26"
               Start="0,0"
-              End="0,29.5">
+              End="0,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.5" />
+                    End="0,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1628,18 +1623,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB1]"
-          TopLeft="459.5,140">
+          TopLeft="459.5,120">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34"
+              EndConnector="0,24"
               Start="0,0"
-              End="0,26.5">
+              End="0,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1650,18 +1645,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
-          TopLeft="230,55">
+          TopLeft="230.5,55">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45"
+              EndConnector="0,24"
               Start="0,0"
-              End="0,37.5">
+              End="0,16.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.5" />
+                    End="0,16.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1672,18 +1667,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación1]"
-          TopLeft="373,283.5">
+          TopLeft="369,233">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-49,0"
+              EndConnector="-46,0"
               Start="0,0"
-              End="-41.5,0">
+              End="-38.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-41.5,0" />
+                    End="-38.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1694,18 +1689,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de ordenación]"
-          TopLeft="227.5,222">
+          TopLeft="227,186">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43"
+              EndConnector="0,27"
               Start="0,0"
-              End="0,35.5">
+              End="0,19.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.5" />
+                    End="0,19.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1716,18 +1711,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
-          TopLeft="462,216">
+          TopLeft="460,186">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="0,25"
               Start="0,0"
-              End="0,36.5">
+              End="0,17.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="0,17.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1738,18 +1733,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
-          TopLeft="228.25,142">
+          TopLeft="228.75,121">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38"
+              EndConnector="0,23"
               Start="0,0"
-              End="0,30.5">
+              End="0,15.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.5" />
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1760,18 +1755,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de combinación de mezcla]"
-          TopLeft="227,307">
+          TopLeft="225.5,255">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41"
+              EndConnector="0,32"
               Start="0,0"
-              End="0,33.5">
+              End="0,24.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.5" />
+                    End="0,24.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1782,18 +1777,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de columna derivada]"
-          TopLeft="226,390">
+          TopLeft="225.5,329">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42"
+              EndConnector="0,28"
               Start="0,0"
-              End="0,34.5">
+              End="0,20.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.5" />
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
