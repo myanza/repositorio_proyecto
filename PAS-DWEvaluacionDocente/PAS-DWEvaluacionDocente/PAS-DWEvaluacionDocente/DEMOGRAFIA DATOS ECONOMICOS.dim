@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1117" scrolltop="-4723" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6588" y="10319" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1117" scrolltop="-4723" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6138" y="10213" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -79,9 +79,9 @@
               </Attributes>
               <Position x="20" y="20" />
             </Shape>
-            <Shape Id="ESTRATO 1 2" Expanded="false">
+            <Shape Id="ESTRATO 2" Expanded="false">
               <Attributes>
-                <Attribute Id="ESTRATO 1 2" />
+                <Attribute Id="ESTRATO 2" />
               </Attributes>
               <Position x="238" y="20" />
             </Shape>
@@ -115,29 +115,17 @@
               </Attributes>
               <Position x="457" y="116" />
             </Shape>
-            <Shape Id="VIVIENDA PROPIA 1" Expanded="false">
-              <Attributes>
-                <Attribute Id="VIVIENDA PROPIA 1" />
-              </Attributes>
-              <Position x="238" y="164" />
-            </Shape>
-            <Shape Id="ESTRATO 2" Expanded="false">
-              <Attributes>
-                <Attribute Id="ESTRATO 2" />
-              </Attributes>
-              <Position x="457" y="164" />
-            </Shape>
             <Shape Id="ESTRATO 1" Expanded="false">
               <Attributes>
                 <Attribute Id="ESTRATO 1" />
               </Attributes>
-              <Position x="238" y="212" />
+              <Position x="238" y="164" />
             </Shape>
             <Shape Id="VIVIENDA PROPIA" Expanded="false">
               <Attributes>
                 <Attribute Id="VIVIENDA PROPIA" />
               </Attributes>
-              <Position x="457" y="212" />
+              <Position x="457" y="164" />
             </Shape>
           </Shapes>
         </DiagramLayout>
@@ -186,8 +174,8 @@
     <DimensionPermission dwd:design-time-name="f32aa660-351c-46bc-a518-d2aef1b9292c">
       <ID>DimensionPermission 3</ID>
       <Name>DimensionPermission 3</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
       <RoleID>Role 3</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
@@ -233,8 +221,8 @@
           <AttributeID>NUMERO HERMANOS</AttributeID>
           <Name>NUMERO HERMANOS</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="7ba73f05-3698-4df4-8f95-10100a61b825">
-          <AttributeID>ESTRATO 1 2</AttributeID>
+        <AttributeRelationship dwd:design-time-name="fc5d02aa-549f-49a8-a238-6b1ca4ef010a">
+          <AttributeID>ESTRATO 2</AttributeID>
           <Name>ESTRATO_MADRECABEZA</Name>
         </AttributeRelationship>
       </AttributeRelationships>
@@ -566,38 +554,37 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="5502657b-69c3-4d83-8bfe-02601dfbac13">
-      <ID>ESTRATO 1 2</ID>
+    <Attribute dwd:design-time-name="b4e81a34-8ceb-4382-b8e4-978d4f2fbf18">
+      <ID>ESTRATO 2</ID>
       <Name>ESTRATO_MADRECABEZA</Name>
-      <EstimatedCount>21</EstimatedCount>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="079331fc-b204-4f1c-913d-2af1243ddcc7">
+        <KeyColumn dwd:design-time-name="04f7cf6c-ff14-4902-94e9-21384d72e390">
           <DataType>WChar</DataType>
           <DataSize>30</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="145ebbe4-c6c2-4d19-a9a9-4acffffbf3fc">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="64734a4a-da85-455d-8be4-f089503215dd">
             <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
             <ColumnID>MADRE_CABEZA</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="68cee652-7a7d-4801-a7a2-cae6a190f1a2">
+        <KeyColumn dwd:design-time-name="b1ba3de2-e0b7-4d23-aff0-a966661e51c0">
           <DataType>WChar</DataType>
           <DataSize>15</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="85373adc-505b-4665-bfe2-8f314acdc2c1">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="829ea9b7-ad82-4bab-9c51-08698ded9461">
             <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
             <ColumnID>ESTRATO</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="6e3f1d89-f06f-4292-b6e9-8255a68b2d10">
+      <NameColumn dwd:design-time-name="97c39d0e-5c42-4109-8d89-e9015be41f98">
         <DataType>WChar</DataType>
-        <DataSize>30</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="16815db0-d84e-4a09-a642-0d60e336e997">
+        <DataSize>15</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="c8017405-5fbe-4e59-96cb-16d5216ef236">
           <TableID>DW_ACADEMICO_LABOR_DEMOGRAFIA_DATOS_ECONOMICOS</TableID>
-          <ColumnID>MADRE_CABEZA</ColumnID>
+          <ColumnID>ESTRATO</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="b9938eac-19ba-4b43-b818-16fdf1da69de">
+        <AttributeRelationship dwd:design-time-name="e8554514-f33a-444f-9c68-0bc4ada266f9">
           <AttributeID>MADRE CABEZA</AttributeID>
           <Name>MADRE CABEZA</Name>
         </AttributeRelationship>
@@ -697,12 +684,12 @@
             </Translation>
           </Translations>
         </Level>
-        <Level dwd:design-time-name="df0e6fe0-5290-4af1-97af-9dd5e9917195">
+        <Level dwd:design-time-name="e3d12c04-7418-4736-a342-3532afdb0024">
           <ID>ESTRATO_MADRECABEZA</ID>
           <Name>ESTRATO_MADRECABEZA</Name>
-          <SourceAttributeID>ESTRATO 1 2</SourceAttributeID>
+          <SourceAttributeID>ESTRATO 2</SourceAttributeID>
           <Translations>
-            <Translation dwd:design-time-name="3756a77a-31a9-42bb-a45a-60a59e88883a">
+            <Translation dwd:design-time-name="6b8c4d1e-5b66-459f-a879-4d9362c23c63">
               <Language>9226</Language>
               <Caption>Estrato</Caption>
             </Translation>

@@ -13,7 +13,7 @@
     <DataSet Name="DataSet1">
       <Query>
         <DataSourceName>DS_Consultas_MD</DataSourceName>
-        <CommandText>SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PROGRAMA].[FACULTAD].[FACULTAD].ALLMEMBERS * [PROGRAMA].[NOMBRE_SINJERARQUIA].[NOMBRE_SINJERARQUIA].ALLMEMBERS * [MATERIA].[Jerarquia_Area_Conocimiento].[NOMBRE MATERIA_AMSC].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
+        <CommandText> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PROGRAMA].[FACULTAD].[FACULTAD].ALLMEMBERS * [PROGRAMA].[NOMBRE_SINJERARQUIA].[NOMBRE_SINJERARQUIA].ALLMEMBERS * [MATERIA].[AREA CONOCIMIENTO_SINJERARQUIA].[AREA CONOCIMIENTO_SINJERARQUIA].ALLMEMBERS * [MATERIA].[NOMBRE MATERIA_SINJERARQUIA].[NOMBRE MATERIA_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
         <rd:DesignerState>
           <QueryDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
             <CommandType>MDX</CommandType>
@@ -45,23 +45,23 @@
                   <Item>
                     <ID xsi:type="Level">
                       <DimensionName>MATERIA</DimensionName>
-                      <HierarchyName>Jerarquia_Area_Conocimiento</HierarchyName>
-                      <HierarchyUniqueName>[MATERIA].[Jerarquia_Area_Conocimiento]</HierarchyUniqueName>
-                      <LevelName>AREA CONOCIMIENTO_AMSC</LevelName>
-                      <UniqueName>[MATERIA].[Jerarquia_Area_Conocimiento].[AREA CONOCIMIENTO_AMSC]</UniqueName>
+                      <HierarchyName>AREA CONOCIMIENTO_SINJERARQUIA</HierarchyName>
+                      <HierarchyUniqueName>[MATERIA].[AREA CONOCIMIENTO_SINJERARQUIA]</HierarchyUniqueName>
+                      <LevelName>AREA CONOCIMIENTO_SINJERARQUIA</LevelName>
+                      <UniqueName>[MATERIA].[AREA CONOCIMIENTO_SINJERARQUIA].[AREA CONOCIMIENTO_SINJERARQUIA]</UniqueName>
                     </ID>
-                    <ItemCaption>AREA CONOCIMIENTO_AMSC</ItemCaption>
+                    <ItemCaption>Área Conocimiento</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
                     <ID xsi:type="Level">
                       <DimensionName>MATERIA</DimensionName>
-                      <HierarchyName>Jerarquia_Area_Conocimiento</HierarchyName>
-                      <HierarchyUniqueName>[MATERIA].[Jerarquia_Area_Conocimiento]</HierarchyUniqueName>
-                      <LevelName>NOMBRE MATERIA_AMSC</LevelName>
-                      <UniqueName>[MATERIA].[Jerarquia_Area_Conocimiento].[NOMBRE MATERIA_AMSC]</UniqueName>
+                      <HierarchyName>NOMBRE MATERIA_SINJERARQUIA</HierarchyName>
+                      <HierarchyUniqueName>[MATERIA].[NOMBRE MATERIA_SINJERARQUIA]</HierarchyUniqueName>
+                      <LevelName>NOMBRE MATERIA_SINJERARQUIA</LevelName>
+                      <UniqueName>[MATERIA].[NOMBRE MATERIA_SINJERARQUIA].[NOMBRE MATERIA_SINJERARQUIA]</UniqueName>
                     </ID>
-                    <ItemCaption>NOMBRE MATERIA_AMSC</ItemCaption>
+                    <ItemCaption>Asignatura</ItemCaption>
                     <UniqueName>true</UniqueName>
                   </Item>
                   <Item>
@@ -124,7 +124,7 @@
               </QueryProperties>
             </QuerySpecification>
             <Query>
-              <Statement> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PROGRAMA].[FACULTAD].[FACULTAD].ALLMEMBERS * [PROGRAMA].[NOMBRE_SINJERARQUIA].[NOMBRE_SINJERARQUIA].ALLMEMBERS * [MATERIA].[Jerarquia_Area_Conocimiento].[NOMBRE MATERIA_AMSC].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
+              <Statement> SELECT NON EMPTY { [Measures].[PUNTAJE] } ON COLUMNS, NON EMPTY { ([PROGRAMA].[FACULTAD].[FACULTAD].ALLMEMBERS * [PROGRAMA].[NOMBRE_SINJERARQUIA].[NOMBRE_SINJERARQUIA].ALLMEMBERS * [MATERIA].[AREA CONOCIMIENTO_SINJERARQUIA].[AREA CONOCIMIENTO_SINJERARQUIA].ALLMEMBERS * [MATERIA].[NOMBRE MATERIA_SINJERARQUIA].[NOMBRE MATERIA_SINJERARQUIA].ALLMEMBERS * [DOCENTE].[NOMBRE COMPLETO_SINJERARQUIA].[NOMBRE COMPLETO_SINJERARQUIA].ALLMEMBERS * [PERIODO].[PERIODO COMPLETO].[PERIODO COMPLETO].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( [PERIODO].[PERIODO COMPLETO].&amp;[2015.2] : [PERIODO].[PERIODO COMPLETO].&amp;[2018.1] ) ON COLUMNS FROM [Cubo_Evaluacion_Docente]) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</Statement>
               <ParameterDefinitions />
             </Query>
           </QueryDefinition>
@@ -139,12 +139,12 @@
           <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[PROGRAMA].[NOMBRE_SINJERARQUIA].[NOMBRE_SINJERARQUIA]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="AREA_CONOCIMIENTO_AMSC">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[MATERIA].[Jerarquia_Area_Conocimiento].[AREA CONOCIMIENTO_AMSC]" /&gt;</DataField>
+        <Field Name="Área_Conocimiento">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[MATERIA].[AREA CONOCIMIENTO_SINJERARQUIA].[AREA CONOCIMIENTO_SINJERARQUIA]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="NOMBRE_MATERIA_AMSC">
-          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[MATERIA].[Jerarquia_Area_Conocimiento].[NOMBRE MATERIA_AMSC]" /&gt;</DataField>
+        <Field Name="Asignatura">
+          <DataField>&lt;?xml version="1.0" encoding="utf-8"?&gt;&lt;Field xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="Level" UniqueName="[MATERIA].[NOMBRE MATERIA_SINJERARQUIA].[NOMBRE MATERIA_SINJERARQUIA]" /&gt;</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Nombre_Completo">
@@ -1085,12 +1085,15 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                         <TablixMember>
                           <Group Name="AREA_CONOCIMIENTO_AMSC">
                             <GroupExpressions>
-                              <GroupExpression>=Fields!AREA_CONOCIMIENTO_AMSC.Value</GroupExpression>
+                              <GroupExpression>=Fields!Área_Conocimiento.Value</GroupExpression>
                             </GroupExpressions>
+                            <PageBreak>
+                              <BreakLocation>StartAndEnd</BreakLocation>
+                            </PageBreak>
                           </Group>
                           <SortExpressions>
                             <SortExpression>
-                              <Value>=Fields!AREA_CONOCIMIENTO_AMSC.Value</Value>
+                              <Value>=Fields!Área_Conocimiento.Value</Value>
                             </SortExpression>
                           </SortExpressions>
                           <TablixMembers>
@@ -1098,14 +1101,14 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                               <TablixHeader>
                                 <Size>5.33104cm</Size>
                                 <CellContents>
-                                  <Textbox Name="AREA_CONOCIMIENTO_AMSC1">
+                                  <Textbox Name="Área_Conocimiento">
                                     <CanGrow>true</CanGrow>
                                     <KeepTogether>true</KeepTogether>
                                     <Paragraphs>
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value>=Fields!AREA_CONOCIMIENTO_AMSC.Value</Value>
+                                            <Value>=Fields!Área_Conocimiento.Value</Value>
                                             <Style>
                                               <FontStyle>Italic</FontStyle>
                                               <FontWeight>Bold</FontWeight>
@@ -1115,7 +1118,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                         <Style />
                                       </Paragraph>
                                     </Paragraphs>
-                                    <rd:DefaultName>AREA_CONOCIMIENTO_AMSC1</rd:DefaultName>
+                                    <rd:DefaultName>Área_Conocimiento</rd:DefaultName>
                                     <Style>
                                       <Border>
                                         <Color>LightGrey</Color>
@@ -1171,12 +1174,12 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                             <TablixMember>
                               <Group Name="NOMBRE_MATERIA_AMSC">
                                 <GroupExpressions>
-                                  <GroupExpression>=Fields!NOMBRE_MATERIA_AMSC.Value</GroupExpression>
+                                  <GroupExpression>=Fields!Asignatura.Value</GroupExpression>
                                 </GroupExpressions>
                               </Group>
                               <SortExpressions>
                                 <SortExpression>
-                                  <Value>=Fields!NOMBRE_MATERIA_AMSC.Value</Value>
+                                  <Value>=Fields!Asignatura.Value</Value>
                                 </SortExpression>
                               </SortExpressions>
                               <TablixMembers>
@@ -1217,14 +1220,14 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                       <TablixHeader>
                                         <Size>5.33104cm</Size>
                                         <CellContents>
-                                          <Textbox Name="NOMBRE_MATERIA_AMSC">
+                                          <Textbox Name="Asignatura">
                                             <CanGrow>true</CanGrow>
                                             <KeepTogether>true</KeepTogether>
                                             <Paragraphs>
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=Fields!NOMBRE_MATERIA_AMSC.Value</Value>
+                                                    <Value>=Fields!Asignatura.Value</Value>
                                                     <Style>
                                                       <FontWeight>Bold</FontWeight>
                                                     </Style>
@@ -1233,7 +1236,7 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                                 <Style />
                                               </Paragraph>
                                             </Paragraphs>
-                                            <rd:DefaultName>NOMBRE_MATERIA_AMSC</rd:DefaultName>
+                                            <rd:DefaultName>Asignatura</rd:DefaultName>
                                             <Style>
                                               <Border>
                                                 <Color>LightGrey</Color>
@@ -1331,13 +1334,13 @@ Round(Avg(Fields!Puntaje.Value),2) &gt; 90, "#adff81"
                                   </TablixMembers>
                                   <Visibility>
                                     <Hidden>true</Hidden>
-                                    <ToggleItem>NOMBRE_MATERIA_AMSC</ToggleItem>
+                                    <ToggleItem>Asignatura</ToggleItem>
                                   </Visibility>
                                 </TablixMember>
                               </TablixMembers>
                               <Visibility>
                                 <Hidden>true</Hidden>
-                                <ToggleItem>AREA_CONOCIMIENTO_AMSC1</ToggleItem>
+                                <ToggleItem>Área_Conocimiento</ToggleItem>
                               </Visibility>
                             </TablixMember>
                             <TablixMember>

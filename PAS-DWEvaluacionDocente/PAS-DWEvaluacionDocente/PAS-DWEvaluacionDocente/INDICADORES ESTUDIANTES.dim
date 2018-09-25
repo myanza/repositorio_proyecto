@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-839" scrolltop="-4299" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6588" y="10319" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-839" scrolltop="-4299" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6138" y="10213" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
             </font>
@@ -164,8 +164,8 @@
     <DimensionPermission dwd:design-time-name="a91594b6-3766-4102-b483-ce17f45d5587">
       <ID>DimensionPermission 3</ID>
       <Name>DimensionPermission 3</Name>
-      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
-      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <CreatedTimestamp>0001-01-01T05:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T05:00:00Z</LastSchemaUpdate>
       <RoleID>Role 3</RoleID>
       <ReadDefinition>Allowed</ReadDefinition>
       <Read>Allowed</Read>
@@ -203,10 +203,6 @@
           <AttributeID>JOVENES ACCION</AttributeID>
           <Name>JOVENES ACCION</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="c9f1a037-9675-4ee6-9260-85d5fcc95db0">
-          <AttributeID>BECADO ICETEX</AttributeID>
-          <Name>BECADO ICETEX</Name>
-        </AttributeRelationship>
         <AttributeRelationship dwd:design-time-name="2a5484ff-a9b9-4b65-9ab1-31f3164dd467">
           <AttributeID>AYUDA</AttributeID>
           <Name>AYUDA</Name>
@@ -218,6 +214,10 @@
         <AttributeRelationship dwd:design-time-name="1fb4363e-492b-4a20-b61b-3664e3ee4165">
           <AttributeID>CHECKSUM</AttributeID>
           <Name>CHECKSUM</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0b2778d6-d153-4811-9c4e-9ed514d2ad46">
+          <AttributeID>BECADO ICETEX</AttributeID>
+          <Name>BECADO ICETEX</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
@@ -379,59 +379,6 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="be2ca15f-3cba-44ca-b8ef-fd19bf030410">
-      <ID>BECADO ICETEX</ID>
-      <Name>BECADO ICETEX</Name>
-      <EstimatedCount>64</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="5e7fc414-e5a2-41c2-ad0d-439146ebc5c9">
-          <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="08ad0441-b84e-4075-adf4-1b8b0ced335c">
-            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-            <ColumnID>INDEST_ID</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="5a91ff48-e1f9-42f7-a252-8b9d47800d04">
-          <DataType>WChar</DataType>
-          <DataSize>40</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="d22e0f50-aa26-4289-bf0d-0b2382a2b70c">
-            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-            <ColumnID>AYUDA</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="c7773f26-f6d8-4d6a-862a-a547c63caa1a">
-          <DataType>WChar</DataType>
-          <DataSize>25</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="3df27720-869d-487e-86cc-2182942977b5">
-            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-            <ColumnID>BECADO_ICETEX</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="24618354-75db-4c13-a0eb-8737570a442f">
-        <DataType>WChar</DataType>
-        <DataSize>25</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="40422a6d-7c81-4eeb-8122-cc161f5354f6">
-          <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-          <ColumnID>BECADO_ICETEX</ColumnID>
-        </Source>
-      </NameColumn>
-      <Translations>
-        <Translation dwd:design-time-name="7e86f46f-ac15-4e8f-88eb-a8f0e4678cf8">
-          <Language>9226</Language>
-          <Caption>Becado Icetex</Caption>
-        </Translation>
-      </Translations>
-      <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="96204a47-ea56-4df7-90d8-295acff28531">
-          <AttributeID>AYUDA 2</AttributeID>
-          <Name>AYUDA_BECADO</Name>
-        </AttributeRelationship>
-      </AttributeRelationships>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
     <Attribute dwd:design-time-name="9e2fa87a-c9bc-44f0-b20a-59c597639694">
       <ID>AYUDA</ID>
       <Name>AYUDA_SINJERARQUIA</Name>
@@ -545,39 +492,6 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="81d0eb06-63ea-42bb-a77b-4d30dd4dd47a">
-      <ID>AYUDA 2</ID>
-      <Name>AYUDA_BECADO</Name>
-      <EstimatedCount>64</EstimatedCount>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="83871337-59e6-4ce8-b40a-c0af7f10ee65">
-          <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="fd9d62d4-d65d-442c-a432-b112a1333325">
-            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-            <ColumnID>INDEST_ID</ColumnID>
-          </Source>
-        </KeyColumn>
-        <KeyColumn dwd:design-time-name="d0ede16e-e24a-40a1-bf6f-28b40d966b0f">
-          <DataType>WChar</DataType>
-          <DataSize>40</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c8ed0a48-7dc1-41fb-b1fc-a47ad5ecba24">
-            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-            <ColumnID>AYUDA</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <NameColumn dwd:design-time-name="bf137d01-3d0d-4f04-a898-9ca9be2982f5">
-        <DataType>WChar</DataType>
-        <DataSize>40</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="8ec4851e-88bb-4e0d-a7e9-c1ae8d72e3b8">
-          <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
-          <ColumnID>AYUDA</ColumnID>
-        </Source>
-      </NameColumn>
-      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
     <Attribute dwd:design-time-name="75ac03fe-7809-4fcc-93df-b84a968259b7">
       <ID>AYUDA 3</ID>
       <Name>AYUDA_PILO</Name>
@@ -608,6 +522,28 @@
         </Source>
       </NameColumn>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1d001ecd-fc48-4581-af1f-3185420cd676">
+      <ID>BECADO ICETEX</ID>
+      <Name>BECADO ICETEX</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a16096d8-b205-4bfc-97ea-c563a6f4401d">
+          <DataType>WChar</DataType>
+          <DataSize>25</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f31e4c16-50cd-4be0-81c6-c50754402371">
+            <TableID>DW_ACADEMICO_LABOR_INDICADORES_ESTUDIANTES</TableID>
+            <ColumnID>BECADO_ICETEX</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <Translations>
+        <Translation dwd:design-time-name="c4665f37-2c30-4149-bae6-3cd1bc7a7d0d">
+          <Language>9226</Language>
+          <Caption>Becado Icetex</Caption>
+        </Translation>
+      </Translations>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
@@ -642,40 +578,6 @@
             <Translation dwd:design-time-name="c7278824-de3d-48ff-baef-99edb589b4e0">
               <Language>9226</Language>
               <Caption>Jóvenes Acción</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-      </Levels>
-    </Hierarchy>
-    <Hierarchy dwd:design-time-name="fc5bb250-ee5a-4a2d-ad35-13c0e99a9522">
-      <ID>Hierarchy 1</ID>
-      <Name>Jerarquia_Becado</Name>
-      <Translations>
-        <Translation dwd:design-time-name="ef6e04e5-9476-4255-abd0-f9ff9409f8c7">
-          <Language>9226</Language>
-          <Caption>Jerarquia Becado Icetex</Caption>
-        </Translation>
-      </Translations>
-      <Levels>
-        <Level dwd:design-time-name="3c2741dc-17ec-4b3b-9922-da6cba907e04">
-          <ID>AYUDA_BECADO</ID>
-          <Name>AYUDA_BECADO</Name>
-          <SourceAttributeID>AYUDA 2</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="1e45e5aa-a089-44a0-b1ed-2d6eb35743b0">
-              <Language>9226</Language>
-              <Caption>Ayuda del Estado</Caption>
-            </Translation>
-          </Translations>
-        </Level>
-        <Level dwd:design-time-name="e86dabbf-0dc4-4c7b-946a-361154bcacfc">
-          <ID>BECADO ICETEX</ID>
-          <Name>BECADO ICETEX</Name>
-          <SourceAttributeID>BECADO ICETEX</SourceAttributeID>
-          <Translations>
-            <Translation dwd:design-time-name="0f27a88d-d206-4128-81ad-85a0e54cfad3">
-              <Language>9226</Language>
-              <Caption>Becado Icetex</Caption>
             </Translation>
           </Translations>
         </Level>
