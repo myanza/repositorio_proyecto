@@ -11,8 +11,8 @@
   DTS:LocaleID="3082"
   DTS:ObjectName="Cargue-Incremental-Contratacion"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{24E8AAD8-AE29-4477-AF8F-8FA6937DD2D1}">
+  DTS:VersionBuild="65"
+  DTS:VersionGUID="{3D2C209B-B322-4E21-AA3D-D419F7881F4E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -3412,14 +3412,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Tarea Flujo de datos\Combinación de mezcla Categoria.Outputs[Salida de combinación de mezcla]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
-              endId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
-              name="Salida de conversión de datos"
-              startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
               endId="Package\Tarea Flujo de datos\Búsqueda.Inputs[Entrada de búsqueda]"
               name="Salida de conversión de datos"
               startId="Package\Tarea Flujo de datos\Conversión de datos Checksum.Outputs[Salida de conversión de datos]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+              endId="Package\Tarea Flujo de datos\Columna derivada.Inputs[Entrada de columna derivada]"
+              name="Salida de conversión de datos"
+              startId="Package\Tarea Flujo de datos\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de entradas no coincidentes de búsqueda]"
               endId="Package\Tarea Flujo de datos\Llave primaria Contratacion.Inputs[Input 0]"
@@ -3442,24 +3442,24 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
               startId="Package\Tarea Flujo de datos\Ordenar Dedicacion.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel3]"
+              endId="Package\Tarea Flujo de datos\Combinación de mezcla Categoria.Inputs[Entrada derecha de combinación de mezcla]"
+              name="Salida de origen de Excel"
+              startId="Package\Tarea Flujo de datos\Fuente Categoria.Outputs[Salida de origen de Excel]" />
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla Nivel Estudio.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de origen de Excel"
               startId="Package\Tarea Flujo de datos\Fuente Nivel Estudios.Outputs[Salida de origen de Excel]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel1]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla Dedicacion.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de origen de Excel"
               startId="Package\Tarea Flujo de datos\Fuente Dedicacion.Outputs[Salida de origen de Excel]" />
             <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel1]"
+              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel2]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla Contratacion.Inputs[Entrada derecha de combinación de mezcla]"
               name="Salida de origen de Excel"
               startId="Package\Tarea Flujo de datos\Fuente Contratacion.Outputs[Salida de origen de Excel]" />
-            <path
-              refId="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel2]"
-              endId="Package\Tarea Flujo de datos\Combinación de mezcla Categoria.Inputs[Entrada derecha de combinación de mezcla]"
-              name="Salida de origen de Excel"
-              startId="Package\Tarea Flujo de datos\Fuente Categoria.Outputs[Salida de origen de Excel]" />
             <path
               refId="Package\Tarea Flujo de datos.Paths[Salida de origen de OLE DB]"
               endId="Package\Tarea Flujo de datos\Combinación de mezcla Contratacion.Inputs[Entrada izquierda de combinación de mezcla]"
@@ -3678,28 +3678,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel3]"
-          TopLeft="674,1235">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-95,0"
-              Start="0,0"
-              End="-87.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-87.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel2]"
           TopLeft="686,1370.89285714286">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3721,7 +3699,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel1]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel2]"
           TopLeft="663,957">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3743,7 +3721,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel1]"
           TopLeft="677,1091.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3756,6 +3734,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="-93.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de origen de Excel]"
+          TopLeft="674,1235">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95,0"
+              Start="0,0"
+              End="-87.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-87.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3856,28 +3856,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos1]"
-          TopLeft="450.607142857145,1468.71428571429">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,33.2857142857099"
-              Start="0,0"
-              End="0,25.7857142857099">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.7857142857099" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
           TopLeft="702,1639">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -3890,6 +3868,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,-30.10699084966" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[Salida de conversión de datos]"
+          TopLeft="450.607142857145,1468.71428571429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,33.2857142857099"
+              Start="0,0"
+              End="0,25.7857142857099">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.7857142857099" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
